@@ -108,6 +108,15 @@ nav {
   margin-top: 16pt;
   margin-bottom: 48pt;
 }
+nav #locales {
+  text-align: center;
+}
+nav #locales a {
+  color: #000;
+}
+nav #locales span {
+  font-weight: bold;
+}
 nav #next {
   float: right;
 }
@@ -143,10 +152,6 @@ footer {
   text-align: center;
   padding-right: 64pt;
   min-height: 56pt;
-}
-
-footer span {
-  display: block;
 }
 
 footer a {

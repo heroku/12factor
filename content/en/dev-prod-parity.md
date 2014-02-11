@@ -1,7 +1,7 @@
 ## X. Dev/prod parity
 ### Keep development, staging, and production as similar as possible
 
-Historically, there have been substantial gaps between development (a developer making live edits to a local [deploy](/codebase) of the app) and production (a running deploy of the app accessed by end users).  These gaps manifest in three areas:
+Historically, there have been substantial gaps between development (a developer making live edits to a local [deploy](./codebase) of the app) and production (a running deploy of the app accessed by end users).  These gaps manifest in three areas:
 
 * **The time gap:** A developer may work on code that takes days, weeks, or even months to go into production.
 * **The personnel gap**: Developers write code, ops engineers deploy it.
@@ -38,7 +38,7 @@ Summarizing the above into a table:
   </tr>
 </table>
 
-[Backing services](/backing-services), such as the app's database, queueing system, or cache, is one area where dev/prod parity is important.  Many languages offer libraries which simplify access to the backing service, including *adapters* to different types of services.  Some examples are in the table below.
+[Backing services](./backing-services), such as the app's database, queueing system, or cache, is one area where dev/prod parity is important.  Many languages offer libraries which simplify access to the backing service, including *adapters* to different types of services.  Some examples are in the table below.
 
 <table>
   <tr>
