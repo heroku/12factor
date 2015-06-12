@@ -1,4 +1,5 @@
-Who should read this document?
-==============================
+Ai nên đọc tài liệu này?
+========================
 
-Any developer building applications which run as a service.  Ops engineers who deploy or manage such applications.
+Bất kì lập trình viên đang xây dựng các ứng dụng chạy như là một dịch vụ. Các kỹ sữ hệ
+thống đảm nhiệm viện triển khai hoặc quản lý các ứng dụng.
