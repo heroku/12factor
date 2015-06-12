@@ -1,8 +1,8 @@
-The Twelve Factors
-==================
+12 hệ số
+========
 
-## [I. Codebase](./codebase)
-### One codebase tracked in revision control, many deploys
+## [I. Mã gốc](./codebase)
+### Một mã gốc được theo dõi với hệ thống quản lý phiên bản, và nhiều lần triển khai
 
 ## [II. Dependencies](./dependencies)
 ### Explicitly declare and isolate dependencies

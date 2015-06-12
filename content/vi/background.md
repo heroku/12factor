@@ -1,9 +1,17 @@
-Background
-==========
+Gốc gác
+=======
 
-The contributors to this document have been directly involved in the development and deployment of hundreds of apps, and indirectly witnessed the development, operation, and scaling of hundreds of thousands of apps via our work on the [Heroku](http://www.heroku.com/) platform.
+Tất cả tác giả của tài liệu này đã trực tiếp tham gia vào quá trình phát triển và triển
+khai của hàng trăm ứng dụng, và gián tiếp theo dõi các quá trình phát triển, vận hành,
+và mở rộng của hàng nghìn ứng dụng thông qua công việc của chúng tôi trên hệ thống [Heroku](http://www.heroku.com/).
 
-This document synthesizes all of our experience and observations on a wide variety of software-as-a-service apps in the wild.  It is a triangulation on ideal practices for app development, paying particular attention to the dynamics of the organic growth of an app over time, the dynamics of collaboration between developers working on the app's codebase, and [avoiding the cost of software erosion](http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/).
+Tài liệu này là cô đọng của tất cả kinh nghiệm và quan sát của chúng tôi trên một số lượng
+lớn các ứng dụng-như-một-dịch vụ ở ngoài. Đây là kết hợp của kiến thức thực hành chuẩn mực
+trong việc phát triển ứng dụng, với trọng tâm vào cơ cấu phát triển cơ bản của ứng dụng trong
+một khoảng thời gian, cơ cấu động của sự hợp tác giữa các lập trình viên đang làm việc trên
+cùng một mã gốc, và [tránh rò rỉ chi phí phát triển phần mềm](http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/).
 
-Our motivation is to raise awareness of some systemic problems we've seen in modern application development, to provide a shared vocabulary for discussing those problems, and to offer a set of broad conceptual solutions to those problems with accompanying terminology.  The format is inspired by Martin Fowler's books *[Patterns of Enterprise Application Architecture](http://books.google.com/books/about/Patterns_of_enterprise_application_archi.html?id=FyWZt5DdvFkC)* and *[Refactoring](http://books.google.com/books/about/Refactoring.html?id=1MsETFPD3I0C)*.
-
+Động lực của chúng tôi là tăng cường nhận thức về các vấn đề hệ thống mà chúng tôi biết
+với các qui trình phát triển ứng dụng hiện tại, để chia sẻ một kho kiến thức thảo luận
+về các vấn đề này, và để cung cấp một chuỗi các giải pháp mở chác vấn đề trên và cũng đi kèm
+với các thuật ngữ chuyên môn. Định dạng này lấy ý tưởng từ cuốn sách *[Patterns of Enterprise Application Architecture](http://books.google.com/books/about/Patterns_of_enterprise_application_archi.html?id=FyWZt5DdvFkC)* và *[Refactoring](http://books.google.com/books/about/Refactoring.html?id=1MsETFPD3I0C)* của ông Martin Fowler.

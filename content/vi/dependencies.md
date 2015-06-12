@@ -1,12 +1,23 @@
-## II. Dependencies
-### Explicitly declare and isolate dependencies
+## II. Các phụ thuộc
+### Khai báo và phân cách các phụ thuộc
 
-Most programming languages offer a packaging system for distributing support libraries, such as [CPAN](http://www.cpan.org/) for Perl or [Rubygems](http://rubygems.org/) for Ruby.  Libraries installed through a packaging system can be installed system-wide (known as "site packages") or scoped into the directory containing the app (known as "vendoring" or "bundling").
+Hầu hết các ngôn ngữ lập trình đều cung cấp hệ thống gói để phân phối các gói thư viện hỗ trợ, ví dụ như [CPAN](http://www.cpan.org/) cho Perl hay [Rubygems](http://rubygems.org/) cho Ruby.  Các thư viện cài đặt thông qua một hệ thống gói có thể được cài đặt ở mức phủ hệ thống (được biết đến với thuật ngữ "site packages") hay được nhóm và trong một thư mục có kèm ứng
+dụng (được biết đến với thuật ngữ "vendoring" hay "bundling").
 
-**A twelve-factor app never relies on implicit existence of system-wide packages.**  It declares all dependencies, completely and exactly, via a *dependency declaration* manifest.  Furthermore, it uses a *dependency isolation* tool during execution to ensure that no implicit dependencies "leak in" from the surrounding system.  The full and explicit dependency specification is applied uniformly to both production and development.
+**Một ứng dụng 12-hệ số không bao giờ phụ thuộc vào sự hiện diện tuyệt đối của các gói hệ
+thống.** Nó khai báo toàn bộ các phụ thuộc hoàn toàn thông qua bản kê khai *khai báo phụ thuộc*. Hơn thế nữa nó còn sử dụng công cụ *phân cách phụ thuộc* trong quá trình thực thi để
+đảm bảo rằng không có các phụ thuộc tuyệt đối nào bị "lọt" vào trong các hệ thống xung quanh.
+Khai báo đầy đủ và rõ ràng các phụ thuộc được áp dụng đồng đều cho cả hệ thống sản xuất và
+phát triển.
 
-For example, [Gem Bundler](http://gembundler.com/) for Ruby offers the `Gemfile` manifest format for dependency declaration and `bundle exec` for dependency isolation.  In Python there are two separate tools for these steps -- [Pip](http://www.pip-installer.org/en/latest/) is used for declaration and [Virtualenv](http://www.virtualenv.org/en/latest/) for isolation.  Even C has [Autoconf](http://www.gnu.org/s/autoconf/) for dependency declaration, and static linking can provide dependency isolation.  No matter what the toolchain, dependency declaration and isolation must always be used together -- only one or the other is not sufficient to satisfy twelve-factor.
+Lấy ví dụ [Gem Bundler](http://gembundler.com/) của Ruby cung cấp định dạng kê khai `Gemfile` để khai báo phụ thuộc và `bundle exec` để phân cách phụ thuộc.  Với Python thì có công cụ riêng biệt cho các bước trên -- [Pip](http://www.pip-installer.org/en/latest/) được dùng để khai báo [Virtualenv](http://www.virtualenv.org/en/latest/) để phân cách.  Ngay cả C có [Autoconf](http://www.gnu.org/s/autoconf/) để khai báo phụ thuộc, và liên kết tĩnh (static linking) có thể cung cấp phân cách phụ thuộc.  Bất kể công cụ gì, kê khai phụ thuộc và phân cách luôn phải đi đôi với nhau -- chỉ cần thiếu một trong hai là không đạt yêu câu của của 12-hệ số.
 
-One benefit of explicit dependency declaration is that it simplifies setup for developers new to the app.  The new developer can check out the app's codebase onto their development machine, requiring only the language runtime and dependency manager installed as prerequisites.  They will be able to set up everything needed to run the app's code with a deterministic *build command*.  For example, the build command for Ruby/Bundler is `bundle install`, while for Clojure/[Leiningen](https://github.com/technomancy/leiningen#readme) it is `lein deps`.
+Một ích lợi khác của khai báo phụ thuộc rõ ràng là nó đơn giản hoá quá trình cài đặt cho
+lập trình viên mới tiếp nhận dự án.  Các lập trình viên mới có thể lấy về mã trên hệ thống
+phát triển của họ, chỉ với một yêu cầu là cài đặt trước ngôn ngữ lập trình và trình quản lý
+phụ thuộc.  Chúng có thể được dùng để thiết lập mọi thứ cần để vận hành một ứng dụng với một
+*lệnh biên dịch/xây dựng* định sẵn.  Lấy một ví dụ cụ thể là lệnh thiết lập cho Ruby/Bundler là `bundle install`, còn với Clojure/[Leiningen](https://github.com/technomancy/leiningen#readme) là `lein deps`.
 
-Twelve-factor apps also do not rely on the implicit existence of any system tools.  Examples include shelling out to ImageMagick or `curl`.  While these tools may exist on many or even most systems, there is no guarantee that they will exist on all systems where the app may run in the future, or whether the version found on a future system will be compatible with the app.  If the app needs to shell out to a system tool, that tool should be vendored into the app.
+Các ứng dụng 12-hệ số đông thời có thể không phụ thuộc vào bất cứ sự hiện diện của các công cụ hệ thống tuyệt đối nào. Các ví dụ bao gồm các công cụ cài đặt sẵn như ImageMagick hay `curl`. Trong khi các công cụ trên có thể hiện diện trên đa số các hệ thống, nhưng không có gì bảo
+đảm là chúng sẽ hiện diện trên toàn bộ các hệ thống mà ứng dụng có thể chạy trong tương la, hoặc có chăng phiên bản tìm thấy trên các hệ thống tương lai sẽ tương thích với ứng dụng.  Nếu ứng dụng cần được cài sẵn như một công cụ hệ thống, các công cụ đó nên được đi kèm cùng
+với ứng dụng.
