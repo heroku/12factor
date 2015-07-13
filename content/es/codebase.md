@@ -1,7 +1,7 @@
-## I. Codebase
-### One codebase tracked in revision control, many deploys
+## I. Base de código
+### Una base de código, bajo control de versiones, muchos despliegues
 
-A twelve-factor app is always tracked in a version control system, such as [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), or [Subversion](http://subversion.apache.org/).  A copy of the revision tracking database is known as a *code repository*, often shortened to *code repo* or just *repo*.
+Una aplicación de doce factores siempre está bajo un sistema de control de versiones, como [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), o [Subversion](http://subversion.apache.org/).  Una copia de la base de datos del control de versiones se conoce como *repositorio de código*, *repo de código* o simplemente *repo*.
 
 A *codebase* is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).
 
