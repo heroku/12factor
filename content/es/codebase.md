@@ -12,7 +12,7 @@ Siempre hay una correspondencia uno a uno entre la base de código y la aplicaci
 * Si hay múltiples bases de código, no es una app -- es un sistema distribuido. Cada componente en un sistema distribuido es una aplicación, y cada una puede cumplir individualmente con los doce factores.
 * Múltiples aplicaciones compartiendo el mismo código es una violación de los doce factores.  La solución es descomponer el código compartido en librerías, que pueden ser incluídas usando un [gestor de dependencias](./dependencies).
 
-There is only one codebase per app, but there will be many deploys of the app.  A *deploy* is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.
+Sólo hay una base de código por aplicación, pero puede haber muchos despliegues de la app. Un *despliegue* es una instancia en ejecución de la aplicación. Una instancia, típicamente, es una página de producción y uno o más sitios de preproducción. Adicionalmente, cada desarrollador tiene una copia de la aplicación ejecutándose en su entorno local, que también cuenta como despliegue.
 
 The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.
 
