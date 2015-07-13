@@ -1,38 +1,38 @@
-The Twelve Factors
+Los doce factores
 ==================
 
-## [I. Codebase](./codebase)
-### One codebase tracked in revision control, many deploys
+## [I. Base de código](./codebase)
+### Una base de código, bajo control de versiones, muchos despliegues
 
-## [II. Dependencies](./dependencies)
-### Explicitly declare and isolate dependencies
+## [II. Dependencias](./dependencies)
+### Declaración explícita y aislamiento de dependencias
 
-## [III. Config](./config)
-### Store config in the environment
+## [III. Configuración](./config)
+### Almacenamiento de la configuración del entorno
 
-## [IV. Backing Services](./backing-services)
-### Treat backing services as attached resources
+## [IV. Servicios de apoyo](./backing-services)
+### Tratar los servicios de apoyo como recursos acoplados
 
-## [V. Build, release, run](./build-release-run)
-### Strictly separate build and run stages
+## [V. Empaquetar, desplegar, ejecutar](./build-release-run)
+### Separación explícita entre empaquetado y ejecución
 
-## [VI. Processes](./processes)
-### Execute the app as one or more stateless processes
+## [VI. Procesos](./processes)
+### Ejecución de la aplicación como uno o más procesos sin estado (stateless)
 
-## [VII. Port binding](./port-binding)
-### Export services via port binding
+## [VII. Asociación de puertos](./port-binding)
+### Exportar servicios usando la asociación de puertos
 
-## [VIII. Concurrency](./concurrency)
-### Scale out via the process model
+## [VIII. Concurrencia](./concurrency)
+### Escalado horizontal (scale out) vía el modelo del proceso
 
-## [IX. Disposability](./disposability)
-### Maximize robustness with fast startup and graceful shutdown
+## [IX. De usar y tirar](./disposability)
+### Maximizar la robustez con una arrancada rápida y un gracioso apagado
 
-## [X. Dev/prod parity](./dev-prod-parity)
-### Keep development, staging, and production as similar as possible
+## [X. Paridad entre dev y prod](./dev-prod-parity)
+### Mantener desarrollo, preproducción y producción tan similares como sea posible
 
 ## [XI. Logs](./logs)
-### Treat logs as event streams
+### Tratar los logs como una corriente de eventos
 
-## [XII. Admin processes](./admin-processes)
-### Run admin/management tasks as one-off processes
+## [XII. Procesos de Admin](./admin-processes)
+### Ejecución de procesos de administración como excepciones
