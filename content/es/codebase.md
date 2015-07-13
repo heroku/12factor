@@ -3,14 +3,14 @@
 
 Una aplicación de doce factores siempre está bajo un sistema de control de versiones, como [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), o [Subversion](http://subversion.apache.org/).  Una copia de la base de datos del control de versiones se conoce como *repositorio de código*, *repo de código* o simplemente *repo*.
 
-A *codebase* is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).
+Una *base de código* es un único repo (en una sistema de control de código centralizado como Subversion), o un conjunto de repos que comparten un commit raíz (en un sistem descentralizado como Git).
 
-![One codebase maps to many deploys](/images/codebase-deploys.png)
+![Una base de código se corresponde con muchos despliegues](/images/codebase-deploys.png)
 
-There is always a one-to-one correlation between the codebase and the app:
+Siempre hay una correspondencia uno a uno entre la base de código y la aplicación:
 
-* If there are multiple codebases, it's not an app -- it's a distributed system.  Each component in a distributed system is an app, and each can individually comply with twelve-factor.
-* Multiple apps sharing the same code is a violation of twelve-factor.  The solution here is to factor shared code into libraries which can be included through the [dependency manager](./dependencies).
+* Si hay múltiples bases de código, no es una app -- es un sistema distribuido. Cada componente en un sistema distribuido es una aplicación, y cada una puede cumplir individualmente con los doce factores.
+* Múltiples aplicaciones compartiendo el mismo código es una violación de los doce factores.  La solución es descomponer el código compartido en librerías, que pueden ser incluídas usando un [gestor de dependencias](./dependencies).
 
 There is only one codebase per app, but there will be many deploys of the app.  A *deploy* is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.
 
