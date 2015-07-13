@@ -14,5 +14,5 @@ Siempre hay una correspondencia uno a uno entre la base de código y la aplicaci
 
 Sólo hay una base de código por aplicación, pero puede haber muchos despliegues de la app. Un *despliegue* es una instancia en ejecución de la aplicación. Una instancia, típicamente, es una página de producción y uno o más sitios de preproducción. Adicionalmente, cada desarrollador tiene una copia de la aplicación ejecutándose en su entorno local, que también cuenta como despliegue.
 
-The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.
+La base de código es compartida por todos los despliegues, aunque diferentes versiones pueden estar activas en cada despliegue. Por ejemplo, un desarrollador tiene commits que aún no han sido desplegados en preproducción; preproducción tiene commits que aún no han llegado a producción. Pero todos comparten la misma base de código, identificándolos así como diferentes despliegues de la misma aplicación.
 
