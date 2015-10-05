@@ -1,0 +1,14 @@
+## IV. Servicios de apoyo
+### Tratar a los servicios de apoyo como recursos adjuntos
+
+Un *servicio de apoyo* es cualquier servicio que el app consume por la red como parte de su operación normal. Ejemplos incluyen bases de datos (como [MySQL](http://dev.mysql.com/) o [CouchDB](http://couchdb.apache.org/)), sistemas de mensajes/colas (como [RabbitMQ](http://www.rabbitmq.com/) o [Beanstalkd](http://kr.github.com/beanstalkd/)), servicios de SMTP para emails externos (como [Postfix](http://www.postfix.org/)), y sistemas de caché (como [Memcached](http://memcached.org/)).
+
+Servicios de apoyo como la base de datos son tradicionalmente manejados por los mismos administradores de sistemas, que los que manejan el servidor del deploy correspondiente. Además de estos servicios manejados localmente, el app también podrá tener servicios que son prestados y manejados por terceros. Ejemplos incluyen servicios de SMTP (como [Postmark](http://postmarkapp.com/)), servicios de colección de métricas (como [New Relic](http://newrelic.com/) o [Loggly](http://www.loggly.com/)), servicios de activos binarios (como [Amazon S3](http://aws.amazon.com/s3/)), y hasta servicios de consumidores accesible por un API (como [Twitter](http://dev.twitter.com/), [Google Maps](http://code.google.com/apis/maps/index.html), o [Last.fm](http://www.last.fm/api)).
+
+**El código de un app twelve-factor no distingue entre servicios locales y terceros.** Para el app, ambos son recursos adjuntos, accedidos por un URL u otro localizador/credenciales guardado en la [config](./config). Un [deploy](./codebase) del app twelve-factor debe ser capaz de cambiar una base de datos MySQL local por uno manejado por terceros (como [Amazon RDS](http://aws.amazon.com/rds/)) sin efectuar ningún cambio en el código del app. Asimismo, un servidor SMTP local se podrá cambiar por un servicio de SMTP de terceros (como Postmark) sin cambio en el código. En ambos casos, solamente las credenciales en la config deben cambiar.
+
+Cada servicio de apoyo distinto es un *recurso*. Por ejemplo, una base de datos MySQL es un recurso; dos bases de datos MySQL (usadas para sharding dentro de la aplicación) califican como dos recursos distintos. El app twelve-factor trata a estas bases de datos como *recursos adjuntos*, lo que indica su bajo acoplamiento con el deploy al que están adjuntos.
+
+<img src="/images/attached-resources.png" class="full" alt="Un deploy producción adjunto a cuatro servicios de apoyo." />
+
+Los recursos se pueden adjuntar y despegar a los deploys a voluntad. Por ejemplo, si la base de datos del app no está funcionando bien debido a un problema del hardware, el administrador del app podría lanzar un nuevo servidor de la base de datos restaurada de una copia de seguridad reciente. La base de datos actual de producción se podría despegar, y la nueva base de datos se podría adjuntar -- todo sin cambios en el código.
