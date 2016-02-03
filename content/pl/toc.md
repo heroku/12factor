@@ -2,10 +2,10 @@ The Twelve Factors
 ==================
 
 ## [I. Codebase](./codebase)
-### Jedno źródło kodu śledzone systememem kontroli wersji, wiele wdrożeń
+### Jedno źródło kodu śledzone systemem kontroli wersji, wiele wdrożeń
 
 ## [II. Zależności](./dependencies)
-### Jawnie zadeklaruj i wyizoluj zależności
+### Jawnie zadeklaruj i wydziel zależności
 
 ## [III. Konfiguracja](./config)
 ### Trzymaj konfigurację w środowisku
