@@ -10,8 +10,8 @@ The Twelve Factors
 ## [III. Konfiguracja](./config)
 ### Trzymaj konfigurację w środowisku
 
-## [IV. Backing Services](./backing-services)
-### Traktuj Backing Services jako przydzielone zasoby
+## [IV. Usługi wspierające](./backing-services)
+### Traktuj usługi wspierające jako przydzielone zasoby
 
 ## [V. Buduj, wypuszczaj, uruchamiaj](./build-release-run)
 ### Precyzyjnie oddziel etap budowania od uruchamiania
