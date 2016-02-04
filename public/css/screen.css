@@ -124,6 +124,7 @@ nav #prev {
   float: left;
 }
 nav #next a, nav #prev a {
+  display: block;
   font-size: 19pt;
   text-decoration: none;
   color: #000;
