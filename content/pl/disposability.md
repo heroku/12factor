@@ -1,0 +1,14 @@
+## IX. Disposability
+### Zwiększ elastyczność aplikacji przez szybki start i bezproblemowe zamknięcie
+
+**[Procesy](./processes) aplikacji 12factor są *jednorazowe*, znaczy to, że mogą być wystartowane lub zatrzymane** Ułatwia to elastyczne skalowanie i szybkie wdrożenia [kodu](./codebase), zmianę [konfiguracji](./config) i zapewnia większą stabilność przy deploymencie na produkcję.
+
+Procesy powinny dążyć do **minimalizowania czasu swojego rozruchu**.  W idealnej sytuacji, proces potrzebuje kilka sekund by wystartować i być gotowy na przyjmowanie zapytań oraz zadań. Krótki czas startu zapewnia większą szybkość dla skalowania i [wypuszczania](./build-release-run) procesów. Zwiększa to również zdolności aplikacji do radzenia sobie z problemami, ponieważ manager procesów może łatwo przenieść je na nową maszynę fizyczną będzie taka potrzeba.
+
+Procesy  **zamykają się płynnie gdy otrzymają sygnał [SIGTERM](http://en.wikipedia.org/wiki/SIGTERM)** od managera procesów.  Dla procesów sieciowych, płynne zamknięcie jest uzyskiwane przez zakończenie nasłuchiwania na porcie usługi (skutkiem czego jest odrzucanie nowych zapytań), pozwalające na zakończenie obecnych zapytań, a następnie koniec działania. Wynika z tego, że zapytania HTTP są krótkie (trwają nie więcej niż kilka sekund), lub w przypadku long poolingu, klient powinien bezproblemowo spróbować połączyć się ponownie, gdy utracił połączenie.
+
+Dla procesów roboczych płynnym zakończeniem jest zwrot obecnie wykonywanego zadania do kolejki.  Dla przykładu w [RabbitMQ](http://www.rabbitmq.com/) działający proces może wysłać [`NACK`](http://www.rabbitmq.com/amqp-0-9-1-quickref.html#basic.nack); w [Beanstalkd](http://kr.github.com/beanstalkd/), zadanie jest zwracane do kolejki automatycznie, gdy tylko proces się rozłączy.  Systemy bazujące na blokadach zasobów jak [Delayed Job](https://github.com/collectiveidea/delayed_job#readme) muszą upewnić się, że odblokowały zajmowany wcześniej zasób. Implicit in this model is that all jobs are [reentrant](http://en.wikipedia.org/wiki/Reentrant_%28subroutine%29), which typically is achieved by wrapping the results in a transaction, or making the operation [idempotent](http://en.wikipedia.org/wiki/Idempotence).
+
+Processes should also be **robust against sudden death**, in the case of a failure in the underlying hardware.  While this is a much less common occurrence than a graceful shutdown with `SIGTERM`, it can still happen.  A recommended approach is use of a robust queueing backend, such as Beanstalkd, that returns jobs to the queue when clients disconnect or time out.  Either way, a twelve-factor app is architected to handle unexpected, non-graceful terminations.  [Crash-only design](http://lwn.net/Articles/191059/) takes this concept to its [logical conclusion](http://docs.couchdb.org/en/latest/intro/overview.html).
+
+
