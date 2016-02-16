@@ -1,0 +1,14 @@
+## VIII. Współbieżność
+### Skaluj przez modelowanie procesów
+
+Każdy program komputerowy od momentu uruchomienia jest reprezentowany przez jeden lub więcej procesów. Aplikacje internetowe mogą być uruchamiane w różnorodny sposób. Na przykład procesy PHP uruchamiają się jako podrzędne procesy Apache'a, uruchamiane na żądanie w zależności od potrzeby obsługi odpowiednio dużej liczby zapytań. W Javie procesy obsługiwane są zupełnie inaczej, z JVM zapewniającym jeden nadrzędny proces, który rezerwuje zasoby systemu (CPU oraz pamięć) na starcie oraz współbieżnością zarządzaną wewnętrznie i opartą na wątkach. W obu przypadkach uruchomione procesy są tylko minimalnie widoczne dla developerów aplikacji.
+
+![Skala jest wyrażana przez działające procesy, różnorodność obciążenia jest wyrażana w typach procesów](/images/process-types.png)
+
+**W aplikacji 12factor, procesy są typem pierwszoklasowym**  Zachowanie tych procesów jest mocno wzorowane na  [modelu procesów unixowych dla usług działających w wewnątrz systemu operacyjnego](http://adam.heroku.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/).  Używając tego modelu programista może zaprojektować aplikację by radziła sobie z różnorodnym obciążeniem przez przypisywanie każdej czynności do *typu procesu*. Przykładami tego jest obsługa procesów sieciowych przez HTTP oraz długotrwałe działanie zadań w tle opierających się na procesach roboczych.
+
+Nie wyklucza to indywidualnych procesów przed obsługą swojego wewnętrznego zwielokrotnienia, przez wątki w środowisku maszyny wirtualnej lub w asynchronicznym modelu wydarzeń, który możemy znaleźć wśród narzędzi takich jak [EventMachine](http://rubyeventmachine.com/), [Twisted](http://twistedmatrix.com/trac/), albo [Node.js](http://nodejs.org/).  Należy pamiętać, że pojedyncza maszyna wirtualna może urosnąć do bardzo dużych rozmiarów (skala pionowa), więc aplikacja musi być również w stanie pracować na wielu procesach działających na wielu fizycznych maszynach.
+
+Największa zaleta modelu procesów objawia się w momencie skalowania.  [Niezależność oraz dzielenie się na podprocesy](./processes) znaczy, że dodawanie więcej równolegle działających procesów jest proste i bezproblemowe. Tablica typów procesów i liczba procesów nazywana jest ich *formacją*.
+
+Procesy aplikacji 12factor [nigdy nie powinny demonizować(lol)](http://dustin.github.com/2010/02/28/running-processes.html) lub zapisywać plików PID.  Zamiast tego polegają na obsłudze procesów systemu operacyjnego (np. [Upstart](http://upstart.ubuntu.com/), narzędzie do zarządzania rozproszonymi procesami w chmurze, lub [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) w developmencie) do zarządzania [stumieniami wyjściowymi](./logs), obsługi zatrzymanych procesów, restartu i zakończenia działania zainicjowanych przez użytkownika.
