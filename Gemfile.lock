@@ -8,6 +8,7 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-ssl-enforcer (0.2.9)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -24,6 +25,7 @@ PLATFORMS
 DEPENDENCIES
   i18n
   maruku
+  rack-ssl-enforcer
   sinatra
   thin
 
@@ -31,4 +33,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.12.4
+   1.12.5
