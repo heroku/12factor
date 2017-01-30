@@ -64,7 +64,7 @@ helpers do
         path_prefix = locale == I18n.default_locale ? "" : "/#{locale}"
         "<a href=\"#{path_prefix}/#{factor}\">#{I18n.t(:language, :locale => locale)}</a>"
       end
-    }.join(" | ")
+    }.each_slice(4).to_a
   end
 
   def rtl_lang?(lang)

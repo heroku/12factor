@@ -9,7 +9,7 @@ body {
 h1, h2, h3 {
   padding: 0;
   margin: 0;
-}  
+}
 
 h1, h2 {
   line-height: 1.25em;
@@ -151,12 +151,12 @@ footer {
   padding-top: 24pt;
   padding-bottom: 16pt;
   text-align: center;
-  padding-right: 64pt;
   min-height: 56pt;
 }
 
 footer a {
   color: #999;
+  text-decoration: none;
 }
 
 article img {
@@ -167,4 +167,13 @@ article img {
 article img.full {
   float: none;
   margin-left: 0;
+}
+
+#locales table{
+  margin:auto;
+  padding:15px;
+  vertical-align: text-top;
+}
+#locales table td{
+  vertical-align: text-top;
 }

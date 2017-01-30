@@ -36,7 +36,18 @@
   <%= yield %>
 
   <footer>
-  <div id="locales"><%= render_locales(@factor) %></div>
+  <div id="locales">
+    <h3>Available in</h3>
+    <table>
+      <% render_locales(@factor).each do |row| %>
+        <tr>
+        <% row.each do |el| %>
+          <td><%= el %></td>
+        <% end%>
+        </tr>
+      <% end %>
+    </table>
+  </div>
   <div>Written by Adam Wiggins</div>
   <div>Last updated Jan 30, 2012</div>
   <div><a href="https://github.com/heroku/12factor">Sourcecode</a></div>

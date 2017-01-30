@@ -152,13 +152,13 @@ footer {
   padding-top: 24pt;
   padding-bottom: 16pt;
   text-align: center;
-  padding-left: 64pt;
   min-height: 56pt;
   direction: ltr;
 }
 
 footer a {
   color: #999;
+  text-decoration: none;
 }
 
 article img {
@@ -169,4 +169,12 @@ article img {
 article img.full {
   float: none;
   margin-right: 0;
+}
+#locales table{
+  margin:auto;
+  padding:15px;
+  vertical-align: text-top;
+}
+#locales table td{
+  vertical-align: text-top;
 }
