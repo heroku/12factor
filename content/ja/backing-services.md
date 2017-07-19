@@ -1,4 +1,4 @@
-## IV. バックエンドサービス
+## IV. バックエンドサービス (Backing Services)
 ### バックエンドサービスをアタッチされたリソースとして扱う
 
 *バックエンドサービス* はアプリケーションが通常の動作の中でネットワーク越しに利用するすべてのサービスを言う。例としては、データストア（例：[MySQL](http://dev.mysql.com/) や [CouchDB](http://couchdb.apache.org/)）、メッセージキューイングシステム（例：[RabbitMQ](http://www.rabbitmq.com/) や [Beanstalkd](http://kr.github.com/beanstalkd/)）、電子メールを送信するためのSMTPサービス（例：[Postfix](http://www.postfix.org/)）、キャッシュシステム（例：[Memcached](http://memcached.org/)）などがある。

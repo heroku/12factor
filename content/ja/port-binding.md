@@ -1,4 +1,4 @@
-## VII. ポートバインディング
+## VII. ポートバインディング (Port binding)
 ### ポートバインディングを通してサービスを公開する
 
 WebアプリケーションはWebサーバーコンテナの内部で実行されることがある。例えば、PHPアプリケーションは[Apache HTTPD](http://httpd.apache.org/)内部のモジュールとして実行されるかもしれないし、Javaアプリケーションは[Tomcat](http://tomcat.apache.org/)の内部で実行されるかもしれない。
