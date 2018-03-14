@@ -1,12 +1,12 @@
-Introduction
-============
+Bevezetés
+=========
 
-In the modern era, software is commonly delivered as a service: called *web apps*, or *software-as-a-service*.  The twelve-factor app is a methodology for building software-as-a-service apps that:
+A modern korban a szoftvert általában szolgáltatásként szállítják: a neve *webes alkalmazás* vagy *szoftver-mint-szolgáltatás*. A tizenkét tényezős alkalmazás egy módszertan szoftver-mint-szolgáltatás létrehozására, ami:
 
-* Use **declarative** formats for setup automation, to minimize time and cost for new developers joining the project;
+* A projekthez új fejlesztő csatlakozása esetén felmerülő idő és költség veszteségek minimalizálása érdekében a telepítés automatikussá tételéhez **deklaratív** formátumot használ;
 * Have a **clean contract** with the underlying operating system, offering **maximum portability** between execution environments;
 * Are suitable for **deployment** on modern **cloud platforms**, obviating the need for servers and systems administration;
 * **Minimize divergence** between development and production, enabling **continuous deployment** for maximum agility;
-* And can **scale up** without significant changes to tooling, architecture, or development practices.
+* És az eszközök, a környezet vagy a fejlesztési gyakorlat jelentős változtatása nélküli **skálázható**.
 
-The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).
+A tizenkét tényezős módszertan bármilyen programnyelven írt alkalmazáshoz felhasználható amik a háttérszolgáltatások (adatbázis, várakozósor, memória gyorsítótárazás, stb.) tetszőleges kombinációját használhatják.
