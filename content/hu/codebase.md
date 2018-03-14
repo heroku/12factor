@@ -1,18 +1,17 @@
-## I. Codebase
-### One codebase tracked in revision control, many deploys
+## I. Kódbázis
+### Egy kódbázis kódtárban kezelve, több telepítés
 
-A twelve-factor app is always tracked in a version control system, such as [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), or [Subversion](http://subversion.apache.org/).  A copy of the revision tracking database is known as a *code repository*, often shortened to *code repo* or just *repo*.
+A tizenkét tényezős alkalmazást minden esetben verziókövető rendszerrel kezelünk, mint a [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), vagy [Subversion](http://subversion.apache.org/). A verziókövető adatbázist és másolatát *kódtárnak* hívjuk.
 
-A *codebase* is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).
+A *kódbázis* egy tetszőleges kódtár (központosított verziókövetési rendszernél, mint a Subversion), vagy bármilyen csoportja a kódtáraknak, amik a kezdő commit-et megosztják (decentralizált verziókövető rendszerek esetén, mint a Git)
 
-![One codebase maps to many deploys](/images/codebase-deploys.png)
+![Egy kódbázis több telepítéshez tartozik](/images/codebase-deploys.png)
 
-There is always a one-to-one correlation between the codebase and the app:
+Egy alkalmazáshoz mindig pontosan egy kódbázis tartozik:
 
-* If there are multiple codebases, it's not an app -- it's a distributed system.  Each component in a distributed system is an app, and each can individually comply with twelve-factor.
-* Multiple apps sharing the same code is a violation of twelve-factor.  The solution here is to factor shared code into libraries which can be included through the [dependency manager](./dependencies).
+* Ha több kódbázis van, akkor az nem lehet egy alkalmazás. Ebben az esetben elosztott rendszerről beszélünk több összetevővel. Ilyenkor tekintsünk minden összetevőt egy-egy alkalmazásnak, és ezek az alkalmazások külön-külön már alkalmasak arra, hogy a 12 tényezős alkalmazásfejlesztés követelményeinek megfeleljenek.
+* Ha több alkalmazás ugyanazt a kódot megosztja (például ugyanazt a függvényt használják, ugyanazt a konstans/modell kódot tartalmazzák stb.), akkor ezek az alkalmazások megsértik a 12 tényezős alkalmazásfejlesztés előírásait. Ebben az esetben a megoldás az, hogy a megosztott kódot például egy könyvtárba ki kell szervezni, és az egyes alkalmazások közötti [függőségek feloldásának mechanizmusával](./dependencies) felhasználni ahol szükség van rá.
 
-There is only one codebase per app, but there will be many deploys of the app.  A *deploy* is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.
+Minden kódbázishoz tehát pontosan egy alkalmazás tartozik, azonban ezt az alkalmazást több környezetben és változatban is lehet telepíteni. A *telepítés* az alkalmazásnak egy futó példánya. Ilyen például az éles üzemeltetési (produkciós) környezet, különböző tesztelési környezetek. Emellett minden fejlesztő gépére kerül egy-egy fejlesztői másolat is az alkalmazásból.
 
-The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.
-
+A kódbázis azonos minden példánynál akkor is, ha nem minden telepítés azonos kód verzióból készült. A fejlesztőknél lehetnek olyan módosítások, amiket a tesztelési környezet(ek)re még nem telepítettünk, és a tesztkörnyezeteken is olyan változatot tesztelünk, aminek nem minden változása van az éles telepítésben. De minden telepítés ugyanazt a kódbázist (kódtárat) használja, innen ismerjük fel, hogy ezek ugyanannak az alkalmazásnak a különböző telepítései.

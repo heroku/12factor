@@ -1,4 +1,4 @@
-Who should read this document?
-==============================
+Kinek érdemes ezt a dokumentumot elolvasni?
+===========================================
 
-Any developer building applications which run as a service.  Ops engineers who deploy or manage such applications.
+Minden fejlesztőnek, aki szolgáltatásként üzemelő alkalmazáson dolgozik. Üzemeltető mérnököknek, aki telepíti vagy kezeli ezeket az alkalmazásokat.
