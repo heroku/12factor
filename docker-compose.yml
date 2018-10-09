@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: heroku/12factor
+    container_name: 12factor
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    environment:
+      - FORCE_SSL

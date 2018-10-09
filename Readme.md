@@ -10,6 +10,11 @@ Development
     heroku local:start
     open http://localhost:5000
 
+Alternatively with Docker:
+
+    docker-compose up -d
+    open http://localhost:5000
+
 Production deploy
 -----------------
 
