@@ -10,8 +10,8 @@ Historiquement, il y a eu un fossé conséquent entre le développement (un dév
 **Les applications 12 facteurs sont conçues pour le [déploiement continu (en)](http://avc.com/2011/02/continuous-deployment/) en gardant un fossé étroit entre le développement et la production.** Si l'on regarde les trois fossés décrits plus haut :
 
 * Réduire le fossé temporel : un développeur peut écrire du code et le déployer quelques heures ou même juste quelques minutes plus tard.
-* Réduire le fossé des personnes : les personnes qui écrivent le code sont impliquées dans son déploiement et pour surveiller son comportement en production
-* Réduire le fossé des outils : réduire, autant que possible, les différences entre le développement et la production
+* Réduire le fossé des personnes : les personnes qui écrivent le code sont impliquées dans son déploiement et pour surveiller son comportement en production.
+* Réduire le fossé des outils : réduire, autant que possible, les différences entre le développement et la production.
 
 Si l'on résume cela en un tableau :
 
@@ -24,7 +24,7 @@ Si l'on résume cela en un tableau :
   <tr>
     <th>Temps entre les déploiements</th>
     <td>Semaines</td>
-    <td>heures</td>
+    <td>Heures</td>
   </tr>
   <tr>
     <th>Auteurs du code et ceux qui le déploient</th>
@@ -44,7 +44,7 @@ Si l'on résume cela en un tableau :
   <tr>
     <th>Type</th>
     <th>Langage</th>
-    <th>Librarie</th>
+    <th>Librairie</th>
     <th>Adaptateurs</th>
   </tr>
   <tr>
@@ -71,6 +71,6 @@ Les développeurs trouvent parfois agréable d'utiliser des services externes l�
 
 **Les développeurs des applications 12 facteurs résistent au besoin d'utiliser des services externes différents entre le développement local et la production**, même lorsque les adaptateurs permettent d'abstraire en théorie beaucoup de différences entre les services externes. Les différences entre les services externes signifient que de petites incompatibilités surviennent, ce qui va faire que du code qui fonctionnait et qui passait les tests durant le développement ou la validation ne fonctionnera pas en production. Ce type d'erreurs crée de la friction en défaveur du déploiement continu. Le coût de cette friction et son impact négatif sur le déploiement continu est extrêmement élevé lorsqu'il est cumulé sur toute la vie de l'application.
 
-Les services locaux légers sont moins attirants aujourd'hui qu'ils ne l'étaient autrefois. Les services externes modernes tels que Memcached, PostgreSQL, et RabbitMQ ne sont pas difficiles à installer et à faire fonctionner grâce aux systèmes de paquets modernes comme [Homebrew](http://mxcl.github.com/homebrew/) et [apt-get](https://help.ubuntu.com/community/AptGet/Howto). Autre possibilité, des outils de provisionnement comme [Chef](http://www.opscode.com/chef/) et [Puppet](http://docs.puppetlabs.com/), combinés à des environnements virtuels légers comme [Vagrant](http://vagrantup.com/) permettent aux développeurs de faire fonctionner des environnements locaux qui reproduisent de très près les environnements de production. Le coût d'installation et d'utilisation de ces systèmes est faible comparé aux bénéfices d'une bonne parité développement/production et du déploiement continu.
+Les services locaux légers sont moins attirants aujourd'hui qu'ils ne l'étaient autrefois. Les services externes modernes tels que Memcached, PostgreSQL, et RabbitMQ ne sont pas difficiles à installer et à faire fonctionner grâce aux systèmes de paquets modernes comme [Homebrew](http://mxcl.github.com/homebrew/) et [apt-get](https://help.ubuntu.com/community/AptGet/Howto). Autre possibilité, des outils de provisionnement comme [Chef](http://www.opscode.com/chef/) et [Puppet](http://docs.puppetlabs.com/), combinés à des environnements virtuels légers comme [Docker](https://www.docker.com/) et [Vagrant](http://vagrantup.com/) permettent aux développeurs de faire fonctionner des environnements locaux qui reproduisent de très près les environnements de production. Le coût d'installation et d'utilisation de ces systèmes est faible comparé aux bénéfices d'une bonne parité développement/production et du déploiement continu.
 
 Les adaptateurs à ces différents systèmes externes sont malgré tout utiles, car ils rendent le portage vers de nouveaux services externes relativement indolores. Mais tous les déploiements de l'application (environnement de développement, validation, production) devraient utiliser le même type et la même version de chacun de ces services externes.

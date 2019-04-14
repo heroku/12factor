@@ -3,7 +3,7 @@
 
 Historically, there have been substantial gaps between development (a developer making live edits to a local [deploy](./codebase) of the app) and production (a running deploy of the app accessed by end users).  These gaps manifest in three areas:
 
-* **The time gap:** A developer may work on code that takes days, weeks, or even months to go into production.
+* **The time gap**: A developer may work on code that takes days, weeks, or even months to go into production.
 * **The personnel gap**: Developers write code, ops engineers deploy it.
 * **The tools gap**: Developers may be using a stack like Nginx, SQLite, and OS X, while the production deploy uses Apache, MySQL, and Linux.
 

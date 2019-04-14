@@ -67,7 +67,7 @@ I [backing service](./backing-services), come il database dell'applicazione o la
   </tr>
 </table>
 
-Gli sviluppatori, inoltre, trovano utile usare dei servizi "leggeri" in fase di sviluppo, passando quindi a qualcosa di più serio e robusto in produzione. Per esempio, usando SQLite localmente e PostgreSQL in produzone. Ancora, un sistema di cache in locale in fase di sviluppo e Memcached in produzione.
+Gli sviluppatori, inoltre, trovano utile usare dei servizi "leggeri" in fase di sviluppo, passando quindi a qualcosa di più serio e robusto in produzione. Per esempio, usando SQLite localmente e PostgreSQL in produzione. Ancora, un sistema di cache in locale in fase di sviluppo e Memcached in produzione.
 
 **Lo sviluppatore twelve-factor "resiste" a questa necessità**, anche se gli adapter ci sono e funzionano in modo tale da astrarre in modo sufficiente tutte le differenze nella gestione. Nulla impedisce, infatti, a qualche altra incompatibilità di uscire allo scoperto quando meno ce lo si aspetta, soprattutto se in ambiente di sviluppo funziona tutto e poi, magari, in produzione i test non vengono superati. Il costo di questa differenza può risultare abbastanza alto, soprattutto in situazioni in cui si effettua il rilascio continuo.
 
