@@ -11,4 +11,4 @@
 
 上述进程模型会在系统急需扩展时大放异彩。 [12-Factor 应用的进程所具备的无共享，水平分区的特性](./processes) 意味着添加并发会变得简单而稳妥。这些进程的类型以及每个类型中进程的数量就被称作 *进程构成* 。
 
-12-Factor 应用的进程 [不需要守护进程](http://dustin.github.com/2010/02/28/running-processes.html) 或是写入 PID 文件。相反的，应该借助操作系统的进程管理器(例如 [systemd](https://www.freedesktop.org/wiki/Software/systemd/) ，分布式的进程管理云平台，或是类似 [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) 的工具)，来管理 [输出流](/logs) ，响应崩溃的进程，以及处理用户触发的重启和关闭超级进程的请求。
+12-Factor 应用的进程 [不需要守护进程](http://dustin.github.com/2010/02/28/running-processes.html) 或是写入 PID 文件。相反的，应该借助操作系统的进程管理器(例如 [systemd](https://www.freedesktop.org/wiki/Software/systemd/) ，分布式的进程管理云平台，或是类似 [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) 的工具)，来管理 [输出流](./logs) ，响应崩溃的进程，以及处理用户触发的重启和关闭超级进程的请求。
