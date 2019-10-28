@@ -13,7 +13,7 @@ Les 12 facteurs
 ## [IV. Services externes](./backing-services)
 ### Traitez les services externes comme des ressources attachées
 
-## [V. Build, release, run](./build-release-run)
+## [V. Assemblez, publiez, exécutez](./build-release-run)
 ### Séparez strictement les étapes d'assemblage et d'exécution
 
 ## [VI. Processus](./processes)
