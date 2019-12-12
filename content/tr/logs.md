@@ -5,7 +5,7 @@
 
 Günlükler, bütün çalışan süreçler ve destek servislerinin çıktı akışlarından kümelenmiş, zaman sıralı olayların [akışıdır](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/). Günlükler ilk formda her bir satır için bir olay olacak şekilde yazı formatındadır(Bununla birlikte istisnalardaki geri dönüşleri birden fazla satırda ölçebilir). Günlükler başta ve sonda düzeltilmemiş ama akış, uygulama işlediği sürece devam eder.
 
-**On iki faktör uygulaması çıkış akışlarının depolaması veya yönlendirilmesiyle ilgilenmez.** Günlük dosyalarını yazma ve yönetme yapmamalıdır. Bunun yerine, her çalışan süreç kendi olay akışını tamponlamadan `stdout`'a yazar. Yerel geliştirme süresince, geliştirici uygulamanın davranışını gözlemlemek için terminallerinin önplanında bu akışı inceleyecekler.
+**On iki faktör uygulaması çıkış akışlarının depolaması veya yönlendirilmesiyle ilgilenmez.** Günlük dosyalarını yazma ve yönetme yapmamalıdır. Bunun yerine, her çalışan süreç kendi olay akışını tamponlamadan `stderr`'a yazar. Yerel geliştirme süresince, geliştirici uygulamanın davranışını gözlemlemek için terminallerinin önplanında bu akışı inceleyecekler.
 
 Evreleme ve ürün dağıtımlarında herbir sürecin akışı çalışma ortamı tarafından yakalanmış diğer uygulamadaki, diğer bütün akışlarla birlikte sıralanmış, görüntüleme ve uzun dönem arşivleme için bir veya daha fazla son hedeflerine yönlendirilmiş olacaklar. Bu arşivsel hedefler uygulama tarafından görülebilir veya yapılandırılabilir değildir, bunun yerine tamamen çalışma ortamı tarafından yönetilirler. Açık kaynak günlük yönlendiricileri ([Logplex](https://github.com/heroku/logplex) ve [Fluentd](https://github.com/fluent/fluentd) gibi) bu amaç için erişilebilirdir.
 
