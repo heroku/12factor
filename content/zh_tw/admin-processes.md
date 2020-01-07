@@ -3,7 +3,7 @@
 
 [進程構成](./concurrency)（process formation）是指用來處理應用的常規業務（比如處理 web 請求）的一組進程。與此不同，開發人員經常希望執行一些管理或維護應用的一次性任務，例如：
 
-* 運行數據移植（Django 中的 `manage.py migrate`, Rails 中的 `rake db:migrate`）。
+* 運行資料庫遷移（Django 中的 `manage.py migrate`, Rails 中的 `rake db:migrate`）。
 * 運行一個控制台（也被稱為 [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell），來執行一些代碼或是針對線上資料庫做一些檢查。大多數語言都通過直譯器提供了一個 REPL 工具（`python` 或 `perl`） ，或是其他命令（Ruby 使用 `irb`, Rails 使用 `rails console`）。
 * 運行一些提交到代碼倉庫的一次性腳本。
 
