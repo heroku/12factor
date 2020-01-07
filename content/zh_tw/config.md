@@ -3,7 +3,7 @@
 
 通常，應用的 *配置* 在不同 [部署](./codebase) (預發佈、生產環境、開發環境等等)間會有很大差異。這其中包括：
 
-* 資料庫庫，Memcached，以及其他 [後端服務](./backing-services) 的配置
+* 資料庫，Memcached，以及其他 [後端服務](./backing-services) 的配置
 * 第三方服務的認證，如 Amazon S3、Twitter 等
 * 每份部署特有的配置，如域名等
 
