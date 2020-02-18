@@ -1,4 +1,4 @@
-## IV. Backing services
+## IV. Podpůrné služby
 ### Nakládejte s podpůrnými službami jako s připojenými zdroji.
 
 *Podpůrná* služba je jakákoliv služba, kterou aplikace konzumuje přes síť jako součást svého normálního běhu. Příklady zahrnují databáze (jako například [MySQL](http://dev.mysql.com/) nebo [CouchDB](http://couchdb.apache.org/)), messaging/queueing systémy (jako jsou [RabbitMQ](http://www.rabbitmq.com/) nebo [Beanstalkd](https://beanstalkd.github.io)), SMTP služby pro odchozí emaily (jako [Postfix](http://www.postfix.org/)) a  cachovací systémy (jako je [Memcached](http://memcached.org/)).
