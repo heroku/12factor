@@ -1,4 +1,4 @@
-## V. Bygga, produktionssätta, köra
+## V. Build, deploy, run (Bygga, produktionssätta, köra)
 ### Strikt separation mellan bygg-stadie och kör-stadie
 
 En [kodbas](./codebase) omvandlas till en produkt (avsedd för annat än utveckling) genom tre stadier:

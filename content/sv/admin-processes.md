@@ -1,4 +1,4 @@
-## XII. Administrativa processer
+## XII. Admin processes (Administrativa processer)
 ### Köra administrativa uppgifter som engångsprocesser
 
 [Process-skapandet](./concurrency) är en samling av processer som används för att utföra applikationens ordinarie verksamhet (som att exempelvis hantera webb-anrop) medan den är igång. Förutom detta vill utvecklare ofta utföra enskilda administrativa eller underhållsmässiga uppgifter för applikationen, som till exempel:
