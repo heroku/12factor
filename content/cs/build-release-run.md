@@ -15,5 +15,5 @@ Nástroje pro nasazení obvykle poskytují i správu vydání a zejména pak sch
 
 Každé vydaní by mělo mít vždy unikátní ID, jako je například časová značka ( `2011-04-06-20:32:17`) nebo inkrementální číslo (například `v100`). Vydání již nelze po vytvoření jakkoliv upravovat, libovolná změna musí vždy vytvořit nové vydání.
 
-Sestavení iniciují vývojáři aplikace, kdykoliv se nasazuje nový kód. Naopak ke spuštění v běhovém prostředí může dojít automaticky v případě restartu serveru nebo restartem havarovaného procesu pomocí správce procesů. Proto by měla mít fáze spuštění co nejméně pohyblivých částí, jelikož problémy bránící aplikaci v běhu mohou nastat uprostřed noci, kdy nejsou žádní vývořáji k dispozici. Fáze sestavení pak může být složitější, protože chyby jsou více na očích pro vývojáře kontrolující nasazení aplikace.
+Sestavení iniciují vývojáři aplikace, kdykoliv se nasazuje nový kód. Naopak ke spuštění v běhovém prostředí může dojít automaticky v případě restartu serveru nebo restartem havarovaného procesu pomocí správce procesů. Proto by měla mít fáze spuštění co nejméně pohyblivých částí, jelikož problémy bránící aplikaci v běhu mohou nastat uprostřed noci, kdy nejsou žádní vývojáři k dispozici. Fáze sestavení pak může být složitější, protože chyby jsou více na očích pro vývojáře kontrolující nasazení aplikace.
 

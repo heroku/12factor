@@ -9,7 +9,7 @@ Twelve-factor aplikace je vždy sledována ve verzovacím systému, jako je nap�
 
 Vždy existuje korelace jedna-ku-jedné mezi zdrojovým kódem a aplikací: 
 
-* Pokud existuje více zdrojových kódů, nejedná se o aplikaci, ale o distribuovaný systém. Každá komponenta distibuovaného systému je dílčí aplikace, která může samostatně podléhat twelve-factor metodice.
+* Pokud existuje více zdrojových kódů, nejedná se o aplikaci, ale o distribuovaný systém. Každá komponenta distribuovaného systému je dílčí aplikace, která může samostatně podléhat twelve-factor metodice.
 * Více aplikací sdílejících stejný kód je porušení twelve-factor metodiky. Řešením je oddělení sdíleného kódu do knihovny, která se připojí pomocí [systému na správu závislostí](./dependencies).
 
 Každá aplikace má pouze jeden zdrojový kód, ale nasazení jedné aplikace bude vícero. *Nasazení* je běžící instance aplikace. Typicky je to produkční web a jeden nebo více testovacích webů. Každý vývojář má navíc lokální vývojovou kopii běžící aplikace, každou takovou kopii lze také považovat za nasazení.
