@@ -1,0 +1,7 @@
+zh_cn:
+  # Name of language listed in locales menu
+  language: 简体中文 (zh_cn)
+
+  # A text to make known that the article is a translation not an original.
+  # Empty for English, original.
+  translation: （简体中文）

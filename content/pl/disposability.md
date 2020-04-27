@@ -1,0 +1,14 @@
+## IX. Zbywalność
+### Zwiększ elastyczność aplikacji przez szybki start i bezproblemowe zamknięcie
+
+**[Procesy](./processes) aplikacji 12factor są *jednorazowe*, znaczy to, że mogą być wystartowane lub zatrzymane w dowolnym momencie.** Ułatwia to elastyczne skalowanie i szybkie wdrożenia [kodu](./codebase), zmianę [konfiguracji](./config) oraz zapewnia większą stabilność przy wdrożeniu na produkcję.
+
+Procesy powinny dążyć do **minimalizowania czasu swojego rozruchu**. W idealnej sytuacji proces powinien potrzebować kilku sekund na to aby wystartować i być gotowym na przyjmowanie zapytań. Dzięki krótkiemu czasowi startu można szybciej wykonywać kolejne [wdrożenia](./build-release-run) oraz łatwiej skalować aplikację. Zwiększa to również zdolności aplikacji do radzenia sobie z problemami, ponieważ `process manager` może bezproblemowo przenieść je na nową maszynę fizyczną, gdy zajdzie taka potrzeba.
+
+Procesy **zamykają się gdy otrzymają sygnał [SIGTERM](http://en.wikipedia.org/wiki/SIGTERM)** od managera procesów. Dla procesów sieciowych poprawne zamknięcie polega na zakończeniu nasłuchiwania na porcie usługi (skutkiem czego jest odrzucanie nowych zapytań), zakończenie obecnych, a ostatecznie zaprzestaniu działania. Wynika z tego, że zapytania HTTP są krótkie (trwają nie więcej niż kilka sekund), lub w przypadku `long pollingu` i utraty połączenia klient powinien bezproblemowo spróbować połączyć się ponownie.
+
+Dla procesów roboczych poprawnym zamknięciem jest zwrot obecnie wykonywanego zadania do kolejki. Dla przykładu w [RabbitMQ](http://www.rabbitmq.com/) działający proces może wysłać wiadomość [`NACK`](http://www.rabbitmq.com/amqp-0-9-1-quickref.html#basic.nack); w [Beanstalkd](https://beanstalkd.github.io), zadanie jest zwracane do kolejki automatycznie, gdy tylko proces się rozłączy. Systemy bazujące na blokadach zasobów jak [Delayed Job](https://github.com/collectiveidea/delayed_job#readme) muszą upewnić się, że odblokowały zajmowany wcześniej zasób. W tym modelu ważne jest to, że wszystkie zadania są [wielobieżne](http://pl.wikipedia.org/wiki/Wielobieżność), co zazwyczaj jest osiągane przez zebranie wyników w transakcję lub uczynienie operacji [idempotentną](http://pl.wikipedia.org/wiki/Idempotentno%C5%9B%C4%87).
+
+Architektura aplikacji 12factor jest również zaprojektowana by działające procesy zostały poprawnie **zakończone w razie awarii** sprzętu. Podczas gdy taka sytuacja jest o wiele rzadsza niż otrzymanie sygnału `SIGTERM`, wciąż może mieć miejsce. Zalecanym podejściem w takich przypadkach jest stosowanie serwerowego systemu kolejkowania zadań, jak Beanstalkd, który zwróci zadanie do kolejki, gdy klient się rozłączy, bądź minie maksymalny czas obsługi pojedynczego zapytania. Architektura ["crash-only"](http://lwn.net/Articles/191059/) jest więc rozwinięciem takiego [konceptu](http://docs.couchdb.org/en/latest/intro/overview.html).
+
+

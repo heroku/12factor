@@ -1,0 +1,13 @@
+<section class="abstract" id="factor">
+  <article>
+    <%= render_markdown(@factor) %>
+  </article>
+</section>
+
+<section class="concrete">
+  <nav>
+    <div id="locales"><%= render_locales(@factor) %></div>
+    <div id="prev"><%= render_prev(@factor) %></div>
+    <div id="next"><%= render_next(@factor) %></div>
+  </nav>
+</section>

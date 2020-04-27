@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, sans-serif;
+  line-height: 1.5em;
+  font-size: 12pt;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}  
+
+h1, h2 {
+  line-height: 1.25em;
+}
+
+header {
+  margin: 0;
+  margin-bottom: 8pt;
+  padding-top: 12pt;
+  padding-bottom: 26pt;
+  border: 1px solid black;
+  color: #fff;
+  background: #000;
+  font-size: 19pt;
+  text-align: center;
+  box-shadow: 0px 2px 12px #888;
+}
+
+header h1 a {
+  background: url(/images/symbol.png) top center no-repeat;
+  color: #FFFFFF;
+  display: block;
+  margin-top: 0.25em;
+  padding-top: 100px;
+  text-decoration: none;
+}
+
+section {
+  padding-top: 16pt;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 19pt;
+}
+
+article {
+  padding-top: 8pt;
+}
+
+article, nav {
+  margin: 0 auto;
+  text-align: justify;
+}
+
+article p a, article li a {
+  text-decoration: none;
+  border-bottom: 1px dashed #444;
+  color: #000;
+}
+
+article p a:hover, article li a:hover {
+  color: #337;
+}
+
+section.concrete {
+  background: #ccc;
+  margin-top: 24pt;
+  padding-top: 24pt;
+  padding-bottom: 32pt;
+  border-top: 8pt solid #aaa;
+}
+section.concrete h1 {
+  font-size: 28pt;
+  margin-bottom: 32pt;
+  text-align: center;
+}
+section.concrete h2 {
+  margin-top: 12pt;
+}
+section.concrete h2 a {
+  text-decoration: none;
+  color: #000;
+}
+section.concrete h2 a:hover {
+  border-bottom: 2px dashed #444;
+  color: #337;
+}
+section.concrete h3 {
+  color: #333;
+  font-weight: normal;
+}
+
+section#factor h2 {
+  font-size: 28pt;
+  margin-bottom: 12pt;
+}
+section#factor h3 {
+  font-size: 17pt;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 16pt;
+}
+
+nav {
+  margin-top: 16pt;
+  margin-bottom: 48pt;
+}
+nav #locales {
+  text-align: center;
+}
+nav #locales a {
+  color: #000;
+}
+nav #locales span {
+  font-weight: bold;
+}
+nav #next {
+  float: right;
+}
+nav #prev {
+  float: left;
+}
+nav #next a, nav #prev a {
+  display: block;
+  font-size: 19pt;
+  text-decoration: none;
+  color: #000;
+}
+
+code {
+  border: 1px solid #999;
+  background: #eee;
+  padding: 1pt 3pt;
+}
+
+table {
+  padding-left: 32pt;
+}
+td, th {
+  padding-right: 12pt;
+  padding-bottom: 4pt;
+}
+
+footer {
+  color: #999;
+  font-size: 10pt;
+  background: #000;
+  padding-top: 24pt;
+  padding-bottom: 16pt;
+  text-align: center;
+  padding-right: 64pt;
+  min-height: 56pt;
+}
+
+footer a {
+  color: #999;
+}
+
+article img {
+  float: right;
+  margin-left: 32pt;
+}
+
+article img.full {
+  float: none;
+  margin-left: 0;
+}

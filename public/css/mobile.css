@@ -1,0 +1,121 @@
+@media screen and (min-width: 1041px) {
+
+  section {
+    min-width: 65em;
+  }
+
+  article, nav {
+    max-width: 55em;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  article img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1040px) {
+
+  header {
+    font-size: 1em;
+  }
+  
+  article, nav {
+    width:85%;
+    min-width: none;
+    max-width: none;
+  }
+
+  section, footer {
+    width:100%;
+    min-width: none;
+    max-width: none;
+  }
+
+  article h1, article h2, article h3, article p, article table {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  article ul, article ol {
+    padding-left: 35px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  
+  article table {
+    font-size: 0.8em;
+  }
+  
+  article table td {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+  
+  article img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  nav a {
+    padding:1em;
+  }
+  
+  nav a {
+    padding:1em;
+  }
+  
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 0.75em;
+  }
+  
+  section, article, nav, footer {
+    min-width: 320px;
+    max-width: 480px;
+  }
+
+  article h1, article h2, article h3, article p, article table {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+  }
+  
+  article ul, article ol {
+    padding-left: 35px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  
+  article table {
+    font-size: 0.5em;
+  }
+  
+  article table td {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+  
+  article img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  nav a {
+    padding: 1em;
+  }
+  
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

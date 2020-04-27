@@ -1,0 +1,17 @@
+{
+  "name": "12factor",
+  "stack": "heroku-18",
+  "scripts": {
+  },
+  "env": {
+  },
+  "addons": [
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "exit 0"
+      }
+    }
+  }
+}

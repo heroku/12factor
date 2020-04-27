@@ -1,0 +1,7 @@
+fr:
+  # Name of language listed in locales menu
+  language: "Français (fr)"
+
+  # A text to make known that the article is a translation not an original.
+  # Empty for English, original.
+  translation: "Ce texte est une traduction"

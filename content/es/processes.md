@@ -1,0 +1,14 @@
+## VI. Procesos
+### Ejecutar la aplicación como uno o más procesos sin estado
+
+La aplicación se ejecuta como uno o más *procesos* en el entorno de ejecución.
+
+El caso más sencillo que podemos plantear es que el código es un script independiente, el entorno de ejecución es un portátil de un desarrollador, el compilador o interprete correspondiente del lenguaje está instalado, y el proceso se lanza mediante la linea de mandatos (por ejemplo, `python my_script.py`). Por otro lado podemos encontrar el caso de un despliegue en producción de una aplicación compleja que puede usar muchos [tipos de procesos, instanciados como cero o más procesos en ejecución](./concurrency).
+
+**Los procesos "twelve-factor" no tienen estado y son "[share-nothing](http://en.wikipedia.org/wiki/Shared_nothing_architecture)".** Cualquier información que necesite persistencia se debe almacenar en un ['backing service'](./backing-services) con estado, habitualmente una base de datos.
+
+Tanto el espacio de memoria de un proceso como el sistema de ficheros se pueden usar como si fueran una cache temporal para hacer transacciones. Por ejemplo, descargar un fichero de gran tamaño, realizar alguna operación sobre él, y almacenar sus resultados en una base de datos. Las aplicaciones "twelve-factor" nunca dan por hecho que cualquier cosa cacheada en memoria o en el disco vaya a estar disponible al realizar una petición al ejecutar diferentes procesos. Con muchos procesos de cada tipo ejecutándose al mismo tiempo, existe una gran probabilidad de que otro proceso distinto sirva una petición en el futuro. Incluso cuando solo está corriendo un solo proceso, un reinicio (provocado por el despliegue de código, un cambio de configuración o un cambio de contexto del proceso) normalmente elimina todo el estado local (e.g. memoria y sistema de ficheros).
+
+Los compresores de estáticos (como [Jammit](http://documentcloud.github.com/jammit/) o [django-compressor](http://django-compressor.readthedocs.org/)) usan el sistema de ficheros como una cache para ficheros compilados. En las aplicaciones "twelve-factor" es preferible realizar esta compilación durante la [fase de construcción](./build-release-run), como con el [asset pipeline de Rails](http://guides.rubyonrails.org/asset_pipeline.html), en lugar de hacerlo en tiempo de ejecución.
+
+Algunos sistemas webs dependen de ["sticky sessions"](http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence), esto quiere decir que cachean la información de la sesión de usuario en la memoria del proceso de la aplicación y esperan peticiones futuras del mismo visitante para redirigirle al mismo proceso. Las "sticky sessions" son una violación de "twelve-factor" y no deberían usarse nunca ni depender de ellas. La información del estado de la sesión es un candidato perfecto para almacenes de información que ofrecen mecanismos de tiempo de expiración, como [Memcached](http://memcached.org/) o [Redis](http://redis.io/).

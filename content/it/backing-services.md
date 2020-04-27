@@ -1,0 +1,14 @@
+## IV. Backing Service
+### Tratta i backing service come "risorse"
+
+Un "backing service" è un qualsiasi servizio che l'applicazione consuma attraverso la rete durante la sua esecuzione. Alcuni esempi includono i database (come [MySQL](http://dev.mysql.com/) o [CouchDB](http://couchdb.apache.org/)), servizi di messaging/code (come [RabbitMQ](http://www.rabbitmq.com/) oppure [Beanstalkd](https://beanstalkd.github.io)), servizi SMTP per la posta (come [Postfix](http://www.postfix.org/)) e sistemi di cache (come [Memcached](http://memcached.org/)).
+
+Un backing service (prendiamo ad esempio un database) è tradizionalmente gestito dallo stesso amministratore di sistema, al deployment dell'applicazione. In aggiunta a questi servizi gestiti in locale potrebbero esserne presenti altri, forniti da terze parti. Parliamo di servizi SMTP (come [Postmark](http://postmarkapp.com/)), servizi di raccolta metriche (come [New Relic](http://newrelic.com/) o [Loggly](http://www.loggly.com/)), servizi per asset (come [Amazon S3](http://aws.amazon.com/s3/)), e anche servizi accessibili via API (come [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), o [Last.fm](http://www.last.fm/api)).
+
+**Il codice di un'app twelve-factor non fa distinzioni tra servizi in locale o third party**. Per l'applicazione, entrambi sono risorse connesse, accessibili via URL (o tramite un altro locator) e credenziali memorizzate nell'opportuno file di [configurazione](./config).  A un qualsiasi [deployment](./codebase) di un'applicazione twelve-factor si deve poter permettere di passare velocemente da un database MySQL locale a uno third party (come [Amazon RDS](http://aws.amazon.com/rds/)) senza alcuna modifica al codice. Allo stesso modo, un server SMTP locale dovrebbe poter essere cambiato con uno third party (come Postmark). In entrambi i casi, a cambiare dovrebbero essere **solo** i file di configurazione necessari.
+
+Ogni backing service è quindi definibile come una "risorsa connessa". Un Database MySQL è una risorsa. Due database MySQL (utilizzati per lo sharding a livello di applicazione) saranno visti come due distinte risorse. Un'app twelve-factor vede questi database come *risorse* anche per sottolineare la separazione dal deployment a cui fanno riferimento.
+
+<img src="/images/attached-resources.png" class="full" alt="Un deployment di produzione collegato a quattro backing service." />
+
+Le risorse possono essere collegate e scollegate da un deployment a piacimento. Per esempio, supponiamo che il database dell'applicazione si comporti in modo anomalo per problemi hardware. L'amministratore potrebbe decidere di voler configurare un altro server di database ripreso da un recente backup. Il vecchio database verrebbe scollegato, quello nuovo connesso -- senza modifiche al codice.

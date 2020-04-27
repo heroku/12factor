@@ -1,0 +1,7 @@
+es:
+  # Name of language listed in locales menu
+  language: Español (es)
+
+  # A text to make known that the article is a translation not an original.
+  # Empty for English, original.
+  translation: (Traducción de la versión original en Inglés)
