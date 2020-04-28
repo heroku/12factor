@@ -1,18 +1,17 @@
 ## I. Кодавая база
 ### Адна кодавая база адсочваецца ў сістэме кантролю версій, шмат разгортванняў
 
-A twelve-factor app is always tracked in a version control system, such as [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), or [Subversion](http://subversion.apache.org/).  A copy of the revision tracking database is known as a *code repository*, often shortened to *code repo* or just *repo*.
+Дванаццаціфактарны дадатак заўсёды адсочваецца ў сістэме кіравання версіямі, такіх як [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) або [Subversion](http://subversion.apache.org/). Копія базы дадзеных адсочвання рэвізій вядомая як *рэпазіторый кода* (code repository), часта скарочанае да *рэпа кода* (code repo) або проста *рэпа* (repo).
 
-A *codebase* is any single repo (in a centralized revision control system like Subversion), or any set of repos who share a root commit (in a decentralized revision control system like Git).
+*Кодава база* - гэта любы адзіны рэпазіторый (у цэнтралізаванай сістэме кіравання версіямі, як Subversion), або любы набор рэпазіторый,якія маяюць адізны пачатковы камміт (commit) (у дэцэнтралізаванай сістэме кантролю версій, такі як Git).
 
 ![One codebase maps to many deploys](/images/codebase-deploys.png)
 
-There is always a one-to-one correlation between the codebase and the app:
+Паміж кодавай базай і дадаткам заўседы ўзаемна адназначная карэляція:
 
-* If there are multiple codebases, it's not an app -- it's a distributed system.  Each component in a distributed system is an app, and each can individually comply with twelve-factor.
-* Multiple apps sharing the same code is a violation of twelve-factor.  The solution here is to factor shared code into libraries which can be included through the [dependency manager](./dependencies).
+* Калі ёсць некалькі баз кодаў, гэта не дадатак - гэта размеркаваная сістэма (distributed system). Кожны кампанент у размеркаванай сістэме - гэта дадатак, і кожны з іх можа індывідуальна адпавядаць дванаццаці фактарам.
+* Сумеснае выкарыстоўванне агульнага кода некалькімі дадаткамі з'яўляецца парушэннем дванаццаці фактараў.  У данным выпадку рашэнне складаецца ў там, каб раскласці агульны код па бібліятэцам, якія могуць быць уключаны ў дадаткі праз [мэнэджэра залежнасцяў (dependency manager)](./dependencies).
 
-There is only one codebase per app, but there will be many deploys of the app.  A *deploy* is a running instance of the app.  This is typically a production site, and one or more staging sites.  Additionally, every developer has a copy of the app running in their local development environment, each of which also qualifies as a deploy.
+Існуе толькі адна кодавая база для кожнага дадатка, але можна быць шмат разгортванняў гэтага дадатку. *Разгортванне (deploy)* гэта запушчаны асобнік(instance) дадатка. Гэта, як правіла, вытворчы(production) сайт і адзін або некалькі прамежкавых(staging) сайтаў. Акрамя таго, кожны распрацоўшчык мае копію дадатка, які запушчаны ў сваёй лакальнай асяроддзі распрацоўкі, кожная з якіх таксама кваліфікуецца як разгортванне.
 
-The codebase is the same across all deploys, although different versions may be active in each deploy.  For example, a developer has some commits not yet deployed to staging; staging has some commits not yet deployed to production.  But they all share the same codebase, thus making them identifiable as different deploys of the same app.
-
+Кодава база аднолькавая ва ўсіх разгортваннях, у той жа час розныя версіі могуць быць усталяваны ў кожным разгортванні. Напрыклад, у распрацоўніка есць некалькі камітаў, якія яшчэ не разгорнуты ў прамежкавым асяроддзі(staging); прамежкавае асяроддзе мае некалькі камітаў, якія не разгорнуты ў вытворчым асяроддзі (production). Але ўсе яны маюць адну і тую ж кодавую базу, што дазваляе ідэнтыфікаваць іх як розныя разгортванні аднаго і таго ж дадатку.
