@@ -4,7 +4,7 @@
 [进程构成](./concurrency)（process formation）是指用来处理应用的常规业务（比如处理 web 请求）的一组进程。与此不同，开发人员经常希望执行一些管理或维护应用的一次性任务，例如：
 
 * 运行数据移植（Django 中的 `manage.py migrate`, Rails 中的 `rake db:migrate`）。
-* 运行一个控制台（也被称为 [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell），来执行一些代码或是针对线上数据库做一些检查。大多数语言都通过解释器提供了一个 REPL 工具（`python` 或 `perl`） ，或是其他命令（Ruby 使用 `irb`, Rails 使用 `rails console`）。
+* 运行一个控制台（也被称为 [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) shell），来执行一些代码或是针对线上数据库做一些检查。大多数语言都通过解释器提供了一个 REPL 工具（`python` 或 `perl`） ，或是其他命令（Ruby 使用 `irb`, Rails 使用 `rails console`）。
 * 运行一些提交到代码仓库的一次性脚本。
 
 一次性管理进程应该和正常的 [常驻进程](./processes) 使用同样的环境。这些管理进程和任何其他的进程一样使用相同的 [代码](./codebase) 和 [配置](./config) ，基于某个 [发布版本](./build-release-run) 运行。后台管理代码应该随其他应用程序代码一起发布，从而避免同步问题。

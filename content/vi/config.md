@@ -10,7 +10,7 @@ Các ứng dụng thường lưu trữ các cấu hình như là hằng số tro
 
 Một litmus test cho ứng dụng có các cấu hình được thừa số hoá chính xác là mã gốc có khả năng nguồn mở hoá bất kỳ lúc nào mà không lo sợ bị mất các thông tin đăng nhập.
 
-Chú ý rằng, định nghĩa của "cấu hình" không bao gồm các cấu hình nội tại của ứng dụng, như là `config/routes.rb` trong Rails, hoặc [các thành phần được kết nối](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) trong [Spring](http://spring.io/). Những cấu hình kiểu này thường không thay đổi giữa các triển khai, và do đó đã thực hiện tốt trong mã nguồn.
+Chú ý rằng, định nghĩa của "cấu hình" không bao gồm các cấu hình nội tại của ứng dụng, như là `config/routes.rb` trong Rails, hoặc [các thành phần được kết nối](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) trong [Spring](https://spring.io/). Những cấu hình kiểu này thường không thay đổi giữa các triển khai, và do đó đã thực hiện tốt trong mã nguồn.
 
 Một cách tiếp cận khác với các cấu hình là việc sử dụng tệp tin cấu hình mà tệp tin đó không được quản lý phiên bản, như là `config/database.yml` trong Rails. Đây là một cải tiến lớn so với việc
 sử dụng hằng số trong mã nguồn đã được quản lý phiên bản, nhưng vẫn có điểm yếu: dễ bị thêm nhầm vào quản lý phiên bản, các tệp tin cấu hình dễ bị phân tán ở những nơi khác nhau và các định dạng khác

@@ -1,7 +1,7 @@
 ## I. Base de code
 ### Une base de code suivie avec un système de contrôle de version, plusieurs déploiements
 
-Une application 12 facteurs est toujours suivie dans un système de contrôle de version, tel que [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), ou [Subversion](http://subversion.apache.org/). Une copie de la base de données de suivi des révisions est appelée *dépôt de code*, souvent raccourci en *dépôt*. Le terme anglais *code repository*, raccourci en *repository* et *repo* est également utilisé.
+Une application 12 facteurs est toujours suivie dans un système de contrôle de version, tel que [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), ou [Subversion](https://subversion.apache.org/). Une copie de la base de données de suivi des révisions est appelée *dépôt de code*, souvent raccourci en *dépôt*. Le terme anglais *code repository*, raccourci en *repository* et *repo* est également utilisé.
 
 Une *base de code* correspond à chaque dépôt (dans un système de contrôle de version centralisé tel que Subversion), ou tout ensemble de dépôts qui partage un commit racine (dans un système de contrôle de version décentralisé comme Git).
 

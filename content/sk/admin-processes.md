@@ -4,7 +4,7 @@
 [Process formation](./concurrency) je sada procesov, ktoré tvoria bežnú prevádzku aplikácie (napríklad odpovedanie na požiadavky).  Na rozdiel od toho, vývojári často chcú spraviť jednorazové administratívne alebo údržbové úlohy, ako napríklad:
 
 * Spustenie databázovej migrácie (e.g. `manage.py migrate` v Django, `rake db:migrate` v Rails).
-* Spustenie konzoly (alebo tiež [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell) aby mohli spúštať ľubovoľný kód alebo skúmať modely aplikácie voči živej databáze.  Väčšina jazykov poskytuje REPL spustením interpretra bez argumentov (napr. `python` alebo `perl`) v niektorých prípadoch majú samostatný príkaz (napr. `irb` pre Ruby, `rails console` pre Rails).
+* Spustenie konzoly (alebo tiež [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) shell) aby mohli spúštať ľubovoľný kód alebo skúmať modely aplikácie voči živej databáze.  Väčšina jazykov poskytuje REPL spustením interpretra bez argumentov (napr. `python` alebo `perl`) v niektorých prípadoch majú samostatný príkaz (napr. `irb` pre Ruby, `rails console` pre Rails).
 * Spustenie jednorazových skriptov uložených v repozitári aplikácie (napr.. `php scripts/fix_bad_records.php`).
 
 Jednorazové administračné procesy by sa mali spúštať v identickom prostredí ako bežné dlho [bežiace procesy](./processes) aplikácie.  Bežia voči [releasu](./build-release-run), použitím rovnakého [kódu](./codebase) a [konfigurácie](./config) ako ostatné procesy bežiace v rámci releasu. Administračný kód sa musí dodať spolu s kódom aplikácie, aby sa zamedzilo synchronizačným problémom.

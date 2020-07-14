@@ -1,7 +1,7 @@
 ## I. Zdrojový kód
 ### Mějte jeden zdrojový kód ve verzovacím systému a mnoho nasazení.
 
-Twelve-factor aplikace je vždy sledována ve verzovacím systému, jako je například [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) nebo [Subversion](http://subversion.apache.org/). Kopie verzovací databáze se nazývá *kódový repozitář*, často zkracováno jako *repozitář* nebo jen *repo*.
+Twelve-factor aplikace je vždy sledována ve verzovacím systému, jako je například [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) nebo [Subversion](https://subversion.apache.org/). Kopie verzovací databáze se nazývá *kódový repozitář*, často zkracováno jako *repozitář* nebo jen *repo*.
 
 *Zdrojový kód* je jakýkoliv repozitář (v centralizovaném verzovacím systému jako je Subversion), nebo jakákoliv skupina repozitářů, které mají společný kořenový commit (v decentralizovaném verzovacím systému jako je Git).
 

@@ -1,7 +1,7 @@
 ## II. Các phụ thuộc
 ### Khai báo rõ ràng và phân tách các phụ thuộc
 
-Hầu hết các ngôn ngữ lập trình đều cung cấp hệ thống gói để phân phối các gói thư viện hỗ trợ, ví dụ như [CPAN](http://www.cpan.org/) cho Perl hay [Rubygems](http://rubygems.org/) cho Ruby.  Các thư viện cài đặt thông qua một hệ thống gói có thể được cài đặt ở mức phủ hệ thống (được biết đến với thuật ngữ "site packages") hay được nhóm và trong một thư mục có kèm ứng
+Hầu hết các ngôn ngữ lập trình đều cung cấp hệ thống gói để phân phối các gói thư viện hỗ trợ, ví dụ như [CPAN](https://www.cpan.org/) cho Perl hay [Rubygems](https://rubygems.org/) cho Ruby.  Các thư viện cài đặt thông qua một hệ thống gói có thể được cài đặt ở mức phủ hệ thống (được biết đến với thuật ngữ "site packages") hay được nhóm và trong một thư mục có kèm ứng
 dụng (được biết đến với thuật ngữ "vendoring" hay "bundling").
 
 **Một ứng dụng 12-hệ số không bao giờ phụ thuộc vào sự hiện diện tuyệt đối của các gói hệ
@@ -10,7 +10,7 @@ thống.** Nó khai báo toàn bộ các phụ thuộc hoàn toàn thông qua b�
 Khai báo đầy đủ và rõ ràng các phụ thuộc được áp dụng đồng đều cho cả hệ thống sản xuất và
 phát triển.
 
-Lấy ví dụ [Gem Bundler](http://gembundler.com/) của Ruby cung cấp định dạng kê khai `Gemfile` để khai báo phụ thuộc và `bundle exec` để phân cách phụ thuộc.  Với Python thì có công cụ riêng biệt cho các bước trên -- [Pip](http://www.pip-installer.org/en/latest/) được dùng để khai báo [Virtualenv](http://www.virtualenv.org/en/latest/) để phân cách.  Ngay cả C có [Autoconf](http://www.gnu.org/s/autoconf/) để khai báo phụ thuộc, và liên kết tĩnh (static linking) có thể cung cấp phân cách phụ thuộc.  Bất kể công cụ gì, kê khai phụ thuộc và phân cách luôn phải đi đôi với nhau -- chỉ cần thiếu một trong hai là không đạt yêu câu của của 12-hệ số.
+Lấy ví dụ [Gem Bundler](http://gembundler.com/) của Ruby cung cấp định dạng kê khai `Gemfile` để khai báo phụ thuộc và `bundle exec` để phân cách phụ thuộc.  Với Python thì có công cụ riêng biệt cho các bước trên -- [Pip](http://www.pip-installer.org/en/latest/) được dùng để khai báo [Virtualenv](http://www.virtualenv.org/en/latest/) để phân cách.  Ngay cả C có [Autoconf](https://www.gnu.org/s/autoconf/) để khai báo phụ thuộc, và liên kết tĩnh (static linking) có thể cung cấp phân cách phụ thuộc.  Bất kể công cụ gì, kê khai phụ thuộc và phân cách luôn phải đi đôi với nhau -- chỉ cần thiếu một trong hai là không đạt yêu câu của của 12-hệ số.
 
 Một ích lợi khác của khai báo phụ thuộc rõ ràng là nó đơn giản hoá quá trình cài đặt cho
 lập trình viên mới tiếp nhận dự án.  Các lập trình viên mới có thể lấy về mã trên hệ thống

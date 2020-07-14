@@ -4,7 +4,7 @@
 [프로세스 포메이션](./concurrency)은 애플리케이션의 일반적인 기능들(예: Web request의 처리)을 처리하기 위한 프로세스들의 집합 입니다. 이와는 별도로, 개발자들은 종종 일회성 관리나 유지 보수 작업이 필요합니다. 그 예는 아래와 같습니다.
 
 * 데이터베이스 마이그레이션을 실행합니다. (예: Django에서 `manage.py migrate`, Rail에서 `rake db:migrate`)
-* 임의의 코드를 실행하거나 라이브 데이터베이스에서 앱의 모델을 조사하기 위해 콘솔([REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) Shell로도 알려져 있는)을 실행합니다. 대부분의 언어에서는 인터프리터를 아무런 인자 없이 실행하거나(예: python, perl) 별도의 명령어로 실행(예: ruby의 irb, rails의 rails console)할 수 있는 REPL를 제공합니다.
+* 임의의 코드를 실행하거나 라이브 데이터베이스에서 앱의 모델을 조사하기 위해 콘솔([REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) Shell로도 알려져 있는)을 실행합니다. 대부분의 언어에서는 인터프리터를 아무런 인자 없이 실행하거나(예: python, perl) 별도의 명령어로 실행(예: ruby의 irb, rails의 rails console)할 수 있는 REPL를 제공합니다.
 * 애플리케이션 저장소에 커밋된 일회성 스크립트의 실행 (예: php scripts/fix_bad_records.php)
 
 일회성 admin 프로세스는 애플리케이션의 일반적인 [오래 실행되는 프로세스](./processes)들과 동일한 환경에서 실행되어야 합니다. 일회성 admin 프로세스들은 릴리즈를 기반으로 실행되며, 해당 릴리즈를 기반으로 돌아가는 모든 프로세스처럼 같은 [코드베이스](./codebase)와 [설정](./config)를 사용해야 합니다. admin 코드는 동기화 문제를 피하기 위해 애플리케이션 코드와 함께 배포되어야 합니다.

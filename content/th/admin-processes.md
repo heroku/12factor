@@ -4,7 +4,7 @@
 [process formation](./concurrency) เป็นอาร์เรย์ของ process ที่ใช้ในการทำธุรกิจปรกติของ app (เช่นการจัดการ reqeust ของเว็บ) ขณะทำงาน developer มักต้องการทำการดูแลหรือบำรุงรักษาเพียงคนเดียวสำหรับ app เช่น:
 
 * รันการย้ายข้อมูลฐานข้อมูล (เช่น `manage.py migrate` ใน Django, `rake db:migrate` ใน Rails)
-* รันคอนโซล (เป็นที่รู้จักในชื่อ [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell) เพื่อรัน code แบบทันทีทันใดหรือตรวจสอบโมเดลของ app ที่ติดต่อกับฐานข้อมูลทันที ภาษาคอมพิวเตอร์ส่วนใหญ่มี REPL โดยการรัน interpreter โดยไม่ต้องมี argument ใดๆ (เช่น `python` หรือ `perl`) หรือในบางกรณีมีการแยกคำสั่ง (เช่น `irb` สำหรับ Ruby, `rails console` สำหรับ Rails) 
+* รันคอนโซล (เป็นที่รู้จักในชื่อ [REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) shell) เพื่อรัน code แบบทันทีทันใดหรือตรวจสอบโมเดลของ app ที่ติดต่อกับฐานข้อมูลทันที ภาษาคอมพิวเตอร์ส่วนใหญ่มี REPL โดยการรัน interpreter โดยไม่ต้องมี argument ใดๆ (เช่น `python` หรือ `perl`) หรือในบางกรณีมีการแยกคำสั่ง (เช่น `irb` สำหรับ Ruby, `rails console` สำหรับ Rails) 
 * รันสคริปต์ครั้งเดียวที่ commit ไปที่ repo ของ app (เช่น `php scripts/fix_bad_records.php`)
 
 การดูแล process ครั้งเดียวควรจะทำงานในสภาพแวดล้อมที่เหมือนกับทั้วไป [long-running processes](./processes) สำหรับ app ซึ่งทำงานกับ [release](./build-release-run) ใช้ [codebase](./codebase) and [การตั้งค่า](./config) เดียวกันกับ process ใดๆที่ทำงานกับ release ผู้ดูแลระบบของ code จำเป็นต้อง ship ด้วย application code เพื่อหลีกเลี่ยงปัญหาการประสาน (synchronization)

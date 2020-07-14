@@ -1,7 +1,7 @@
 ## I. Código base (Codebase)
 ### Un código base sobre el que hacer el control de versiones y multiples despliegues
 
-Una aplicación "twelve-factor" se gestiona siempre con un sistema de control de versiones, como [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), o [Subversion](http://subversion.apache.org/). A la copia de la base de datos de seguimiento de versiones se le conoce como un *repositorio de código*, a menudo abreviado como *repo de código* o simplemente *repo*.
+Una aplicación "twelve-factor" se gestiona siempre con un sistema de control de versiones, como [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), o [Subversion](https://subversion.apache.org/). A la copia de la base de datos de seguimiento de versiones se le conoce como un *repositorio de código*, a menudo abreviado como *repo de código* o simplemente *repo*.
 
 El *código base* es cualquier repositorio (en un sistema de control de versiones centralizado como Subversion), o cualquier conjunto de repositorios que comparten un commit raíz (en un sistema de control de versiones descentralizado como Git).
 

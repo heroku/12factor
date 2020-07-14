@@ -1,7 +1,7 @@
 ## I. コードベース
 ### バージョン管理されている1つのコードベースと複数のデプロイ
 
-Twelve-Factor Appは[Git](http://git-scm.com/)や[Mercurial](https://www.mercurial-scm.org/)、[Subversion](http://subversion.apache.org/)などのバージョン管理システムで常に変更を追跡している。リビジョン追跡データベースのコピーは *コードリポジトリ* と言われ、単に *リポジトリ* とも言われる。
+Twelve-Factor Appは[Git](https://git-scm.com/)や[Mercurial](https://www.mercurial-scm.org/)、[Subversion](https://subversion.apache.org/)などのバージョン管理システムで常に変更を追跡している。リビジョン追跡データベースのコピーは *コードリポジトリ* と言われ、単に *リポジトリ* とも言われる。
 
 *コードベース* は、単一のリポジトリ（Subversionのような集中バージョン管理システムの場合）またはルートコミットを共有する複数のリポジトリ（Gitのような分散バージョン管理システムの場合）である。
 

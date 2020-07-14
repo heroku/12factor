@@ -7,8 +7,8 @@
 
 **Twelve-Factor Appではプロセスは第一級市民である。** Twelve-Factor Appにおけるプロセスの考え方は、[サービスのデーモンを実行するためのUnixプロセスモデル](https://adam.herokuapp.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/)から大きなヒントを得ている。このモデルを使い、個々のワークロードの種類を *プロセスタイプ* に割り当てることで、開発者はアプリケーションが多様なワークロードを扱えるように設計することができる。例えば、HTTPリクエストはWebプロセスによって処理し、時間のかかるバックグラウンドタスクはワーカープロセスによって処理することができる。
 
-このモデルは、ランタイムVM内のスレッドや、[EventMachine](https://github.com/eventmachine/eventmachine)、[Twisted](http://twistedmatrix.com/trac/)、[Node.js](http://nodejs.org/)などの非同期イベントモデルによって、個々のプロセスがプロセス内部で多重化することを禁止するわけではない。しかし個々のVMはそれほど大きくなる（垂直にスケールする）ことができないため、アプリケーションは複数の物理マシンで動作する複数のプロセスへと拡大できなければならない。
+このモデルは、ランタイムVM内のスレッドや、[EventMachine](https://github.com/eventmachine/eventmachine)、[Twisted](https://twistedmatrix.com/trac/)、[Node.js](https://nodejs.org/)などの非同期イベントモデルによって、個々のプロセスがプロセス内部で多重化することを禁止するわけではない。しかし個々のVMはそれほど大きくなる（垂直にスケールする）ことができないため、アプリケーションは複数の物理マシンで動作する複数のプロセスへと拡大できなければならない。
 
 このプロセスモデルが真価を発揮するのは、スケールアウトが必要になったときである。[シェアードナッシングで水平分割可能なTwelve-Factor Appプロセスの性質](./processes)は、並行性を高める操作が単純かつ確実なものであることを意味する。プロセスタイプとそれぞれのタイプのプロセス数の配列は、 *プロセスフォーメーション* と言われる。
 
-Twelve-Factor Appのプロセスは[決してデーモン化するべきではないし](http://dustin.github.com/2010/02/28/running-processes.html)、PIDファイルを書き出すべきではない。その代わりに、OSのプロセスマネージャー（例：[systemd](https://www.freedesktop.org/wiki/Software/systemd/)、クラウドプラットフォームの分散プロセスマネージャー、あるいは開発環境における[Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)のようなツール）を頼ることで、[出力ストリーム](./logs)を管理し、プロセスのクラッシュに対応し、ユーザーによる再起動やシャットダウンを処理すべきである。
+Twelve-Factor Appのプロセスは[決してデーモン化するべきではないし](https://dustin.github.com/2010/02/28/running-processes.html)、PIDファイルを書き出すべきではない。その代わりに、OSのプロセスマネージャー（例：[systemd](https://www.freedesktop.org/wiki/Software/systemd/)、クラウドプラットフォームの分散プロセスマネージャー、あるいは開発環境における[Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)のようなツール）を頼ることで、[出力ストリーム](./logs)を管理し、プロセスのクラッシュに対応し、ユーザーによる再起動やシャットダウンを処理すべきである。

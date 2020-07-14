@@ -1,7 +1,7 @@
 ## I. Codebase
 ### Una sola codebase sotto controllo di versione, tanti deploy
 
-Un'app conforme alla metodologia twelve-factor è sempre sotto un sistema di controllo di versione, sia essa [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), o [Subversion](http://subversion.apache.org/). Una copia della codebase è detta *code repository*, oppure più in breve *code repo* o *repo*.
+Un'app conforme alla metodologia twelve-factor è sempre sotto un sistema di controllo di versione, sia essa [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), o [Subversion](https://subversion.apache.org/). Una copia della codebase è detta *code repository*, oppure più in breve *code repo* o *repo*.
 
 Una *codebase* è quindi un singolo repository (in un sistema centralizzato come Subversion), oppure un set di repo che condividono una root commit (in un sistema di controllo decentralizzato come Git).
 

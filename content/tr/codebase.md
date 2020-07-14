@@ -1,7 +1,7 @@
 ## I. Kod Tabanı
 ### Bir çok dağıtım kod tabanı gözden geçirme kontrolünde izlenmeli
 
-On iki faktör bir uygulama her zaman [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/) veya [Subversion](http://subversion.apache.org/) gibi bir sürüm takip sistemiyle izlenir. VEritabanının gözden geçirme sisteminin bir kopyası *kod deposu* olarak bilinir. *kod repo* ya da sadece *repo* olarak kısaltılır.
+On iki faktör bir uygulama her zaman [Git](https://git-scm.com/), [Mercurial](http://mercurial.selenic.com/) veya [Subversion](https://subversion.apache.org/) gibi bir sürüm takip sistemiyle izlenir. VEritabanının gözden geçirme sisteminin bir kopyası *kod deposu* olarak bilinir. *kod repo* ya da sadece *repo* olarak kısaltılır.
 
 Bir *kod tabanı* herhangi tek bir depo(Subversion gibi merkezi gözden geçirme kontrol sistemi) ya da kök işleyicini paylaşan bir takım repodur(Git gibi merkezi olmayan gözden geçirme kontrol sistemi).
 

@@ -1,7 +1,7 @@
 ## I. Base de Código
 ### Uma base de código com rastreamento utilizando controle de revisão, muitos deploys
 
-Uma aplicação 12 fatores é sempre rastreada em um sistema de controle de versão, como [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), ou [Subversion](http://subversion.apache.org/). Uma cópia da base de dados do rastreamento de revisões é conhecido como *repositório de código*, normalmente abreviado como *repositório* ou *repo*.
+Uma aplicação 12 fatores é sempre rastreada em um sistema de controle de versão, como [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), ou [Subversion](https://subversion.apache.org/). Uma cópia da base de dados do rastreamento de revisões é conhecido como *repositório de código*, normalmente abreviado como *repositório* ou *repo*.
 
 Uma *base de código* é um único repo (em um sistema de controle de versão centralizado como Subversion), ou uma série de repositórios que compartilham um registro raiz.
 
