@@ -5,8 +5,7 @@ En tolvfaktorsapplikation hålls alltid i någon form av versionskontrollsystem,
 
 En *kodbas* är varje enskilt repo (i ett centraliserat versionshanteringssystem såsom Subversion), eller varje set av repon som delar en viss koduppladdning som bas (i ett decentraliserat versionshanteringssystem såsom Git).
 
-![En kodbas, flera produktionssättningar](/images/codebase-deploys.png)
-![One codebase maps to many deploys](/images/codebase-deploys.png)
+![En kodbas kopplas till flera produktionssättningar](/images/codebase-deploys.png)
 
 Det finns alltid ett ett-till-ett-förhållande mellan kodbasen och applikationen:
 
@@ -15,4 +14,4 @@ Det finns alltid ett ett-till-ett-förhållande mellan kodbasen och applikatione
 
 Det finns alltid bara en kodbas per applikation, men det kommer bli många produktionssättningar av samma applikation. En *produktionssättning* är en körbar instans av applikationen. Det kan exempelvis vara en produktionssajt, eller en eller flera sajter för acceptanstestning. Dessutom har ofta respektive utvecklare en kopia av applikationen som kan köras lokalt i den egna utvecklingsmiljön, vilket också räknas som en produktionssättning.
 
-Kodbasen är densamma för samtliga produktionssättningar, även om olika versioner kan vara gällande för varje enskild produktionsssättning. Till exempel, en utvecklare kan ha kodändringar som fortfarande inte har lagts över för acceptanstestning; acceptansmiljön kan ha kodändringar som ännu inte lagts över till produktion. Men alla delar samma kodbas, vilket gör dem identifierbara som olika produktionssättningar av samma applikation.
+Kodbasen är densamma för samtliga produktionssättningar, även om olika versioner kan vara gällande för varje enskild produktionsssättning. Till exempel, en utvecklare kan ha kodändringar som fortfarande inte har lagts över för acceptanstestning; acceptansmiljön kan ha kodändringar som ännu inte lagts över till produktion. Men alla delar samma kodbas, vilket gör dem identifierbara som olika versioner av samma applikation.
