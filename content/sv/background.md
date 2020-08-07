@@ -1,4 +1,4 @@
-Background (Bakgrund)
+Bakgrund
 ==========
 
 De som bidragit till detta dokument har varit direkt involverade i utvecklingen och produktionssättningen av hundratals applikationer, och indirekt bidragit till utvecklingen, skötsel och uppskalningen av hundratusentals applikationer via vårt arbete med plattformen <a href="http://www.heroku.com/" target="_blank">Heroku</a>.

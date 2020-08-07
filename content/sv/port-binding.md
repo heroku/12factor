@@ -1,14 +1,14 @@
-## VII. Port binding
-### Export services via port binding
+## VII. Port binding (Portbindning)
+### Göra tjänster tillgängliga genom portbindning
 
-Web apps are sometimes executed inside a webserver container.  For example, PHP apps might run as a module inside [Apache HTTPD](http://httpd.apache.org/), or Java apps might run inside [Tomcat](http://tomcat.apache.org/).
+Webbapplikationer körs ibland inuti en webbserver container. Exempelvis kan PHP-applikationer köras som en modul inuti [Apache HTTPD](http://httpd.apache.org/), och Java-applikationer kan köras inuti [Tomcat](http://tomcat.apache.org/).
 
-**The twelve-factor app is completely self-contained** and does not rely on runtime injection of a webserver into the execution environment to create a web-facing service.  The web app **exports HTTP as a service by binding to a port**, and listening to requests coming in on that port.
+**Tolvfaktorapplikationen är helt självförsörjande** och förlitar sig inte på tillgängligheten av en webbserver-komponent för att skapa en webbtjänst som är tillgänglig externt. Webbapplikationen själv **exporterar HTTP som en tjänst genom att binda till en port** och att lyssna på inkommande anrop på den porten.
 
-In a local development environment, the developer visits a service URL like `http://localhost:5000/` to access the service exported by their app.  In deployment, a routing layer handles routing requests from a public-facing hostname to the port-bound web processes.
+I en lokal utvecklingsmiljö besöker utvecklaren en URL för tjänsten som ex. `http://localhost:5000/` för att få åtkomst till den tjänst som exporteras av applikationen. I produktion hanterar ett ruttningslager anropen för att styra vidare dem till ett publikt tillgängligt värdnamn för den portbundna webbprocessen.
 
-This is typically implemented by using [dependency declaration](./dependencies) to add a webserver library to the app, such as [Tornado](http://www.tornadoweb.org/) for Python, [Thin](http://code.macournoyer.com/thin/) for Ruby, or [Jetty](http://www.eclipse.org/jetty/) for Java and other JVM-based languages.  This happens entirely in *user space*, that is, within the app's code.  The contract with the execution environment is binding to a port to serve requests.
+Detta är vanligtvis implementerat genom att använda [beroende-deklarering](./dependencies) för att lägga till ett webbserver-bibliotek till applikationen, såsom [Tornado](http://www.tornadoweb.org/) för Python, [Thin](http://code.macournoyer.com/thin/) för Ruby, eller [Jetty](http://www.eclipse.org/jetty/) för Java och andra JVM-baserade språk. Detta händer helt i *användarutrymmet* (eng. "user space"), dvs inom applikationens kod. Kontraktet med körmiljön är portbindningen för att svara på anrop.
 
-HTTP is not the only service that can be exported by port binding.  Nearly any kind of server software can be run via a process binding to a port and awaiting incoming requests.  Examples include [ejabberd](http://www.ejabberd.im/) (speaking [XMPP](http://xmpp.org/)), and [Redis](http://redis.io/) (speaking the [Redis protocol](http://redis.io/topics/protocol)).
+HTTP är inte den enda tjänst som kan exporteras genom portbindning. I princip alla typer av servermjukvara kan köra via processbindning till en port och invänta inkommande anrop. Ex. [ejabberd](http://www.ejabberd.im/) (som talar protokollet [XMPP](http://xmpp.org/)), och [Redis](http://redis.io/) (som talar protokollet [Redis](http://redis.io/topics/protocol)).
 
-Note also that the port-binding approach means that one app can become the [backing service](./backing-services) for another app, by providing the URL to the backing app as a resource handle in the [config](./config) for the consuming app.
+Notera också att tillvägagångssättet med portbindning betyder att en applikation kan fungera som en [stödtjänst](./backing-services) för en annan applikation, genom att lägga URL till stöd-applikationen som en ansluten resurs i [konfigurationen](./config)

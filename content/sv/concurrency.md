@@ -1,5 +1,5 @@
 ## VIII. Concurrency (Samtidighet)
-### Skala ut systemet inom process modellen
+### Skala ut systemet inom processmodellen
 
 Alla datorprogram, medan det körs, representeras av en eller flera processer. Webbapplikationer har tagit en mångfald av former för process-exekvering. Till exempel, PHP-processer körs som ärvda processer till Apache, som startas utifrån behov av den efterfrågande processen. Java-processer tar det motsatta tillvägagångssättet, med en JVM som bistår med en massiv överprocess som reserverar stora mängder av systemresurser (CPU och minne) vid uppstart, med hantering av samtidiga processer via trådar. I båda fallen är de exekverade processerna endast minimalt synliga för applikationsutvecklarna.
 

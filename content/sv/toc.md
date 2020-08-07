@@ -1,38 +1,38 @@
-The Twelve Factors
+De tolv faktorerna
 ==================
 
-## [I. Codebase (kodbas)](./codebase)
-### One codebase tracked in revision control, many deploys
+## [I. Codebase (Kodbas)](./codebase)
+### En kodbas med versionshantering, flera produktionssättningar
 
-## [II. Dependencies (beroenden)](./dependencies)
-### Explicitly declare and isolate dependencies
+## [II. Dependencies (Beroenden)](./dependencies)
+### Deklarera och isolera beroenden explicit
 
-## [III. Config (konfiguration)](./config)
-### Store config in the environment
+## [III. Config (Konfiguration)](./config)
+### Lagra konfiguration i miljön
 
-## [IV. Backing services (stödtjänster)](./backing-services)
-### Treat backing services as attached resources
+## [IV. Backing services (Stödtjänster)](./backing-services)
+### Behandla stödstjänster som anslutna resurser
 
-## [V. Build, release, run (bygga, släppa, köra)](./build-release-run)
-### Strictly separate build and run stages
+## [V. Build, release, run (Bygga, produktionssätta, köra)](./build-release-run)
+### Strikt separation mellan bygg- och körstadie
 
-## [VI. Processes (processer)](./processes)
-### Execute the app as one or more stateless processes
+## [VI. Processes (Arbetsprocesser)](./processes)
+### Exekvera applikationen som en eller flera tillståndslösa processer
 
-## [VII. Port binding (porttilldelning)](./port-binding)
-### Export services via port binding
+## [VII. Port binding (Portbindning)](./port-binding)
+### Göra tjänster tillgängliga genom portbindning
 
-## [VIII. Concurrency (samtidighet)](./concurrency)
-### Scale out via the process model
+## [VIII. Concurrency (Samtidighet)](./concurrency)
+### Skala ut systemet inom processmodellen
 
-## [IX. Disposability (slopning)](./disposability)
-### Maximize robustness with fast startup and graceful shutdown
+## [IX. Disposability (Engångsbruk)](./disposability)
+### Maximimera robusthet med snabb uppstart och smidig nedstängning
 
-## [X. Dev/prod parity (likhet mellan utveckling och produktion)](./dev-prod-parity)
-### Keep development, staging, and production as similar as possible
+## [X. Dev/prod parity (Likhet mellan miljöer)](./dev-prod-parity)
+### Låt utvecklings-, acceptanstests- och produktionsmiljö vara så lika som möjligt
 
-## [XI. Logs (loggning)](./logs)
-### Treat logs as event streams
+## [XI. Logs (Loggar)](./logs)
+### Behandla logga som flöden av händelser
 
-## [XII. Admin processes (administrativa processer)](./admin-processes)
-### Run admin/management tasks as one-off processes
+## [XII. Admin processes (Administrativa processer)](./admin-processes)
+### Köra administrativa uppgifter som engångsprocesser
