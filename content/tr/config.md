@@ -11,7 +11,7 @@ Uygulamalar bazen  yapılandırmayı koddaki sabitler gibi saklar. Bu on iki fak
 
 Bir uygulamanın tüm yapılandırmaları koddan doğru bir biçimde çıkarılıp çıkarılmadığına dair bir litot testi, herhangi bir kimlik bilgilerinden ödün vermeksizin kod tabanının her an açık kaynak yapıp yapamayacağına karar verir.
 
-Bu *yapılandırma* tanımlamasının, [Spring](http://spring.io/)'de [kod modullerinin bağlantısında](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) olduğu gibi ve Rails'de `config/routes.rb` gibi dahili uygulama yapılandırmasını **içermediğini** unutmayın. Bu tip yapılandırma dağıtımlar arasında değişiklik göstermez ve bu kod içinde en iyi şekilde gerçekleştirilmiştir.
+Bu *yapılandırma* tanımlamasının, [Spring](https://spring.io/)'de [kod modullerinin bağlantısında](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) olduğu gibi ve Rails'de `config/routes.rb` gibi dahili uygulama yapılandırmasını **içermediğini** unutmayın. Bu tip yapılandırma dağıtımlar arasında değişiklik göstermez ve bu kod içinde en iyi şekilde gerçekleştirilmiştir.
 
 Yapılandırmaya diğer bir yaklaşım  Rails'deki `config/database.yml` gibi gözden geçirme kontrolünde kontrol edilmemiş yapılandırma dosyalarının kullanımıdır. Bu kod deposundaki kontrol edilmiş sabitlerin kullanımındaki büyük bir gelişmedir, fakat hala zayıflıkları vardır: Depoda, yapılandırma dosyalarının kontrolünde hata kolay yapılabilir; Yapılandırma dosyalarının farklı yerlerde ve farklı formatlarda dağılmış olması için bir eğilim vardır, bu durum bütün yapılandırmayı bir yerde görmeyi ve yönetmeyi zorlaştırır. Bu formatların özel dil veya çatı olma eğilimi vardır.
 

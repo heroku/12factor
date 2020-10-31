@@ -11,7 +11,7 @@ Aplikacja czasem przechowuje konfigurację jako stałe wartości w kodzie źród
 
 Dowodem na to, czy aplikacja posiada swoją konfigurację oddzieloną od kodu jest to, czy można ją udostępnić na zasadach open source bez równoczesnego udostępniania np. danych uwierzytelniających.
 
-Należy pamiętać, że definicja "konfiguracji" **nie** dotyczy wewnętrznych ustawień aplikacji takich jak np. plik `config/routes.rb` w Railsach lub to jak [są połączone moduły kodu](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) w [Springu](http://spring.io/). Konfiguracja tego typu nie zmienia się pomiędzy wdrożeniami co sprawia, że najbardziej odpowiednim miejscem do jej przechowywania jest kod aplikacji.
+Należy pamiętać, że definicja "konfiguracji" **nie** dotyczy wewnętrznych ustawień aplikacji takich jak np. plik `config/routes.rb` w Railsach lub to jak [są połączone moduły kodu](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) w [Springu](https://spring.io/). Konfiguracja tego typu nie zmienia się pomiędzy wdrożeniami co sprawia, że najbardziej odpowiednim miejscem do jej przechowywania jest kod aplikacji.
 
 Innym podejściem do konfiguacji jest korzystanie z plików, które nie znajdują się w repozytorium i nie są wersjonowane, jak np. `config/database.yml` w Railsach. Jest to duże usprawnienie względem używania stałych wartości, które są zapisywane w repozytorium. Minusem tego rozwiązania jest możliwość przypadkowego umieszczenia pliku konfiguracyjnego w repo. Ponadto można spotkać się z tendencją do rozrzucania takich plików w różnych katalogach i różnych formatach, co czyni je trudnymi do znalezienia i zarządzania z jednego miejsca.
 

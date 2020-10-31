@@ -11,7 +11,7 @@
 
 判断一个应用是否正确地将配置排除在代码之外，一个简单的方法是看该应用的基准代码是否可以立刻开源，而不用担心会暴露任何敏感的信息。
 
-需要指出的是，这里定义的"配置"并**不**包括应用的内部配置，比如 Rails 的 `config/routes.rb`，或是使用 [Spring](http://spring.io/) 时 [代码模块间的依赖注入关系](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) 。这类配置在不同部署间不存在差异，所以应该写入代码。
+需要指出的是，这里定义的"配置"并**不**包括应用的内部配置，比如 Rails 的 `config/routes.rb`，或是使用 [Spring](https://spring.io/) 时 [代码模块间的依赖注入关系](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) 。这类配置在不同部署间不存在差异，所以应该写入代码。
 
 另外一个解决方法是使用配置文件，但不把它们纳入版本控制系统，就像 Rails 的 `config/database.yml` 。这相对于在代码中使用常量已经是长足进步，但仍然有缺点：总是会不小心将配置文件签入了代码库；配置文件的可能会分散在不同的目录，并有着不同的格式，这让找出一个地方来统一管理所有配置变的不太现实。更糟的是，这些格式通常是语言或框架特定的。
 

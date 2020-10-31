@@ -1,7 +1,7 @@
 ## I. 코드베이스
 ### 버전 관리되는 하나의 코드베이스와 다양한 배포
 
-Twelve-Factor 앱은 항상 [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), [Subversion](http://subversion.apache.org/) 같은 버전 컨트롤 시스템을 사용하여 변화를 추적하며, 버전 추적 데이터베이스의 사본을 *코드 저장소*, 줄여서 *저장소*라고 부릅니다.
+Twelve-Factor 앱은 항상 [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), [Subversion](https://subversion.apache.org/) 같은 버전 컨트롤 시스템을 사용하여 변화를 추적하며, 버전 추적 데이터베이스의 사본을 *코드 저장소*, 줄여서 *저장소*라고 부릅니다.
 
 *코드베이스*는 단일 저장소(Subversion 같은 중앙 집중식 버전 관리 시스템의 경우) 일수도 있고, 루트 커밋을 공유하는 여러 저장소(Git 같은 분산 버전 관리 시스템)일수도 있습니다. 
 

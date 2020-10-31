@@ -1,7 +1,7 @@
 ## I. Codebase
 ### Jedno źródło kodu śledzone systemem kontroli wersji, wiele wdrożeń
 
-Aplikacja 12factor zawsze jest zarządzana w systemie kontroli wersji takim jak [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), czy [Subversion](http://subversion.apache.org/). Miejsce, w którym trzymany i rewizjonowany jest kod nazywane jest *repozytorium kodu źródłowego*, często skracane do samego *code repo*, albo po prostu *repo*.
+Aplikacja 12factor zawsze jest zarządzana w systemie kontroli wersji takim jak [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), czy [Subversion](https://subversion.apache.org/). Miejsce, w którym trzymany i rewizjonowany jest kod nazywane jest *repozytorium kodu źródłowego*, często skracane do samego *code repo*, albo po prostu *repo*.
 
 *Codebase* (baza kodu) jest więc niczym innym jak pojedynczym repo (w przypadku zcentralizowanego systemu kontroli wersji jak Subversion), albo zestawem repozytoriów, które współdzielą tzw. root commit. (w przypadku zdecentralizowanego systemu jak Git).
 

@@ -1,7 +1,7 @@
 ﻿## I. Codebase
 ### Eine im Versionsmanagementsystem verwaltete Codebase, viele Deployments
 
-Eine Zwölf-Faktor-App wird immer in einem Versionsmanagementsystem verwaltet, wie zum Beispiel [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) oder [Subversion](http://subversion.apache.org/). Eine Kopie der Versionsdatenbank wird *Code Repository* genannt, kurz *Code Repo* oder auch nur *Repo*.
+Eine Zwölf-Faktor-App wird immer in einem Versionsmanagementsystem verwaltet, wie zum Beispiel [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) oder [Subversion](https://subversion.apache.org/). Eine Kopie der Versionsdatenbank wird *Code Repository* genannt, kurz *Code Repo* oder auch nur *Repo*.
 
 Eine *Codebase* ist jedes einzelne Repo (in einem zentralisierten Versionsmanagementsystem wie Subversion) oder jede Menge von Repos, die einen ursprünglichen Commit teilen (in dezentralisierten Versionsmanagementsystemen wie git).
 

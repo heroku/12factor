@@ -11,7 +11,7 @@
 
 애플리케이션의 모든 설정이 정상적으로 코드 바깥으로 분리되어 있는지 확인할 수 있는 간단한 테스트는 어떠한 인증정보도 유출시키지 않고 코드베이스가 지금 당장 오픈 소스가 될 수 있는지 확인하는 것입니다.
 
-이 "설정"의 정의는 애플리케이션 내부 설정을 *포함하지 않는다는 점*에 유의해야 합니다. Rails의 `config/routes.rb`이나 [Spring](http://spring.io/)의 ["어떻게 코드 모듈이 연결되는 가](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html)과 같은 설정들은 배치 사이에서 변하지 않기 때문에 코드의 내부에 있는 것이 가장 좋습니다.
+이 "설정"의 정의는 애플리케이션 내부 설정을 *포함하지 않는다는 점*에 유의해야 합니다. Rails의 `config/routes.rb`이나 [Spring](https://spring.io/)의 ["어떻게 코드 모듈이 연결되는 가](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html)과 같은 설정들은 배치 사이에서 변하지 않기 때문에 코드의 내부에 있는 것이 가장 좋습니다.
 
 설정에 대한 또 다른 접근방식은 Rails의 `config/database.yaml`처럼 버전 관리 시스템에 등록되지 않은 설정 파일을 이용하는 것입니다. 이 방법은 코드 저장소에 등록된 상수를 사용하는 것에 비하면 매우 큰 발전이지만, 설정 파일이 여러 위치에 여러 포맷으로 흝어지고 모든 설정을 한 곳에서 확인하고 관리하기 어렵게 만드는 경향이 있습니다. 게다가, 이러한 형식들은 언어와 프레임워크을 따라가는 경향이 있습니다.
 

@@ -11,7 +11,7 @@ Aplikace si někdy ukládají konfiguraci jako konstanty v kódu. To je porušen
 
 Test lakmusovým papírkem na správné oddělení konfigurace od kódu je fakt, že aplikace by mohla být kdykoliv uvolněna jako open source bez kompromitace přístupových údajů.
 
-Nutno podotknout, že do definice "konfigurace" *nepatří* interní nastavení aplikace jako je například `config/routes.rb` v Rails nebo nastavení [propojení základních modulů](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) ve [Springu](http://spring.io/). Tento typ konfigurace se neliší mezi nasazeními a je nejlepší ho ponechat v kódu.
+Nutno podotknout, že do definice "konfigurace" *nepatří* interní nastavení aplikace jako je například `config/routes.rb` v Rails nebo nastavení [propojení základních modulů](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) ve [Springu](https://spring.io/). Tento typ konfigurace se neliší mezi nasazeními a je nejlepší ho ponechat v kódu.
 
 Další možností jak přistupovat ke konfiguracím je mít konfigurační soubory, které nejsou uložené ve verzovacím systému, jak je tomu například u `config/database.yml` v Rails. To je obrovské zlepšení oproti konstantám uloženým v repozitáři, tento přístup má však stále několik slabin: je velmi jednoduché omylem uložit tento soubor do repozitáře; chtě nechtě jsou tyto soubory obvykle rozmístěny na několika místech a v různých formátech, což komplikuje jejich centrální správu. Navíc jsou tyto konfigurační soubory často specifické pro daný jazyk či framework.
 

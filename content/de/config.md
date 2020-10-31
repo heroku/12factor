@@ -11,7 +11,7 @@ Manchmal speichern Apps die Konfiguration als Konstanten im Code. Dies ist eine 
 
 Ein Lackmustest, ob eine App die Konfiguration vollständig ausgelagert hat, ist, wenn die Codebase jederzeit als Open Source veröffentlicht werden könnte, ohne Credentials preiszugeben.
 
-Es sei darauf hingewiesen, dass diese Definition von "Konfiguration" die interne Anwendungskonfiguration **nicht einschließt**, wie `config/routes.rb` in Rails oder wie Code-Module [mit Spring verdrahtet sind](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html). Diese Art von Konfiguration ändert sich nicht von Deploy zu Deploy und gehört daher zum Code.
+Es sei darauf hingewiesen, dass diese Definition von "Konfiguration" die interne Anwendungskonfiguration **nicht einschließt**, wie `config/routes.rb` in Rails oder wie Code-Module [mit Spring verdrahtet sind](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html). Diese Art von Konfiguration ändert sich nicht von Deploy zu Deploy und gehört daher zum Code.
 
 
 Als Konfiguration könnte man auch Dateien verwenden, die nicht ins Versionsmanagement eingecheckt sind wie `config/database.yml` in Rails. Dies ist eine deutliche Verbesserung gegenüber der Verwendung von Konstanten, die ins Versionsmanagement eingecheckt sind, hat aber Schwächen. Es ist relativ einfach, versehentlich eine Konfigurationsdatei ins Repo einzuchecken. Zusätzlich gibt es Tendenzen, Konfigurationsdateien an verschiedenen Orten und in verschiedenen Formaten zu streuen. Das macht es schwer die Konfiguration von einem Punkt aus zu managen. Desweiteren sind diese Formate oft sprach- oder plattformspezifisch.

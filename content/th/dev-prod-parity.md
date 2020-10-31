@@ -7,7 +7,7 @@
 * **ช่องว่างของบุคคล** developer เขียน code แต่วิศวกร ops ทำการ deploy code
 * **ช่องว่างของเครื่องมือ** developer อาจจะใช้ stack อย่างเช่น Nginx, SQLite และ OSX ขณะที่ production deploy ใช้ Apache, MySQL และ Linux
 
-**Twelve-factor app ถูกออกแบบสำหรับ [การ deployment อย่างต่อเนื่อง (continuous deployment)](http://avc.com/2011/02/continuous-deployment/) ด้วยการรักษาช่องว่างระหว่าง development และ production ให้แคบที่สุด** โดยพิจารณาจากช่องว่าง 3 เรื่องด้านบน:
+**Twelve-factor app ถูกออกแบบสำหรับ [การ deployment อย่างต่อเนื่อง (continuous deployment)](https://avc.com/2011/02/continuous-deployment/) ด้วยการรักษาช่องว่างระหว่าง development และ production ให้แคบที่สุด** โดยพิจารณาจากช่องว่าง 3 เรื่องด้านบน:
 
 * ทำให้เวลาสั้นลง: developer อาจจะเขียน code และทำการ deploy ในเวลาเพียงชั่วโมงเดียวหรือเพียงไม่กี่นาทีหลังจากเขียน code เสร็จ
 * ทำให้ช่องว่างบุคคลแคบลง: developer เป็นคนเขียน code และเป็นคนที่ deploy code เองและเป็นคนที่ดูใน production เอง
@@ -71,7 +71,7 @@ Developer บางครั้งหาวิธีที่ใช้ backing s
 
 **Twelve-factor developer ต่อต้านกำใช้งาน backing service ที่แตกต่างกันระหว่าง development และ production** แม้ว่าเมื่อใช้ adapter ในทางทฤษฎีแล้วไม่มีความแตกต่างกันใน backing service ความแตกต่างระหว่าง backing service หมายความว่าความไม่เข้ากันเพียงเล็กน้อยที่เป็นสาเหตุให้ code ทำงานได้และผ่านการทดสอบใน development หรือ staging แต่ไปทำงานผิดพลาดใน production ความผิดหลาดเหล่านี้สร้างความไม่ลงรอยกันกับการ delopyment อย่างต่อเนื่อง และราคาของความไม่ลงรอยกันนี้และความผันผวนตามมาของการ deployment อย่างต่อเนื่องสูงมากเมื่อพิจารณาตลอดอายุการทำงานของ application
 
-Lightweight local service ไม่น่าสนใจมากเหมือนเมื่อก่อน ด้วย backing service สมัยใหม่อย่างเช่น Memcached, PostgreSQL และ RabbitMQ ไม่มีความแตกต่างกันในการติดตั้งและทำงาน ต้องขอบคุณระบบ packaging สมัยใหม่ อย่างเช่น [Homebrew](http://mxcl.github.com/homebrew/) และ [apt-get](https://help.ubuntu.com/community/AptGet/Howto) อีกทางเลือกหนึ่ง เครืองมือจัดเตรียมที่เปิดเผยอย่างเช่น [Chef](http://www.opscode.com/chef/) และ [Puppet](http://docs.puppetlabs.com/) รวม light-weight สิ่งแวดล้อมเสมือนอย่างเช่น [Docker](https://www.docker.com/) และ [Vagrant](http://vagrantup.com/) ทำให้ developer รัน app ในสิ่งแวดล้องของเครื่องได้ใกล้เคียงกับสิ่งแวดล้อมของ production มากที่สุด และค่าใช้จ่ายของการติดตั้งและใช้งานระบบเหล่านี้ต่ำมากถ้าเทียบกับประโยชน์ที่ได้รับสำหรับความเท่าเทียมกันของ dev/prod และการ deployment ที่ต่อเนื่อง
+Lightweight local service ไม่น่าสนใจมากเหมือนเมื่อก่อน ด้วย backing service สมัยใหม่อย่างเช่น Memcached, PostgreSQL และ RabbitMQ ไม่มีความแตกต่างกันในการติดตั้งและทำงาน ต้องขอบคุณระบบ packaging สมัยใหม่ อย่างเช่น [Homebrew](https://mxcl.github.com/homebrew/) และ [apt-get](https://help.ubuntu.com/community/AptGet/Howto) อีกทางเลือกหนึ่ง เครืองมือจัดเตรียมที่เปิดเผยอย่างเช่น [Chef](https://www.opscode.com/chef/) และ [Puppet](http://docs.puppetlabs.com/) รวม light-weight สิ่งแวดล้อมเสมือนอย่างเช่น [Docker](https://www.docker.com/) และ [Vagrant](https://vagrantup.com/) ทำให้ developer รัน app ในสิ่งแวดล้องของเครื่องได้ใกล้เคียงกับสิ่งแวดล้อมของ production มากที่สุด และค่าใช้จ่ายของการติดตั้งและใช้งานระบบเหล่านี้ต่ำมากถ้าเทียบกับประโยชน์ที่ได้รับสำหรับความเท่าเทียมกันของ dev/prod และการ deployment ที่ต่อเนื่อง
 
 Adapter ไปยัง backing service ที่แตกต่างกันยังคงมีประโยชน์อยู่ เพราะว่าจะทำให้ port ไปใช้กับ backing service ใหม่ๆ ได้อย่างง่ายดาย แต่การ deploy ทั้งหมดของ app (developer environment, staging, production) ควรจะใช้ชนิดและเวอร์ชันที่เหมือนกันของแต่ล่ะ backing service.
 

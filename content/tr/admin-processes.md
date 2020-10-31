@@ -4,7 +4,7 @@
 [Süreç oluşumu](./concurrency) uygulama çalışırken uygulamanın sıradan işlerini (web isteklerini idare etmek gibi) yapmakta kullanılan süreçlerin bir dizisidir. Ayrı olarak, geliştiriciler çoğunlukla uygulamanın bir kereye mahsus yönetimsel veya bakım görevlerini yapmayı dileyecekler, şunun gibi:
 
 * Veri tabanı göçü çalıştırmak (Django'da `manage.py migrate`, Rails'de `rake db:migrate`).
-* Konsolu ([REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) kabuğu olarakta bilinir), rastgele kodu çalıştırmak veya canlı veritabanına karşılık uygulamanın modellerini denetlemek için çalıştırmak. Çoğu dil hiç bir arguman olmadan (`python` veya `perl`), yorumlayıcı veya bazı durumlarda ayrı komutlarla (Ruby için  `irb`, Rails için `rails console`) çalıştırarak bir REPL sağlar.
+* Konsolu ([REPL](https://en.wikipedia.org/wiki/Read-eval-print_loop) kabuğu olarakta bilinir), rastgele kodu çalıştırmak veya canlı veritabanına karşılık uygulamanın modellerini denetlemek için çalıştırmak. Çoğu dil hiç bir arguman olmadan (`python` veya `perl`), yorumlayıcı veya bazı durumlarda ayrı komutlarla (Ruby için  `irb`, Rails için `rails console`) çalıştırarak bir REPL sağlar.
 * Uygulamanın deposuna commit'lenmiş betikleri çalıştırmak (`php scripts/fix_bad_records.php`).
 
 Bir kerelik yönetici süreçleri uygulamanın sıradan [uzun çalışan süreçleri](./processes)  gibi aynı ortamlarda çalışmalıdır. Onlar herhangi bir sürecin çalıştığı gibi [sürüme](./build-release-run) karşı aynı [kod tabanı](./codebase) ve [yapılandırmayı](./config) kullanarak çalışır. Yönetici uygulama kodunu senkronizasyon sorunundan kaçınmak için yüklemelidir.

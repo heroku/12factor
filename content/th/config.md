@@ -11,7 +11,7 @@
 
 การทดสอบ litmus เพื่อดูว่า app มีการเอาการตั้งค่าทั้งหมดออกจาก code ถูกต้องหรือไม่ ทำให้ codebase สามารถ open source ได้ตลอดเวลา โดยไม่กระทบกับ credential ใดๆ
 
-โปรดทราบว่าการนิยามนี้ของ "การตั้งค่า" **ไม่**รวมการตั้งค่า internal application อย่างเช่น `config/routes.rb` ใน Rails หรือ [code modules เชื่อมต่อกันอย่างไร](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) ใน [Spring](http://spring.io/) ชนิดของการตั้งค่าเหล่านี้ไม่เปลี่ยนแปลงตาม deploy และควรจะอยู่ใน code
+โปรดทราบว่าการนิยามนี้ของ "การตั้งค่า" **ไม่**รวมการตั้งค่า internal application อย่างเช่น `config/routes.rb` ใน Rails หรือ [code modules เชื่อมต่อกันอย่างไร](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) ใน [Spring](https://spring.io/) ชนิดของการตั้งค่าเหล่านี้ไม่เปลี่ยนแปลงตาม deploy และควรจะอยู่ใน code
 
 อีกวิธีการหนึ่งของการตั้งค่าคือการใช้ไฟล์การตั้งค่าซึ่งไม่รวมไว้ใน revision control อย่างเช่น `config/database.yml` ใน Reals ซึ่งเป็นการพัฒนาสำหรับการใช้ค่าคงที่ซึ่งถูกรวมเข้าไปใน code repo แต่ก็ยังมีจุดอ่อนคือมันจะเกิดความผิดพลาดจากการที่รวมค่าการตั้งค่านี้เข้าไปใน repo จะทำให้มีแนวโน้มที่การไฟล์การตั้งค่าจะกระจายอยู่ในที่แตกต่างกันและแตกต่างรูปแบบ ทำให้มันยากที่จะดูแลและจัดการการตั้งค่าทั้งหมดในหนึ่งที่ นอกจากนี้รูปแบบเหล่านี้ยังขึ้นอยู่กับภาษาคอมพิวเตอร์ หรือ เฉพาะ framework.
 

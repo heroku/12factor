@@ -11,7 +11,7 @@ Aplikácia si niekedy ukladá konštanty v kóde. Toto je porušenie dvanástich
 
 Litmusovým testom správneho oddelenia konfigurácie, je to či by mohla byť v ktoromkoľvek momente open-sourcovaná bez úniku prihlasovacích údajov.
 
-Všimnite si, že definícia "konfigurácie" **nezahŕňa** internú konfiguráciu aplikácie, ako napríklad `config/routes.rb` v Rails, alebo [prepojenie modulov](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) v [Spring](http://spring.io/).  Tento typ konfigurácie sa medzi nasadeniami nelíši, a preto je najlepšie ho nechať v kóde.
+Všimnite si, že definícia "konfigurácie" **nezahŕňa** internú konfiguráciu aplikácie, ako napríklad `config/routes.rb` v Rails, alebo [prepojenie modulov](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) v [Spring](https://spring.io/).  Tento typ konfigurácie sa medzi nasadeniami nelíši, a preto je najlepšie ho nechať v kóde.
 
 Ďalšou možnosťou, ako pristupovať ku konfiguráciám je mať konfiguračné súbory, ktoré nie sú uložené v revíznom systéme, ako napríklad `config/database.yml` v Rails.  Je to obrovské zlepšenie oproti konštantám uloženým v repozitári, ale stále má slabosť: je veľmi jednoduché omylom tento súbor uložiť do repozitára; je tendencia mať konfiguračné súbory na rôznych miestach a v rôznych formátoch, a preto je ťažké ich spravovať z jedného miesta. Navyše, tieto formáty zvyknú byť špecifické pre jazyk alebo framework.
 
