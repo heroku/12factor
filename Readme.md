@@ -3,6 +3,8 @@ The Twelve-Factor App
 
 Source for the content app running at: https://12factor.net/
 
+**This repository is not accepting new PRs at this time. Thank you for all the contributions that have helped it reach such a broad audience!**
+
 Development
 -----------
 
