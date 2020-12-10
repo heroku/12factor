@@ -10,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon.ico">
 
-  <link rel="stylesheet" href="/css/screen.css" media="screen">
-  <link rel="stylesheet" href="/css/mobile.css" media="screen">
+  <link rel="stylesheet" href="/css/screen<%= '-rtl' if rtl_lang?(I18n.locale) %>.css" media="screen">
+  <link rel="stylesheet" href="/css/mobile<%= '-rtl' if rtl_lang?(I18n.locale) %>.css" media="screen">
 
   <script type="text/javascript" src="//use.typekit.com/rsq7tro.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
