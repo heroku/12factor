@@ -26,7 +26,7 @@ The Twelve Factors
 ### 프로세스 모델을 사용한 확장
 
 ## [IX. 폐기 가능(Disposability)](./disposability)
-### 빠른 시작과 그레이스풀 셧다운(graceful shutdown)을 통한 안정성 극대화
+### 빠른 시작과 우아한 종료(graceful shutdown)를 통한 안정성 극대화
 
 ## [X. 개발/프로덕션환경 일치](./dev-prod-parity)
 ### 개발, 스테이징, 프로덕션 환경을 최대한 비슷하게 유지
