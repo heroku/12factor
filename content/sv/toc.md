@@ -32,7 +32,7 @@ De tolv faktorerna
 ### Låt utvecklingsmiljö, testmiljöer och produktionsmiljö vara så lika som möjligt
 
 ## [XI. Logs (Loggar)](./logs)
-### Behandla logga som flöden av händelser
+### Behandla loggar som flöden av händelser
 
 ## [XII. Admin processes (Administrativa processer)](./admin-processes)
 ### Köra administrativa uppgifter som engångsprocesser
