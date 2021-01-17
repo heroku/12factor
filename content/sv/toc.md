@@ -35,4 +35,4 @@ De tolv faktorerna
 ### Behandla loggar som flöden av händelser
 
 ## [XII. Admin processes (Administrativa processer)](./admin-processes)
-### Köra administrativa uppgifter som engångsprocesser
+### Kör administrativa uppgifter som engångsprocesser
