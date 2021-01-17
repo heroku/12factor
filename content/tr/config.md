@@ -1,22 +1,22 @@
 ## III. Yapılandırma
-### Ortamda yapılandırma depolama
+### Yapılandırma ayarlarını ortam değişkeni saklama
 
-Bir uygulamanın *yapılandırması* muhtemelen [dağıtımlar](./codebase) arasındaki değişikliktir(kademelendirme, ürün, geliştirici ortamları vb.). Bunları içerir:
+Bir uygulamanın *yapılandırma ayarları* [dağıtımlar](./codebase) arasında farklı olma ihtimali olan her şeydir. Örneğin:
 
-* Veri tabanını ele alan kaynaklar, önbellek ve diğer [destek servisleri](./backing-services)
+* Veritabanlarının, önbellekleme servislerinin ve diğer [yardımcı servislerin](./backing-services) erişim bilgileri
 * Amazon S3 ve Twitter gibi dış servisler için kimlik bilgileri
-* Dağıtımlar için standart sunucu ismi gibi her dağıtım için değerler
+* Dağıtımlar için standart sunucu ismi gibi dağıtım-öncesi değerler
 
-Uygulamalar bazen  yapılandırmayı koddaki sabitler gibi saklar. Bu on iki faktörün, **yapılandırmayı koddan mutlak ayırmayı** gerektiren bir ihlalidir. Yapılandırma dağıtımlar arasında önemli derecede değişime uğrar, kod uğramaz.
+Uygulamalar bazen yapılandırma ayarlarını kod içerisinde saklar. Bu on iki faktörün, **yapılandırmayı koddan mutlak ayrımını** gerektiren kuralın ihlalidir. Yapılandırma ayarları dağıtımlar arasında değişir, ama kod değişmez.
 
-Bir uygulamanın tüm yapılandırmaları koddan doğru bir biçimde çıkarılıp çıkarılmadığına dair bir litot testi, herhangi bir kimlik bilgilerinden ödün vermeksizin kod tabanının her an açık kaynak yapıp yapamayacağına karar verir.
+Bir uygulamanın herhangi bir kimlik bilgisinin gizliliğini ihlal etmeden açık kaynak yapılabilip yapılamayacak olması, tüm yapılandırmaları koddan doğru bir biçimde çıkarılıp çıkarılmadığını belirleyebilecek bir litmus testidir.
 
-Bu *yapılandırma* tanımlamasının, [Spring](http://spring.io/)'de [kod modullerinin bağlantısında](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) olduğu gibi ve Rails'de `config/routes.rb` gibi dahili uygulama yapılandırmasını **içermediğini** unutmayın. Bu tip yapılandırma dağıtımlar arasında değişiklik göstermez ve bu kod içinde en iyi şekilde gerçekleştirilmiştir.
+Bu *yapılandırma ayarı* tanımının, [Spring](http://spring.io/)'de [kod modüllerinin bağlantısında](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) olduğu gibi ve Rails'deki `config/routes.rb` gibi dahili uygulama yapılandırmasını **içermediğini** unutmayın. Bu tip yapılandırmalar, dağıtımlar arasında değişiklik göstermeyeceği için, kod içinde gerçekleştirilmeleri mantıklıdır.
 
-Yapılandırmaya diğer bir yaklaşım  Rails'deki `config/database.yml` gibi gözden geçirme kontrolünde kontrol edilmemiş yapılandırma dosyalarının kullanımıdır. Bu kod deposundaki kontrol edilmiş sabitlerin kullanımındaki büyük bir gelişmedir, fakat hala zayıflıkları vardır: Depoda, yapılandırma dosyalarının kontrolünde hata kolay yapılabilir; Yapılandırma dosyalarının farklı yerlerde ve farklı formatlarda dağılmış olması için bir eğilim vardır, bu durum bütün yapılandırmayı bir yerde görmeyi ve yönetmeyi zorlaştırır. Bu formatların özel dil veya çatı olma eğilimi vardır.
+Yapılandırmaya diğer bir yaklaşım da Rails'deki `config/database.yml` gibi dosyaların versiyon kontrol sistemine dahil edilmeden kullanımıdır. Bu, kod deposuna dahil edilmiş sabitler kullanmaya göre büyük bir gelişimdir, fakat hala zayıflıkları vardır: Bu dosyaların yanlışlıkla versiyon kontrol sistemine dahil edilme olasılığı oldukça yüksektir. Yapılandırma dosyalarının farklı yerlerde ve farklı formatlarda dağılmış olması eğilimi mevcuttur, ve bu durum bütün yapılandırmayı bir yerde görmeyi ve yönetmeyi zorlaştırır. Dahası, bu formatlar genelde dil veya çatı için özelleşmiştir.
 
-**On iki faktör uygulamalarında yapılandırma *ortam değişkenlerinde* kaydedilir**(sıklıkla *env vars* veya *env* olarak kısaltılır). Ortam değişkenleri herhangi bir kod değişikliği olmadan, dağıtımlar arasında kolay değişebilir; Yapılandırma dosyalarının aksine, kod deposunda yanlışlıkla kontrol edilme şansı az; ve özel yapılandırma dosyalarının veya Java sistem özellikleri gibi yapılandırma mekanizmalarının aksine, onlar dil ve işletim sisteminden etkilenmez.
+**On iki faktör uygulamalarında yapılandırma *ortam değişkenlerinde* kaydedilir** (sıklıkla *env vars* veya *env* olarak kısaltılır). Ortam değişkenleri herhangi bir kod değişikliği olmadan, dağıtımlar arasında kolay değişebilir; Yapılandırma dosyalarının aksine, kod deposuna yanlışlıkla dahil edilme ihtimali düşüktür; ve özel yapılandırma dosyalarının veya Java sistem özellikleri gibi yapılandırma mekanizmalarının aksine, onlar dil ve işletim sisteminden etkilenmez.
 
-Yapılandırma yönetiminin diğer bir açısı da gruplandırmadır. Bazen uygulamalar, Rails'deki `geliştirme`, `test` ve `üretim` ortamları gibi belirli dağıtımlardan sonra adlandırılmış, adlandrılmış guruplar içinde yapılandırılır(genellikle "environments" olarak adlandırılır). Bu method temiz bir ölçüm yapmaz: uygulamanın daha fazla dağıtımı oluştuğu sürece, yeni ortam isimleri gereklidir, `staging` veya `qa` gibi. Projeler ilerde geliştikçe, geliştiriciler `joes-staging` kendi özel ortam değişkenlerini ekleyebilir, dağıtım yönetimini çok hassas yapan yapılandırmanın birleşimsel infilakıyla sonuçlanır.
+Yapılandırma yönetiminin diğer bir açısı da gruplandırmadır. Bazen uygulamalar, Rails'deki `geliştirme`, `test` ve `canlı` ortamları gibi belirli dağıtımlardan sonra adlandırılmış gruplar içinde yapılandırılır. Bu yöntem temiz bir şekilde ölçeklenemez. Çünkü uygulamanın daha fazla dağıtımı oluştukça, yeni ortam isimleri gerekli olur, `staging` veya `qa` gibi. Projeler ilerde geliştikçe, geliştiriciler `joes-staging` kendi özel ortam değişkenlerini ekleyebilir. Bu da yapılandırma dosyalarının hızla artmasıyla sonuçlanarak dağıtım yönetimini oldukça kırılganlaştırır.
 
-On iki faktör uygulamasında ortam değişkenleri parçacıklı kontrol edilirler, her biri diğer ortam değişkenlerine karşı suffix/prefix olarak gelmez ayrı tanımlanır. Asla "environments" olarak beraber gruplandırılamaz, fakat onun yerine her bir dağıtım için bağımsız yönetilir. Bu, uygulamayı yaşam süresi boyunca daha fazla dağıtıma genişletmeyi sorunsuzca büyüten bir modeldir.
+On iki faktör uygulamasında ortam değişkenleri parçacıklı kontrol edilirler, birbirlerinden bağımsızlardır. Asla gruplandırılmazlar, onun yerine her bir dağıtım için bağımsız olarak yönetilirler. Bu, uygulamayı yaşam süresi boyunca daha fazla dağıtıma genişletmeyi sorunsuzca ölçeklendiren bir modeldir.
