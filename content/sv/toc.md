@@ -29,7 +29,7 @@ De tolv faktorerna
 ### Maximimera robusthet med snabb uppstart och smidig nedstängning
 
 ## [X. Dev/prod parity (Likhet mellan miljöer)](./dev-prod-parity)
-### Låt utvecklings-, acceptanstests- och produktionsmiljö vara så lika som möjligt
+### Låt utvecklingsmiljö, testmiljöer och produktionsmiljö vara så lika som möjligt
 
 ## [XI. Logs (Loggar)](./logs)
 ### Behandla logga som flöden av händelser
