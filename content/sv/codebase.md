@@ -1,7 +1,7 @@
 ## I. Kodbas (Codebase)
 ### En kodbas med versionshantering, flera produktionssättningar
 
-En tolvfaktorsapplikation hålls alltid i någon form av versionskontrollsystem, som exempelvis [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), eller [Subversion](http://subversion.apache.org/). En kopia av versionshanteringsdatabasen kallas för ett *kodrepository*, ofta förkortat till *kodrepo* eller just *repo*.
+En tolvfaktorsapplikation hålls alltid i någon form av versionshanteringssystem, som exempelvis [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), eller [Subversion](http://subversion.apache.org/). En kopia av versionshanteringsdatabasen kallas för ett *kodrepository*, ofta förkortat till *kodrepo* eller just *repo*.
 
 En *kodbas* är varje enskilt repo (i ett centraliserat versionshanteringssystem såsom Subversion), eller varje set av repon som delar en viss koduppladdning som bas (i ett decentraliserat versionshanteringssystem såsom Git).
 
