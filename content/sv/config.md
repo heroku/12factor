@@ -1,7 +1,7 @@
 ## III. Config (Konfiguration)
 ### Lagra konfiguration i miljön
 
-En applikations *konfigration* berör allting som kan tänkas skilja sig mellan kodsläpp (acceptanstestnings-, produktions-, utvecklingsmiljöer etc) Detta inkluderar:
+En applikations *konfigration* berör allting som kan tänkas skilja sig mellan kodsläpp (acceptanstestnings-, produktions-, utvecklingsmiljöer etc). Detta inkluderar:
 
 * Resurslänkar till databasen, minnescachning och andra [stödtjänster](./backing-services)
 * Inloggningsuppgifter mot externa tjänster såsom Amazon S3 eller Twitter
