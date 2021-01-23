@@ -1,7 +1,7 @@
 ## XII. Admin processes (Administrativa processer)
 ### Köra administrativa uppgifter som engångsprocesser
 
-[Process-skapandet](./concurrency) är en samling av processer som används för att utföra applikationens ordinarie verksamhet (som att exempelvis hantera webb-anrop) medan den är igång. Förutom detta vill utvecklare ofta utföra enskilda administrativa eller underhållsmässiga uppgifter för applikationen, som till exempel:
+[Processformationen](./concurrency) är den samling processer som används för att utföra applikationens ordinarie verksamhet (som att exempelvis hantera webb-anrop) medan den är igång. Förutom detta vill utvecklare ofta utföra enskilda administrativa eller underhållsmässiga uppgifter för applikationen, som till exempel:
 
 * Genomföra databasmigreringar (ex. `manage.py migrate` i Django, `rake db:migrate` i Rails).
 * Köra konsolapplikationer (även kända som [REPL skal](http://en.wikipedia.org/wiki/Read-eval-print_loop)) för att köra godtycklig kod eller undersöka en applikations modell mot en produktionsdatabas. De flesta språk erbjuder en REPL genom att köra kodtolken utan några argument (ex. `python` eller `perl`) eller har i vissa fall ett separat kommando (ex. `irb` i Ruby, `rails console` i Rails).
