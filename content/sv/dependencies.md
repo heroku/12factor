@@ -1,7 +1,7 @@
 ## II. Dependencies (Beroenden)
 ### Deklarera och isolera beroenden explicit
 
-De flesta programmeringsspråk erbjuder någon form av paketeringssystem för distribuering av stödbibliotek, som ex. [CPAN](http://www.cpan.org/) för Perl eller [Rubygems](http://rubygems.org/) för Ruby. Bibliotek installerade genom ett paketeringssystem kan installeras för hela arbetsmiljön (kallat för "systempaket", eng. "site packages") eller inom applikationens lokala utrymmet (kallat för "tredjepartspaket" eller "paketering", eng. "vendoring"/"bundling").
+De flesta programmeringsspråk erbjuder någon form av paketeringssystem för distribuering av stödbibliotek, som ex. [CPAN](http://www.cpan.org/) för Perl eller [Rubygems](http://rubygems.org/) för Ruby. Bibliotek installerade genom ett paketeringssystem kan installeras för hela arbetsmiljön (kallat för "systempaket", eng. "site packages") eller inom applikationens lokala utrymme (kallat för "tredjepartspaket" eller "paketering", eng. "vendoring"/"bundling").
 
 **En tolvfaktorapplikation förlitar sig aldrig på en implicit tillgänglighet av systempaket.** Den deklararerar alla beroenden, komplett och exakt, via ett *beroendespecifikationsmanifest* (eng. "dependency declaration manifest"). Vidare använder den verktyg för *isolering av beroenden* under exekvering för att försäkra sig om att inga implicita beroenden "läckt in" från det omgivande körsystemet. Den fullständiga och exakta beroendespecifikationen appliceras likadant på både produktionsmiljön och utvecklingsmiljön.
 
