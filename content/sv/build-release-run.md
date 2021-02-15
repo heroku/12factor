@@ -3,7 +3,7 @@
 
 En [kodbas](./codebase) omvandlas till en produkt (avsedd för annat än utveckling) genom tre stadier:
 
-* *Byggstadiet* är en transformering som omvandlar ett kod-repo till ett exekverbart paket som kallas för ett *bygge* (eng. "build"). Byggprocessen använder sig av den version av koden som använts vid en viss uppladdning, hämtar tredjepartskomponenter som definierats som [beroenden](./dependencies) och kompilerar binära filer och resurser.
+* *Byggstadiet* är en transformering som omvandlar ett kod-repo till ett exekverbart paket som kallas för ett *bygge* (eng. "build"). Byggprocessen använder sig av en specifik incheckning/version av kodbasen, hämtar tredjepartskomponenter som definierats som [beroenden](./dependencies) och kompilerar binära filer och resurser.
 * *Produktionssättningsstadiet* tar det som producerats vid byggstadiet och kombinerar det med den aktuella produktionssättningens [konfiguration](./config). Resultatet (kallad en *release*/*kodsläpp*) innehåller både byggpaketet och konfigurationen och är redo för omedelbar exekvering i den miljö som den är avsedd för.
 * *Körstadiet* kör applikationen i dess miljö, genom att sätta igång de [applikationsprocesser](./processes) som gäller för den aktuella produktionssättningen.
 
