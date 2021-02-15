@@ -7,7 +7,7 @@ En applikations *konfigration* berör allting som kan tänkas skilja sig mellan 
 * Inloggningsuppgifter mot externa tjänster såsom Amazon S3 eller Twitter
 * Produktionssättningsspecifika värden som exempelvis vedertagna värdnamn
 
-Applikationer sparar ibland konfiguration som konstanter i koden. Detta är ett brott mot tolvfaktor-modellen, som kräver en **strikt uppdelning mellan konfigration och kod**. Konfiguration varierar avsevärt mellan kodsläpp, kod gör det inte.
+Applikationer sparar ibland konfiguration som konstanter i koden. Detta är ett brott mot tolvfaktor-modellen, som kräver en **strikt uppdelning mellan konfiguration och kod**. Konfiguration varierar avsevärt mellan kodsläpp, kod gör det inte.
 
 Ett litmustest för om en applikation har all konfiguration korrekt separarerad från koden är om kodbasen skulle kunna göras om till öppen källkod när som helst, utan att avslöja några inloggningsuppgifter.
 
