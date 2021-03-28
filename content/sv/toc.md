@@ -13,7 +13,7 @@ De tolv faktorerna
 ## [IV. Stödtjänster (Backing services)](./backing-services)
 ### Behandla stödstjänster som anslutna resurser
 
-## [V. Bygga, släppa, köra (Build, deploy, run)](./build-release-run)
+## [V. Bygg, släpp, kör (Build, deploy, run)](./build-release-run)
 ### Strikt separation mellan bygg- och körstadie
 
 ## [VI. Arbetsprocesser (Processes)](./processes)
