@@ -1,4 +1,4 @@
-## IV. Stödstjänster (Backing services)
+## IV. Stödtjänster (Backing services)
 ### Behandla stödstjänster som anslutna resurser
 
 En *stödtjänst* är en tjänst som applikationen använder över nätverket, som del av sin normala drift. Exempel på detta inkluderar datalager (ex. [MySQL](http://dev.mysql.com/) eller [CouchDB](http://couchdb.apache.org/)), meddelande/kö-system (ex. [RabbitMQ](http://www.rabbitmq.com/) eller [Beanstalkd](https://beanstalkd.github.io)), SMTP-tjänster för utgående epost (ex. [Postfix](http://www.postfix.org/)), och system för caching (ex. [Memcached](http://memcached.org/)).
