@@ -1,16 +1,16 @@
 ## X. Likhet mellan miljöer (Dev/prod parity)
 ### Låt utvecklings-, acceptanstests- och produktionsmiljö vara så lika som möjligt
 
-Historiskt sett har det funnits betydande skillnader mellan utvecklingsmiljö (där utvecklare gör förändringar i en lokal [kodversion](./codebase) av en applikation) och produktionsmiljö (en aktiv produktionssättning av applikationen som används av slutanvändare). Dessa skillnader tydliggörs i tre områden: 
+Historiskt sett har det funnits betydande skillnader mellan utvecklingsmiljö (där utvecklare gör förändringar i en lokal [kodversion](./codebase) av en applikation) och produktionsmiljö (ett aktivt kodsläpp av applikationen som används av slutanvändare). Dessa skillnader tydliggörs i tre områden: 
 
 * **Tidsskillnad**: en utvecklare kan arbeta på kod under dagar, veckor, till och med månader innan den går in i produktion.
 * **Personalskillnad**: Utvecklare skriver kod, tekniker produktionssätter den.
-* **Verktygsskillnad**: Utvecklare kan använda en uppsättning olika verktyg som ex. Nginx, SQLite och OS X medan produktionssättningen använder Apache, MySQL och Linux.
+* **Verktygsskillnad**: Utvecklare kan använda en uppsättning olika verktyg som ex. Nginx, SQLite och OS X medan kodsläppet använder Apache, MySQL och Linux.
 
-**Tolvfaktorapplikationen är designad för [kontinuerlig produktionssättning](http://avc.com/2011/02/continuous-deployment/) genom att hålla skillnaden mellan utvecklingsmiljö och produktionsmiljö liten.** Om man ser till de tre skillnaderna ovan:
+**Tolvfaktorapplikationen är designad för [kontinuerlig release](http://avc.com/2011/02/continuous-deployment/) genom att hålla skillnaden mellan utvecklingsmiljö och produktionsmiljö liten.** Om man ser till de tre skillnaderna ovan:
 
 * Gör tidsskillnaden liten: en utvecklare kan skriva kod och få den produktionssatt timmar eller bara minuter senare.
-* Gör personalskillnaden liten: utvecklare som skrev koden är tätt involverade i att produktionssätta den och att se dess beteende i produktion.
+* Gör personalskillnaden liten: utvecklare som skrev koden är tätt involverade i att releasa den och att se dess beteende i produktion.
 * Gör verktygsskillnaden liten: håll utvecklingsmiljö och produktionsmiljö så lika som möjligt.
 
 För att sammanfatta ovanstående i en tabell:
@@ -22,7 +22,7 @@ För att sammanfatta ovanstående i en tabell:
     <th>Tolvfaktorapplikation</th>
   </tr>
   <tr>
-    <th>Tid mellan produktionssättningar</th>
+    <th>Tid mellan kodsläpp</th>
     <td>Veckor</td>
     <td>Timmar</td>
   </tr>
@@ -69,8 +69,8 @@ För att sammanfatta ovanstående i en tabell:
 
 Utvecklare finner det ibland attraktivt att använda lättviktiga stödtjänster i deras lokala miljö, medan mer seriösa och robusta stödtjänster används i produktion. Till ex. att använda SQLite lokalt och PostgreSQL i produktion, eller lokalt processminne för cachning i utvecklingsmiljön och Memcached i produktion.
 
-**Tolvfaktor-utvecklaren motstår ingivelsen att använda olika stödtjänster mellan utvecklingsmiljö och produktionsmiljö** även när adaptrar teoretiskt sett kan abstrahera iväg alla skillnader mellan stödtjänster. Skillnaden mellan stödtjänster innebär att små inkompabiliteter dyker upp, som orsakar att kod som funkat och passerat testning i utvecklingsmiljö och acceptanstestsmiljö misslyckas i produktion. Denna typ av fel skapar friktion som hämmar kontinuerlig produktionssättning. Den sammanräknade kostnaden för denna friktion och de efterföljande hindren för kontinuerlig produktionssättning är extremt hög sett över en applikations livslängd.
+**Tolvfaktor-utvecklaren motstår ingivelsen att använda olika stödtjänster mellan utvecklingsmiljö och produktionsmiljö** även när adaptrar teoretiskt sett kan abstrahera iväg alla skillnader mellan stödtjänster. Skillnaden mellan stödtjänster innebär att små inkompabiliteter dyker upp, som orsakar att kod som funkat och passerat testning i utvecklingsmiljö och acceptanstestsmiljö misslyckas i produktion. Denna typ av fel skapar friktion som hämmar kontinuerlig release. Den sammanräknade kostnaden för denna friktion och de efterföljande hindren för kontinuerlig release är extremt hög sett över en applikations livslängd.
 
-Lättviktiga lokala tjänster är mindre tilltalande nu än de tidigare var. Moderna stödtjänster som Memcached, PostgreSQL, och RabbitMQ är inte svåra att installera och köra tack vare moderna paketeringssystem såsom [Homebrew](http://mxcl.github.com/homebrew/) och [apt-get](https://help.ubuntu.com/community/AptGet/Howto).  Alternativt, att använda deklarativa nedladdningsverktyg såsom [Chef](http://www.opscode.com/chef/) och [Puppet](http://docs.puppetlabs.com/) kombinerat med lättviktiga virtuella miljöer såsom [Docker](https://www.docker.com/) och [Vagrant](http://vagrantup.com/) möjliggör utvecklare att köra lokala miljöer som mycket tätt liknar produktionsmiljöer. Kostnaden för att installera och använda dessa system är låg i förhållande till fördelarna av likhet mellan miljöer och kontinuerlig produktionssättning. 
+Lättviktiga lokala tjänster är mindre tilltalande nu än de tidigare var. Moderna stödtjänster som Memcached, PostgreSQL, och RabbitMQ är inte svåra att installera och köra tack vare moderna paketeringssystem såsom [Homebrew](http://mxcl.github.com/homebrew/) och [apt-get](https://help.ubuntu.com/community/AptGet/Howto).  Alternativt, att använda deklarativa nedladdningsverktyg såsom [Chef](http://www.opscode.com/chef/) och [Puppet](http://docs.puppetlabs.com/) kombinerat med lättviktiga virtuella miljöer såsom [Docker](https://www.docker.com/) och [Vagrant](http://vagrantup.com/) möjliggör utvecklare att köra lokala miljöer som mycket tätt liknar produktionsmiljöer. Kostnaden för att installera och använda dessa system är låg i förhållande till fördelarna av likhet mellan miljöer och kontinuerlig release. 
 
-Adaptrar till olika stödtjänster är dock fortfarande användbara, eftersom de gör portning till nya stödtjänster relativt smärtfri. Men alla produktionssättningar av applikationen (utvecklarmiljö, acceptanstestsmiljö, produktionsmiljö) bör använda samma typ och version av respektivt stödtjänst.
+Adaptrar till olika stödtjänster är dock fortfarande användbara, eftersom de gör portning till nya stödtjänster relativt smärtfri. Men alla kodsläpp av applikationen (utvecklarmiljö, acceptanstestsmiljö, produktionsmiljö) bör använda samma typ och version av respektivt stödtjänst.

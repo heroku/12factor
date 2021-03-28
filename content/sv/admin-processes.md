@@ -7,7 +7,7 @@
 * Köra konsolapplikationer (även kända som [REPL skal](http://en.wikipedia.org/wiki/Read-eval-print_loop)) för att köra godtycklig kod eller undersöka en applikations modell mot en produktionsdatabas. De flesta språk erbjuder en REPL genom att köra kodtolken utan några argument (ex. `python` eller `perl`) eller har i vissa fall ett separat kommando (ex. `irb` i Ruby, `rails console` i Rails).
 * Köra enskilda engångsscript som lagts in i applikationens repo (ex. `php scripts/fix_bad_records.php`).
 
-Engångsprocesser bör köras i en identisk miljö som applikationens ordinarie [processer](./processes). De bör köras mot en [produktionsrelease](./build-release-run), som har samma [kodbas](./codebase) och samma [konfiguration](./config) som alla andra processer som är baserade på den releasen. Administrativ kod bör läggas tillsammans med applikationskoden för att undvika versionsproblem.
+Engångsprocesser bör köras i en identisk miljö som applikationens ordinarie [processer](./processes). De bör köras mot ett [kodsläpp](./build-release-run), som har samma [kodbas](./codebase) och samma [konfiguration](./config) som alla andra processer som är baserade på den releasen. Administrativ kod bör läggas tillsammans med applikationskoden för att undvika versionsproblem.
 
 Samma teknik för [isolering av beroenden](./dependencies) bör användas på alla processtyper. Till exempel, om en webb-process i Ruby använder kommandot `bundle exec thin start`, så bör en databas-migrering använda `bundle exec rake db:migrate`. På samma sätt, ett Python-program som använder Virtualenv bör använda tredjepartskomponenten `bin/python` dels för att köra Tornado-webservern och dels för alla administriva processer med `manage.py`.
 

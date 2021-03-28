@@ -2,7 +2,7 @@ De tolv faktorerna
 ==================
 
 ## [I. Kodbas (Codebase)](./codebase)
-### En kodbas med versionshantering, flera produktionssättningar
+### En kodbas med versionshantering, flera kodsläpp
 
 ## [II. Beroenden (Dependencies)](./dependencies)
 ### Deklarera och isolera beroenden explicit

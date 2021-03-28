@@ -1,11 +1,11 @@
 ## III. Konfiguration (Config)
 ### Lagra konfiguration i miljön
 
-En applikations *konfiguration* berör allting som kan tänkas skilja sig mellan kodsläpp (acceptanstestnings-, produktions-, utvecklingsmiljöer etc). Detta inkluderar:
+En applikations *konfiguration* berör allting som kan tänkas skilja sig mellan kodsläpp (acceptanstestningsmiljö, produktionsmiljö, utvecklingsmiljöer etc). Detta inkluderar:
 
 * Resurslänkar till databasen, minnescachning och andra [stödtjänster](./backing-services)
 * Inloggningsuppgifter mot externa tjänster såsom Amazon S3 eller Twitter
-* Produktionssättningsspecifika värden som exempelvis vedertagna värdnamn
+* Releasespecifika värden som exempelvis vedertagna värdnamn
 
 Applikationer sparar ibland konfiguration som konstanter i koden. Detta är ett brott mot tolvfaktor-modellen, som kräver en **strikt uppdelning mellan konfiguration och kod**. Konfiguration varierar avsevärt mellan kodsläpp, kod gör det inte.
 

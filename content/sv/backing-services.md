@@ -9,6 +9,6 @@ Stödtjänster såsom databaser hanteras traditionellt av samma systemadministra
 
 Varje distinkt stödtjänst är en *resurs*. Till exempel, en MySQL-databas är en resurs; två MySQL-databaser (som används för lastbalansering av applikationslagret) kvalificeras som två distinkta resurser. Tolvfaktor-applikationen behandlar dessa databaser som *anslutna resurser*, vilket indikerar deras lösa koppling till den produkt som de är anslutna till.
 
-<img src="/images/attached-resources.png" class="full" alt="En produktionssättning ansluten till fyra stödtjänster" />
+<img src="/images/attached-resources.png" class="full" alt="Ett kodsläpp ansluten till fyra stödtjänster" />
 
 Resurser kan anslutas till och kopplas från produkter efter behov. Till exempel, om applikationens databas beter sig märkligt på grund av ett hårdvarufel skulle applikationens administratör kunna sätta igång en ny databasserver som återställts från en nyligen tagen backup. Den nuvarande produktionsdatabasen kan kopplas ifrån och den nya databasen kopplas in -- helt och hållet utan kodändringar.

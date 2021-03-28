@@ -1,7 +1,7 @@
 ## IX. Tillgängliggörande (Disposability)
 ### Maximimera robusthet med snabb uppstart och smidig nedstängning
 
-**Tolvfaktorapplikationens [processer](./processes) är för *engångsbruk*, i betydelsen att de kan startas och stoppas när man behagar.** Detta förenklar snabb elastiskt skalning, snabb produktionssättning av [kod](./codebase) eller [konfigurationsändringar](./config), och robusta produktionssättningar.
+**Tolvfaktorapplikationens [processer](./processes) är *tillgängliggjord*, i betydelsen att de kan startas och stoppas när man behagar.** Detta förenklar snabb elastiskt skalning, snabb release av [kod](./codebase) eller [konfigurationsändringar](./config), och robusta kodsläpp.
 
 Processer bör sträva efter att **minimera starttid**. Helst bör en process ta ett fåtal sekunders tid mellan att kommandot anropas och att processen är uppe och är redo att emotta anrop eller job. Kort starttid erbjuder mer för anpassningsbarhet för [kodsläppsprocessen](./build-release-run) och uppskalning, och det hjälper robusthet eftersom tekniker kan lätt flytta processer till nya fysiska maskiner när det är motiverat.
 
