@@ -10,7 +10,7 @@ De tolv faktorerna
 ## [III. Konfiguration (Config)](./config)
 ### Lagra konfiguration i miljön
 
-## [IV. Stödstjänster (Backing services)](./backing-services)
+## [IV. Stödtjänster (Backing services)](./backing-services)
 ### Behandla stödstjänster som anslutna resurser
 
 ## [V. Bygga, släppa, köra (Build, deploy, run)](./build-release-run)
