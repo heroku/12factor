@@ -1,4 +1,4 @@
-## II. Dependencies (Beroenden)
+## II. Beroenden (Dependencies)
 ### Deklarera och isolera beroenden explicit
 
 De flesta programmeringsspråk erbjuder någon form av paketeringssystem för distribuering av stödbibliotek, som ex. [CPAN](http://www.cpan.org/) för Perl eller [Rubygems](http://rubygems.org/) för Ruby. Bibliotek installerade genom ett paketeringssystem kan installeras för hela arbetsmiljön (kallat för "systempaket", eng. "site packages") eller inom applikationens lokala utrymme (kallat för "tredjepartspaket" eller "paketering", eng. "vendoring"/"bundling").

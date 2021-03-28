@@ -1,4 +1,4 @@
-## VI. Processes (Arbetsprocesser)
+## VI. Arbetsprocesser (Processes)
 ### Exekvera applikationen som en eller flera tillståndslösa processer
 
 Applikationen körs i arbetsmiljön som en eller flera *processer*.

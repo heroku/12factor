@@ -1,38 +1,38 @@
 De tolv faktorerna
 ==================
 
-## [I. Codebase (Kodbas)](./codebase)
+## [I. Kodbas (Codebase)](./codebase)
 ### En kodbas med versionshantering, flera produktionssättningar
 
-## [II. Dependencies (Beroenden)](./dependencies)
+## [II. Beroenden (Dependencies)](./dependencies)
 ### Deklarera och isolera beroenden explicit
 
-## [III. Config (Konfiguration)](./config)
+## [III. Konfiguration (Config)](./config)
 ### Lagra konfiguration i miljön
 
-## [IV. Backing services (Stödtjänster)](./backing-services)
+## [IV. Stödstjänster (Backing services)](./backing-services)
 ### Behandla stödstjänster som anslutna resurser
 
-## [V. Build, release, run (Bygga, produktionssätta, köra)](./build-release-run)
+## [V. Bygga, släppa, köra (Build, deploy, run)](./build-release-run)
 ### Strikt separation mellan bygg- och körstadie
 
-## [VI. Processes (Arbetsprocesser)](./processes)
+## [VI. Arbetsprocesser (Processes)](./processes)
 ### Exekvera applikationen som en eller flera tillståndslösa processer
 
-## [VII. Port binding (Portbindning)](./port-binding)
+## [VII. Portbindning (Portbinding)](./port-binding)
 ### Göra tjänster tillgängliga genom portbindning
 
-## [VIII. Concurrency (Samtidighet)](./concurrency)
+## [VIII. Samtidighet (Concurrency)](./concurrency)
 ### Skala ut systemet inom processmodellen
 
-## [IX. Disposability (Engångsbruk)](./disposability)
+## [IX. Tillgängliggörande (Disposability)](./disposability)
 ### Maximimera robusthet med snabb uppstart och smidig nedstängning
 
-## [X. Dev/prod parity (Likhet mellan miljöer)](./dev-prod-parity)
+## [X. Likhet mellan miljöer (Dev/prod parity)](./dev-prod-parity)
 ### Låt utvecklingsmiljö, testmiljöer och produktionsmiljö vara så lika som möjligt
 
-## [XI. Logs (Loggar)](./logs)
+## [XI. Loggar (Logs)](./logs)
 ### Behandla loggar som flöden av händelser
 
-## [XII. Admin processes (Administrativa processer)](./admin-processes)
+## [XII. Administrativa processer (Admin processes)](./admin-processes)
 ### Kör administrativa uppgifter som engångsprocesser

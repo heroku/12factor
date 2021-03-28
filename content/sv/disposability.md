@@ -1,4 +1,4 @@
-## IX. Disposability (Engångsbruk)
+## IX. Tillgängliggörande (Disposability)
 ### Maximimera robusthet med snabb uppstart och smidig nedstängning
 
 **Tolvfaktorapplikationens [processer](./processes) är för *engångsbruk*, i betydelsen att de kan startas och stoppas när man behagar.** Detta förenklar snabb elastiskt skalning, snabb produktionssättning av [kod](./codebase) eller [konfigurationsändringar](./config), och robusta produktionssättningar.

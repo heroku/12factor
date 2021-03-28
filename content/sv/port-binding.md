@@ -1,4 +1,4 @@
-## VII. Port binding (Portbindning)
+## VII. Portbindning (Portbinding)
 ### Göra tjänster tillgängliga genom portbindning
 
 Webbapplikationer körs ibland inuti en webbserver container. Exempelvis kan PHP-applikationer köras som en modul inuti [Apache HTTPD](http://httpd.apache.org/), och Java-applikationer kan köras inuti [Tomcat](http://tomcat.apache.org/).

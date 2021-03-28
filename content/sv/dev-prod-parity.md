@@ -1,4 +1,4 @@
-## X. Dev/prod parity (Likhet mellan miljöer)
+## X. Likhet mellan miljöer (Dev/prod parity)
 ### Låt utvecklings-, acceptanstests- och produktionsmiljö vara så lika som möjligt
 
 Historiskt sett har det funnits betydande skillnader mellan utvecklingsmiljö (där utvecklare gör förändringar i en lokal [kodversion](./codebase) av en applikation) och produktionsmiljö (en aktiv produktionssättning av applikationen som används av slutanvändare). Dessa skillnader tydliggörs i tre områden: 

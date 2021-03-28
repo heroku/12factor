@@ -1,4 +1,4 @@
-## III. Config (Konfiguration)
+## III. Konfiguration (Config)
 ### Lagra konfiguration i miljön
 
 En applikations *konfiguration* berör allting som kan tänkas skilja sig mellan kodsläpp (acceptanstestnings-, produktions-, utvecklingsmiljöer etc). Detta inkluderar:

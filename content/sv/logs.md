@@ -1,5 +1,5 @@
-## XI. Logs (Loggar)
-### Behandla logga som flöden av händelser
+## XI. Loggar (Logs)
+### Behandla loggar som flöden av händelser
 
 *Loggar* erbjuder insikt i beteendet av en körande applikation. I en server-baserad miljö skrivs de vanligtvis till en fil på disken (en "loggfil") men detta är bara ett utformat.
 
