@@ -1,0 +1,14 @@
+## VIII. Samtidighet (Concurrency)
+### Skala ut systemet inom processmodellen
+
+Alla datorprogram, medan det körs, representeras av en eller flera processer. Webbapplikationer har tagit en mångfald av former för process-exekvering. Till exempel, PHP-processer körs som ärvda processer till Apache, som startas utifrån behov av den efterfrågande processen. Java-processer tar det motsatta tillvägagångssättet, med en JVM som bistår med en massiv överprocess som reserverar stora mängder av systemresurser (CPU och minne) vid uppstart, med hantering av samtidiga processer via trådar. I båda fallen är de exekverade processerna endast minimalt synliga för applikationsutvecklarna.
+
+![Skalbarhet uttrycks som exekverade processer, mångfald gällande arbete uttrycks som processtyper.](/images/process-types.png)
+
+**I tolvfaktor-applikationen är processer i första rummet.** Processer i en tolvfaktor-applikation tar i huvudsak styrning från [unix-processmodellen för att köra tjänste-daemoner](https://adam.herokuapp.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/). När man använder denna modell kan utvecklaren designa sin applikation till att hantera olika arbeten genom att tilldela varje typ av arbete till en *processtyp*. Till exempel, HTTP-anrop kan hanteras av en webbprocess, och mer långkörande bakgrundsuppgifter hanteras av en bakgrundsarbetsprocess.
+
+Detta utesluter inte att individuella processer hanterar deras egen interna arbetsfördelning, via trådar inuti den egna virtuella maskinen, eller via en asynkron-/händelse-modell som man hittar ex. i verktyg som [EventMachine](https://github.com/eventmachine/eventmachine), [Twisted](http://twistedmatrix.com/trac/), eller [Node.js](http://nodejs.org/). Men enskilda virtuella maskiner kan bara växa upp till en viss nivå (vertikal uppskalning), så applikationen måste dessutom ha möjlighet att fördela sig över multipla processer som körs på multipla fysiska maskiner.
+
+Processmodellen kommer verkligen till sin rätt när det gäller att skala upp. Modellens natur innebär att [man inte delar resurser och partionerar processer horisontellt](./processes) vilket betyder att lägga till mer samtidighet är en enkel och pålitlig operation. Utbudet av processtyper och antalet processer av respektive typ är vad som kallas för *processformationen*.
+
+Tolvfaktor-processer [bör aldrig daemonisera](http://dustin.github.com/2010/02/28/running-processes.html) eller skriva PID-filer. Istället bör man lita på systemets egen processhanterare (som exempelvis [systemd](https://www.freedesktop.org/wiki/Software/systemd/)), en distribuerad processhanterare på en molnplattform, eller ett verktyg som [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) under utvecklingsprocessen) för att hantera [utströmmar](./logs), att ansvara för kraschade processer och att hantera omstarter och avstängningar initierade av användare.
