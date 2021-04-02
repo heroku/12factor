@@ -5,7 +5,7 @@
 
 Logs เป็น [stream](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) ของการรวบรวม, time-ordered events ที่รวมรวมจาก output stream ของ process ทั้งหมดที่ทำงานอยู่และ backing service, Log ในรูปแบบเดิมโดยปรกติเป็นรูปแบบข้อความด้วยหนึ่ง event ต่อบรรทัด (แม้กระทั้ง backtrace จาก exception ที่มีหลายบรรทัด) Log ไม่มีจุดเริ่มต้นหรือสิ้นสุดที่แน่นอน แต่มีการไหลอย่างต่อเนื่องตราบใดที่ app ทำงานอยู่
 
-**Twelve-factor app ไม่เคยกังวลกับการกำหนดเส้นทางหรือการจัดเก็บสตรีมข้อมูลขาออก** ไม่ควรพยายามเขียนหรือจัดการ logfile แทนที่, แต่ล่ะ process ที่ทำงานจะเขียน event stream ไม่มีการบัฟเฟอร์ ด้วย `stdout` ในระหว่าง local development, developer จะดูสตรีมนี้ในเบื้องหลังของ terminal เพื่อสังเกตุพฤติกรรมของ app
+**Twelve-factor app ไม่เคยกังวลกับการกำหนดเส้นทางหรือการจัดเก็บสตรีมข้อมูลขาออก** ไม่ควรพยายามเขียนหรือจัดการ logfile แทนที่, แต่ล่ะ process ที่ทำงานจะเขียน event stream ไม่มีการบัฟเฟอร์ ด้วย `stderr` ในระหว่าง local development, developer จะดูสตรีมนี้ในเบื้องหลังของ terminal เพื่อสังเกตุพฤติกรรมของ app
 
 ใน staging หรือ production deploy แต่ละสตรีมของ process จะตรวจจับโดยสภาพแวดล้อมการดำเนินงาน รวบรวมเข้าด้วยกันกับสตรีมอื่นๆ จาก app และเชื่อมเส้นทางไปที่จุดหมายปลายทางสุดท้ายที่ใช้ดูและเก็บถาวรในระยะยาว จุดหมายที่เก็บถาวรเหล่านี้ไม่สามารถมองเห็นหรือกำหนดค่าโดย app และแทนจะได้รับการจัดการอย่างสมบูรณ์โดยสภาพแวดล้อมการดำเนินงาน, Open-source log routers (เช่น [Logplex](https://github.com/heroku/logplex) และ [Fluentd](https://github.com/fluent/fluentd)) มีไว้เพื่อการนี้
 
