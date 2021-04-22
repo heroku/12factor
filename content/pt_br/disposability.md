@@ -1,7 +1,7 @@
 ## IX. Descartabilidade
 ### Maximize robustez com inicialização rápida e desligamento gracioso
 
-**Os [processos](./processos) de um app doze-fatores são *descartáveis*, significando que podem ser iniciados ou parados a qualquer momento.** Isso facilita o escalonamento elástico, rápido deploy de [código](./codebase) ou mudanças de [configuração](./config), e robustez de deploys de produção.
+**Os [processos](./processes) de um app doze-fatores são *descartáveis*, significando que podem ser iniciados ou parados a qualquer momento.** Isso facilita o escalonamento elástico, rápido deploy de [código](./codebase) ou mudanças de [configuração](./config), e robustez de deploys de produção.
 
 Processos devem empenhar-se em **minimizar o tempo de inicialização**. Idealmente, um processo leva alguns segundos do tempo que o comando de inicialização é executado até o ponto que ele estará pronto para receber requisições ou tarefas. Períodos curtos de inicialização provém mais agilidade para o processo de [release](./build-release-run) e de escalonamento; e ele adiciona robustez, pois o gestor de processos pode mais facilmente mover processos para outras máquinas físicas quando necessário.
 
