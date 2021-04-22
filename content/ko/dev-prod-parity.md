@@ -72,6 +72,6 @@ production 환경에서는 더 본격적이고 강력한 백엔드 서비스가 
 
 **Twelve-Factor 개발자는 개발 환경과 production 환경에서 다른 백엔드 서비스를 쓰고 싶은 충동에 저항합니다.** 이론적으로는 어댑터가 백엔드 서비스 간의 차이를 추상화해준다고 해도, 백엔드 서비스 간의 약간의 불일치가 개발 환경과 스테이징 환경에서는 동작하고 테스트에 통과된 코드가 production 환경에서 오류를 일으킬 수 있기 때문입니다. 이런 종류의 오류는 지속적인 배포를 방해합니다. 애플리케이션의 생명 주기 전체를 보았을 때, 이러한 방해와 지속적인 배포의 둔화가 발생시키는 손해는 엄청나게 큽니다. 
 
-가벼운 로컬 서비스는 예전처럼 필수적인 것은 아닙니다. Memcache, PostgreSQL, RabbitMQ와 같은 현대적인 백엔드 서비스들은 [Homebrew](http://mxcl.github.com/homebrew/)나 [apt-get](https://help.ubuntu.com/community/AptGet/Howto)와 같은 현대적인 패키징 시스템 덕분에 설치하고 실행하는데 아무런 어려움도 없습니다. 혹은 [Chef](http://www.opscode.com/chef/) and [Puppet](http://docs.puppetlabs.com/)와 같은 선언적 provisioning 툴과 [Vagrant](http://vagrantup.com/)등의 가벼운 가상 환경을 결합하여 로컬 환경을 production 환경과 매우 유사하게 구성할 수 있습니다. dev/prod 일치와 지속적인 배포의 이점에 비하면 이러한 시스템을 설치하고 사용하는 비용은 낮습니다.
+가벼운 로컬 서비스는 예전처럼 필수적인 것은 아닙니다. Memcache, PostgreSQL, RabbitMQ와 같은 현대적인 백엔드 서비스들은 [Homebrew](https://brew.sh/)나 [apt-get](https://help.ubuntu.com/community/AptGet/Howto)와 같은 현대적인 패키징 시스템 덕분에 설치하고 실행하는데 아무런 어려움도 없습니다. 혹은 [Chef](http://www.opscode.com/chef/) and [Puppet](http://docs.puppetlabs.com/)와 같은 선언적 provisioning 툴과 [Vagrant](http://vagrantup.com/)등의 가벼운 가상 환경을 결합하여 로컬 환경을 production 환경과 매우 유사하게 구성할 수 있습니다. dev/prod 일치와 지속적인 배포의 이점에 비하면 이러한 시스템을 설치하고 사용하는 비용은 낮습니다.
 
 여러 백엔드 서비스에 접근할 수 있는 어댑터는 여전히 유용합니다. 새로운 백엔드 서비스를 사용하도록 포팅하는 작업의 고통을 낮춰주기 때문입니다. 하지만, 모든 애플리케이션의 배포들(개발자 환경, 스테이징, production)은 같은 종류, 같은 버전의 백엔드 서비스를 이용해야합니다.

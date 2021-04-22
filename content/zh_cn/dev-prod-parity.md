@@ -71,6 +71,6 @@
 
 **12-Factor 应用的开发人员应该反对在不同环境间使用不同的后端服务** ，即使适配器已经可以几乎消除使用上的差异。这是因为，不同的后端服务意味着会突然出现的不兼容，从而导致测试、预发布都正常的代码在线上出现问题。这些错误会给持续部署带来阻力。从应用程序的生命周期来看，消除这种阻力需要花费很大的代价。
 
-与此同时，轻量的本地服务也不像以前那样引人注目。借助于[Homebrew](http://mxcl.github.com/homebrew/)，[apt-get](https://help.ubuntu.com/community/AptGet/Howto)等现代的打包系统，诸如Memcached、PostgreSQL、RabbitMQ 等后端服务的安装与运行也并不复杂。此外，使用类似 [Chef](http://www.opscode.com/chef/) 和 [Puppet](http://docs.puppetlabs.com/) 的声明式配置工具，结合像 [Vagrant](http://vagrantup.com/) 这样轻量的虚拟环境就可以使得开发人员的本地环境与线上环境无限接近。与同步环境和持续部署所带来的益处相比，安装这些系统显然是值得的。
+与此同时，轻量的本地服务也不像以前那样引人注目。借助于[Homebrew](https://brew.sh/)，[apt-get](https://help.ubuntu.com/community/AptGet/Howto)等现代的打包系统，诸如Memcached、PostgreSQL、RabbitMQ 等后端服务的安装与运行也并不复杂。此外，使用类似 [Chef](http://www.opscode.com/chef/) 和 [Puppet](http://docs.puppetlabs.com/) 的声明式配置工具，结合像 [Vagrant](http://vagrantup.com/) 这样轻量的虚拟环境就可以使得开发人员的本地环境与线上环境无限接近。与同步环境和持续部署所带来的益处相比，安装这些系统显然是值得的。
 
 不同后端服务的适配器仍然是有用的，因为它们可以使移植后端服务变得简单。但应用的所有部署，这其中包括开发、预发布以及线上环境，都应该使用同一个后端服务的相同版本。
