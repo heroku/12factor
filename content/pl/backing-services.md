@@ -7,7 +7,7 @@ Usługa wspierająca taka jak baza danych jest zazwyczaj zarządzana przez tych 
 
 **Aplikacje 12factor nie rozróżniają usług lokalnych od zewnętrznych.** Dla aplikacji wszystkie są załączonymi zasobami, dostepnymi przez adres URL lub inny standard zdefiniowany w [konfiguracji](./config). Przy [wdrożeniu](./codebase) aplikacji nie może być problemów ze zmianą lokalnej bazy MySQL na oferowaną przez zewnętrznego usługodawcę (np. [Amazon RDS](http://aws.amazon.com/rds/)) bez żadnych zmian w kodzie aplikacji. Podobnie lokalny serwer SMTP może być zamieniony na zewnętrzną usługę SMTP (taką jak Postmark) bez zmian kodu. W obu przypadkach zmiana powinna wystąpić jedynie w konfiguracji aplikacji.
 
-Każda usługa jest traktowana jako *zasób*. Zasobem będzie np. baza MySQL; dwie bazy danych (używane do [shardingu](https://en.wikipedia.org/wiki/Shard_(database_architecture)) w warstwie aplikacji) kwalifikują się jako dwa odrębne zasoby. Aplikacja 12factor traktuje te bazy danych jako *załączone zasoby*, co wskazuje, że nie są z nią trwale powiązane.
+Każda usługa jest traktowana jako *zasób*. Zasobem będzie np. baza MySQL; dwie bazy danych (używane do [shardingu](https://en.wikipedia.org/wiki/Shard_(database_architecture))) w warstwie aplikacji) kwalifikują się jako dwa odrębne zasoby. Aplikacja 12factor traktuje te bazy danych jako *załączone zasoby*, co wskazuje, że nie są z nią trwale powiązane.
 
 <img src="/images/attached-resources.png" class="full" alt="Produkcyjne wdrożenie aplikacji korzystajace z czterech usług wspierających." />
 
