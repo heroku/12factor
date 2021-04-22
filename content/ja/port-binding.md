@@ -7,7 +7,7 @@ WebアプリケーションはWebサーバーコンテナの内部で実行さ�
 
 ローカルの開発環境では、開発者はアプリケーションによって公開されたサービスにアクセスするために、`http://localhost:5000/`のようなサービスのURLにアクセスする。本番環境ではルーティング層が、外向きのホスト名からポートにバインドされたWebプロセスへとリクエストをルーティングする。
 
-これは一般に、[依存関係宣言](./dependencies)を使ってWebサーバーライブラリをアプリケーションに追加することで実装される。Webサーバーライブラリの例として、Pythonにおける[Tornado](http://www.tornadoweb.org/)、Rubyにおける[Thin](http://code.macournoyer.com/thin/)、Javaやその他のJVMベースの言語における[Jetty](http://www.eclipse.org/jetty/)などがある。これは *ユーザー空間* すなわちアプリケーションのコード内で完結する。リクエストを処理するための実行環境との契約は、ポートをバインドすることである。
+これは一般に、[依存関係宣言](./dependencies)を使ってWebサーバーライブラリをアプリケーションに追加することで実装される。Webサーバーライブラリの例として、Pythonにおける[Tornado](http://www.tornadoweb.org/)、Rubyにおける[Thin](https://github.com/macournoyer/thin)、Javaやその他のJVMベースの言語における[Jetty](http://www.eclipse.org/jetty/)などがある。これは *ユーザー空間* すなわちアプリケーションのコード内で完結する。リクエストを処理するための実行環境との契約は、ポートをバインドすることである。
 
 ポートバインディングによって公開されるサービスはHTTPだけではない。ほぼすべてのサーバーソフトウェアは、ポートをバインドするプロセスを用いて動作し、リクエストが来るのを待つ。例として、[ejabberd](http://www.ejabberd.im/)（[XMPP](http://xmpp.org/)を話す）や [Redis](http://redis.io/)（[Redisプロトコル](http://redis.io/topics/protocol)を話す）などがある。
 

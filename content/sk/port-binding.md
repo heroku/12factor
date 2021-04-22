@@ -7,7 +7,7 @@ Webové aplikácie sú niekedy vykonávané vnútri webserverového kontainera. 
 
 V lokálnom vývojárskom prostredí developer pristupuje na službu exportovanú jeho aplikáciou cez URL napríklad `http://localhost:5000/`.  Pri nasadení, smerovacia vrstva presmerúva požiadavky z verejnej domény na port web procesu.
 
-Toto sa typicky implementuje použitím [deklarácie závislostí](./dependencies) a pridá sa tak knižnica webservera do aplikácie. Napríklad [Tornado](http://www.tornadoweb.org/) pre Python, [Thin](http://code.macournoyer.com/thin/) pre Ruby, alebo [Jetty](http://www.eclipse.org/jetty/) pre Javu a iných jazykoch bežiacich na JVM.  Deje sa to úplne v *používateľskom priestore*, takže v kóde aplikácie.  Dohoda s exekučným prostredím je je bindovanie na port na ktorom bude obsluhovať požiadavky.
+Toto sa typicky implementuje použitím [deklarácie závislostí](./dependencies) a pridá sa tak knižnica webservera do aplikácie. Napríklad [Tornado](http://www.tornadoweb.org/) pre Python, [Thin](https://github.com/macournoyer/thin) pre Ruby, alebo [Jetty](http://www.eclipse.org/jetty/) pre Javu a iných jazykoch bežiacich na JVM.  Deje sa to úplne v *používateľskom priestore*, takže v kóde aplikácie.  Dohoda s exekučným prostredím je je bindovanie na port na ktorom bude obsluhovať požiadavky.
 
 HTTP nie je jediná služba, ktorú je možné exportovať bindovaním na port.  Skoro každý serverový softvér môže bežať na otvorenom porte a čakať na prichádzajúce požiadavky.  Príklady zahŕňajú [ejabberd](http://www.ejabberd.im/) (protokol [XMPP](http://xmpp.org/)), a [Redis](http://redis.io/) (protokol [Redis](http://redis.io/topics/protocol)).
 

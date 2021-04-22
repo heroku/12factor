@@ -7,7 +7,7 @@ Webové aplikace jsou někdy vykonávány uvnitř webového serveru. Například
 
 V lokálním vývojovém prostředí přistupuje vývojář na službu exportovanou jeho aplikací přes URL jako je `http://localhost:5000/`. U nasazení přesměrovává směrovací vrstva požadavky z veřejně dostupné domény na port webového procesu.
 
-To se typicky realizuje přidáním knihovny webserveru přímo do aplikace za pomoci [deklarace závislostí](./dependencies). Například [Tornado](http://www.tornadoweb.org/) pro Python, [Thin](http://code.macournoyer.com/thin/) pro Ruby, nebo [Jetty](http://www.eclipse.org/jetty/) pro Javu a jiné jazyky založené na JVM. Toto se děje výhradně v *uživatelském prostoru*, tedy v kódu aplikace. Dohoda s běhovým prostředím je pak pouze vazba na port pro obsluhu požadavků.
+To se typicky realizuje přidáním knihovny webserveru přímo do aplikace za pomoci [deklarace závislostí](./dependencies). Například [Tornado](http://www.tornadoweb.org/) pro Python, [Thin](https://github.com/macournoyer/thin) pro Ruby, nebo [Jetty](http://www.eclipse.org/jetty/) pro Javu a jiné jazyky založené na JVM. Toto se děje výhradně v *uživatelském prostoru*, tedy v kódu aplikace. Dohoda s běhovým prostředím je pak pouze vazba na port pro obsluhu požadavků.
 
 HTTP není jediná služba, kterou je možné exportovat přes port. Téměř libovolný serverový software může běžet na otevřeném portu a naslouchat příchozím požadavkům. Například [ejabberd](http://www.ejabberd.im/) (komunikující pomocí [XMPP](http://xmpp.org/)) nebo [Redis](http://redis.io/) (komunikující [Redis protokolem](http://redis.io/topics/protocol)).
 
