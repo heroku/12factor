@@ -1,4 +1,4 @@
-﻿## VII. Bindung an Ports
+## VII. Bindung an Ports
 ### Dienste durch das Binden von Ports exportieren
 
 Web-Apps laufen manchmal in einem Webserver als Container. Zum Beispiel laufen PHP-Apps als Modul in [Apache HTTPD](http://httpd.apache.org/), oder Java-Apps laufen manchmal in [Tomcat](http://tomcat.apache.org/).
@@ -7,7 +7,7 @@ Web-Apps laufen manchmal in einem Webserver als Container. Zum Beispiel laufen P
 
 In einer lokalen Entwicklungsumgebung öffnet ein Entwickler eine Dienst-URL wie `http://localhost:5000/`, um auf den Dienst der App zuzugreifen. Beim Deployment sorgt eine Routing-Schicht dafür, dass Requests von einem öffentlich sichtbaren Hostnamen zu den an die Ports gebundenen Prozessen kommen.
 
-Üblicherweise wird dies mittels [Abhängigkeitsdeklaration](./dependencies) implementiert. Zu der App fügt man eine Webserver-Bibliothek hinzu wie [Tornado](http://www.tornadoweb.org/) für Python, [Thin](http://code.macournoyer.com/thin/) für Ruby oder [Jetty](http://www.eclipse.org/jetty/) für Java und andere JVM-basierenden Sprachen. Dies findet vollständig im *User Space* statt, also im Code der App. Der Vertrag mit der Laufzeitumgebung ist das Binden an einen Port um Requests zu bedienen.
+Üblicherweise wird dies mittels [Abhängigkeitsdeklaration](./dependencies) implementiert. Zu der App fügt man eine Webserver-Bibliothek hinzu wie [Tornado](http://www.tornadoweb.org/) für Python, [Thin](https://github.com/macournoyer/thin) für Ruby oder [Jetty](http://www.eclipse.org/jetty/) für Java und andere JVM-basierenden Sprachen. Dies findet vollständig im *User Space* statt, also im Code der App. Der Vertrag mit der Laufzeitumgebung ist das Binden an einen Port um Requests zu bedienen.
 
 HTTP ist nicht der einzige Dienst, der durch Portbindung exportiert werden kann. Fast jede Server-Software kann betrieben werden, indem ein Prozess an einen Port gebunden wird und auf ankommende Requests wartet. Einige Beispiele sind [ejabberd](http://www.ejabberd.im/) (spricht [XMPP](http://xmpp.org/)) und [Redis](http://redis.io/) (spricht das [Redis-Protokoll](http://redis.io/topics/protocol)).
 

@@ -3,7 +3,7 @@
 
 *后端服务*是指程序运行所需要的通过网络调用的各种服务，如数据库（[MySQL](http://dev.mysql.com/)，[CouchDB](http://couchdb.apache.org/)），消息/队列系统（[RabbitMQ](http://www.rabbitmq.com/)，[Beanstalkd](https://beanstalkd.github.io)），SMTP 邮件发送服务（[ Postfix](http://www.postfix.org/)），以及缓存系统（[Memcached](http://memcached.org/)）。
 
-类似数据库的后端服务，通常由部署应用程序的系统管理员一起管理。除了本地服务之外，应用程序有可能使用了第三方发布和管理的服务。示例包括 SMTP（例如 [Postmark](http://postmarkapp.com/)），数据收集服务（例如 [New Relic](http://newrelic.com/) 或 [Loggly](http://www.loggly.com/)），数据存储服务（如 [Amazon S3](http://http://aws.amazon.com/s3/)），以及使用 API 访问的服务（例如 [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), [Last.fm](http://www.last.fm/api)）。
+类似数据库的后端服务，通常由部署应用程序的系统管理员一起管理。除了本地服务之外，应用程序有可能使用了第三方发布和管理的服务。示例包括 SMTP（例如 [Postmark](http://postmarkapp.com/)），数据收集服务（例如 [New Relic](http://newrelic.com/) 或 [Loggly](http://www.loggly.com/)），数据存储服务（如 [Amazon S3](https://aws.amazon.com/s3/)），以及使用 API 访问的服务（例如 [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), [Last.fm](http://www.last.fm/api)）。
 
 **12-Factor 应用不会区别对待本地或第三方服务。** 对应用程序而言，两种都是附加资源，通过一个 url 或是其他存储在 [配置](./config) 中的服务定位/服务证书来获取数据。12-Factor 应用的任意 [部署](./codebase) ，都应该可以在不进行任何代码改动的情况下，将本地 MySQL 数据库换成第三方服务（例如 [Amazon RDS](http://aws.amazon.com/rds/)）。类似的，本地 SMTP 服务应该也可以和第三方 SMTP 服务（例如 Postmark ）互换。上述 2 个例子中，仅需修改配置中的资源地址。
 

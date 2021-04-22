@@ -7,7 +7,7 @@
 
 本地环境中，开发人员通过类似`http://localhost:5000/`的地址来访问服务。在线上环境中，请求统一发送至公共域名而后路由至绑定了端口的网络进程。
 
-通常的实现思路是，将网络服务器类库通过 [依赖声明](./dependencies) 载入应用。例如，Python 的 [Tornado](http://www.tornadoweb.org/), Ruby 的[Thin](http://code.macournoyer.com/thin/) , Java 以及其他基于 JVM 语言的 [Jetty](http://www.eclipse.org/jetty/)。完全由 *用户端* ，确切的说应该是应用的代码，发起请求。和运行环境约定好绑定的端口即可处理这些请求。
+通常的实现思路是，将网络服务器类库通过 [依赖声明](./dependencies) 载入应用。例如，Python 的 [Tornado](http://www.tornadoweb.org/), Ruby 的[Thin](https://github.com/macournoyer/thin) , Java 以及其他基于 JVM 语言的 [Jetty](http://www.eclipse.org/jetty/)。完全由 *用户端* ，确切的说应该是应用的代码，发起请求。和运行环境约定好绑定的端口即可处理这些请求。
 
 HTTP 并不是唯一一个可以由端口绑定提供的服务。其实几乎所有服务器软件都可以通过进程绑定端口来等待请求。例如，使用 [XMPP](http://xmpp.org/) 的 [ejabberd](http://www.ejabberd.im/)  ， 以及使用 [Redis 协议](http://redis.io/topics/protocol) 的 [Redis](http://redis.io/) 。
 
