@@ -5,7 +5,7 @@
 
 * Bước xây dựng* là bước chuyển các đoạn mã thành các gói có khả năng thực thi được gọi là một *bản xảy dựng*. Sử dụng phiên bản của mã nguồn ở một bản cam kết (commit) quy định bở quy trình triển khai, bước xây dựng lấy về và cung cấp các [phụ thuộc](./dependencies) và biên dịch các thành phần và tài nguyên.
 * Bước phát hành* sử dụng các kết quả của bước xây dựng và kết hợp với các [cấu hình](./config) triển khai hiện tại. Kết quả của *phát hành* bao gồm cả bản xây dựng và các câu hình cho phép ứng dụng có thể được vận hành trong môi trường vận hành.
-* Bước vận hành* (được biết như là "thời gian vận hành" (runtime)) vận hành ứng dụng trong môi trường thực thi, bằng việc thực thi một tập các [tiến trình](./process) của của ứng dụng với một phiên bản phát hành cụ thể.
+* Bước vận hành* (được biết như là "thời gian vận hành" (runtime)) vận hành ứng dụng trong môi trường thực thi, bằng việc thực thi một tập các [tiến trình](./processes) của của ứng dụng với một phiên bản phát hành cụ thể.
 
 ![Mã nguồn được xây dựng, kết hợp với các cấu hình để cung cập một phát hành.](/images/release.png)
 
