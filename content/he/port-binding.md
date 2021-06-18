@@ -12,5 +12,3 @@
 HTTP איננו השירות היחיד שניתן לייצא על ידי קשירת פורטים. ניתן להריץ כמעט כל שירות כך שיאזין לפורט מסוים ויחכה לבקשות. לדוגמא [ejabberd](http://www.ejabberd.im/) (אשר מדבר [XMPP](http://xmpp.org/)), ו-[Redis](http://redis.io/) (אשר מדבר ב-[פרוטוקול Redis](http://redis.io/topics/protocol)).
 
 שים לב כי גישה זו אומרת גם שאפליקצייה אחת יכולה להפוך [לשירות מגבה](./backing-services) של אפליקציה אחרת, על ידי הגדרת ה-URL שלה ב-[קונפיגורציה](./config) של האפליקצייה שצריכה להשתמש בה.
-
-Note also that the port-binding approach means that one app can become the [backing service](./backing-services) for another app, by providing the URL to the backing app as a resource handle in the [config](./config) for the consuming app.
