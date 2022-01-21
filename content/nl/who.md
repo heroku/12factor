@@ -1,4 +1,4 @@
-Who should read this document?
+Wie zou dit document moeten lezen?
 ==============================
 
-Any developer building applications which run as a service.  Ops engineers who deploy or manage such applications.
+Elke ontwikkelaar die applicaties bouwt die draaien als een service. Ops ingenieurs die dergelijke toepassingen uitrollen of beheren.
