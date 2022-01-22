@@ -9,4 +9,6 @@ Backing services zoals de database worden traditioneel beheerd door dezelfde sys
 
 Elke afzonderlijke backing service is een *resource*. Bijvoorbeeld, een MySQL database is een bron; twee MySQL databases (gebruikt voor sharding op de applicatielaag) kwalificeren als twee verschillende bronnen. De 12-factor app behandelt deze databases als *attached resources*, wat aangeeft dat ze losgekoppeld zijn aan de deploy waaraan ze gekoppeld zijn.
 
+<img src="/images/attached-resources.png" class="full" alt="A production deploy attached to four backing services." />
+
 Resources kunnen naar believen aan deploys worden toegevoegd of ervan worden losgekoppeld. Bijvoorbeeld, als de database van de app zich niet goed werkt vanwege een hardwareprobleem, kan de app-beheerder een nieuwe databaseserver opstarten die is hersteld vanaf een recente back-up. De huidige productiedatabase kan worden losgekoppeld en de nieuwe database aangekoppeld -- allemaal zonder enige codewijziging.
