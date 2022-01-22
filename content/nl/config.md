@@ -1,22 +1,22 @@
-## III. Config
-### Store config in the environment
+## III. Configuratie
+### Config opslaan in de omgeving
 
-An app's *config* is everything that is likely to vary between [deploys](./codebase) (staging, production, developer environments, etc).  This includes:
+De *config* van een app is alles wat waarschijnlijk varieert tussen [deploys](./codebase) (staging, productie, ontwikkelomgevingen, etc).  Dit omvat:
 
-* Resource handles to the database, Memcached, and other [backing services](./backing-services)
-* Credentials to external services such as Amazon S3 or Twitter
-* Per-deploy values such as the canonical hostname for the deploy
+* Resource handles naar de database, Memcached, en andere [backing-services](./backing-services)
+* Credentials naar externe diensten zoals Amazon S3 of Twitter
+* Per-deploy waarden zoals de canonieke hostnaam voor de deploy
 
-Apps sometimes store config as constants in the code.  This is a violation of twelve-factor, which requires **strict separation of config from code**.  Config varies substantially across deploys, code does not.
+Apps slaan soms config op als constanten in de code. Dit is een schending van de 12-factors, die **strikte scheiding van config en code** vereist. Config varieert aanzienlijk tussen deploys, code niet.
 
-A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
+Een lakmoesproef voor het feit of een app alle configuratie correct uit de code heeft gehaald, is of de codebase op elk moment open source kan worden gemaakt, zonder de credentials te compromitteren.
 
-Note that this definition of "config" does **not** include internal application config, such as `config/routes.rb` in Rails, or how [code modules are connected](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) in [Spring](http://spring.io/).  This type of config does not vary between deploys, and so is best done in the code.
+Merk op dat deze definitie van "config" **niet** interne applicatie config omvat, zoals `config/routes.rb` in Rails, of hoe [code modules zijn verbonden](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/beans.html) in [Spring](http://spring.io/). Dit type van configuratie varieert niet tussen deploys, en wordt dus best in de code gedaan.
 
-Another approach to config is the use of config files which are not checked into revision control, such as `config/database.yml` in Rails.  This is a huge improvement over using constants which are checked into the code repo, but still has weaknesses: it's easy to mistakenly check in a config file to the repo; there is a tendency for config files to be scattered about in different places and different formats, making it hard to see and manage all the config in one place.  Further, these formats tend to be language- or framework-specific.
+Een andere benadering van config is het gebruik van config bestanden die niet ingecheckt worden in revisie controle, zoals `config/database.yml` in Rails. Dit is een enorme verbetering ten opzichte van het gebruik van constanten die in de code repo worden ingecheckt, maar heeft nog steeds zwakke punten: het is gemakkelijk om per ongeluk een config bestand in de repo in te checken; er is een neiging voor config bestanden om verspreid te zijn over verschillende plaatsen en verschillende formaten, wat het moeilijk maakt om alle config op één plaats te zien en te beheren. Verder hebben deze formaten de neiging programmeertaal- of framework-specifiek te zijn.
 
-**The twelve-factor app stores config in *environment variables*** (often shortened to *env vars* or *env*).  Env vars are easy to change between deploys without changing any code; unlike config files, there is little chance of them being checked into the code repo accidentally; and unlike custom config files, or other config mechanisms such as Java System Properties, they are a language- and OS-agnostic standard.
+**De 12-factor app slaat de configuratie op in *environment variables*** (vaak afgekort tot *env vars* of *env*).  Env vars zijn gemakkelijk te veranderen tussen deploys zonder code te veranderen; in tegenstelling tot config files, is er weinig kans dat ze per ongeluk in de code repo ingecheckt worden; en in tegenstelling tot custom config files, of andere config mechanismen zoals Java System Properties, zijn ze een programmeertaal- en OS-agnostische standaard.
 
-Another aspect of config management is grouping.  Sometimes apps batch config into named groups (often called "environments") named after specific deploys, such as the `development`, `test`, and `production` environments in Rails.  This method does not scale cleanly: as more deploys of the app are created, new environment names are necessary, such as `staging` or `qa`.  As the project grows further, developers may add their own special environments like `joes-staging`, resulting in a combinatorial explosion of config which makes managing deploys of the app very brittle.
+Een ander aspect van config management is groeperen. Soms groeperen apps hun config in benoemde groepen (vaak "omgevingen" genaamd), genoemd naar specifieke deploys, zoals de `development`, `test`, en `production` omgevingen in Rails. Deze methode schaalt niet netjes: als meer deploys van de app worden gemaakt, zijn nieuwe omgevingsnamen nodig, zoals `staging` of `qa`. Als het project verder groeit, kunnen ontwikkelaars hun eigen speciale omgevingen toevoegen, zoals `joes-staging`, wat resulteert in een combinatorische explosie van config die het beheren van deploys van de app erg broos maakt.
 
-In a twelve-factor app, env vars are granular controls, each fully orthogonal to other env vars.  They are never grouped together as "environments", but instead are independently managed for each deploy.  This is a model that scales up smoothly as the app naturally expands into more deploys over its lifetime.
+In een 12-factor app, zijn env vars granulaire controls, elk volledig orthogonaal aan andere env vars. Ze worden nooit gegroepeerd als "omgevingen", maar worden in plaats daarvan onafhankelijk beheerd voor elke implementatie. Dit is een model dat soepel opschaalt naarmate de app zich op natuurlijke wijze uitbreidt naar meer implementaties gedurende zijn levensduur.
