@@ -9,4 +9,4 @@ In het moderne tijdperk wordt software vaak geleverd als een dienst: *web apps* 
 * **Minimaliseren van verschillen** tussen ontwikkeling en productie, waardoor **continuous deployment** mogelijk is voor maximale wendbaarheid;
 * En kan **opgeschaald** worden zonder significante wijzigingen in tooling, architectuur of ontwikkelingspraktijken.
 
-De twelve-factor methodologie kan worden toegepast op apps geschreven in elke programmeertaal, en die gebruik maken van elke combinatie van backing services (databases, queue, memory cache, etc). 
+De 12-factor methodologie kan worden toegepast op apps geschreven in elke programmeertaal, en die gebruik maken van elke combinatie van backing services (databases, queue, memory cache, etc). 

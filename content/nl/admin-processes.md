@@ -1,14 +1,14 @@
-## XII. Admin processes
-### Run admin/management tasks as one-off processes
+## XII. Admin-processen
+### Voer admin/beheertaken uit als eenmalige processen
 
-The [process formation](./concurrency) is the array of processes that are used to do the app's regular business (such as handling web requests) as it runs.  Separately, developers will often wish to do one-off administrative or maintenance tasks for the app, such as:
+De [proces formatie](./concurrency) is de reeks van processen die gebruikt worden om de gewone zaken van de app te doen (zoals het afhandelen van web verzoeken) terwijl het draait. Los daarvan zullen ontwikkelaars vaak eenmalige administratieve of onderhoudstaken voor de app willen doen, zoals:
 
-* Running database migrations (e.g. `manage.py migrate` in Django, `rake db:migrate` in Rails).
-* Running a console (also known as a [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell) to run arbitrary code or inspect the app's models against the live database.  Most languages provide a REPL by running the interpreter without any arguments (e.g. `python` or `perl`) or in some cases have a separate command (e.g. `irb` for Ruby, `rails console` for Rails).
-* Running one-time scripts committed into the app's repo (e.g. `php scripts/fix_bad_records.php`).
+* Het uitvoeren van database migraties (bijv. `manage.py migrate` in Django, `rake db:migrate` in Rails).
+* Het uitvoeren van een console (ook bekend als een [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) shell) om willekeurige code uit te voeren of de modellen van de app te inspecteren tegen de live database.  De meeste talen bieden een REPL door het uitvoeren van de interpreter zonder argumenten (bijv. `python` of `perl`) of in sommige gevallen hebben een apart commando (bijv. `irb` voor Ruby, `rails console` voor Rails).
+* Het draaien van eenmalige scripts die gecommit zijn in de repo van de app (bijv. `php scripts/fix_bad_records.php`).
 
-One-off admin processes should be run in an identical environment as the regular [long-running processes](./processes) of the app.  They run against a [release](./build-release-run), using the same [codebase](./codebase) and [config](./config) as any process run against that release.  Admin code must ship with application code to avoid synchronization issues.
+Eenmalige admin processen moeten worden uitgevoerd in een identieke omgeving als de reguliere [langlopende processen](./processes) van de app. Ze draaien tegen een [release](./build-release-run), met dezelfde [codebase](./codebase) en [config](./config) als elk proces dat tegen die release draait. De beheercode moet samen met de applicatiecode worden geleverd om synchronisatieproblemen te voorkomen.
 
-The same [dependency isolation](./dependencies) techniques should be used on all process types.  For example, if the Ruby web process uses the command `bundle exec thin start`, then a database migration should use `bundle exec rake db:migrate`.  Likewise, a Python program using Virtualenv should use the vendored `bin/python` for running both the Tornado webserver and any `manage.py` admin processes.
+Dezelfde [dependency isolation](./dependencies) technieken moeten gebruikt worden op alle procestypes. Bijvoorbeeld, als het Ruby web proces het commando `bundle exec thin start` gebruikt, dan zou een database migratie `bundle exec rake db:migrate` moeten gebruiken. Op dezelfde manier zou een Python programma dat Virtualenv gebruikt de vendored `bin/python` moeten gebruiken voor het draaien van zowel de Tornado webserver als alle `manage.py` admin processen.
 
-Twelve-factor strongly favors languages which provide a REPL shell out of the box, and which make it easy to run one-off scripts.  In a local deploy, developers invoke one-off admin processes by a direct shell command inside the app's checkout directory.  In a production deploy, developers can use ssh or other remote command execution mechanism provided by that deploy's execution environment to run such a process.
+12-factor heeft een sterke voorkeur voor talen die een REPL shell uit de doos bieden, en die het gemakkelijk maken om eenmalige scripts te draaien. In een lokale implementatie roepen ontwikkelaars eenmalige admin processen aan door een direct shell commando in de checkout directory van de app. Bij een productie-implementatie kunnen ontwikkelaars ssh gebruiken of een ander mechanisme om commando's op afstand uit te voeren, zoals voorzien door de uitvoeringsomgeving van die implementatie, om zo'n proces uit te voeren.

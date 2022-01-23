@@ -1,5 +1,5 @@
 ## II. Afhankelijkheden
-### Verklaar en isoleer afhankelijkheden expliciet
+### Expliciet afhankelijkheden declareren en isoleren
 
 De meeste programmeertalen bieden een packaging systeem voor het distribueren van ondersteunende bibliotheken aan, zoals [CPAN](http://www.cpan.org/) voor Perl of [Rubygems](http://rubygems.org/) voor Ruby. Libraries die via een packaging systeem worden geïnstalleerd, kunnen systeembreed worden geïnstalleerd (bekend als "site packages") of worden opgenomen in de map die de app bevat (bekend als "vendoring" of "bundling").
 

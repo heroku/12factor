@@ -1,38 +1,38 @@
-The Twelve Factors
+De Twaalf Factoren
 ==================
 
 ## [I. Codebase](./codebase)
-### One codebase tracked in revision control, many deploys
+### Eén codebasis bijgehouden in versiebeheer, veel uitrollen
 
-## [II. Dependencies](./dependencies)
-### Explicitly declare and isolate dependencies
+## [II. Afhankelijkheden](./dependencies)
+### Expliciet afhankelijkheden declareren en isoleren
 
-## [III. Config](./config)
-### Store config in the environment
+## [III. Configuratie](./config)
+### Config opslaan in de omgeving
 
-## [IV. Backing services](./backing-services)
-### Treat backing services as attached resources
+## [IV. Backing-services](./backing-services)
+### Behandel backing services als bijgevoegde bronnen
 
 ## [V. Build, release, run](./build-release-run)
-### Strictly separate build and run stages
+### Strikt gescheiden houden van build en run stadia
 
-## [VI. Processes](./processes)
-### Execute the app as one or more stateless processes
+## [VI. Processen](./processes)
+### De app als één of meer stateloze processen uitvoeren
 
-## [VII. Port binding](./port-binding)
-### Export services via port binding
+## [VII. Poort-binding](./port-binding)
+### Exporteer diensten via poort binding
 
 ## [VIII. Concurrency](./concurrency)
-### Scale out via the process model
+### Schaalvergroting via het procesmodel
 
-## [IX. Disposability](./disposability)
-### Maximize robustness with fast startup and graceful shutdown
+## [IX. Wegwerpbaarheid](./disposability)
+### Maximaliseer robuustheid met snel opstarten en elegant afsluiten
 
-## [X. Dev/prod parity](./dev-prod-parity)
-### Keep development, staging, and production as similar as possible
+## [X. Dev/prod-pariteit](./dev-prod-parity)
+### Hou ontwikkeling, staging, en productie zo gelijk mogelijk
 
 ## [XI. Logs](./logs)
-### Treat logs as event streams
+### Behandel logs als event streams
 
-## [XII. Admin processes](./admin-processes)
-### Run admin/management tasks as one-off processes
+## [XII. Admin-processen](./admin-processes)
+### Voer admin/beheertaken uit als eenmalige processen

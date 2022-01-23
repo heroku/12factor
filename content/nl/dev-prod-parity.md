@@ -1,4 +1,4 @@
-## X. Dev/prod parity
+## X. Dev/prod pariteit
 ### Hou ontwikkeling, staging, en productie zo gelijk mogelijk
 
 Historisch gezien zijn er aanzienlijke verschillen geweest tussen ontwikkeling (een ontwikkelaar die live bewerkingen uitvoert op een lokale [deploy](./codebase) van de app) en productie (een draaiende deploy van de app die toegankelijk is voor eindgebruikers). Deze verschillen manifesteren zich op drie gebieden:

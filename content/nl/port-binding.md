@@ -1,4 +1,4 @@
-## VII. Poortbinding
+## VII. Poort-binding
 ### Exporteer diensten via poort binding
 
 Web apps worden soms uitgevoerd binnen een webserver container. PHP apps kunnen bijvoorbeeld draaien als een module binnen [Apache HTTPD](http://httpd.apache.org/), of Java apps kunnen draaien binnen [Tomcat](http://tomcat.apache.org/).
