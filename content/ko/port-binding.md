@@ -7,7 +7,7 @@
 
 로컬 개발 환경에서는 `http://localhost:5000`과 같은 주소를 통해 개발자가 애플리케이션 서비스에 접근할 수 있습니다. 배포에서는 라우팅 레이어가 외부에 공개된 호스트명으로 들어온 요청을 포트에 바인딩된 웹 프로세스에 전달 합니다. 
 
-이는 일반적으로 [종속선 선언](./dependency)에 웹서버 라이브러리를 추가함으로써 구현됩니다. 예를 들어, 파이썬의 [Tornado](http://www.tornadoweb.org/)나 루비의 [Thin](http://code.macournoyer.com/thin/)이나 자바와 JVM 기반 언어들을 위한 [Jetty](http://www.eclipse.org/jetty/)가 있습니다. 이것들은 전적으로 *유저 스페이스* 즉, 애플리케이션의 코드 내에서 처리됩니다. 실행 환경과의 규약은 요청을 처리하기 위해 포트를 바인딩하는 것입니다. 
+이는 일반적으로 [종속선 선언](./dependencies)에 웹서버 라이브러리를 추가함으로써 구현됩니다. 예를 들어, 파이썬의 [Tornado](http://www.tornadoweb.org/)나 루비의 [Thin](http://code.macournoyer.com/thin/)이나 자바와 JVM 기반 언어들을 위한 [Jetty](http://www.eclipse.org/jetty/)가 있습니다. 이것들은 전적으로 *유저 스페이스* 즉, 애플리케이션의 코드 내에서 처리됩니다. 실행 환경과의 규약은 요청을 처리하기 위해 포트를 바인딩하는 것입니다. 
 
 포트 바인딩에 의해 공개되는 서비스는 HTTP 뿐만이 아닙니다. 거의 모든 종류의 서버 소프트웨어는 포트를 바인딩하고 요청이 들어오길 기다리는 프로세스를 통해 실행될 수 있습니다. 예를 들면, [ejabberd](http://www.ejabberd.im/) ([XMPP](http://xmpp.org/)을 따름)나 [Redis](http://redis.io/) ([Redis protocol](http://redis.io/topics/protocol)을 따름) 등이 있습니다.
 

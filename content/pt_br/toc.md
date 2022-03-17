@@ -13,7 +13,7 @@ Os Doze Fatores
 ## [IV. Serviços de Apoio](./backing-services)
 ### Trate os serviços de apoio, como recursos ligados
 
-## [V. Build, release, run](./build-release-run)
+## [V. Construa, lance, execute](./build-release-run)
 ### Separe estritamente os builds e execute em estágios
 
 ## [VI. Processos](./processes)

@@ -1,0 +1,12 @@
+## II. Závislosti
+### Explicitne deklarované a izolované závislosti
+
+Väčšina programovacích jazykov poskytuje distribučný systém knižníc, napríklad [CPAN](http://www.cpan.org/) pre Perl alebo [Rubygems](http://rubygems.org/) pre Ruby.  Knižnice nainštalované cez balíčkovací systém sa dajú nainštalovať pre celý systém (nazývané "site packages") alebo len v rámci priečinka s aplikáciou (nazýva sa "vendoring" alebo "bundling").
+
+**Dvanásť faktorová aplikácia sa nikdy nespolieha na implicitnú existenciou systémových balíčkov.**  Svoje závislosti deklaruje úplne a presne, pomocou *deklaráciu závislostí*. Ďalej používa nástroj na *izoláciu závislostí*, pre istotu, aby žiadne implicitné závislosti "nepretiekli" z vonkajšieho systému. Špecifikácia závislostí je úplná a explicitná a používa sa rovnako na produkcii tak aj pri vývoji.
+
+Napríklad, [Bundler](https://bundler.io/) pre Ruby poskytuje `Gemfile` manifest format na deklaráciu závislostí a `bundle exec` na izoláciu závislostí.  V pythone sú na to dva rôzne nástroje -- [Pip](http://www.pip-installer.org/en/latest/) sa používa na deklaráciu a [Virtualenv](http://www.virtualenv.org/en/latest/) na izoláciu.  Dokonca aj C má [Autoconf](http://www.gnu.org/s/autoconf/) na deklaráciu závislostí, a statické linkovanie poskytuje izoláciu závislostí.  Nezáleží na nástrojoch, deklarácia závislostí a izolácia sa musia vždy používať spolu -- len jedno alebo druhé nestačí na splnenie dvanástich faktorov.
+
+Jednou z výhod explicitnej deklarácie závislosí je to, že zjednodušuje rozbehanie aplikácie pre nových developerov.  Nový developer si len naklonuje repozitár aplikácie do svojho vývojárskeho prostredia a ako prerekvizity mu stačí mať nainštalovaný kompilátor jazyka a manažér závislostí.  Všetko potrebné na rozbehanie aplikácie sa dotiahne deterministickým *build príkazom*.  Napríklad, build príkaz pre Ruby/Bundler je `bundle install`, pre Clojure/[Leiningen](https://github.com/technomancy/leiningen#readme) je to `lein deps`.
+
+Dvanásť faktorová aplikácia nezávisí na implicitnej existencii akéhokoľvek systémového nástroja. Príkladom môže byť spustenie  ImageMagick alebo `curl` cez shell.  Napriek tomu, že tieto nástroje môžu existovať na veľa alebo aj väčšine systémov, neexistuje záruka, že budú existovať na všetkých systémoch, na ktorých bude aplikácia bežať v budúcnosti, alebo, že verzia na budúcom systéme bude kompatibilná s aplikáciou.  Ak aplikácia potrebuje spúšťať systémový nástroj cez shell, daný nástroj by mal byť zahrnutý do aplikácie.
