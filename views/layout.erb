@@ -11,8 +11,10 @@
   <link rel="shortcut icon" href="images/favicon.ico">
 
   <link rel="stylesheet" href="https://www.herokucdn.com/shibori3/latest/shibori3.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  <script src="https://www.herokucdn.com/belostick/latest/belostick.min.js"></script>
 </head>
-<body>
+<body class="site">
   <% if ENV['GOOGLE_TAG_MANAGER_ACCOUNT'] %>
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=<%= ENV['GOOGLE_TAG_MANAGER_ACCOUNT'] %>"
@@ -26,18 +28,33 @@
   <% end %>
 
   <header>
-    <h1><a href="./" title="The Twelve-Factor App">The Twelve-Factor App</a></h1>
+    <nav class="db dt-l w-100 border-box pa3 ph5-l bg-purple">
+      <h1 class="db dtc-l v-mid white link w-100 w-25-l tc ttu tl-l mb2 mb0-l f5" href="#" title="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h3 v-mid mr1" viewBox="0 0 72 80">
+          <path fill="#FFF" fill-rule="evenodd" d="M64.8,0 C68.776,0 72,3.224 72,7.2 L72,7.2 L72,72.8 C72,76.776 68.776,80 64.8,80 L64.8,80 L7.2,80 C3.224,80 0,76.776 0,72.8 L0,72.8 L0,7.2 C0,3.224 3.224,0 7.2,0 L7.2,0 Z M64.8,4 L7.2,4 C5.436,4 4,5.435 4,7.2 L4,7.2 L4,72.8 C4,74.564 5.436,76 7.2,76 L7.2,76 L64.8,76 C66.565,76 68,74.564 68,72.8 L68,72.8 L68,7.2 C68,5.435 66.565,4 64.8,4 L64.8,4 Z M19,52 L28,60 L19,68 L19,52 Z M27,12 L27,34.711 C30.994,33.411 36.577,32 42,32 C46.945,32 49.905,33.944 51.517,35.575 C54.814625,38.91 54.995191,43.1202378 55.0003112,43.9159307 L55.0002258,68 L47,68 L47,44.11 C46.961,42.243 46.062,40 42,40 C34.230209,40 25.5570898,43.7328438 24.7166549,44.1028638 L24.651,44.132 L19,46.692 L19,12 L27,12 Z M55,12 C54.46,16.544 52.618,20.9 49,25 L49,25 L41,25 C44.144,20.875 46.118,16.534 47,12 L47,12 Z"/>
+        </svg>
+        The Twelve Factor App
+      </h1>
+      <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+        <a class="link white underline-hover f5 f5-m dib mr3 mr4-l" href="/" title="Home">Home</a>
+        <a class="link white underline-hover f5 f5-m dib mr3 mr4-l" href="/codebase" title="The Twelve Factors">The Twelve Factors</a>
+        <a class="link white underline-hover f5 f5-m dib mr3 mr4-l" href="/12factor.epub" title="eBook">eBook</a>
+        <a class="link white underline-hover f5 f5-m dib mr3 mr4-l" href="https://github.com/heroku/12factor" title="Source" target="_blank">Source</a>
+        <a class="link white underline-hover f5 f5-m dib" href="https://www.heroku.com/" title="Heroku" target="_blank">heroku.com</a>
+      </div>
+    </nav>
   </header>
-
-  <%= yield %>
-
-  <footer>
-  <div id="locales"><%= render_locales(@factor) %></div>
-  <div>Written by Adam Wiggins</div>
-  <div>Last updated 2017</div>
-  <div><a href="https://github.com/heroku/12factor">Sourcecode</a></div>
-  <div><a href="/12factor.epub">Download ePub Book</a></div>
-  <div><a href="https://www.heroku.com/policy/privacy">Privacy Policy</a></div>
-</footer>
+  <section class="content gradient-section gradient-section-bg-img pt3 pb3 lh-copy black-80">
+    <%= yield %>
+  </section>
+  <footer class="pv4 ph3 ph5-m ph6-l dark-gray" style="background-color: #eef1f6">
+    <small class="f6 db tc">© <%= Time.new.year %> Salesforce.com. Originally written by Adam Wiggins. Last updated 2023.</small>
+    <div class="tc mt3">
+      <a class="privacy-terms f6 dib ph2 link dark-gray" rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/?_gl=1*zh3ngv*_ga*MTQ5MzIzOTIwLjE2Nzk2OTA1NjY.*_ga_62RHPFWB9M*MTY4Mjk2OTM0Ni41MC4wLjE2ODI5NjkzNDYuMC4wLjA."><span aria-label="Privacy Icon" title="Privacy Icon"></span> Your Privacy Choices</a>
+      <a href="https://github.com/heroku/12factor" title="Terms" class="f6 dib ph2 link dark-gray">Source Code</a>
+      <a href="/12factor.epub" title="Terms" class="f6 dib ph2 link dark-gray">Download eBook (.epub)</a>
+      <a href="https://www.heroku.com/policy/privacy" title="Privacy" class="f6 dib ph2 link dark-gray">Privacy Policy</a>
+    </div>
+  </footer>
 </body>
 </html>
