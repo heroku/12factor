@@ -1,4 +1,5 @@
 ## XII. Tiến trình quản trị
+
 ### Thực thi nhiệm vụ quản trị như là một tiến trình 
 
 [Công thức cho các tiến trình](./concurrency) là danh sách các tiến trình được sử dụng để thực thi các nghiệp vụ của ứng dụng (như là điều khiển web) khi chúng vận hành. Ngoài ra, lập trình viên thường mong muốn thực hiện các nhiệm vụ quản trị ứng dụng như là: 

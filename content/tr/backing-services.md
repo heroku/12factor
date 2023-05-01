@@ -1,4 +1,5 @@
 ## IV. Destek servisi
+
 ### Destek servislerine ekli kaynak olarak davranma
 
 Bir *destek servisi* uygulamanın kendi normal işleminin bir parçası olarak ağ üzerinden tüketim yapan bir servistir. Örnekler veri deposu([MySQL](http://dev.mysql.com/) veya [CouchDB](http://couchdb.apache.org/) gibi), mesajlama/kuyruklama sistemleri( [RabbitMQ](http://www.rabbitmq.com/) veya [Beanstalkd](https://beanstalkd.github.io)), giden email için SMTP servisi([Postfix](http://www.postfix.org/) gibi) ve önbellekleme sistemleri([Memcached](http://memcached.org/) gibi) içerir.

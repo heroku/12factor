@@ -1,4 +1,5 @@
 ## X. Podobnost Vývoj/Produkce
+
 ### Udržujte si co nejmenší rozdíly mezi vývojovým, testovacím a produkčním prostředím.
 
 Historicky byly vždy velké rozdíly mezi vývojovým (vývojář provádí změny v lokálním nasazení [zdrojového kódu](./codebase)) a produkčním prostředím (běžící nasazení aplikace přístupné koncovým uživatelům). To se projevuje jako mezery v těchto oblastech:

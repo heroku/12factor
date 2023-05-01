@@ -1,4 +1,5 @@
 ## X. Jednolitość środowisk
+
 ### Utrzymuj środowisko developerskie, stagingowe i produkcyjne tak podobne jak tylko możliwe
 
 Z doświadczenia wiadomo, że od zawsze istniały różnice pomiędzy środowiskiem developerskim (developer pracujący nad swoją lokalną wersją [kodu](./codebase) aplikacji) a produkcyjnym (działająca aplikacja dostępna dla użytkowników. Ze względu na ich charakter, możemy wymienić trzy rodzaje różnic:

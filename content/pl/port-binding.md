@@ -1,4 +1,5 @@
 ## VII. Przydzielanie portów
+
 ### Udostępniaj usługi przez przydzielanie portów
 
 Zdarza się, że aplikacje internetowe uruchamiane są w ramach serwera web. Napisane w PHP np. działają jako moduł [Apache HTTPD](http://httpd.apache.org/), natomiast aplikacje w Javie mogą być uruchomiane wewnątrz serwera aplikacji, np. [Tomcat](http://tomcat.apache.org/).

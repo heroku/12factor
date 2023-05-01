@@ -1,4 +1,5 @@
 ## V. Assemblez, publiez, exécutez
+
 ### Séparez strictement les étapes d'assemblage et d'exécution
 
 Une [base de code](./codebase) est transformée en un déploiement (non-développement) à travers les étapes suivantes :

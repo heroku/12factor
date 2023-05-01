@@ -1,4 +1,5 @@
 ## VIII. Concorrenza
+
 ### Scalare attraverso il process model
 
 Ogni software, una volta avviato, è rappresentato da uno o più processi. Le web application in particolare hanno assunto nel tempo una gran varietà di forme e di tipologie di esecuzione, in tal senso. Per esempio, i processi PHP vengono eseguiti come sotto-processi figli di Apache, avviati su richiesta quando necessari in base al volume di richieste. Java invece gestisce le cose nella maniera opposta, tramite un superprocesso unico che usa una grande quantità di risorse sul server (CPU e memoria) dall'avvio, con una concorrenza gestita "internamente" tramite i threads. In entrambi i casi, comunque, i processi non sono esplicitamente visibili allo sviluppatore.

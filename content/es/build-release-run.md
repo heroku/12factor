@@ -1,4 +1,5 @@
 ## V. Construir, distribuir, ejecutar
+
 ### Separar completamente la etapa de construcción de la etapa de ejecución
 
 El [código base](./codebase) se transforma en un despliegue (que no es de desarrollo) al completar las siguientes tres etapas:

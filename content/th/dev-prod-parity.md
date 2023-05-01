@@ -1,4 +1,5 @@
 ## X. Dev/prod parity
+
 ### ทำให้ development, staging และ production ให้มีความใกล้เคียงกันที่สุด
 
 ในอดีต มีช่องว่างที่มากมายระหว่าง development (developer แก้ไข app ในเครื่องตัวเอง [deploy](./codebase)) และ production (deploy ที่ทำงานและใช้งานโดยผู้ใช้งานที่แท้จริง) ช่องว่างที่ชัดเจนมี 3 เรื่่อง:

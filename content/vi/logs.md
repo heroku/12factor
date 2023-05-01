@@ -1,4 +1,5 @@
 ## [XI. Nhật ký](./logs)
+
 ### Nhật ký là các luồng sự kiện
 
 *Nhật ký* cung cấp khả năng thể hiện các hình vi của ứng dụng đang vận hành, trong môi trường máy chủ chúng thường được ghi lại thành các tệp tin trên ổ đĩa cứng (a "logfile"); nhưng chỉ có một định dạng biểu diễn duy nhất.

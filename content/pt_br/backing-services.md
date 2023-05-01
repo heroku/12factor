@@ -1,4 +1,5 @@
 ## IV. Serviços de Apoio
+
 ### Trate serviços de apoio como recursos anexados
 
 Um *serviço de apoio* é qualquer serviço que o app consuma via rede como parte de sua operação normal. Exemplos incluem armazenamentos de dados (como [MySQL](http://dev.mysql.com/) ou [CouchDB](http://couchdb.apache.org/)), sistemas de mensagens/filas (tais como [RabbitMQ](http://www.rabbitmq.com/) ou [Beanstalkd](https://beanstalkd.github.io)), serviços SMTP para emails externos (tais como [Postfix](http://www.postfix.org/)), e sistemas de cache (tais como [Memcached](http://memcached.org/)).

@@ -1,4 +1,5 @@
 ## II. Dépendances
+
 ### Déclarez explicitement et isolez les dépendances
 
 La plupart des langages de programmation offrent des systèmes pour créer des paquets à partir de bibliothèques afin de les distribuer, tel que [CPAN](http://www.cpan.org/) pour Perl ou [Rubygems](http://rubygems.org/) pour Ruby. Les bibliothèques installées à travers un système de packaging peuvent être installées à travers tout le système, ou bien limitées au répertoire contenant l'application (que l'on appelle les "vendor" ou "bundles").

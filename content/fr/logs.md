@@ -1,4 +1,5 @@
 ## XI. Logs
+
 ### Traitez les logs comme des flux d'évènements
 
 Les *logs* fournissent de la visibilité au comportement de l'application qui s'exécute. Dans des environnements de type serveur, ils sont généralement écrits dans un fichier, sur le disque (dans un fichier de log). Mais c'est simplement un format de sortie.

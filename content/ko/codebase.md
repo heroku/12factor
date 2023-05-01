@@ -1,4 +1,5 @@
 ## I. 코드베이스
+
 ### 버전 관리되는 하나의 코드베이스와 다양한 배포
 
 Twelve-Factor 앱은 항상 [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), [Subversion](http://subversion.apache.org/) 같은 버전 컨트롤 시스템을 사용하여 변화를 추적하며, 버전 추적 데이터베이스의 사본을 *코드 저장소*, 줄여서 *저장소*라고 부릅니다.

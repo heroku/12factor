@@ -1,4 +1,5 @@
 ## II. Závislosti
+
 ### Explicitne deklarované a izolované závislosti
 
 Väčšina programovacích jazykov poskytuje distribučný systém knižníc, napríklad [CPAN](http://www.cpan.org/) pre Perl alebo [Rubygems](http://rubygems.org/) pre Ruby.  Knižnice nainštalované cez balíčkovací systém sa dajú nainštalovať pre celý systém (nazývané "site packages") alebo len v rámci priečinka s aplikáciou (nazýva sa "vendoring" alebo "bundling").

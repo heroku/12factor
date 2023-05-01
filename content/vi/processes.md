@@ -1,4 +1,5 @@
 ## VI. Tiến trình
+
 ### Vận hành ứng dụng như là một hoặc nhiều tiến trình phi trạng thái
 
 Ứng dụng được vận hành trong môi trường vận hành như là một hoặc nhiều *tiến trình*.

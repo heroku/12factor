@@ -1,4 +1,5 @@
 ## II. Dependências
+
 ### Declare e isole explicitamente as dependências
 
 A maioria das linguagens de programação oferecem um sistema de pacotes para a distribuição de bibliotecas de apoio, como o [CPAN](http://www.cpan.org/) para Perl ou [Rubygems](http://rubygems.org/) para Ruby. Bibliotecas instaladas por meio de um sistema de pacotes podem ser instaladas em todo o sistema (conhecidas como "site packages") ou com escopo dentro do diretório contendo a aplicação (conhecidas como "vendoring" ou "building").

@@ -1,4 +1,5 @@
 ## IV. Dịch vụ hỗ trợ
+
 ### Dịch vụ hỗ trợ như là tài nguyên bổ xung
 
 *Dịch vụ hỗ trợ* là các dịch vụ mà ứng dụng sử dụng thông qua mạng như là một thành phần trong vận hành. Ví dụ bao gồm nơi lưu trữ dữ liệu (như là [MySQL](http://dev.mysql.com/) hoặc [CouchDB](http://couchdb.apache.org/)), hệ thống tin nhắn/hàng đợi (như là [RabbitMQ](http://www.rabbitmq.com/) hoặc [Beanstalkd](http://kr.github.com/beanstalkd/)), dịch vụ SMTP để gửi thư điện tử ra ngoài (như là [Postfix](http://www.postfix.org/)), và hệ thống đệm (như là [Memcached](http://memcached.org/)).

@@ -1,4 +1,5 @@
 ## III. Config
+
 ### Store config in the environment
 
 An app's *config* is everything that is likely to vary between [deploys](./codebase) (staging, production, developer environments, etc).  This includes:

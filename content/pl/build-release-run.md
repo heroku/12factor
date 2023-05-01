@@ -1,4 +1,5 @@
 ## V.  Buduj, publikuj, uruchamiaj
+
 ### Oddzielaj etap budowania od uruchamiania
 
 [Codebase](./codebase) jest przetwarzany we wdrożenie w trzech etapach (poza lokalnym środowiskiem).

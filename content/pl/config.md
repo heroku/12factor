@@ -1,4 +1,5 @@
 ## III. Konfiguracja
+
 ### Przechowuj konfigurację w środowisku
 
 *Konfiguracja* to jedyny element, który może się różnić pomiędzy [wdrożeniami](./codebase) aplikacji (staging, produkcja, środowisko developerskie, etc). W jej skład wchodzą:

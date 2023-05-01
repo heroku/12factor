@@ -1,4 +1,5 @@
 ## XI. Logy
+
 ### S logy zacházejte jako s proudy událostí.
 
 *Logy* poskytují náhled na chování běžící aplikace. V prostředí serveru se obvykle zapisují do souboru na disku ("logfile"), ale to je jen výstupní formát.

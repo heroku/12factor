@@ -1,4 +1,5 @@
 ## VII. Port Bağlama
+
 ### Port bağlama yolu üzerinden dışarı aktarma
 
 Web uygulamaları bazı zamanlar web sunucu taşıyıcıları içinde çalıştırılırlar. Örneğin, PHP uygulamaları modül olarak [Apache HTTPD](http://httpd.apache.org/) içinde veya Java uygulamaları [Tomcat](http://tomcat.apache.org/) içinde çalıştırılabilirler.

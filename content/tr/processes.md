@@ -1,4 +1,5 @@
 ## VI. Süreç
+
 ### Uygulamayı bir veya daha fazla bağımsız süreç olarak çalıştırma
 
 Uygulama bir veya birden fazla *süreç* olarak çalıştırma ortamında çalıştırılır.

@@ -1,4 +1,5 @@
 ## I. 基准代码
+
 ### 一份基准代码（*Codebase*），多份部署（*deploy*）
 
 12-Factor应用(译者注：应该是说一个使用本文概念来设计的应用，下同)通常会使用版本控制系统加以管理，如[Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), [Subversion](http://subversion.apache.org/)。一份用来跟踪代码所有修订版本的数据库被称作 *代码库*（code repository, code repo, repo）。

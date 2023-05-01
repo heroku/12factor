@@ -1,4 +1,5 @@
 ## IX. Disposability
+
 ### Maximize robustness with fast startup and graceful shutdown
 
 **The twelve-factor app's [processes](./processes) are *disposable*, meaning they can be started or stopped at a moment's notice.**  This facilitates fast elastic scaling, rapid deployment of [code](./codebase) or [config](./config) changes, and robustness of production deploys.

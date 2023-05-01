@@ -1,4 +1,5 @@
 ## V. Sestavení, vydání, spuštění
+
 ### Striktně oddělte fáze sestavení, vydání a spuštění.
 
 [Zdrojový kód](./codebase) je transformován do (nevývojářského) nasazení ve třech fázích:

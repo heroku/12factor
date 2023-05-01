@@ -1,4 +1,5 @@
 ## VII. 포트 바인딩
+
 ### 포트 바인딩을 사용해서 서비스를 공개함
 
 웹앱은 웹서버 컨테이너 내부에서 실행되기도 합니다. 예를 들어, PHP 앱은 [Apache HTTPD](http://httpd.apache.org/)의 모듈로 실행될 수도 있고, Java 앱은 [Tomcat](http://tomcat.apache.org/) 내부에서 실행될 수도 있습니다. 

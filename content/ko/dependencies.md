@@ -1,4 +1,5 @@
 ## II. 종속성
+
 ### 명시적으로 선언되고 분리된 종속성
 
 대부분의 프로그래밍 언어는 라이브러리 배포를 위한 패키징 시스템을 제공하고 있습니다. Perl의 [CPAN](http://www.cpan.org/) 이나 Ruby의 [Rubygems](http://rubygems.org/)가 그 예입니다. 라이브러리는 패키징 시스템을 통해 시스템 전체(site pakages)나 애플리케이션을 포함한 디렉토리(vendoring 혹은 bundling)에 설치될 수 있습니다.

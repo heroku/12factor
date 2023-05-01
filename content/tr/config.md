@@ -1,4 +1,5 @@
 ## III. Yapılandırma
+
 ### Ortamda yapılandırma depolama
 
 Bir uygulamanın *yapılandırması* muhtemelen [dağıtımlar](./codebase) arasındaki değişikliktir(kademelendirme, ürün, geliştirici ortamları vb.). Bunları içerir:

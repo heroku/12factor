@@ -1,4 +1,5 @@
 ## IX. Zbywalność
+
 ### Zwiększ elastyczność aplikacji przez szybki start i bezproblemowe zamknięcie
 
 **[Procesy](./processes) aplikacji 12factor są *jednorazowe*, znaczy to, że mogą być wystartowane lub zatrzymane w dowolnym momencie.** Ułatwia to elastyczne skalowanie i szybkie wdrożenia [kodu](./codebase), zmianę [konfiguracji](./config) oraz zapewnia większą stabilność przy wdrożeniu na produkcję.

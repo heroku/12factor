@@ -1,4 +1,5 @@
 ## X. Dev/prod parity
+
 ### Vývojové, testovacie a produkčné prostredie sú čo najpodobnejšie ako sa dá
 
 Historicky bývali podstatné rozdiely medzi vývojovým prostredím (developer upravoval živé lokálne [nasadenie](./codebase)) a produkčným prostredím (bežiace nasadenie aplikácie, na ktoré pristupujú používatelia). Tieto rozdiely sa prejavujú v týchto troch oblastiach:

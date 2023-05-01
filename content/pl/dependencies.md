@@ -1,4 +1,5 @@
 ## II. Dependencies
+
 ### Jawnie zadeklaruj i wydziel zależności
 
 Większość języków programowania oferuje narzędzia do dystrybucji dodatkowych bibliotek, takie jak [CPAN](http://www.cpan.org/) dla Perla lub [Rubygems](http://rubygems.org/) dla języka Ruby. Biblioteki zainstalowane w ten sposób mogą być dostępne dla całego systemu (określane jako "site packages") lub zakres ich działania może być ograniczony dla pojedynczego projektu lub aplikacji (określane jako "vendoring" lub "bundling").

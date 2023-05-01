@@ -1,4 +1,5 @@
 ## X. Paridade entre desenvolvimento e produção
+
 ### Mantenha o desenvolvimento, homologação e produção o mais similares possível
 
 Historicamente, houveram lacunas substanciais entre desenvolvimento (um desenvolvedor editando código num [deploy](./codebase) local do app) e produção (um deploy acessado pelos usuários finais). Essas lacunas se manifestam em três áreas:

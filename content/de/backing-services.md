@@ -1,4 +1,5 @@
 ﻿## IV. Unterstützende Dienste
+
 ### Unterstützende Dienste als angehängte Ressourcen behandeln
 
 Ein *unterstützender Dienst* ist jeder Dienst, den die App über das Netzwerk im Rahmen ihrer normalen Arbeit konsumiert. Beispiele sind Datenspeicher  (wie [MySQL](http://dev.mysql.com/) oder [CouchDB](http://couchdb.apache.org/)), Messaging/Queueing-Systeme (wie [RabbitMQ](http://www.rabbitmq.com/) oder [Beanstalkd](https://beanstalkd.github.io)), SMTP-Dienste für das Senden von Mail (wie [Postfix](http://www.postfix.org/)), und Cache-Systeme (wie [Memcached](http://memcached.org/)).

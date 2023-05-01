@@ -1,4 +1,5 @@
 ## IX. Zahoditelnost
+
 ### Maximalizujte robustnost pomocí rychlého spouštění a korektního vypnutí.
 
 

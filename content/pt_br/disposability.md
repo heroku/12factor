@@ -1,4 +1,5 @@
 ## IX. Descartabilidade
+
 ### Maximize robustez com inicialização rápida e desligamento gracioso
 
 **Os [processos](./processos) de um app doze-fatores são *descartáveis*, significando que podem ser iniciados ou parados a qualquer momento.** Isso facilita o escalonamento elástico, rápido deploy de [código](./codebase) ou mudanças de [configuração](./config), e robustez de deploys de produção.

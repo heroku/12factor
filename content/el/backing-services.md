@@ -1,4 +1,5 @@
 ## IV. Υπηρεσίες υποστήριξης
+
 ### Υπηρεσίες υποστήριξης ως επισυναπτόμενοι πόροι
 
 Μία *υπηρεσία υποστήριξης* (*backing service*) είναι οποιαδήποτε υπηρεσία την οποία η εφαρμογή καταναλώνει μέσω του δικτύου ως μέρος της κανονικής λειτουργίας της.  Παραδείγματα περιλαμβάνουν τις αποθήκες δεδομένων (datastores) (όπως η [MySQL](http://dev.mysql.com/) ή η [CouchDB](http://couchdb.apache.org/)), τα συστήματα μηνυμάτων/ουρών (messaging/queueing systems) (όπως το [RabbitMQ](http://www.rabbitmq.com/) ή το [Beanstalkd](https://beanstalkd.github.io)), τις υπηρεσίες SMTP για εξερχόμενη ηλεκτρονική αλληλογραφία (όπως το [Postfix](http://www.postfix.org/)), και συστήματα προσωρινής μνήμης (caching systems) (όπως το [Memcached](http://memcached.org/)).

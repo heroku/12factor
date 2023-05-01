@@ -1,4 +1,5 @@
 ## IX. Einweggebrauch
+
 ### Robuster mit schnellem Start und problemlosen Stopp
 
 **Die Prozesse einer Zwölf-Faktor-App können *weggeworfen* werden, sie können also schnell gestartet und gestoppt werden.** Dies erleichtert schnelles elastisches Skalieren, schnelles Deployment von [Code](./codebase) oder [Konfigurationsänderungen](./config) und macht Produktionsdeployments robuster.

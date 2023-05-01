@@ -1,4 +1,5 @@
 ## XII. Zarządzanie aplikacją
+
 ### Uruchamiaj zadania administracyjne jako jednorazowe procesy
 
 [Formacja](./concurrency) jest zestawem procesów używanych przez aplikację podczas jej działania (np. obsługi zapytań z sieci). Do często wykonywanych zadań administracyjnych należą:

@@ -1,4 +1,5 @@
 ## II. Dependencies
+
 ### มีการประกาศและแยกการอ้างอิง (dependency) ทั้งหมดอย่างชัดเจน
 
 ภาษาโปรแกรมส่วนใหญ่จะมีระบบ packaging สำหรับรองรับ library ต่างๆ อย่างเช่น [CPAN](http://www.cpan.org/) สำหรับ Perl หรือ [Rubygems](http://rubygems.org/) สำหรับ Ruby, Library จะถูกติดตั้งผ่านทางระบบ packaging สามารถติดตั้ง system-wide (เรียกว่า "site packages") หรือกำหนดขอบเขตเป็นไดเรกทรอรีที่มี app (เรียกว่า "vendoring" หรือ "bundling")

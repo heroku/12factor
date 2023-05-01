@@ -1,4 +1,5 @@
 ## II. 依赖
+
 ### 显式声明依赖关系（ *dependency* ）
 
 大多数编程语言都会提供一个打包系统，用来为各个类库提供打包服务，就像 Perl 的 [CPAN](http://www.cpan.org/) 或是 Ruby 的 [Rubygems](http://rubygems.org/) 。通过打包系统安装的类库可以是系统级的（称之为 "site packages"），或仅供某个应用程序使用，部署在相应的目录中（称之为 "vendoring" 或 "bunding"）。

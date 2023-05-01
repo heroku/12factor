@@ -1,4 +1,5 @@
 ## IV. Backing Service
+
 ### Tratta i backing service come "risorse"
 
 Un "backing service" è un qualsiasi servizio che l'applicazione consuma attraverso la rete durante la sua esecuzione. Alcuni esempi includono i database (come [MySQL](http://dev.mysql.com/) o [CouchDB](http://couchdb.apache.org/)), servizi di messaging/code (come [RabbitMQ](http://www.rabbitmq.com/) oppure [Beanstalkd](https://beanstalkd.github.io)), servizi SMTP per la posta (come [Postfix](http://www.postfix.org/)) e sistemi di cache (come [Memcached](http://memcached.org/)).

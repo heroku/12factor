@@ -1,4 +1,5 @@
 ## VIII. Souběh
+
 ### Škálujte do šířky použitím proces modelu.
 
 Každý počítačový program se po spuštění prezentuje jako jeden nebo více procesů. Webové aplikace mají různé formy vykonávání procesů. Například PHP procesy běží jako potomci Apache procesu, spouštěné na požádání dle množství požadavků. Java procesy mají opačný přístup, kde JVM poskytuje jeden masivní super proces, který si po spuštění vyhradí velké množství systémovývh požadavků (CPU a paměti) a souběh si řídí interně pomocí vláken. V obou případech jsou běžící procesy jen málo viditelné pro vývojáře aplikace.

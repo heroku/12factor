@@ -1,4 +1,5 @@
 ## XI. Logs
+
 ### Logy sú prúdy udalostí
 
 *Logy* poskytujú náhľad do správania sa bežiacej aplikácie. V prostredí serverov sa zvyčajne zapisujú do súboru na disk (tzv. "logfile"); ale toto je len výstupný formát.

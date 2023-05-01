@@ -1,4 +1,5 @@
 ## VII. Binding delle Porte
+
 ### Esporta i servizi tramite binding delle porte
 
 Normalmente, le applicazioni web sono qualcosa di eseguito all'interno di un server web, che fa da contenitore. Per esempio, le applicazioni PHP possono venire eseguite come modulo all'interno di [Apache HTTPD](http://httpd.apache.org/), così come un'applicazione Java viene eseguita in [Tomcat](http://tomcat.apache.org/).

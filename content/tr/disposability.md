@@ -1,4 +1,5 @@
 ## IX. Kullanıma Hazır Olma Durumu
+
 ### Hızlı başlangıç ve otomatik zararsız kapama ile sağlamlığı üst düzeye çıkarma
 
 **On iki faktör uygulamalarını [süreçleri](./processes) *tek kullanımlıktır*, anlamı anlık uyarıda başlatılabilirler veya durdurulabilirler.** Bu hızlı esnek ölçeklemeyi, [kod](./codebase) ve [yapılandırma](./config) değişikliğinin hızlı dağıtımı ve üretim dağıtımının sağlamlığı kolaylaştırır.

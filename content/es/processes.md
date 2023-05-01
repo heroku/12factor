@@ -1,4 +1,5 @@
 ## VI. Procesos
+
 ### Ejecutar la aplicación como uno o más procesos sin estado
 
 La aplicación se ejecuta como uno o más *procesos* en el entorno de ejecución.

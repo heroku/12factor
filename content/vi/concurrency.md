@@ -1,4 +1,5 @@
 ## VIII. Đồng bộ hoá
+
 ### Mở rộng theo chiều ngang thông qua mô hình tiến trình 
 
 Bất kỳ chương trình máy tính nào, khi vận hành, đều được đại diện bởi một hoặc nhiều tiến trình. Ứng dụng web có thể sử dụng bất kỳ dạng nào của tiến trình vận hành. Ví dụ, tiến trình PHP vận hành như là tiến trình con của Apache, chạy như một tiến trình nền dựa vào số lượng yêu cầu được gửi đến. Ứng dụng Java, tiếp cận theo cách ngược lại, với JVM cung cấp một tiến trình nền tảng lớn (a massive uberprocess) với lượng lớn các tài nguyên (CPU và bộ nhớ) được cấp phát ngay từ đầu, việc đồng bộ hoá được quản lý bên trong thông qua các luồng. Trong cả hai trường hợp, các tiến trình vận hành chỉ hiện hữu rất ít đối với các nhà phát triển của ứng dụng.

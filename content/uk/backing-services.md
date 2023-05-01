@@ -1,4 +1,5 @@
 ## IV. Сторонні служби
+
 ### Вважайте сторонні служби (backing services) підключеними ресурсами
 
 *Стороння служба* — це будь-яка служба, яка доступна застосунку по мережі і необхідна для його нормальної роботи: бази даних (наприклад, [MySQL](http://dev.mysql.com/) або [CouchDB](http://couchdb.apache.org/)), системи черг повідомлень (наприклад, [RabbitMQ](http://www.rabbitmq.com/) або [Beanstalkd](https://beanstalkd.github.io)), служби SMTP для вихідної пошти (наприклад, [Postfix](http://www.postfix.org/)), системи кешування (наприклад, [Memcached](http://memcached.org/)) тощо.

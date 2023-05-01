@@ -1,4 +1,5 @@
 ## XI. Logi
+
 ### Traktuj logi jako strumień zdarzeń
 
 *Logi* zapewniają wgląd w zachowanie działającej aplikacji. W środowiskach korzystających z serwera zazwyczaj są zapisywane na dysku (plik "logfile"); jednak jest to tylko wybrany format zapisu.

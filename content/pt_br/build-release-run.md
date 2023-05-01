@@ -1,4 +1,5 @@
 ## V. Construa, lance, execute
+
 ### Separe estritamente os estágios de construção e execução
 
 Uma [base de código](./codebase) é transformada num deploy (de não-desenvolvimento) através de três estágios:

@@ -1,4 +1,5 @@
 ## IX. Tính khả dụng
+
 ### Tối ưu hoá với khởi động nhanh và dừng phần mềm ổn định
 
 **[Tiến trình](./processes) của ứng dụng áp dụng mười hai thừa số luôn *sẵn sàng* (disposable), có nghĩa là bạn có thể chạy hoặc dừng phần mềm tại một thời điểm báo trước.** Điều này tạo điều kiện cho việc mở rộng trở nên dễ dàng hơn, việc triển khai nhanh các thay đổi của [mã nguồn](./codebase) hoặc [cấu hình](./config), và sự linh hoạt quá trình triển khai sản phẩm.

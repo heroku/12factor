@@ -1,4 +1,5 @@
 ## III. Konfigurace
+
 ### Konfigurace ukládejte do prostředí.
 
 *Konfigurace* aplikace je všechno, co se liší mezi [nasazeními](./codebase) (testovací, produkční, vývojové prostředí, atd.). To zahrnuje:

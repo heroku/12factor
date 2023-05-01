@@ -1,4 +1,5 @@
 ## IX. Desechabilidad
+
 ### Hacer el sistema más robusto intentando conseguir inicios rápidos y finalizaciones seguras
 
 **Los [procesos](./processes) de las aplicaciones "twelve-factor" son *desechables*, lo que significa que pueden iniciarse o finalizarse en el momento que sea necesario.** Esto permite un escalado rápido y flexible, un despliegue rápido del [código](./codebase) y de los cambios de las [configuraciones](./config), y despliegues más robustos en producción.

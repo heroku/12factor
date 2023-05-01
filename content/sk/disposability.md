@@ -1,4 +1,5 @@
 ## IX. Zahoditeľnosť
+
 ### Maximalizácia robustnosti rýchlym štartom a vhodným vypnutím
 
 **[Procesy](./processes) dvanásť faktorovej aplikácie sú *zahoditeľné*, čo znamená, že sa kedykoľvek dajú spustiť alebo zastaviť.**  Umožňuje to elastické škálovanie, rýchly vývoj [kódu](./codebase) alebo zmeny v [konfigurácii](./config), a robustnosť produkčných nasadení.

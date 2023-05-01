@@ -1,4 +1,5 @@
 ## VII. Asignación de puertos
+
 ### Publicar servicios mediante asignación de puertos
 
 Las aplicaciones web se ejecutan a menudo mediante contenedores web. Por ejemplo, las aplicaciones de PHP se suelen ejecutar como módulos del [HTTPD de Apache](http://httpd.apache.org/), y las aplicaciones Java en [Tomcat](http://tomcat.apache.org/).

@@ -1,4 +1,5 @@
 ## II. Dipendenze
+
 ### Dipendenze dichiarate e isolate
 
 Molti linguaggi di programmazione offrono dei sistemi di packaging per la distribuzione delle proprie librerie, come [CPAN](http://www.cpan.org/) per Perl o [Rubygems](http://rubygems.org/) per Ruby. Le librerie installate attraverso questi sistemi, inoltre, possono essere identificate come "system-wide" (attive a livello di sistema), oppure posizionate nella directory della singola applicazione (in questo caso si parla di "vendoring" o "bundling").

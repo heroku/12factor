@@ -1,4 +1,5 @@
 ## VIII. Concurrencia
+
 ### Escalar mediante el modelo de procesos
 
 Todo programa de ordenador, al ejecutarse, se encuentra representado en memoria por uno o más procesos. Las aplicaciones web se pueden ejecutar de diferentes formas desde el punto de vista del modelo de procesos que usan. Por ejemplo, los procesos PHP se ejecutan como procesos pesados (o simplemente procesos), hijos del proceso Apache, creándolos bajo demanda a causa de la cantidad de peticiones si es necesario. Los procesos Java funcionan de forma distinta, la Máquina Virtual de Java (JVM) proporciona un conjunto de procesos que reservan al principio una gran cantidad de recursos del sistema (CPU y memoria), gestionando la concurrencia internamente mediante procesos ligeros (threads). En ambos casos, los procesos en ejecución son prácticamente transparentes para los desarrolladores de la aplicación.

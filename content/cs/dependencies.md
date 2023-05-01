@@ -1,4 +1,5 @@
 ## II. Závislosti
+
 ### Explicitně deklarujte a izololujte závislosti.
 
 Většina programovacých jazyků poskytuje balíčkovací systém pro distribuci podpůrných knihoven, například [CPAN](http://www.cpan.org/) pro Perl nebo [Rubygems](http://rubygems.org/) pro Ruby. Knihovny instalované skrze balíčkovací systém mohou být instalovány globálně pro celý systém (nazýváme "site packages") nebo pouze lokálně v rámci adresáře dané aplikace (nazýváme "vendoring" nebo "bundling").

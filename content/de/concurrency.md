@@ -1,4 +1,5 @@
 ﻿## VIII. Nebenläufigkeit
+
 ### Mit dem Prozess-Modell skalieren
 
 Jedes Computerprogramm wird, wenn es läuft, repräsentiert durch einen oder mehrere Prozesse. Webapps nutzen verschiedenste Arten der Prozess-Ausführung. Zum Beispiel laufen PHP-Prozesse als Kind-Prozesse von Apache und werden nach Bedarf gestartet, wenn Requests kommen. Java-Prozesse gehen anders vor: die JVM stellt einen massiven Über-Prozess zur Verfügung der große Mengen an Systemressourcen (Speicher und CPU) reserviert und die Nebenläufigkeit wird intern über Threads verwaltet. In beiden Fällen sind die laufenden Prozesse für die Entwickler der App nur minimal zu sehen.

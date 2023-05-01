@@ -1,4 +1,5 @@
 ﻿## II. Abhängigkeiten
+
 ### Abhängigkeiten explizit deklarieren und isolieren
 
 Die meisten Programmiersprachen bieten ein System an, um unterstützende Bibliotheken zu verbreiten, wie [CPAN](http://www.cpan.org/) für Perl oder [Rubygems](http://rubygems.org/) für Ruby. Aus einem Paketsystem stammende Bibliotheken können systemweit installiert werden (auch "Site Packages" genannt) oder in ein Verzeichnis der App beschränkt werden (genannt "vendoring" oder "bundling" - deutsch auch "mitliefern").

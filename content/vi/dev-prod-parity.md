@@ -1,4 +1,5 @@
 ## X. Sự tương đồng giữa quá trình phát triển và vận hành thực tế
+
 ### Đảm bảo sự tương đồng giữa môi trường phát triển, kiểm thử và thực tế 
 
 Trước đây, có sự khác biệt nhất định giữa quá trình phát triển (lập trình viên có thể tạo ra các bản chỉnh sửa [triển khai](./codebase) cục bộ của ứng dụng) và vận hành thực tế (phiên bản được triển khai thực tế và truy cập bởi khách hàng). Khác biệt này được thể hiện ở ba lĩnh vực:

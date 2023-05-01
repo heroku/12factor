@@ -1,4 +1,5 @@
 ## VII. Associations de ports
+
 ### Exportez les services via des associations de ports
 
 Les applications web sont parfois exécutées à l'intérieur d'un container de serveur web. Par exemple, les applications PHP peuvent fonctionner comme un module à l'intérieur de [HTTPD, d'Apache](http://httpd.apache.org/), ou bien les applications Java peuvent fonctionner à l'intérieur de [Tomcat](http://tomcat.apache.org/).

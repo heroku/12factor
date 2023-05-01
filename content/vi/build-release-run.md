@@ -1,4 +1,5 @@
 ## V. Xây dựng, phát hành, vận hành
+
 ### Tách biệt hoàn toàn giữa bước xây dựng và vận hành
 
 [Mã gốc](./codebase) được chuyển sang (tạm dừng phát triển) triển khai thông qua ba bước:

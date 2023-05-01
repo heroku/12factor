@@ -1,4 +1,5 @@
 ## I. Mã gốc (codebase)
+
 ### Một mã gốc (codebase) được theo dõi với hệ thống quản lý phiên bản, và nhiều lần triển khai (deploy)
 
 Một ứng dụng 12-hệ số luôn luôn được theo dõi bới hê thống quản lý phiên bản, như là [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), hay [Subversion](http://subversion.apache.org/). Một bản lưu của cơ sở dữ liệu các phiên bản được gọi là **kho mã (code repository)**, và hay được viết vắn tắt thành *code repo* hay *repo*.

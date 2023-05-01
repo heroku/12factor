@@ -1,4 +1,5 @@
 ﻿## XI. Logs
+
 ### Logs als Strom von Ereignissen behandeln
 
 *Logs* machen das Verhalten einer laufenden App sichtbar. In Server-basierten Umgebungen werden sie üblicherweise in eine Datei auf der Platte geschrieben (eine Logdatei) - das ist aber nur ein Ausgabeformat.

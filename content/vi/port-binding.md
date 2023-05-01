@@ -1,4 +1,5 @@
 ## VII. Mở cổng mạng
+
 ### Cung cấp các dịch vụ thông qua mở cổng mạng
 
 Các ứng dụng web thường được thực thi bên trong một máy chủ web. Ví dụ, ứng dụng PHP có thể thực thi như là một thành phần của [Apache HTTPD](http://httpd.apache.org/), hoặc ứng dụng Java có thể thực thi thông qua [Tomcat](http://tomcat.apache.org/).

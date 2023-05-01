@@ -1,4 +1,5 @@
 ## XI. Logs
+
 ### Trate logs como fluxos de eventos
 
 *Logs* provém visibilidade no comportamento de um app em execução. Em ambientes de servidor eles são comumente escritos num arquivo em disco (um "logfile"); mas este é apenas um formato de saída.

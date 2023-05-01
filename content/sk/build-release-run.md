@@ -1,4 +1,5 @@
 ## V. Build, release, run
+
 ### Jasne oddelené fázy build, release a run
 
 [Kód](./codebase) sa transformuje do (nevývojárskeho) nasadenia troma krokmi:

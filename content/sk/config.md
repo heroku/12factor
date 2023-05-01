@@ -1,4 +1,5 @@
 ## III. Konfigurácia
+
 ### Konfigurácia uložená v prostredí
 
 *Konfigurácia* aplikácie je všetko, čo sa líši medzi [nasadeniami](./codebase) (staging, produkcia, vývojárske prostredie, atď).  To zahŕňa:

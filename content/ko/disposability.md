@@ -1,4 +1,5 @@
 ## IX. 폐기 가능(Disposability)
+
 ### 빠른 시작과 그레이스풀 셧다운(graceful shutdown)을 통한 안정성 극대화
 
 **Twelve-Factor App의 [프로세스](./processes)는 *간단하게 폐기 가능*합니다. 즉, 프로세스는 바로 시작하거나 종료될 수 있습니다.** 이러한 속성은 신축성 있는 확장과 [코드](./codebase)나 [설정](./config)의 변화를 빠르게 배포하는 것을 쉽게 하며, production 배포를 안정성 있게 해줍니다.

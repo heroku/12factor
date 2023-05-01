@@ -1,4 +1,5 @@
 ## VI. Procesy
+
 ### Execute the app as one or more stateless processes
 
 Aplikácia sa vykonáva v exekučnom prostredí ako jeden alebo viac *procesov*.

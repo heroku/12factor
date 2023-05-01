@@ -1,4 +1,5 @@
 ## III. Cấu hình
+
 ### Lưu trữ cấu hình trong môi trường
 
 Cấu hình của ứng dụng là những thứ có thể thay đổi qua các [triển khai](./codebase) (hệ thống thử, hệ thống sản xuất, môi trường phát triển, etc). Nó bao gồm:

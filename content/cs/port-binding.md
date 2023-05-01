@@ -1,4 +1,5 @@
 ## VII. Vazba s portem
+
 ### Exportujte služby pomocí vazby na port.
 
 Webové aplikace jsou někdy vykonávány uvnitř webového serveru. Například PHP aplikace mohou běžet jako modul uvnitř [Apache HTTPD](http://httpd.apache.org/) nebo Java aplikace mohou běžet uvnitř [Tomcatu](http://tomcat.apache.org/).

@@ -1,4 +1,5 @@
 ## II. Bağımlıklar
+
 ### Bağımlıkları açık bir şekilde açıklama ve ayırma
 
 Çoğu programlama dili destek kitaplıklarını dağıtmak için bir paketleme sistemi sunar, Perl için [CPAN](http://www.cpan.org/), Ruby için [Rubygems](http://rubygems.org/). Bir paketleme sistemi aracılığıyla yüklenen kütüphaneler, sistem genelinde ("site paketleri" olarak bilinir) yüklenebilir veya uygulamanın bulunduğu dizine ("sağlayıcı" veya "paketleme" olarak bilinir) dahil edilebilir.

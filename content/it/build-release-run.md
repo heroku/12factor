@@ -1,4 +1,5 @@
 ## V. Build, release, esecuzione
+
 ### Separare in modo netto lo stadio di build dall'esecuzione
 
 Una [codebase](./codebase) viene "trasformata" in deployment attraverso tre fasi:

@@ -1,4 +1,5 @@
 ## I. Zdrojový kód
+
 ### Jeden zdrojový kód vo verzionovacom systéme, veľa nasadení
 
 Dvanásť faktorová aplikácia je vždy uložená vo verzionovacom systéme ako napríklad [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), alebo [Subversion](http://subversion.apache.org/). Kópia databázy verzionovacieho systému sa nazýva *repozitár kódu*, často skrátene *repozitár* alebo len *repo*.

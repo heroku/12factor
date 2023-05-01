@@ -1,4 +1,5 @@
 ## VI. Procesy
+
 ### Uruchamiaj aplikację jako jeden lub więcej bezstanowych procesów
 
 Aplikacja jest uruchamiana w środowisku wykonawczym w postaci jednego lub kilku *procesów*.

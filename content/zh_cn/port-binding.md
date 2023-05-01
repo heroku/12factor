@@ -1,4 +1,5 @@
 ## VII. 端口绑定
+
 ### 通过端口绑定(*Port binding*)来提供服务
 
 互联网应用有时会运行于服务器的容器之中。例如 PHP 经常作为 [Apache HTTPD](http://httpd.apache.org/) 的一个模块来运行，正如 Java 运行于 [Tomcat](http://tomcat.apache.org/) 。

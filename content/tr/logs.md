@@ -1,4 +1,5 @@
 ## XI. Günlükler
+
 ### Günlüklere olay akışı gibi davranma
 
 *Günlükler* çalışan bir uygulamanın davranışının görünür olmasını sağlar. Sunucu tabanlı ortamlarda genellikle diskteki bir dosyaya yazılırlar("logfile"); ama bu sadece çıktı formatındadır.

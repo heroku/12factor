@@ -1,4 +1,5 @@
 ## VII. Port binding
+
 ### Export services via port binding
 
 Web apps are sometimes executed inside a webserver container.  For example, PHP apps might run as a module inside [Apache HTTPD](http://httpd.apache.org/), or Java apps might run inside [Tomcat](http://tomcat.apache.org/).

@@ -1,4 +1,5 @@
 ## VII. Port binding
+
 ### Export služieb cez port binding
 
 Webové aplikácie sú niekedy vykonávané vnútri webserverového kontainera.  Napríklad PHP aplikácie bežia ako modul vnútri [Apache HTTPD](http://httpd.apache.org/), alebo Java aplikácie môžu bežať vnútri [Tomcat](http://tomcat.apache.org/).

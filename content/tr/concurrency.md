@@ -1,4 +1,5 @@
 ## VIII. Eş Zamanlılık
+
 ### Süreç modeli yardımıyla dağıtıklaştırma
 
 Herhangi bir bilgisayar programı bir kere çalıştığı zaman bir veya daha fazla süreç tarafından temsil edilir. Web uygulamaları çeşitli süreç çalışma formlarını alır. Örneğin, Php süreçleri Apache'nin çocuk süreçleri olarak çalışır, istek üzerine talep hacmine tarafından ihtiyaç duyulduğunda başlatılır. Java süreçleri, karşıt yaklaşımı benimser; JVM, başlangıçta çok sayıda sistem kaynağı (CPU ve bellek) ayıran büyük bir uber işlemi sağlar ve eşzamanlılık iş parçacıkları aracılığıyla dahili olarak yönetilir. Her iki durumda, çalışan süreçler, uygulamanın geliştiricilerine yalnızca minimum düzeyde görünürdür.

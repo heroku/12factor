@@ -1,4 +1,5 @@
 ## IV. Podporné služby
+
 ### Spravovanie podporných služieb ako pripojených zdrojov
 
 *Podporná služba* je akákoľvek služba, ktorú aplikácia konzumuje cez sieť ako súčasť je normálneho behu.  Príklady zahŕňajú databázy (ako napr. [MySQL](http://dev.mysql.com/) alebo [CouchDB](http://couchdb.apache.org/)), messaging/queueing systémy (napr.  [RabbitMQ](http://www.rabbitmq.com/) alebo [Beanstalkd](https://beanstalkd.github.io)), SMTP služby pre odchádzajúce emaily (napr. [Postfix](http://www.postfix.org/)), a cachovacie systémy (napr. [Memcached](http://memcached.org/)).

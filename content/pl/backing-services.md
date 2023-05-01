@@ -1,4 +1,5 @@
 ## IV. Usługi wspierające
+
 ### Traktuj usługi wspierające jako przydzielone zasoby
 
 Usługą wspierającą jest każda, z której aplikacja korzysta przez sieć jako część normalnego działania. Zaliczamy do nich np. magazyny danych (takie jak [MySQL](http://dev.mysql.com/) albo [CouchDB](http://couchdb.apache.org/)), systemy wysyłania/kolejkowania wiadomości (takie jak [RabbitMQ](http://www.rabbitmq.com/) czy [Beanstalkd](https://beanstalkd.github.io)), usługi SMTP do zewnętrznej wysyłki emaili (np. [Postfix](http://www.postfix.org/)) oraz systemy cachowania pamięci (np. [Memcached](http://memcached.org/)).

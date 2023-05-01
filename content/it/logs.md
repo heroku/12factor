@@ -1,4 +1,5 @@
 ## XI. Log
+
 ### Tratta i log come stream di eventi
 
 I *log* offrono una maggiore chiarezza riguardo un comportamento di un'app in esecuzione. In ambienti basati su server, questi sono tendenzialmente scritti su un file su disco (logfile). A ogni modo, è solo un formato.

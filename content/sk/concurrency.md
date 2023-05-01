@@ -1,4 +1,5 @@
 ## VIII. Concurrency
+
 ### Škálovanie pomocou modelu procesov
 
 Každý počítačový program je po spustení reprezentovaný jedným alebo viac procesmi. Webové aplikácie sa objavujú v rôznych formách vykonávania procesov.  Napríklad, PHP procesy bežia ako podprocesy Apachu, spustené na požiadanie podľa objemu požiadaviek.  Java procesy prevzali opačný prístup, kde JVM poskytuje jeden masívny nadproces, ktorý si vyhradí veľké množstvo systémových prostriedkov (CPU a pamäte) pri spustení a súbežnosť spravuje interne cez vlákna.  V obidvoch prípadoch sú bežiace procesy len minimálne viditeľné pre developera aplikácie.

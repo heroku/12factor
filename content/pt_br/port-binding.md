@@ -1,4 +1,5 @@
 ## VII. Vínculo de Portas
+
 ### Exporte serviços via vínculo de portas
 
 Apps web as vezes são executadas dentro de container de servidor web. Por exemplo, apps PHP podem rodar como um módulo dentro do [Apache HTTPD](http://httpd.apache.org/), ou apps Java podem rodar dentro do [Tomcat](http://tomcat.apache.org/).

@@ -1,4 +1,5 @@
 ## X. Igualdad entre desarrollo y producción
+
 ### Mantener desarrollo, preproducción y producción tan parecidos como sea posible
 
 Históricamente, han existido dos tipos de entorno muy diferenciados: desarrollo (donde un desarrollador puede editar en vivo en un [despliegue](./codebase) local de la aplicación) y producción (un despliegue en el que la aplicación está en ejecución disponible para que lo usen los usuarios). Estas diferencias se pueden clasificar en tres tipos:

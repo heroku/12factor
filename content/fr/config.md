@@ -1,4 +1,5 @@
 ## III. Configuration
+
 ### Stockez la configuration dans l'environnement
 
 La *configuration* d'une application est tout ce qui est susceptible de varier entre des [déploiements](./codebase) (validation, production, environnement de développement, etc.). Cela inclut :

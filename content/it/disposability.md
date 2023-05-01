@@ -1,4 +1,5 @@
 ## IX. Rilasciabilità
+
 ### Massimizzare la robustezza con avvii veloci e shutdown graduali
 
 **I [processi](./processes) di un'applicazione twelve-factor sono *rilasciabili*, cioè possono essere avviati o fermati senza problemi al momento del bisogno.** Questa caratteristica ovviamente facilita le procedure di scaling, deploy rapido della [codebase](./codebase) o cambi dei file di [configurazione](./config).

@@ -1,4 +1,5 @@
 ## II. Dependencias
+
 ### Declarar y aislar explícitamente las dependencias
 
 La mayoría de los lenguajes de programación tienen un sistema de gestión de paquetes para distribuir sus librerías, como [CPAN](http://www.cpan.org/) en Perl o [Rubygems](http://rubygems.org/) en Ruby. Las librerías instaladas a través de estos sistemas se pueden instalar en el sistema (también conocido como "site packages") o limitarse al directorio que contiene la aplicación (también conocido como "vendoring" o "bundling").

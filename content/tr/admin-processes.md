@@ -1,4 +1,5 @@
 ## XII. Yönetici Süreci
+
 ### Yönetici/yönetim görevlerini tek seferlik işlem olarak çalıştırma
 
 [Süreç oluşumu](./concurrency) uygulama çalışırken uygulamanın sıradan işlerini (web isteklerini idare etmek gibi) yapmakta kullanılan süreçlerin bir dizisidir. Ayrı olarak, geliştiriciler çoğunlukla uygulamanın bir kereye mahsus yönetimsel veya bakım görevlerini yapmayı dileyecekler, şunun gibi:

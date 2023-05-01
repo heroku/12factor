@@ -1,4 +1,5 @@
 ﻿## III. Konfiguration
+
 ### Die Konfiguration in Umgebungsvariablen ablegen
 
 Die *Konfiguration* einer App ist alles, was sich wahrscheinlich zwischen den [Deploys](./codebase) ändern wird (Staging, Produktion, Entwicklungsumgebungen, usw.). Dies umfasst:

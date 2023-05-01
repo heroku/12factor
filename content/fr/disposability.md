@@ -1,4 +1,5 @@
 ## IX. Jetable
+
 ### Maximisez la robustesse avec des démarrages rapides et des arrêts gracieux
 
 **Les [processus](./processes) des applications 12 facteurs sont *jetables*, c'est-à-dire qu'ils peuvent être démarrés ou stoppés en un instant.** Cela simplifie un rapide grossissement vertical, le déploiement rapide du [code](./codebase) ou de changements dans la [configuration](./config), ainsi que la robustesse des déploiements de production.

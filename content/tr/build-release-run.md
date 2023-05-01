@@ -1,4 +1,5 @@
 ## V. Derleme, Sürüm, Çalıştırma
+
 ### Derleme ve çalıştırma aşamalarını tam olarak ayırma
 
 Bir [kod tabanı](./codebase) üç aşamada dağıtıma dönüşebilir:
