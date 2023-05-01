@@ -1,0 +1,113 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+  text-decoration: none;
+  color: #79589f;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: rgba(0,0,0,.8);
+}
+
+h1, h2 {
+  font-size: 2rem;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.content article,
+.content .previous-next,
+.content .locales {
+  margin-bottom: 2rem;
+}
+
+.content article > *,
+.content .content-footer > * {
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+
+.content article h2 {
+  margin-bottom: 0;
+}
+
+.content article h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(0,0,0,0.7);
+  margin-top: 0;
+}
+
+.content .previous-next {
+  text-align: center;
+}
+
+.content .previous-next a {
+  padding: 0 1rem;
+}
+
+.content .locales {
+  text-align: center;
+}
+
+.gradient-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eef1f6));
+  background: -webkit-linear-gradient(#fff, #eef1f6);
+  background: -o-linear-gradient(#fff, #eef1f6);
+  background: linear-gradient(#fff, #eef1f6);
+  background-repeat: repeat-x;
+  background-size: auto 25%;
+  background-position: bottom center;
+  padding-bottom: 270px;
+  position: relative;
+}
+
+.gradient-section-bg-img {
+  background: url(/images/art-ocean-small.svg), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eef1f6));
+  background: url(/images/art-ocean-small.svg), -webkit-linear-gradient(#fff, #eef1f6);
+  background: url(/images/art-ocean-small.svg), -o-linear-gradient(#fff, #eef1f6);
+  background: url(/images/art-ocean-small.svg), linear-gradient(#fff, #eef1f6);
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  padding-bottom: 180px;
+  position: relative;
+}
+
+.gradient-section-bg-img::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 160px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(240, 243, 247)), to(rgba(240, 243, 247, 0)));
+  background: -webkit-linear-gradient(rgb(240, 243, 247), rgba(240, 243, 247, 0));
+  background: -o-linear-gradient(rgb(240, 243, 247), rgba(240, 243, 247, 0));
+  background: linear-gradient(rgb(240, 243, 247), rgba(240, 243, 247, 0));
+}
+
+.privacy-terms span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  margin: 0 3px -22px 3px;
+  background-image: url(https://www0.assets.heroku.com/assets/bookends/footer/privacy-c5c3a463f9246ecae06befec31bebc5d387cfcabafac948d38e08ffd5c73ea06.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
