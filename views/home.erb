@@ -1,9 +1,15 @@
-<section class="abstract">
-  <article><%= render_markdown('intro') %></article>
-  <article><%= render_markdown('background') %></article>
-  <article><%= render_markdown('who') %></article>
-</section>
+<article>
+  <%= render_markdown('intro') %>
+</article>
 
-<section class="concrete">
-  <article><%= render_markdown('toc') %></article>
-</section>
+<article>
+  <%= render_markdown('background') %>
+</article>
+
+<article>
+  <%= render_markdown('who') %>
+</article>
+
+<article class="bt bb b--silver bg-lightest-silver">
+  <%= render_markdown('toc') %>
+</article>
