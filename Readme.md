@@ -24,9 +24,9 @@ heroku open
 
 ### Meta
 
-Created by Adam Wiggins
+Original Creator: Adam Wiggins
 
-Contributions from: James Lindenbaum, Mark McGranaghan, Chris Stolt, Ryan
+Contributiors: James Lindenbaum, Mark McGranaghan, Chris Stolt, Ryan
 Daigle, Mark Imbriaco, Keith Rarick, Will Leinweber, Jesper Jørgensen, James
 Ward, Adam Seligman, Phil Hagelberg, Jon Mountjoy, Matthew Turland, Daniel
 Jomphe, Mattt Thompson, Anand Narasimhan, Lucas Fais, Pete Hodgson
@@ -50,7 +50,7 @@ Bob Marteen,
 [@filiphanes](https://github.com/filiphanes)
 and [more](https://github.com/heroku/12factor/graphs/contributors).
 
-2023 Brand Refresh™ bolted on by [@johlym](https://github.com/johlym).
+2023 Brand Refresh™ by [@johlym](https://github.com/johlym).
 
 Released under the MIT License:
 https://opensource.org/licenses/MIT
