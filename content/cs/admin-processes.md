@@ -1,7 +1,7 @@
-## XII. Admin procesy
-
-### Spouštějte administrativní úlohy jako jednorázové procesy.
-
+---
+title: XII. Admin procesy
+description: Spouštějte administrativní úlohy jako jednorázové procesy.
+---
 [Formace procesů](./concurrency) je sada procesů, které aplikace používá pro svůj běh (jako je například obsluha příchozích požadavků). Kromě toho potřebují vývojáři často spouštět i jednorázové administrativní nebo úlohy údržby, jako například:
 
 * Spuštění databázové migrace (jako `manage.py migrate` v Django, `rake db:migrate` v Rails).

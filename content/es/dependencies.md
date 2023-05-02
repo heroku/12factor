@@ -1,7 +1,7 @@
-## II. Dependencias
-
-### Declarar y aislar explícitamente las dependencias
-
+---
+title: II. Dependencias
+description: Declarar y aislar explícitamente las dependencias
+---
 La mayoría de los lenguajes de programación tienen un sistema de gestión de paquetes para distribuir sus librerías, como [CPAN](http://www.cpan.org/) en Perl o [Rubygems](http://rubygems.org/) en Ruby. Las librerías instaladas a través de estos sistemas se pueden instalar en el sistema (también conocido como "site packages") o limitarse al directorio que contiene la aplicación (también conocido como "vendoring" o "bundling").
 
 **Una aplicación "twelve-factor" no depende nunca de la existencia explícita de paquetes instalados en el sistema.**  Declara todas sus dependencias, completamente y explícitamente, mediante un manifiesto de *declaración de dependencias*.  Además, usa herramientas de *aislamiento de dependencias* durante la ejecución para asegurar que las dependencias, implícitamente, no afectan al resto del sistema. La especificación de dependencias completa y explícita se aplica de la misma manera tanto en producción como en desarrollo.

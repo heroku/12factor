@@ -1,7 +1,7 @@
-## XII. Admin 프로세스
-
-### admin/maintenance 작업을 일회성 프로세스로 실행
-
+---
+title: XII. Admin 프로세스
+description: admin/maintenance 작업을 일회성 프로세스로 실행
+---
 [프로세스 포메이션](./concurrency)은 애플리케이션의 일반적인 기능들(예: Web request의 처리)을 처리하기 위한 프로세스들의 집합 입니다. 이와는 별도로, 개발자들은 종종 일회성 관리나 유지 보수 작업이 필요합니다. 그 예는 아래와 같습니다.
 
 * 데이터베이스 마이그레이션을 실행합니다. (예: Django에서 `manage.py migrate`, Rail에서 `rake db:migrate`)

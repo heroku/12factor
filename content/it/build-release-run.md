@@ -1,7 +1,7 @@
-## V. Build, release, esecuzione
-
-### Separare in modo netto lo stadio di build dall'esecuzione
-
+---
+title: V. Build, release, esecuzione
+description: Separare in modo netto lo stadio di build dall'esecuzione
+---
 Una [codebase](./codebase) viene "trasformata" in deployment attraverso tre fasi:
 
 * la fase di *build*, che converte il codice del repo in una build "eseguibile". Usando una certa versione del codice, a una specifica commit, nella fase di build vengono compilati i binari con gli asset appropriati includendo anche le eventuali dipendenze;

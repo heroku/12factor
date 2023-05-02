@@ -1,7 +1,7 @@
-## XII. Admin procesy
-
-### Spúštanie administrátorských/správcovských úloh ako jednorazových procesov
-
+---
+title: XII. Admin procesy
+description: Spúštanie administrátorských/správcovských úloh ako jednorazových procesov
+---
 [Process formation](./concurrency) je sada procesov, ktoré tvoria bežnú prevádzku aplikácie (napríklad odpovedanie na požiadavky).  Na rozdiel od toho, vývojári často chcú spraviť jednorazové administratívne alebo údržbové úlohy, ako napríklad:
 
 * Spustenie databázovej migrácie (e.g. `manage.py migrate` v Django, `rake db:migrate` v Rails).

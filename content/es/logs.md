@@ -1,7 +1,7 @@
-## XI. Historiales
-
-### Tratar los historiales como una transmisión de eventos
-
+---
+title: XI. Historiales
+description: Tratar los historiales como una transmisión de eventos
+---
 Los *historiales* permiten observar el comportamiento de la aplicación durante su ejecución. En entornos basados en servidores es muy común escribir un fichero en disco (un "fichero de histórico") pero este, es tan solo un posible formato de salida.
 
 Los historiales son la [transmisión](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) de un conjunto de eventos ordenados y capturados de la salida de todos los procesos en ejecución y de los "backing services". En bruto, los historiales suelen estar en formato texto y tienen un evento por línea (aunque las trazas de excepciones suelen estar en varias líneas). Los historiales no tienen un principio y un final fijo, sino que fluyen continuamente mientras la aplicación está en funcionamiento.

@@ -1,7 +1,7 @@
-## IX. Zahoditeľnosť
-
-### Maximalizácia robustnosti rýchlym štartom a vhodným vypnutím
-
+---
+title: IX. Zahoditeľnosť
+description: Maximalizácia robustnosti rýchlym štartom a vhodným vypnutím
+---
 **[Procesy](./processes) dvanásť faktorovej aplikácie sú *zahoditeľné*, čo znamená, že sa kedykoľvek dajú spustiť alebo zastaviť.**  Umožňuje to elastické škálovanie, rýchly vývoj [kódu](./codebase) alebo zmeny v [konfigurácii](./config), a robustnosť produkčných nasadení.
 
 Procesy by sa mali snažiť **minimalizovať čas spustenia**.  Ideálne, procesu zaberie len pár sekúnd od spustenia príkazu do kým je proces pripravený prijímať požiadavky alebo úlohy.  Krátky čas spustenia poskytuje väčšiu agility pre [release](./build-release-run) proces a škálovanie; a pomáha tiež robustnosti, lebo manažér procesov, môže jednoduchšie presúvať procesy na nové fyzické stroje v prípade potreby.

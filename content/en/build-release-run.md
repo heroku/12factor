@@ -1,7 +1,7 @@
-## V. Build, release, run
-
-### Strictly separate build and run stages
-
+---
+title: V. Build, release, run
+description: Strictly separate build and run stages
+---
 A [codebase](./codebase) is transformed into a (non-development) deploy through three stages:
 
 * The *build stage* is a transform which converts a code repo into an executable bundle known as a *build*.  Using a version of the code at a commit specified by the deployment process, the build stage fetches vendors [dependencies](./dependencies) and compiles binaries and assets.

@@ -1,7 +1,7 @@
-## III. Configuration
-
-### Stockez la configuration dans l'environnement
-
+---
+title: III. Configuration
+description: Stockez la configuration dans l'environnement
+---
 La *configuration* d'une application est tout ce qui est susceptible de varier entre des [déploiements](./codebase) (validation, production, environnement de développement, etc.). Cela inclut :
 
 * Les ressources gérées par la base de données, Memcached, ou tout autre [service de stockage](./backing-services)

@@ -1,7 +1,7 @@
-## III. Yapılandırma
-
-### Ortamda yapılandırma depolama
-
+---
+title: III. Yapılandırma
+description: Ortamda yapılandırma depolama
+---
 Bir uygulamanın *yapılandırması* muhtemelen [dağıtımlar](./codebase) arasındaki değişikliktir(kademelendirme, ürün, geliştirici ortamları vb.). Bunları içerir:
 
 * Veri tabanını ele alan kaynaklar, önbellek ve diğer [destek servisleri](./backing-services)

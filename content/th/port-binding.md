@@ -1,7 +1,7 @@
-## VII. Port binding
-
-### นำออกบริการด้วยการเชื่อมโยง port
-
+---
+title: VII. Port binding
+description: นำออกบริการด้วยการเชื่อมโยง port
+---
 เว็บแอพ (Web App) บางครั้งทำงานข้างใน webserver container. ตัวอย่างเช่น PHP app จะทำงานเป็นโมดูลข้างใน [Apache HTTPD](http://httpd.apache.org/) หรือ Java app จะทำงานข้างใน [Tomcat](http://tomcat.apache.org/) เป็นต้น
 
 **Twelve-factor app เป็น self-contained โดยสมบูรณ์** และไม่ขึ้นอยู่กับ runtime injection ของ webserver เข้ามายังสภาพแวดล้อมการดำเนินงานเพิ่อสร้าง web-facing service. เว็บแอพ **นำออก HTTP เป็นบริการโดยเชื่อมโยงกับ port** และคอยตรวจสอบ request ที่เข้ามาจาก port นั้น

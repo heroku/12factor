@@ -1,7 +1,7 @@
-## III. Configurazione
-
-### Memorizza le informazioni di configurazione nell'ambiente
-
+---
+title: III. Configurazione
+description: Memorizza le informazioni di configurazione nell'ambiente
+---
 La "configurazione" di un'applicazione è tutto quello che può variare da un [deployment](./codebase) all'altro (staging, production, ambienti di sviluppo). Ad esempio:
 
 * Valori da usare per connettersi a un database, Memcached, oppure altri [backing service](./backing-services);

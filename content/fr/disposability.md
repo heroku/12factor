@@ -1,7 +1,7 @@
-## IX. Jetable
-
-### Maximisez la robustesse avec des démarrages rapides et des arrêts gracieux
-
+---
+title: IX. Jetable
+description: Maximisez la robustesse avec des démarrages rapides et des arrêts gracieux
+---
 **Les [processus](./processes) des applications 12 facteurs sont *jetables*, c'est-à-dire qu'ils peuvent être démarrés ou stoppés en un instant.** Cela simplifie un rapide grossissement vertical, le déploiement rapide du [code](./codebase) ou de changements dans la [configuration](./config), ainsi que la robustesse des déploiements de production.
 
 Les processus doivent viser à **minimiser le temps de démarrage**. Idéalement, un processus prend quelques secondes entre le moment où une commande le lance et celui où il est en marche et prêt à recevoir des requêtes ou du travail. Un court temps de démarrage rend les processus de [release](./build-release-run) et de scalabilité verticale plus agiles; il aide également à la robustesse, car les gestionnaires de processus peuvent plus facilement déplacer des processus vers de nouvelles machines physiques lorsque c'est nécessaire.

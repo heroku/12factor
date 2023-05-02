@@ -1,7 +1,7 @@
-## XI. Logi
-
-### Traktuj logi jako strumień zdarzeń
-
+---
+title: XI. Logi
+description: Traktuj logi jako strumień zdarzeń
+---
 *Logi* zapewniają wgląd w zachowanie działającej aplikacji. W środowiskach korzystających z serwera zazwyczaj są zapisywane na dysku (plik "logfile"); jednak jest to tylko wybrany format zapisu.
 
  Logi są listą zaagregowanych i uporządkowanych w czasie [zdarzeń](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) zebranych ze strumieni wyjściowych wszystkich uruchomionych procesów i usług wspierających. Logi w swojej pierwotnej formie występują zazwyczaj w formacie tekstowym, gdzie jedno zdarzenie zajmuje jedną linię w pliku (wyjątkiem jest jednak [backtrace](https://en.wikipedia.org/wiki/Stack_trace), który może zajmować wiele linii). Logi nie mają określonego początku ani końca, napływają nieustannie podczas działania aplikacji.

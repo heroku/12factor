@@ -1,7 +1,7 @@
-## V. Build, release, run
-
-### แยกขั้นตอนของการ build และ run อย่างเคร่งครัด
-
+---
+title: V. Build, release, run
+description: แยกขั้นตอนของการ build และ run อย่างเคร่งครัด
+---
 [codebase](./codebase) จะเปลี่ยนแปลงไปเป็น (non-development) deploy ด้วย 3 ขั้นตอน:
 
 * *ขั้นตอนการ build* เป็นการแปลงซึ่งเป็นการเปลี่ยน code repo ไปเป็นโปรแกรมที่ทำงานได้ (executable bundle) เรียกว่าการ *build* ใช้ version ของ code ที่ระบุ commit ด้วยกระบวนการ deployment ซึ่งขั้นตอนการ build นี้จะดึง[การอ้างอิง](./dependencies) และ compile เป็น binariy และ assets.

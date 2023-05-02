@@ -1,7 +1,7 @@
-## VI. Procesos
-
-### Ejecutar la aplicación como uno o más procesos sin estado
-
+---
+title: VI. Procesos
+description: Ejecutar la aplicación como uno o más procesos sin estado
+---
 La aplicación se ejecuta como uno o más *procesos* en el entorno de ejecución.
 
 El caso más sencillo que podemos plantear es que el código es un script independiente, el entorno de ejecución es un portátil de un desarrollador, el compilador o interprete correspondiente del lenguaje está instalado, y el proceso se lanza mediante la linea de mandatos (por ejemplo, `python my_script.py`). Por otro lado podemos encontrar el caso de un despliegue en producción de una aplicación compleja que puede usar muchos [tipos de procesos, instanciados como cero o más procesos en ejecución](./concurrency).

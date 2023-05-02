@@ -1,7 +1,7 @@
-## IV. Podpůrné služby
-
-### Nakládejte s podpůrnými službami jako s připojenými zdroji.
-
+---
+title: IV. Podpůrné služby
+description: Nakládejte s podpůrnými službami jako s připojenými zdroji.
+---
 *Podpůrná* služba je jakákoliv služba, kterou aplikace konzumuje přes síť jako součást svého normálního běhu. Příklady zahrnují databáze (jako například [MySQL](http://dev.mysql.com/) nebo [CouchDB](http://couchdb.apache.org/)), messaging/queueing systémy (jako jsou [RabbitMQ](http://www.rabbitmq.com/) nebo [Beanstalkd](https://beanstalkd.github.io)), SMTP služby pro odchozí emaily (jako [Postfix](http://www.postfix.org/)) a  cachovací systémy (jako je [Memcached](http://memcached.org/)).
 
 Podpůrné služby, jako například databáze, jsou obvykle spravovány stejnými systémovými inženýry jako samotné nasazení aplikace. K těmto lokálně spravovaným službám může aplikace navíc využívat služby provozované a spravované třetí stranou. To mohou být například SMTP služby (jako je [Postmark](http://postmarkapp.com/)), služby na sbírání metrik (jako [New Relic](http://newrelic.com/) nebo [Loggly](http://www.loggly.com/)), datová uložistě (jako [Amazon S3](http://aws.amazon.com/s3/)) a dokonce i služby přístupné přes API (jako jsou například [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/) nebo [Last.fm](http://www.last.fm/api)).

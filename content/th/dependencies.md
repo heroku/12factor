@@ -1,7 +1,7 @@
-## II. Dependencies
-
-### มีการประกาศและแยกการอ้างอิง (dependency) ทั้งหมดอย่างชัดเจน
-
+---
+title: II. Dependencies
+description: มีการประกาศและแยกการอ้างอิง (dependency) ทั้งหมดอย่างชัดเจน
+---
 ภาษาโปรแกรมส่วนใหญ่จะมีระบบ packaging สำหรับรองรับ library ต่างๆ อย่างเช่น [CPAN](http://www.cpan.org/) สำหรับ Perl หรือ [Rubygems](http://rubygems.org/) สำหรับ Ruby, Library จะถูกติดตั้งผ่านทางระบบ packaging สามารถติดตั้ง system-wide (เรียกว่า "site packages") หรือกำหนดขอบเขตเป็นไดเรกทรอรีที่มี app (เรียกว่า "vendoring" หรือ "bundling")
 
 **twelve-factor app ไม่ขึ้นอยู่กับ implicit existence of system-wide packages.** โดยประกาศการอ้างอิงทั้งหมด อย่างครบถ้วน และอย่างแน่นอน ด้วย *dependency declaration* manifest นอกจากนี้ใช้เครื่องมือ *dependency isolation* ระหว่างทำงานเพื่อให้แน่ใจว่าไม่มีการอ้างอิงแบบปริยาย "รั่ว (leak in)" จากระบบรอบๆ, รายละเอียดการอ้างอิงที่ครบถ้วนและชัดเจนใช้รูปแบบเดียวกันทั้ง production และ development

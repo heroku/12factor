@@ -1,7 +1,7 @@
-## III. Konfiguracja
-
-### Przechowuj konfigurację w środowisku
-
+---
+title: III. Konfiguracja
+description: Przechowuj konfigurację w środowisku
+---
 *Konfiguracja* to jedyny element, który może się różnić pomiędzy [wdrożeniami](./codebase) aplikacji (staging, produkcja, środowisko developerskie, etc). W jej skład wchodzą:
 
 * Ustawienia połączeń do baz danych, Memcached, i innych [usług wspierających](./backing-services)

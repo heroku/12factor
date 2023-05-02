@@ -1,7 +1,7 @@
-## V. Construa, lance, execute
-
-### Separe estritamente os estágios de construção e execução
-
+---
+title: V. Construa, lance, execute
+description: Separe estritamente os estágios de construção e execução
+---
 Uma [base de código](./codebase) é transformada num deploy (de não-desenvolvimento) através de três estágios:
 
 * O *estágio de construção* é uma transformação que converte um repositório de código em um pacote executável conhecido como *construção*. Usando uma versão do código de um commit especificado pelo processo de desenvolvimento, o estágio de construção obtém e fornece [dependências](./dependencies) e compila binários e ativos.

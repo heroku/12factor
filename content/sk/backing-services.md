@@ -1,7 +1,7 @@
-## IV. Podporné služby
-
-### Spravovanie podporných služieb ako pripojených zdrojov
-
+---
+title: IV. Podporné služby
+description: Spravovanie podporných služieb ako pripojených zdrojov
+---
 *Podporná služba* je akákoľvek služba, ktorú aplikácia konzumuje cez sieť ako súčasť je normálneho behu.  Príklady zahŕňajú databázy (ako napr. [MySQL](http://dev.mysql.com/) alebo [CouchDB](http://couchdb.apache.org/)), messaging/queueing systémy (napr.  [RabbitMQ](http://www.rabbitmq.com/) alebo [Beanstalkd](https://beanstalkd.github.io)), SMTP služby pre odchádzajúce emaily (napr. [Postfix](http://www.postfix.org/)), a cachovacie systémy (napr. [Memcached](http://memcached.org/)).
 
 Podporné služby ako databázy sú tradične spravované tými istými systémovými administrátormi ako nasadenia aplikácie.  Popri lokálne spravovaných službách, može mať aplikácia služby spravované tretími stranami.  Príklady zahŕňajú SMTP služby (napr. [Postmark](http://postmarkapp.com/)), služby na zbieranie metrík (napr. [New Relic](http://newrelic.com/) alebo [Loggly](http://www.loggly.com/)), úložiskové služby (napr. [Amazon S3](http://aws.amazon.com/s3/)), alebo dokonca služby prístupné cez API (napr. [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), alebo [Last.fm](http://www.last.fm/api)).

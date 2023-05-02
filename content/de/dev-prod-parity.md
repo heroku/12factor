@@ -1,5 +1,7 @@
-﻿##X. Dev-Prod-Vergleichbarkeit
-### Entwicklung, Staging und Produktion so ähnlich wie möglich halten
+﻿---
+title: X. Dev-Prod-Vergleichbarkeit
+description: Entwicklung, Staging und Produktion so ähnlich wie möglich halten
+---
 
 Historisch gibt es große Lücken zwischen Entwicklung (wo ein Entwickler live an einem lokalen [Deploy](./codebase) der App Änderungen macht) und Produktion (ein laufender Deploy der App, auf den Endbenutzer zugreifen). Diese Lücken zeigen sich auf drei Gebieten:
 

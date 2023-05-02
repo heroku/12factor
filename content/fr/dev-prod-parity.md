@@ -1,7 +1,7 @@
-## X. Parité dev/prod
-
-### Gardez le développement, la validation et la production aussi proches que possible
-
+---
+title: X. Parité dev/prod
+description: Gardez le développement, la validation et la production aussi proches que possible
+---
 Historiquement, il y a eu un fossé conséquent entre le développement (un développeur qui fait des modifications sur un [déploiement](./codebase) local de l'application) et la production (un déploiement de l'application accessible aux utilisateurs finaux). Ce fossé se manifeste de trois manières :
 
 * **Le fossé temporel** : un développeur peut travailler sur du code qui peut prendre des jours, des semaines ou des mois avant d'aller en production

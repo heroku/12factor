@@ -1,7 +1,7 @@
-## X. Paridade entre desenvolvimento e produção
-
-### Mantenha o desenvolvimento, homologação e produção o mais similares possível
-
+---
+title: X. Paridade entre desenvolvimento e produção
+description: Mantenha o desenvolvimento, homologação e produção o mais similares possível
+---
 Historicamente, houveram lacunas substanciais entre desenvolvimento (um desenvolvedor editando código num [deploy](./codebase) local do app) e produção (um deploy acessado pelos usuários finais). Essas lacunas se manifestam em três áreas:
 
 * **A lacuna do tempo:** Um desenvolvedor pode trabalhar em código que demora dias, semanas ou até meses para ir para produção.

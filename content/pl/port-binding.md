@@ -1,7 +1,7 @@
-## VII. Przydzielanie portów
-
-### Udostępniaj usługi przez przydzielanie portów
-
+---
+title: VII. Przydzielanie portów
+description: Udostępniaj usługi przez przydzielanie portów
+---
 Zdarza się, że aplikacje internetowe uruchamiane są w ramach serwera web. Napisane w PHP np. działają jako moduł [Apache HTTPD](http://httpd.apache.org/), natomiast aplikacje w Javie mogą być uruchomiane wewnątrz serwera aplikacji, np. [Tomcat](http://tomcat.apache.org/).
 
 **Aplikacja 12factor nie posiada zewnętrznych zależności** co czyni ją niezależną wobec innych modułów znajdujących się na serwerze. Aplikacja internetowa **udostępniać będzie np. HTTP w formie usługi przez przydzielenie portu**. Umożliwia jej to obsługę zapytań przychodzących do wybranego portu.

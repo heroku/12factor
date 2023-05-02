@@ -1,7 +1,7 @@
-## IV. Dịch vụ hỗ trợ
-
-### Dịch vụ hỗ trợ như là tài nguyên bổ xung
-
+---
+title: IV. Dịch vụ hỗ trợ
+description: Dịch vụ hỗ trợ như là tài nguyên bổ xung
+---
 *Dịch vụ hỗ trợ* là các dịch vụ mà ứng dụng sử dụng thông qua mạng như là một thành phần trong vận hành. Ví dụ bao gồm nơi lưu trữ dữ liệu (như là [MySQL](http://dev.mysql.com/) hoặc [CouchDB](http://couchdb.apache.org/)), hệ thống tin nhắn/hàng đợi (như là [RabbitMQ](http://www.rabbitmq.com/) hoặc [Beanstalkd](http://kr.github.com/beanstalkd/)), dịch vụ SMTP để gửi thư điện tử ra ngoài (như là [Postfix](http://www.postfix.org/)), và hệ thống đệm (như là [Memcached](http://memcached.org/)).
 
 Dịch vụ hỗ trợ như cơ sở dữ liệu thường được quản lý bởi chính hệ thống quản trị của dịch vụ đó trong quá trình triển khai ứng dụng. Thêm vào đó, việc quản trị dịch vụ cục bộ, các ứng dụng có thể sử dụng các dịch vụ được cung cấp và quản lý bởi bên thứ ba. Ví dụ như các dịch vụ SMTP (như [Postmark](http://postmarkapp.com/)), các dịch vụ thu thập thông tin đo lường (metrics-gathering services) (như [New Relic](http://newrelic.com/) hay [Loggly](http://www.loggly.com/)), dịch vụ tài sản nhị phân (binary assets services) (như [Amazon S3](http://aws.amazon.com/s3/)), và các dịch vụ sử dụng API (như [Twitter](http://dev.twitter.com/), [Google Maps](http://code.google.com/apis/maps/index.html), hoặc [Last.fm](http://www.last.fm/api)).

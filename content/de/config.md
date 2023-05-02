@@ -1,7 +1,7 @@
-﻿## III. Konfiguration
-
-### Die Konfiguration in Umgebungsvariablen ablegen
-
+﻿---
+title: III. Konfiguration
+description: Die Konfiguration in Umgebungsvariablen ablegen
+---
 Die *Konfiguration* einer App ist alles, was sich wahrscheinlich zwischen den [Deploys](./codebase) ändern wird (Staging, Produktion, Entwicklungsumgebungen, usw.). Dies umfasst:
 
 * Resource-Handles für Datenbanken, Memcached und andere [unterstützende Dienste](./backing-services)

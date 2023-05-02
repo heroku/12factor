@@ -1,7 +1,7 @@
-## III. Config
-
-### Store config in the environment
-
+---
+title: III. Config
+description: Store config in the environment
+---
 An app's *config* is everything that is likely to vary between [deploys](./codebase) (staging, production, developer environments, etc).  This includes:
 
 * Resource handles to the database, Memcached, and other [backing services](./backing-services)

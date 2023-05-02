@@ -1,7 +1,7 @@
-## VI. Procesy
-
-### Execute the app as one or more stateless processes
-
+---
+title: VI. Procesy
+description: Execute the app as one or more stateless processes
+---
 Aplikácia sa vykonáva v exekučnom prostredí ako jeden alebo viac *procesov*.
 
 V najjednoduchšom prípade je kód jednoduchý skript, exekučné prostredie je laptop developera s nainštalovaným kompilátorom/interpretrom jazyka, a proces sa spúšta z príkazového riadka (napríklad, `python my_script.py`).  Na druhej strane spektra, produkčné nasadenie sofistikovanej aplikácie môže mať viacero [typov procesov, inštancovaných do jedného alebo viacerých procesov](./concurrency).

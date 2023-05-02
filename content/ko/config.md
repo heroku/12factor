@@ -1,7 +1,7 @@
-## III. 설정
-
-### 환경(environment)에 저장된 설정
-
+---
+title: III. 설정
+description: 환경(environment)에 저장된 설정
+---
 애플리케이션의 *설정*은 [배포](./codebase) (스테이징, 프로덕션, 개발 환경 등) 마다 달라질 수 있는 모든 것들입니다. 설정에는 다음이 포함됩니다.
 
 * 데이터베이스, memcached 등 [백엔드 서비스](./backing-services)들의 리소스 핸들

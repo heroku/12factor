@@ -1,7 +1,7 @@
-## II. Dependencies
-
-### Jawnie zadeklaruj i wydziel zależności
-
+---
+title: II. Dependencies
+description: Jawnie zadeklaruj i wydziel zależności
+---
 Większość języków programowania oferuje narzędzia do dystrybucji dodatkowych bibliotek, takie jak [CPAN](http://www.cpan.org/) dla Perla lub [Rubygems](http://rubygems.org/) dla języka Ruby. Biblioteki zainstalowane w ten sposób mogą być dostępne dla całego systemu (określane jako "site packages") lub zakres ich działania może być ograniczony dla pojedynczego projektu lub aplikacji (określane jako "vendoring" lub "bundling").
 
 **Aplikacja 12factor nigdy nie jest zależna od bibliotek zainstalowanych dla całego systemu.** Wszystkie zależności są dokładnie określone przez dokument zawierający ich kompletną listę (*dependency declaration manifest*). Ponadto taka aplikacja korzysta   z narzędzia służącego do izolacji tych zależności podczas działania aplikacji. W ten sposób ma się pewność, że np. jakaś biblioteka nie jest przypadkiem jedną z tych zainstalowanych w zewnętrznym środowisku, w którym działa aplikacja. Inaczej podobna sytuacja mogłaby uniemożliwiać poprawne działanie aplikacji w innym środowisku, gdzie takiej biblioteki by brakowało. Pełna i dokładna specyfikacja bibliotek używanych przez aplikację jest identyczna dla zarówno środowiska developerskiego jak i produkcyjnego.

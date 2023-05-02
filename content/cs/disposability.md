@@ -1,7 +1,7 @@
-## IX. Zahoditelnost
-
-### Maximalizujte robustnost pomocí rychlého spouštění a korektního vypnutí.
-
+---
+title: IX. Zahoditelnost
+description: Maximalizujte robustnost pomocí rychlého spouštění a korektního vypnutí.
+---
 
 **[Procesy](./processes) twelve-factor aplikace jsou *zahoditelné*, to znamená, že mohou být kdykoliv spuštěny nebo vypnuty.** Usnadňuje to elastické škálování, rychlé nasazování [kódu](./codebase), změny [konfigurace](./config) a zvyšuje se robustnost celého produkčního nasazení.
 

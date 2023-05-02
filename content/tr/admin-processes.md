@@ -1,7 +1,7 @@
-## XII. Yönetici Süreci
-
-### Yönetici/yönetim görevlerini tek seferlik işlem olarak çalıştırma
-
+---
+title: XII. Yönetici Süreci
+description: Yönetici/yönetim görevlerini tek seferlik işlem olarak çalıştırma
+---
 [Süreç oluşumu](./concurrency) uygulama çalışırken uygulamanın sıradan işlerini (web isteklerini idare etmek gibi) yapmakta kullanılan süreçlerin bir dizisidir. Ayrı olarak, geliştiriciler çoğunlukla uygulamanın bir kereye mahsus yönetimsel veya bakım görevlerini yapmayı dileyecekler, şunun gibi:
 
 * Veri tabanı göçü çalıştırmak (Django'da `manage.py migrate`, Rails'de `rake db:migrate`).

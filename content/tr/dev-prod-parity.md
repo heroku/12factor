@@ -1,7 +1,7 @@
-## X.Geliştirme/Üretim Eşitliği
-
-### Gelişim, evreleme ve üretimi olabildikçe benzer tutma
-
+---
+title: X.Geliştirme/Üretim Eşitliği
+description: Gelişim, evreleme ve üretimi olabildikçe benzer tutma
+---
 Tarihsel olarak, geliştirme (bir geliştirici uygulamanın yerel [dağıtımına](./codebase) canlı düzenlemeler yapar) ve ürün (uygulamanın çalışan dağıtımı son kullanıcılar tarafından erişilmiştir) arasında önemli aralıklar vardır. Bu aralıklar üç alanda belirtilir:
 
 * **Zaman aralığı:** bir geliştirici kod üzerinde günler,haftalar hatta aylar boyunca bile ürünü oluşturmak için çalışabilir.

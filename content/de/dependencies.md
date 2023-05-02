@@ -1,7 +1,7 @@
-﻿## II. Abhängigkeiten
-
-### Abhängigkeiten explizit deklarieren und isolieren
-
+﻿---
+title: II. Abhängigkeiten
+description: Abhängigkeiten explizit deklarieren und isolieren
+---
 Die meisten Programmiersprachen bieten ein System an, um unterstützende Bibliotheken zu verbreiten, wie [CPAN](http://www.cpan.org/) für Perl oder [Rubygems](http://rubygems.org/) für Ruby. Aus einem Paketsystem stammende Bibliotheken können systemweit installiert werden (auch "Site Packages" genannt) oder in ein Verzeichnis der App beschränkt werden (genannt "vendoring" oder "bundling" - deutsch auch "mitliefern").
 
 **Eine Zwölf-Faktor-App verlässt sich nie auf die Existenz von systemweiten Paketen.**  Sie deklariert alle Abhängigkeiten vollständig und korrekt über eine *Abhängigkeitsdeklaration*. Weiter benutzt sie zur Laufzeit ein Werkzeug zur *Isolation von Abhängigkeiten* um sicherzustellen, dass keine impliziten Abhängigkeiten aus dem umgebenden System "hereinsickern". Die vollständige und explizite Spezifikation der Abhängigkeiten wird gleichermaßen in Produktion und Entwicklung angewandt.

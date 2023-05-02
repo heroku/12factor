@@ -1,7 +1,7 @@
-## XI. Logy
-
-### S logy zacházejte jako s proudy událostí.
-
+---
+title: XI. Logy
+description: S logy zacházejte jako s proudy událostí.
+---
 *Logy* poskytují náhled na chování běžící aplikace. V prostředí serveru se obvykle zapisují do souboru na disku ("logfile"), ale to je jen výstupní formát.
 
 Logy jsou [proudy](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) agregovaných a časově seřazených událostí, posbíraných z výstupních proudů všech běžících procesů a podpůrných služeb. Logy jsou ve své syrové formě typicky v textovém formátu s jednou událostí na řádek (avšak výpis výjimky může zabírat i více řádků). Logy nemají žádný pevný začátek ani konec, ale plynule proudí po celou dobu běhu aplikace.

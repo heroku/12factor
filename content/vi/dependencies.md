@@ -1,7 +1,7 @@
-## II. Các phụ thuộc
-
-### Khai báo rõ ràng và phân tách các phụ thuộc
-
+---
+title: II. Các phụ thuộc
+description: Khai báo rõ ràng và phân tách các phụ thuộc
+---
 Hầu hết các ngôn ngữ lập trình đều cung cấp hệ thống gói để phân phối các gói thư viện hỗ trợ, ví dụ như [CPAN](http://www.cpan.org/) cho Perl hay [Rubygems](http://rubygems.org/) cho Ruby.  Các thư viện cài đặt thông qua một hệ thống gói có thể được cài đặt ở mức phủ hệ thống (được biết đến với thuật ngữ "site packages") hay được nhóm và trong một thư mục có kèm ứng
 dụng (được biết đến với thuật ngữ "vendoring" hay "bundling").
 

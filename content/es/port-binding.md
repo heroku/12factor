@@ -1,7 +1,7 @@
-## VII. Asignación de puertos
-
-### Publicar servicios mediante asignación de puertos
-
+---
+title: VII. Asignación de puertos
+description: Publicar servicios mediante asignación de puertos
+---
 Las aplicaciones web se ejecutan a menudo mediante contenedores web. Por ejemplo, las aplicaciones de PHP se suelen ejecutar como módulos del [HTTPD de Apache](http://httpd.apache.org/), y las aplicaciones Java en [Tomcat](http://tomcat.apache.org/).
 
 **Las aplicaciones "twelve factor" son completamente auto-contenidas** y no dependen de un servidor web en ejecución para crear un servicio web público. Una aplicación web **usa HTTP como un servicio al que se le asigna un puerto**, y escucha las peticiones que recibe por dicho puerto.

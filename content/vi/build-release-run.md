@@ -1,7 +1,7 @@
-## V. Xây dựng, phát hành, vận hành
-
-### Tách biệt hoàn toàn giữa bước xây dựng và vận hành
-
+---
+title: V. Xây dựng, phát hành, vận hành
+description: Tách biệt hoàn toàn giữa bước xây dựng và vận hành
+---
 [Mã gốc](./codebase) được chuyển sang (tạm dừng phát triển) triển khai thông qua ba bước:
 
 * Bước xây dựng* là bước chuyển các đoạn mã thành các gói có khả năng thực thi được gọi là một *bản xảy dựng*. Sử dụng phiên bản của mã nguồn ở một bản cam kết (commit) quy định bở quy trình triển khai, bước xây dựng lấy về và cung cấp các [phụ thuộc](./dependencies) và biên dịch các thành phần và tài nguyên.

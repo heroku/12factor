@@ -1,7 +1,7 @@
-## VII. 포트 바인딩
-
-### 포트 바인딩을 사용해서 서비스를 공개함
-
+---
+title: VII. 포트 바인딩
+description: 포트 바인딩을 사용해서 서비스를 공개함
+---
 웹앱은 웹서버 컨테이너 내부에서 실행되기도 합니다. 예를 들어, PHP 앱은 [Apache HTTPD](http://httpd.apache.org/)의 모듈로 실행될 수도 있고, Java 앱은 [Tomcat](http://tomcat.apache.org/) 내부에서 실행될 수도 있습니다. 
 
 **Twelve-Factor 앱은 완전히 독립적**이며 웹서버가 웹 서비스를 만들기 위해 처리하는 실행환경에 대한 런타임 인젝션에 의존하지 않습니다. Twelve-Factor 웹 앱은 **포트를 바인딩하여 HTTP 서비스로 공개되며** 그 포트로 들어오는 요청을 기다립니다. 

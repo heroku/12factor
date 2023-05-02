@@ -1,7 +1,7 @@
-﻿## VI. Prozesse
-
-### Die App als einen oder mehrere Prozesse ausführen
-
+﻿---
+title: VI. Prozesse
+description: Die App als einen oder mehrere Prozesse ausführen
+---
 Die App wird als ein oder mehrere *Prozesse* ausgeführt.
 
 Im einfachsten Fall ist der Code ein Stand-alone-Skript, die Ausführungsumgebung ist der lokale Laptop eines Entwicklers mit einer installierten Laufzeitumgebung einer Sprache, und der Prozess wird von der Kommandozeile gestartet (zum Beispiel `python my_script.py`). Am anderen Ende des Spektrums kann eine hochentwickelte App viele [Prozesstypen benutzen, die in keinen oder mehreren Prozessen laufen](./concurrency).

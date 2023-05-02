@@ -1,7 +1,7 @@
-## [XI. Nhật ký](./logs)
-
-### Nhật ký là các luồng sự kiện
-
+---
+title: [XI. Nhật ký](./logs)
+description: Nhật ký là các luồng sự kiện
+---
 *Nhật ký* cung cấp khả năng thể hiện các hình vi của ứng dụng đang vận hành, trong môi trường máy chủ chúng thường được ghi lại thành các tệp tin trên ổ đĩa cứng (a "logfile"); nhưng chỉ có một định dạng biểu diễn duy nhất.
 
 Nhật ký như là [luồng](http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/) của sự kết hợp, theo trình tự thời gian của các sự kiện, được thu thập từ các luồng ra của các tiến trình đang vận hành và dịch vụ hỗ trợ của ứng dụng. Nhật ký ở dạng nguyên gốc thường là các chuỗi ký tự được định dạng với mỗi sự kiện trên một dòng (mặc dù các truy vết của ngoại lệ thường chia thành nhiều dòng). Nhật ký không có định điểm bắt đầu hay kết thúc, nhưng là luồng liên tục miễn là ứng dụng vẫn đang vận hành. 

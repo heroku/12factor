@@ -1,7 +1,7 @@
-## XII. Admin processes
-
-### รันงานของผู้ดูแลระบบ/การจัดการให้เป็นกระบวนการแบบครั้งเดียว
-
+---
+title: XII. Admin processes
+description: รันงานของผู้ดูแลระบบ/การจัดการให้เป็นกระบวนการแบบครั้งเดียว
+---
 [process formation](./concurrency) เป็นอาร์เรย์ของ process ที่ใช้ในการทำธุรกิจปรกติของ app (เช่นการจัดการ reqeust ของเว็บ) ขณะทำงาน developer มักต้องการทำการดูแลหรือบำรุงรักษาเพียงคนเดียวสำหรับ app เช่น:
 
 * รันการย้ายข้อมูลฐานข้อมูล (เช่น `manage.py migrate` ใน Django, `rake db:migrate` ใน Rails)

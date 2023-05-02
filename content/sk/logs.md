@@ -1,7 +1,7 @@
-## XI. Logs
-
-### Logy sú prúdy udalostí
-
+---
+title: XI. Logs
+description: Logy sú prúdy udalostí
+---
 *Logy* poskytujú náhľad do správania sa bežiacej aplikácie. V prostredí serverov sa zvyčajne zapisujú do súboru na disk (tzv. "logfile"); ale toto je len výstupný formát.
 
 Logy sú [prúd](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) agregovaných, časovo zoradených udalostí pozbierané z výstupných prúdov všetkých bežiacich procesov a podporných služieb.  Logy sú vo svojej surovej forme zvyčajne v textovom formáte s jednou udalosťou na riadok (thougaj keď výpisy výnimiek môžu zaberať viac riadkov).  Logy nemajú pevný začiatok ani koniec, ale plynule prúdia počas behu aplikácie.

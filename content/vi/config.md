@@ -1,7 +1,7 @@
-## III. Cấu hình
-
-### Lưu trữ cấu hình trong môi trường
-
+---
+title: III. Cấu hình
+description: Lưu trữ cấu hình trong môi trường
+---
 Cấu hình của ứng dụng là những thứ có thể thay đổi qua các [triển khai](./codebase) (hệ thống thử, hệ thống sản xuất, môi trường phát triển, etc). Nó bao gồm:
 * Tài nguyên xử lý cơ sở dữ liệu, Memcached, và [dịch vụ lớp dưới](./backing-services) khác
 * Thông tin đăng nhập đến các dịch vụ như là Amazon S3 hay Twitter

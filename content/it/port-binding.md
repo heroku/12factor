@@ -1,7 +1,7 @@
-## VII. Binding delle Porte
-
-### Esporta i servizi tramite binding delle porte
-
+---
+title: VII. Binding delle Porte
+description: Esporta i servizi tramite binding delle porte
+---
 Normalmente, le applicazioni web sono qualcosa di eseguito all'interno di un server web, che fa da contenitore. Per esempio, le applicazioni PHP possono venire eseguite come modulo all'interno di [Apache HTTPD](http://httpd.apache.org/), così come un'applicazione Java viene eseguita in [Tomcat](http://tomcat.apache.org/).
 
 **L'applicazione twelve-factor** è completamente self-contained (contenuta in se stessa) e non si affida a un altro servizio (come appunto un webserver) nell'ambiente di esecuzione. La web app **esporta HTTP come un servizio effettuando un binding specifico a una porta**, rimanendo in ascolto su tale porta per le richieste in entrata.

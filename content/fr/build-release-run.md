@@ -1,7 +1,7 @@
-## V. Assemblez, publiez, exécutez
-
-### Séparez strictement les étapes d'assemblage et d'exécution
-
+---
+title: V. Assemblez, publiez, exécutez
+description: Séparez strictement les étapes d'assemblage et d'exécution
+---
 Une [base de code](./codebase) est transformée en un déploiement (non-développement) à travers les étapes suivantes :
 
 * L'*étape d'assemblage* (ou "build") est une transformation qui convertit un dépôt de code en un paquet autonome exécutable appelé l'assemblage (ou "build"). En utilisant une version du code référencée par un commit spécifié lors du processus de déploiement, l'étape d'assemblage va chercher toutes les [dépendances externes](./dependencies) et compile les fichiers binaires et les ressources.

@@ -1,7 +1,7 @@
-## VI. Processes
-
-### รันแอพพลิเคชันเป็นหนึ่งหรือมากกว่าให้เป็น stateless processes
-
+---
+title: VI. Processes
+description: รันแอพพลิเคชันเป็นหนึ่งหรือมากกว่าให้เป็น stateless processes
+---
 App ทำงานในสภาพแวดล้อมการดำเนินงานด้วยหนึ่งหรือมากกว่า *processes*
 
 ในกรณีที่ง่ายที่สุดคือ code คือ stand-alone script, สภาพแวดล้อมการดำเนินงานคือเครื่องคอมพิวเตอร์อง developer ที่ติดตั้ง language runtime และวิธีการคือเปิด app ด้วยคำสั่ง (ตัวอย่างเช่น `python my_script.py`) ในอีกด้านหนึ่ง app ที่ซับซ้อนที่ deploy บน production ใช้หลาย [process types, instantiated into zero or more running processes](./concurrency)

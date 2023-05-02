@@ -1,7 +1,7 @@
-﻿## V. Build, release, run
-
-### Build- und Run-Phase strikt trennen
-
+﻿---
+title: V. Build, release, run
+description: Build- und Run-Phase strikt trennen
+---
 Eine [Codebase](./codebase) wird durch drei Phasen in einen (Nicht-Entwicklungs)-Deploy transformiert:
 
 * Die *Build-Phase* ist eine Transformation, die ein Code-Repository in ein ausführbarers Code-Bündel übersetzt, das man auch *Build* nennt. Ausgehend von einer Code-Version eines Commits, der im Deployment-Prozess festgelegt wurde, holt sie [Abhängigkeiten](./dependencies), verpackt sie zum Mitliefern, und kompiliert Binaries und Assets.

@@ -1,7 +1,7 @@
-## X. dev/prod 일치
-
-### development, staging, production 환경을 최대한 비슷하게 유지
-
+---
+title: X. dev/prod 일치
+description: development, staging, production 환경을 최대한 비슷하게 유지
+---
 역사적으로, 개발 환경(애플리케이션의 개발자가 직접 수정하는 로컬의 [배포](./codebase))과 production 환경(최종 사용자가 접근하게 되는 실행 중인 배포) 사이에는 큰 차이가 있었습니다. 이러한 차이는 3가지 영역에 걸처 나타납니다.
 
 * **시간의 차이**: 개발자가 작업한 코드는 production에 반영되기까지 며칠, 몇주, 때로는 몇개월이 걸릴 수 있습니다.

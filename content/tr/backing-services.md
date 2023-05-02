@@ -1,7 +1,7 @@
-## IV. Destek servisi
-
-### Destek servislerine ekli kaynak olarak davranma
-
+---
+title: IV. Destek servisi
+description: Destek servislerine ekli kaynak olarak davranma
+---
 Bir *destek servisi* uygulamanın kendi normal işleminin bir parçası olarak ağ üzerinden tüketim yapan bir servistir. Örnekler veri deposu([MySQL](http://dev.mysql.com/) veya [CouchDB](http://couchdb.apache.org/) gibi), mesajlama/kuyruklama sistemleri( [RabbitMQ](http://www.rabbitmq.com/) veya [Beanstalkd](https://beanstalkd.github.io)), giden email için SMTP servisi([Postfix](http://www.postfix.org/) gibi) ve önbellekleme sistemleri([Memcached](http://memcached.org/) gibi) içerir.
 
 Destek servisleri, veri tabanı gibi, uygulamaların çalışma zamanlı dağıtımlarında olduğu gibi benzer sistem yöneticileri tarafından geleneksel olarak yönetilirler. Bu yerel yönetilen servislere ilave olarak, uygulama üçüncü parti uygulamalar tarafından onaylanmış ve yönetilmiş servislere sahip olabilirler. Örnekler SMTP servisleri([Postmark](http://postmarkapp.com/) gibi), Metrik toplama servisleri( [New Relic](http://newrelic.com/) veya [Loggly](http://www.loggly.com/) gibi), binary servisler([Amazon S3](http://aws.amazon.com/s3/) gibi) ve API-erişilebilir tüketici servisleri bile [Twitter](http://dev.twitter.com/), [Google Maps](http://code.google.com/apis/maps/index.html), ve [Last.fm](http://www.last.fm/api) gibi)  içerir.

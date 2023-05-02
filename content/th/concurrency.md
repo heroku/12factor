@@ -1,7 +1,7 @@
-## VIII. Concurrency
-
-### ขยายออกของแอพพลิเคชันด้วยรูปแบบ process
-
+---
+title: VIII. Concurrency
+description: ขยายออกของแอพพลิเคชันด้วยรูปแบบ process
+---
 โปรแกรมคอมพิวเตอร์ใดๆ เมื่อทำงานแล้วจะถูกแทนที่ด้วย 1 หรือมากกว่า process เว็บแอพมีหลายรูปแบบของ process-execution ตัวอย่างเช่น PHP process ทำงานเป็น process ลูกของ Apache, เริ่มต้นตามความต้องการตามปริมาณคำขอ, Java process มีวิธีที่ตรงกันข้ามซึ่ง JVM จะใช้หนึ่ง uberprocess ขนาดใหญ่ที่สงวนบล็อกขนาดใหญ่สำหรับทรัพยากรระบบ (CPU และหน่วยความจำ) ในตอนเริ่มต้น ซึ่งจัดการ concurrency ภายในด้วย thread ทั้งสองกรณี process ที่ทำงานเป็นส่วนที่มองเห็นน้อยมากสำหรับ developer ของ app
 
 ![Scale is expressed as running processes, workload diversity is expressed as process types.](/images/process-types.png)

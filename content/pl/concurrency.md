@@ -1,7 +1,7 @@
-## VIII. Współbieżność
-
-### Skaluj przez odpowiednio dobrane procesy
-
+---
+title: VIII. Współbieżność
+description: Skaluj przez odpowiednio dobrane procesy
+---
 Każdy program komputerowy od momentu uruchomienia jest reprezentowany przez jeden lub więcej procesów. Aplikacje internetowe mogą być uruchamiane w różnorodny sposób. Dla przykładu -  procesy PHP uruchamiane są na żądanie (w zależności od potrzeby obsługi odpowiednio dużej liczby zapytań) jako podrzędne procesy Apache'a. W Javie procesy obsługiwane są zupełnie inaczej, z JVM zapewniającym jeden nadrzędny proces, który rezerwuje zasoby systemu (CPU oraz pamięć) na starcie oraz współbieżnością zarządzaną wewnętrznie i opartą na wątkach. Dla developerów aplikacji różnica jednak nie będzie szczególnie odczuwalna.
 
 ![Skala wyrażana jest przez działające procesy, natomiast różnorodność obciążenia wyrażana jest w typach procesów](/images/process-types.png)

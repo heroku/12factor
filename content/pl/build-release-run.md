@@ -1,7 +1,7 @@
-## V.  Buduj, publikuj, uruchamiaj
-
-### Oddzielaj etap budowania od uruchamiania
-
+---
+title: V.  Buduj, publikuj, uruchamiaj
+description: Oddzielaj etap budowania od uruchamiania
+---
 [Codebase](./codebase) jest przetwarzany we wdrożenie w trzech etapach (poza lokalnym środowiskiem).
 
 * Podczas *etapu budowania* kod z repozytorium konwertowany jest do wykonywalnej paczki tzw. *buildu*. Używając wersji kodu zdefiniowanej przez commit w procesie deploymentu, w tym etapie pobiera i dołącza się do projektu [zależności](./dependencies) oraz kompiluje niezbędne zasoby.

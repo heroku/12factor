@@ -1,7 +1,7 @@
-## VII. Mở cổng mạng
-
-### Cung cấp các dịch vụ thông qua mở cổng mạng
-
+---
+title: VII. Mở cổng mạng
+description: Cung cấp các dịch vụ thông qua mở cổng mạng
+---
 Các ứng dụng web thường được thực thi bên trong một máy chủ web. Ví dụ, ứng dụng PHP có thể thực thi như là một thành phần của [Apache HTTPD](http://httpd.apache.org/), hoặc ứng dụng Java có thể thực thi thông qua [Tomcat](http://tomcat.apache.org/).
 
 **Ứng dụng áp dụng mười hai-hệ số có khả năng tự đóng gói hoàn toàn chính nó** và không phụ thuộc vào việc tích hợp thêm máy chủ web trong thời gian thực thi vào môi trường thực thi để tạo ra dịch vụ web. Ứng dụng web **cung cấp cơ chế HTTP như là dịch vụ bởi việc mở một cổng nhất định**, và lắng nghe các yêu cầu được gửi tới cổng này.

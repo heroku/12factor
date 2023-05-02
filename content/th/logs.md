@@ -1,7 +1,7 @@
-## XI. Logs
-
-### จัดการ logs ให้เป็นแบบ event stream
-
+---
+title: XI. Logs
+description: จัดการ logs ให้เป็นแบบ event stream
+---
 *Logs* จะทำให้เห็นได้ว่า app ทำงานอย่างไร ในสภาพแวดล้อม server-based โดยทั่วไปจะเขียนเป็นไฟล์บนดิสก์ (ใน "logfile") แต่นี่เป็นเพียง output format เท่านั้น
 
 Logs เป็น [stream](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) ของการรวบรวม, time-ordered events ที่รวมรวมจาก output stream ของ process ทั้งหมดที่ทำงานอยู่และ backing service, Log ในรูปแบบเดิมโดยปรกติเป็นรูปแบบข้อความด้วยหนึ่ง event ต่อบรรทัด (แม้กระทั้ง backtrace จาก exception ที่มีหลายบรรทัด) Log ไม่มีจุดเริ่มต้นหรือสิ้นสุดที่แน่นอน แต่มีการไหลอย่างต่อเนื่องตราบใดที่ app ทำงานอยู่

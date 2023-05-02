@@ -1,7 +1,7 @@
-## X. Parità tra Sviluppo e Produzione
-
-### Mantieni lo sviluppo, staging e produzione simili il più possibile
-
+---
+title: X. Parità tra Sviluppo e Produzione
+description: Mantieni lo sviluppo, staging e produzione simili il più possibile
+---
 Storicamente, ci sono sempre state differenze sostanziali tra gli ambienti di sviluppo (lo sviluppatore che effettua delle modifiche live a un [deployment](./codebase) in locale) e quello di produzione (un deployment in esecuzione raggiungibile dagli utenti finali). Differenze (o gap) che si possono raggruppare in tre categorie:
 
 * **Tempo:** uno sviluppatore può lavorare sul codice per giorni, settimane o mesi prima di poter andare in produzione;

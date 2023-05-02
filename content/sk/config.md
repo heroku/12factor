@@ -1,7 +1,7 @@
-## III. Konfigurácia
-
-### Konfigurácia uložená v prostredí
-
+---
+title: III. Konfigurácia
+description: Konfigurácia uložená v prostredí
+---
 *Konfigurácia* aplikácie je všetko, čo sa líši medzi [nasadeniami](./codebase) (staging, produkcia, vývojárske prostredie, atď).  To zahŕňa:
 
 * Pripojenia k databázam, Memcached a iným [podporným službám](./backing-services)

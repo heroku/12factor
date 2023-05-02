@@ -1,7 +1,7 @@
-## V. Build, release, run
-
-### Jasne oddelené fázy build, release a run
-
+---
+title: V. Build, release, run
+description: Jasne oddelené fázy build, release a run
+---
 [Kód](./codebase) sa transformuje do (nevývojárskeho) nasadenia troma krokmi:
 
 * *Krok build* transformuje kód v repozitári na vykonateľný balík nazývaný *build*.  Použitím verzie kódu v čase commitu špecifikovaného nasadzovacím procesom, krok build stiahne [závislosti](./dependencies) a skompiluje binárky a assets.

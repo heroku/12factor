@@ -1,7 +1,7 @@
-## VIII. Concurrence
-
-### Grossissez à l'aide du modèle de processus
-
+---
+title: VIII. Concurrence
+description: Grossissez à l'aide du modèle de processus
+---
 Tout programme informatique, lorsqu'il s'exécute, est représenté par un ou plusieurs processus. Les applications web ont adopté différentes approches d'exécution de processus. Par exemple, les processus PHP s'exécutent comme des processus fils d'Apache, démarrés à la demande lorsque c'est requis par le volume de requêtes. Les processus Java ont adopté l'approche inverse, avec une machine virtuelle qui fournit un super-processus massif qui réserve un gros bloc de ressources système (processeur et mémoire) au démarrage, et la concurrence est gérée en interne à l'aide de threads. Dans les deux cas, les processus qui tournent sont à peine visibles aux développeurs de l'application.
 
 ![La scalabilité est exprimée par des processus qui s'exécutent, la diversité de la charge de travail est exprimée par les types de processus](/images/process-types.png)

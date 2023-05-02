@@ -1,7 +1,7 @@
-## IX. Kullanıma Hazır Olma Durumu
-
-### Hızlı başlangıç ve otomatik zararsız kapama ile sağlamlığı üst düzeye çıkarma
-
+---
+title: IX. Kullanıma Hazır Olma Durumu
+description: Hızlı başlangıç ve otomatik zararsız kapama ile sağlamlığı üst düzeye çıkarma
+---
 **On iki faktör uygulamalarını [süreçleri](./processes) *tek kullanımlıktır*, anlamı anlık uyarıda başlatılabilirler veya durdurulabilirler.** Bu hızlı esnek ölçeklemeyi, [kod](./codebase) ve [yapılandırma](./config) değişikliğinin hızlı dağıtımı ve üretim dağıtımının sağlamlığı kolaylaştırır.
 
 Süreçler **başlangıç zamanını küçültmeye* çabalamalıdır. İdeal olarak, bir süreç başlatma komutunun çalıştırılıp, sürecin ayağa kalkmış ve istek veya işleri almaya hazır olana kadar olan süre bir kaç saniye alır. Kısa başlama zamanı [sürüm](./build-release-run) süreci ve arttırım için daha fazla çabukluk sağlar; ve sağlamlığına yardımcı olur, çünkü süreç yöneticisi izin verildiğinde süreçleri yeni fiziksel makinelere daha kolay taşıyabilir.

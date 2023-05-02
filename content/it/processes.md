@@ -1,7 +1,7 @@
-## VI. Processi
-
-### Esegui l'applicazione come uno o più processi stateless
-
+---
+title: VI. Processi
+description: Esegui l'applicazione come uno o più processi stateless
+---
 L'app viene eseguita nell'ambiente di esecuzione come uno o più *processi*.
 
 Nel caso più semplice, il codice non è che uno script stand-alone, l'ambiente di esecuzione è il laptop dello sviluppatore e il processo viene lanciato tramite linea di comando (per esempio, `python my_script.py`). Tuttavia, il deployment in produzione di un'app sofisticata potrebbe usare più [tipologie di processo, istanziate in zero o più processi](./concurrency).

@@ -1,7 +1,7 @@
-## VI. Procesy
-
-### Spouštějte aplikaci jako jeden nebo více bezestavových procesů.
-
+---
+title: VI. Procesy
+description: Spouštějte aplikaci jako jeden nebo více bezestavových procesů.
+---
 Aplikace je vykonávána v běhovém prostředí jako jeden nebo více *procesů*.
 
 V nejjednodušším případě je kód samostatný skript, běhové prostředí je laptop vývojáře s naistalovaným interpreterem daného jazyka a proces je spouštěn z příkazové řádky (například jako `python my_script.py`). Na druhé straně spektra je produkční nasazení sofistikované aplikace využívající vícero [typů procesu, instancovaných do nula nebo více běžících procesů](./concurrency).

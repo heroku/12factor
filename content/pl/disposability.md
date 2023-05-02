@@ -1,7 +1,7 @@
-## IX. Zbywalność
-
-### Zwiększ elastyczność aplikacji przez szybki start i bezproblemowe zamknięcie
-
+---
+title: IX. Zbywalność
+description: Zwiększ elastyczność aplikacji przez szybki start i bezproblemowe zamknięcie
+---
 **[Procesy](./processes) aplikacji 12factor są *jednorazowe*, znaczy to, że mogą być wystartowane lub zatrzymane w dowolnym momencie.** Ułatwia to elastyczne skalowanie i szybkie wdrożenia [kodu](./codebase), zmianę [konfiguracji](./config) oraz zapewnia większą stabilność przy wdrożeniu na produkcję.
 
 Procesy powinny dążyć do **minimalizowania czasu swojego rozruchu**. W idealnej sytuacji proces powinien potrzebować kilku sekund na to aby wystartować i być gotowym na przyjmowanie zapytań. Dzięki krótkiemu czasowi startu można szybciej wykonywać kolejne [wdrożenia](./build-release-run) oraz łatwiej skalować aplikację. Zwiększa to również zdolności aplikacji do radzenia sobie z problemami, ponieważ `process manager` może bezproblemowo przenieść je na nową maszynę fizyczną, gdy zajdzie taka potrzeba.

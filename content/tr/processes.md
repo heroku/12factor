@@ -1,7 +1,7 @@
-## VI. Süreç
-
-### Uygulamayı bir veya daha fazla bağımsız süreç olarak çalıştırma
-
+---
+title: VI. Süreç
+description: Uygulamayı bir veya daha fazla bağımsız süreç olarak çalıştırma
+---
 Uygulama bir veya birden fazla *süreç* olarak çalıştırma ortamında çalıştırılır.
 
 En basit senaryoda, kod bağımsız bir betiktir, çalışma ortamı, dil çalışma zamanı yüklenmiş, geliştiricilerin yerel laptopudur ve süreç komut satırı aracılığıyla başlatılır (Örneğin, `python my_script.py`). Diğeri spekturumun sonunda, çok yönlü uygulamanın ürün dağıtımı birden fazla [süreç tipi kullanabilir, sıfır veya daha fazla çalışan süreci somutlaştırabilir](./concurrency).

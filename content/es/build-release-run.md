@@ -1,7 +1,7 @@
-## V. Construir, distribuir, ejecutar
-
-### Separar completamente la etapa de construcción de la etapa de ejecución
-
+---
+title: V. Construir, distribuir, ejecutar
+description: Separar completamente la etapa de construcción de la etapa de ejecución
+---
 El [código base](./codebase) se transforma en un despliegue (que no es de desarrollo) al completar las siguientes tres etapas:
 
 * La *etapa de construcción* es una transformación que convierte un repositorio de código en un paquete ejecutable llamado *construcción* (una "build"). En la etapa de construcción se traen todas las [dependencias](./dependencies) y se compilan los binarios y las herramientas usando una versión concreta del código correspondiente a un commit especificado por el proceso de despliegue.

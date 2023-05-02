@@ -1,7 +1,7 @@
-## VI. Tiến trình
-
-### Vận hành ứng dụng như là một hoặc nhiều tiến trình phi trạng thái
-
+---
+title: VI. Tiến trình
+description: Vận hành ứng dụng như là một hoặc nhiều tiến trình phi trạng thái
+---
 Ứng dụng được vận hành trong môi trường vận hành như là một hoặc nhiều *tiến trình*.
 
 Trong trường hợp đơn giản, mã nguồn là các kịch bản độc lập, môi trường vận hành chính là máy tính của nhà phát triển với ngôn ngữ thực thi được cài đặt, và tiến trình được khởi chạy thông qua dòng lệnh (ví dụ, `python my_script.py`). Ở một khía cạnh khác, triển khai thực tế của ứng dụng phức tạp có thể sử dụng nhiều [xử lý từ không đến nhiều kiểu tiến trình ngay lập tức](./concurrency).

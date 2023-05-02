@@ -1,7 +1,7 @@
-## VII. Vínculo de Portas
-
-### Exporte serviços via vínculo de portas
-
+---
+title: VII. Vínculo de Portas
+description: Exporte serviços via vínculo de portas
+---
 Apps web as vezes são executadas dentro de container de servidor web. Por exemplo, apps PHP podem rodar como um módulo dentro do [Apache HTTPD](http://httpd.apache.org/), ou apps Java podem rodar dentro do [Tomcat](http://tomcat.apache.org/).
 
 **O aplicativo doze-fatores é completamente auto-contido** e não depende de injeções de tempo de execução de um servidor web em um ambiente de execução para criar um serviço que defronte a web. O app web **exporta o HTTP como um serviço através da vínculação a uma porta**, e escuta as requisições que chegam na mesma.

@@ -1,7 +1,7 @@
-## XI. Logs
-
-### Traitez les logs comme des flux d'évènements
-
+---
+title: XI. Logs
+description: Traitez les logs comme des flux d'évènements
+---
 Les *logs* fournissent de la visibilité au comportement de l'application qui s'exécute. Dans des environnements de type serveur, ils sont généralement écrits dans un fichier, sur le disque (dans un fichier de log). Mais c'est simplement un format de sortie.
 
 Les logs sont des [flux (en)](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/) d'agrégats d'évènements, ordonnés dans le temps, collectés à travers les flux de sortie de tous les processus et services externes qui tournent. Les logs, dans leur forme brute, sont au format texte avec un événement par ligne (bien que les traces d'exécutions puissent s'étaler sur plusieurs lignes). Les logs n'ont pas de début ou de fin fixe, mais se remplissent en continu tant que l'application est en marche.

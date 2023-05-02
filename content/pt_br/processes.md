@@ -1,7 +1,7 @@
-## VI. Processos
-
-### Execute a aplicação como um ou mais processos que não armazenam estado
-
+---
+title: VI. Processos
+description: Execute a aplicação como um ou mais processos que não armazenam estado
+---
 A aplicação é executada em um ambiente de execução como um ou mais *processos*.
 
 No caso mais simples, o código é um script autônomo, o ambiente de execução é o laptop local de um desenvolvedor com o runtime da linguagem instalado, e o processo é iniciado pela linha de comando (por exemplo, `python my_script`). Na outra extremidade do espectro, o deploy em produção de uma aplicação sofisticada pode utilizar vários [tipos de processos, instanciado em zero ou mais processos em andamento](./concurrency).

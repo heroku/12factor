@@ -1,7 +1,7 @@
-## II. Závislosti
-
-### Explicitne deklarované a izolované závislosti
-
+---
+title: II. Závislosti
+description: Explicitne deklarované a izolované závislosti
+---
 Väčšina programovacích jazykov poskytuje distribučný systém knižníc, napríklad [CPAN](http://www.cpan.org/) pre Perl alebo [Rubygems](http://rubygems.org/) pre Ruby.  Knižnice nainštalované cez balíčkovací systém sa dajú nainštalovať pre celý systém (nazývané "site packages") alebo len v rámci priečinka s aplikáciou (nazýva sa "vendoring" alebo "bundling").
 
 **Dvanásť faktorová aplikácia sa nikdy nespolieha na implicitnú existenciou systémových balíčkov.**  Svoje závislosti deklaruje úplne a presne, pomocou *deklaráciu závislostí*. Ďalej používa nástroj na *izoláciu závislostí*, pre istotu, aby žiadne implicitné závislosti "nepretiekli" z vonkajšieho systému. Špecifikácia závislostí je úplná a explicitná a používa sa rovnako na produkcii tak aj pri vývoji.

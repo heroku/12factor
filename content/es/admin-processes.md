@@ -1,7 +1,7 @@
-## XII. Administración de procesos
-
-### Ejecutar las tareas de gestión/administración como procesos que solo se ejecutan una vez
-
+---
+title: XII. Administración de procesos
+description: Ejecutar las tareas de gestión/administración como procesos que solo se ejecutan una vez
+---
 El [juego de procesos](./concurrency) es el conjunto de procesos que se usa para hacer las tareas habituales de la aplicación (como procesar las peticiones web). Por otro lado, es frecuente que los desarrolladores quieran ejecutar procesos de administración o mantenimiento una sola vez, como por ejemplo:
 
 * Ejecutar migraciones de las bases de datos (e.g. `manage.py migrate` de Django, `rake db:migrate` de Rails).

@@ -1,7 +1,7 @@
-## III. Configuración
-
-### Guardar la configuración en el entorno
-
+---
+title: III. Configuración
+description: Guardar la configuración en el entorno
+---
 La configuración de una aplicación es todo lo que puede variar entre [despliegues](./codebase) (entornos de preproducción, producción, desarrollo, etc), lo cual incluye:
 
 * Recursos que manejan la base de datos, Memcached, y otros ["backing services"](./backing-services)

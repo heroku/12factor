@@ -1,7 +1,7 @@
-## IX. Einweggebrauch
-
-### Robuster mit schnellem Start und problemlosen Stopp
-
+---
+title: IX. Einweggebrauch
+description: Robuster mit schnellem Start und problemlosen Stopp
+---
 **Die Prozesse einer Zwölf-Faktor-App können *weggeworfen* werden, sie können also schnell gestartet und gestoppt werden.** Dies erleichtert schnelles elastisches Skalieren, schnelles Deployment von [Code](./codebase) oder [Konfigurationsänderungen](./config) und macht Produktionsdeployments robuster.
 
 Prozesse sollten **möglichst geringe Startup-Zeiten** haben. Idealerweise braucht ein Prozess wenige Sekunden vom Startkommando bis der Prozess läuft und Requests oder Jobs entgegennehmen kann. Eine kurze Startup-Zeit gibt dem [Release-Prozess](./build-release-run) und der Skalierung mehr Agilität; sie hilft der Robustheit, weil ein Prozessmanager bei Bedarf einfacher Prozesse auf neue physikalische Maschinen verschieben kann.

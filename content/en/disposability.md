@@ -1,7 +1,7 @@
-## IX. Disposability
-
-### Maximize robustness with fast startup and graceful shutdown
-
+---
+title: IX. Disposability
+description: Maximize robustness with fast startup and graceful shutdown
+---
 **The twelve-factor app's [processes](./processes) are *disposable*, meaning they can be started or stopped at a moment's notice.**  This facilitates fast elastic scaling, rapid deployment of [code](./codebase) or [config](./config) changes, and robustness of production deploys.
 
 Processes should strive to **minimize startup time**.  Ideally, a process takes a few seconds from the time the launch command is executed until the process is up and ready to receive requests or jobs.  Short startup time provides more agility for the [release](./build-release-run) process and scaling up; and it aids robustness, because the process manager can more easily move processes to new physical machines when warranted.

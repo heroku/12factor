@@ -1,7 +1,7 @@
-## III. Konfigurace
-
-### Konfigurace ukládejte do prostředí.
-
+---
+title: III. Konfigurace
+description: Konfigurace ukládejte do prostředí.
+---
 *Konfigurace* aplikace je všechno, co se liší mezi [nasazeními](./codebase) (testovací, produkční, vývojové prostředí, atd.). To zahrnuje:
 
 * Přihlašovací údaje k databázím, Memcached a dalším [podpůrným službám](./backing-services).

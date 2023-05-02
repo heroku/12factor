@@ -1,7 +1,7 @@
-## II. Dipendenze
-
-### Dipendenze dichiarate e isolate
-
+---
+title: II. Dipendenze
+description: Dipendenze dichiarate e isolate
+---
 Molti linguaggi di programmazione offrono dei sistemi di packaging per la distribuzione delle proprie librerie, come [CPAN](http://www.cpan.org/) per Perl o [Rubygems](http://rubygems.org/) per Ruby. Le librerie installate attraverso questi sistemi, inoltre, possono essere identificate come "system-wide" (attive a livello di sistema), oppure posizionate nella directory della singola applicazione (in questo caso si parla di "vendoring" o "bundling").
 
 **Un'applicazione che aderisce alla twelve-factor non si basa mai sull'esistenza implicita di librerie system-wide**. Le dipendenze vengono tutte dichiarate, tramite un manifest dedicato. Inoltre, viene contemplato anche l'uso di un tool di *isolamento delle dipendenze* durante l'esecuzione, in modo tale da assicurarsi che non ci siano delle "dipendenze implicite" che creino interferenze nel sistema in cui ci si trova. La specifica completa ed esplicita delle dipendenze si applica in modo uniforme: sia in production che in sviluppo.

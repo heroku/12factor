@@ -1,7 +1,7 @@
-## I. Codebase
-
-### มีเพียง codebase เดียวที่ติดตามด้วย version control, มีหลาย deploy
-
+---
+title: I. Codebase
+description: มีเพียง codebase เดียวที่ติดตามด้วย version control, มีหลาย deploy
+---
 Twelve-factor app สามารถติดตามได้เสมอด้วย version control เช่น [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), หรือ [Subversion](http://subversion.apache.org/) สำเนาของฐานข้อมูลติดตาม version เรียกว่า *code repository* หรือเรียกสั้นๆว่า *code repo* หรือเรียกเพียงแค่ *repo*
 
 *codebase* เป็น repo เดียวใดๆ (ในระบบ version control ที่มีศูนย์กลางอย่างเช่น Subversion) หรือเป็นเซตของ repo ซึ่งแบ่งปัน root commit (ในระบบ version control ที่ไม่มีศูนย์กลางอย่างเช่น Git)

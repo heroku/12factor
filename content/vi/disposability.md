@@ -1,7 +1,7 @@
-## IX. Tính khả dụng
-
-### Tối ưu hoá với khởi động nhanh và dừng phần mềm ổn định
-
+---
+title: IX. Tính khả dụng
+description: Tối ưu hoá với khởi động nhanh và dừng phần mềm ổn định
+---
 **[Tiến trình](./processes) của ứng dụng áp dụng mười hai thừa số luôn *sẵn sàng* (disposable), có nghĩa là bạn có thể chạy hoặc dừng phần mềm tại một thời điểm báo trước.** Điều này tạo điều kiện cho việc mở rộng trở nên dễ dàng hơn, việc triển khai nhanh các thay đổi của [mã nguồn](./codebase) hoặc [cấu hình](./config), và sự linh hoạt quá trình triển khai sản phẩm.
 
 Các tiến trình nên cố gắng **giảm thiểu thời gian khởi động**. Lý tưởng nhất, một tiến trình chỉ cần một vài giây kể từ khi có lệnh khởi động cho đến khi tiến trình bắt đầu và sẵn sàng để nhận yêu cầu hay bắt đầu công việc. Thời gian khởi động ngắn cho phép quá trình triển khai và mở rộng nhanh hơn; và hỗ trợ mạnh mẽ hơn, vì hệ thống quản lý các tiến trình có thể dễ dàng mang các tiến trình tới các máy chủ vật lý khi có các cảnh báo.

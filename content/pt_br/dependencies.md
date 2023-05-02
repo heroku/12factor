@@ -1,7 +1,7 @@
-## II. Dependências
-
-### Declare e isole explicitamente as dependências
-
+---
+title: II. Dependências
+description: Declare e isole explicitamente as dependências
+---
 A maioria das linguagens de programação oferecem um sistema de pacotes para a distribuição de bibliotecas de apoio, como o [CPAN](http://www.cpan.org/) para Perl ou [Rubygems](http://rubygems.org/) para Ruby. Bibliotecas instaladas por meio de um sistema de pacotes podem ser instaladas em todo o sistema (conhecidas como "site packages") ou com escopo dentro do diretório contendo a aplicação (conhecidas como "vendoring" ou "building").
 
 **Uma aplicação doze-fatores nunca confia na existência implícita de pacotes em todo o sistema.** Ela declara todas as dependências, completa e exatamente, por meio de um manifesto de *declaração de dependência*. Além disso, ela usa uma ferramenta de *isolamento de dependência* durante a execução para garantir que não há dependências implícitas "vazamento" a partir do sistema circundante. A completa e explícita especificação de dependências é aplicada de maneira uniforme tanto para produção quanto para desenvolvimento.

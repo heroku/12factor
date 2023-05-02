@@ -1,7 +1,7 @@
-## VII. 端口绑定
-
-### 通过端口绑定(*Port binding*)来提供服务
-
+---
+title: VII. 端口绑定
+description: 通过端口绑定(*Port binding*)来提供服务
+---
 互联网应用有时会运行于服务器的容器之中。例如 PHP 经常作为 [Apache HTTPD](http://httpd.apache.org/) 的一个模块来运行，正如 Java 运行于 [Tomcat](http://tomcat.apache.org/) 。
 
 **12-Factor 应用完全自我加载** 而不依赖于任何网络服务器就可以创建一个面向网络的服务。互联网应用 **通过端口绑定来提供服务** ，并监听发送至该端口的请求。

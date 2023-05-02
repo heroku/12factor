@@ -1,7 +1,7 @@
-## XI. Günlükler
-
-### Günlüklere olay akışı gibi davranma
-
+---
+title: XI. Günlükler
+description: Günlüklere olay akışı gibi davranma
+---
 *Günlükler* çalışan bir uygulamanın davranışının görünür olmasını sağlar. Sunucu tabanlı ortamlarda genellikle diskteki bir dosyaya yazılırlar("logfile"); ama bu sadece çıktı formatındadır.
 
 Günlükler, bütün çalışan süreçler ve destek servislerinin çıktı akışlarından kümelenmiş, zaman sıralı olayların [akışıdır](https://adam.herokuapp.com/past/2011/4/1/logs_are_streams_not_files/). Günlükler ilk formda her bir satır için bir olay olacak şekilde yazı formatındadır(Bununla birlikte istisnalardaki geri dönüşleri birden fazla satırda ölçebilir). Günlükler başta ve sonda düzeltilmemiş ama akış, uygulama işlediği sürece devam eder.

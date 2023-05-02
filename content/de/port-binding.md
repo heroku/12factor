@@ -1,7 +1,7 @@
-﻿## VII. Bindung an Ports
-
-### Dienste durch das Binden von Ports exportieren
-
+﻿---
+title: VII. Bindung an Ports
+description: Dienste durch das Binden von Ports exportieren
+---
 Web-Apps laufen manchmal in einem Webserver als Container. Zum Beispiel laufen PHP-Apps als Modul in [Apache HTTPD](http://httpd.apache.org/), oder Java-Apps laufen manchmal in [Tomcat](http://tomcat.apache.org/).
 
 **Die Zwölf-Faktor-App ist vollständig eigenständig** und verlässt sich nicht darauf, dass ein externer Webserver zur Laufzeit injiziert wird, um dem Web einen Dienst zur Verfügung zu stellen. Die Web-App **exportiert HTTP als Dienst, indem sie sich an einen Port bindet** und wartet an diesem Port auf Requests.

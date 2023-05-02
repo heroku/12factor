@@ -1,7 +1,7 @@
-## VI. Procesy
-
-### Uruchamiaj aplikację jako jeden lub więcej bezstanowych procesów
-
+---
+title: VI. Procesy
+description: Uruchamiaj aplikację jako jeden lub więcej bezstanowych procesów
+---
 Aplikacja jest uruchamiana w środowisku wykonawczym w postaci jednego lub kilku *procesów*.
 
 W najprostszym przypadku kod aplikacji jest samodzielnym skryptem, środowiskiem wykonawczym jest laptop developera z wsparciem dla języka programowania, a proces jest uruchamiany za pomocą linii komend (na przykład `python my_script.py`). Innym razem wdrożenie produkcyjne mocno rozwiniętej aplikacji może wymagać wiele [różnych rodzajów procesów](./concurrency).

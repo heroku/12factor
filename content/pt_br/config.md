@@ -1,7 +1,7 @@
-## III. Configurações
-
-### Armazene as configurações no ambiente
-
+---
+title: III. Configurações
+description: Armazene as configurações no ambiente
+---
 A *configuração* de uma aplicação é tudo o que é provável variar entre [deploys](./codebase) (homologação, produção, ambientes de desenvolvimento, etc). Isto inclui:
 
 * Recursos para a base de dados, Memcached, e outros [serviços de apoio](./backing-services)

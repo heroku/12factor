@@ -1,7 +1,7 @@
-## II. Bağımlıklar
-
-### Bağımlıkları açık bir şekilde açıklama ve ayırma
-
+---
+title: II. Bağımlıklar
+description: Bağımlıkları açık bir şekilde açıklama ve ayırma
+---
 Çoğu programlama dili destek kitaplıklarını dağıtmak için bir paketleme sistemi sunar, Perl için [CPAN](http://www.cpan.org/), Ruby için [Rubygems](http://rubygems.org/). Bir paketleme sistemi aracılığıyla yüklenen kütüphaneler, sistem genelinde ("site paketleri" olarak bilinir) yüklenebilir veya uygulamanın bulunduğu dizine ("sağlayıcı" veya "paketleme" olarak bilinir) dahil edilebilir.
 
 **On iki faktör bir uygulama asla sistem çapında paketlerin gizli var olmasına dayanmaz.** Bir *bağımlılık bildirimi* ile tüm bağımlılıkları tamamen ve eksiksiz olarak bildirir. Üstelik bağımlılıkların çevredeki sistemden sızmamasını sağlamak için yürütme sırasında bir *bağımlılık yalıtım* aracı kullanılır. Tam ve açık bağımlılık belirtimi hem üretim hem de geliştirme için eşit olarak uygulanmaktadır.

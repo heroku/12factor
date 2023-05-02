@@ -1,7 +1,7 @@
-## IV. Backing services
-
-### จัดการกับบริการสนับสนุน (backing service) ให้เป็นทรัพยากรที่แนบมา
-
+---
+title: IV. Backing services
+description: จัดการกับบริการสนับสนุน (backing service) ให้เป็นทรัพยากรที่แนบมา
+---
 *บริการสนับสนุน (backing service)** เป็นบริการใดๆ ที่ app ใช้บริการผ่านระบบเครือข่ายซึ่งเป็นส่วนหนึ่งของการดำเนินงาน (operation) ตัวอย่างเช่น รวมที่เก็บข้อมูล (datastore) (เช่น [MySQL](http://dev.mysql.com/) หรือ [CouchDB](http://couchdb.apache.org/)), ระบบ messaging/queueing (เช่น [RabbitMQ](http://www.rabbitmq.com/) หรือ [Beanstalkd](https://beanstalkd.github.io)), บริการ SMTP สำหรับส่งอีเมล์ออก (เช่น [Postfix](http://www.postfix.org/)), และระบบ caching (เช่น [Memcached](http://memcached.org/))
 
 บริการสนับสนุนอย่างเช่นฐานข้อมูลเป็นการจัดการแบบดั่งเดิมด้วยผู้จัการระบบเดียวกันกับ app ที่ทำงานหลังจาก deploy เพิ่มเติมจากบริการจัดการภายใน, app อาจจะมีบริการที่ให้บริการและจัดการโดยบริการภายนอก (third parties) ตัวอย่างเช่น รวมบริการ SMTP (เช่น [Postmark](http://postmarkapp.com/)), บริการ metrics-gathering (เช่น [New Relic](http://newrelic.com/) หรือ [Loggly](http://www.loggly.com/)), บริการ binary asset (เช่น [Amazon S3](http://aws.amazon.com/s3/)), และแม้แต่บริการ API-accessible consumer (เช่น [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), หรือ [Last.fm](http://www.last.fm/api)).

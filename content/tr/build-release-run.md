@@ -1,7 +1,7 @@
-## V. Derleme, Sürüm, Çalıştırma
-
-### Derleme ve çalıştırma aşamalarını tam olarak ayırma
-
+---
+title: V. Derleme, Sürüm, Çalıştırma
+description: Derleme ve çalıştırma aşamalarını tam olarak ayırma
+---
 Bir [kod tabanı](./codebase) üç aşamada dağıtıma dönüşebilir:
 
 * *Derleme aşaması* kod deposunun *derleme* olarak bilinen çalıştırılabilir pakette çeviren bir dönüşümdür.Dağıtım süreci tarafından belirlenen bir commit'deki kodun versiyonunu kullanırken, derleme aşaması sağlayıcı [bağımlılıkları](./dependencies)  getirir ve binary'leri derler.

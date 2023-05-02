@@ -1,7 +1,7 @@
-## V. Sestavení, vydání, spuštění
-
-### Striktně oddělte fáze sestavení, vydání a spuštění.
-
+---
+title: V. Sestavení, vydání, spuštění
+description: Striktně oddělte fáze sestavení, vydání a spuštění.
+---
 [Zdrojový kód](./codebase) je transformován do (nevývojářského) nasazení ve třech fázích:
 
 * Fáze *sestavení (build)* je transformace, která převede zdrojový kód do spustitelného balíčku zvaného *sestavení*. Z verze kódu v čase příslušného commitu a dle postupu nasazení, dojde ve fázi sestavení ke stažení [závislostí](./dependencies), zkompilování binárek a připojení assetů.
