@@ -1,24 +1,28 @@
-The Twelve-Factor App
-=====================
+## The Twelve-Factor App
 
 Source for the content app running at: https://12factor.net/
 
-Development
------------
+12F (for short) is a Sinatra app that consumes a truck load of markdown content, parses it using [kramdown](https://github.com/gettalong/kramdown) and [front_matter_parser](https://github.com/waiting-for-dev/front_matter_parser), and renders it for all to enjoy.
 
-    bundle install
-    heroku local:start
-    open http://localhost:5000
+12F uses the latest of all its gems on Ruby 3.2.
 
-Production deploy
------------------
+### Development
 
-    heroku create
-    git push heroku master
-    heroku open
+```sh
+bundle install
+heroku local:start
+open http://localhost:5000
+```
 
-Meta
-----
+### Production deploy
+
+```sh
+heroku create
+git push heroku master
+heroku open
+```
+
+### Meta
 
 Created by Adam Wiggins
 
@@ -45,6 +49,8 @@ Bob Marteen,
 [@melikeyurtoglu](https://github.com/melikeyurtoglu),
 [@filiphanes](https://github.com/filiphanes)
 and [more](https://github.com/heroku/12factor/graphs/contributors).
+
+2023 Brand Refresh™ bolted on by [@johlym](https://github.com/johlym).
 
 Released under the MIT License:
 https://opensource.org/licenses/MIT
