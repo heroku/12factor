@@ -29,16 +29,14 @@ h1, h2 {
   flex: 1;
 }
 
-.content article,
-.content .previous-next,
-.content .locales {
+.content article {
   margin-bottom: 2rem;
 }
 
 .content article > *,
 .content .content-footer > * {
   max-width: 60rem;
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 
 .content article h2 {
@@ -58,7 +56,7 @@ h1, h2 {
 }
 
 .content .previous-next a {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .content .locales {
