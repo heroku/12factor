@@ -4,9 +4,11 @@ GEM
     concurrent-ruby (1.2.2)
     daemons (1.4.1)
     eventmachine (1.2.7)
+    front_matter_parser (1.0.1)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
-    maruku (0.7.3)
+    kramdown (2.4.0)
+      rexml
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     rack (2.2.7)
@@ -30,8 +32,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  front_matter_parser
   i18n
-  maruku
+  kramdown
   rack-ssl-enforcer
   rexml
   sinatra
