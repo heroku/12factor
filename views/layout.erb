@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The Twelve-Factor App <%= I18n.t(:translation) %></title>
+  <title><%= if @frontmatter then "#{@frontmatter['title']} |" end %> The Twelve-Factor App <%= I18n.t(:translation) %></title>
   <meta name="description" content="A methodology for building modern, scalable, maintainable software-as-a-service apps.">
-  <meta name="author" content="Adam Wiggins">
+  <meta name="author" content="Heroku">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon.ico">
