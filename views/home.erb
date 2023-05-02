@@ -1,15 +1,13 @@
 <article>
-  <%= render_markdown('intro') %>
+  <%= render_markdown('main') %>
 </article>
 
 <article>
-  <%= render_markdown('background') %>
-</article>
-
-<article>
-  <%= render_markdown('who') %>
-</article>
-
-<article class="bt bb b--silver bg-lightest-silver">
   <%= render_markdown('toc') %>
 </article>
+
+<div class="content-footer bt bb b--silver bg-lightest-silver">
+  <div class="locales">
+  <%= render_locales(@factor) %>
+  </div>
+</div>
