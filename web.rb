@@ -1,7 +1,8 @@
 require 'sinatra'
-require 'maruku'
+require 'kramdown'
 require 'i18n'
 require 'rack/ssl-enforcer'
+require 'front_matter_parser'
 
 configure do
   use Rack::SslEnforcer if ENV['FORCE_SSL']
@@ -32,13 +33,24 @@ TOC = %w(codebase dependencies config backing-services build-release-run process
 get '/:factor' do |factor|
   halt 404 unless TOC.include?(factor)
   @factor = factor
+  @loaded_file = load_file(factor)
+  @frontmatter = frontmatter(@loaded_file)
   erb :factor
 end
 
 helpers do
+  def page_title
+    "<h2>#{@frontmatter['title']}</h2>"
+  end
+
+  def page_description
+    "<h3>#{@frontmatter['description']}</h3>"
+  end
+
   def render_markdown(file)
-    markdown = File.read("content/#{I18n.locale}/#{file}.md", :encoding => 'utf-8')
-    Maruku.new(markdown).to_html
+    markdown = load_file(file)
+    cleaned = markdown.gsub(/\A---(.|\n)*?---/,'')
+    Kramdown::Document.new(cleaned).to_html
   rescue Errno::ENOENT
     puts "No content for #{I18n.locale}/#{file}, skipping"
   end
@@ -64,6 +76,14 @@ helpers do
         "<a href=\"#{path_prefix}/#{factor}\">#{I18n.t(:language, :locale => locale)}</a>"
       end
     }.join(" | ")
+  end
+
+  def load_file(file)
+    File.read("content/#{I18n.locale}/#{file}.md", :encoding => 'utf-8')
+  end
+
+  def frontmatter(file)
+    FrontMatterParser::Parser.new(:md).call(file)
   end
 end
 
