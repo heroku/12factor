@@ -1,12 +1,26 @@
 <article>
+  <%= page_title %>
+  <%= page_description %>
   <%= render_markdown(@factor) %>
+
+<% if @frontmatter['title'] %>
+  <div class="citation ba pa3 b--silver">
+    <p>Cite this page:<p>
+    <p>
+      <code>Salesforce. (n.d.). <em><%= "#{@frontmatter['title']}"%></em>. The Twelve-Factor App</em>. Retrieved <%= Time.now.strftime('%B %d, %Y') %>, from https://12factor.net/<%= @factor %></code>
+    </p>
+    
+  </div>
+<% end %>
 </article>
 
 <div class="content-footer bt bb b--silver bg-lightest-silver">
-  <div class="previous-next pb3 bb b--silver">
+  <div class="previous-next pt3 pb6 bb b--silver">
     <%= render_prev(@factor) %>
     <%= render_next(@factor) %>
   </div>
+
+
 
   <div class="locales">
   <%= render_locales(@factor) %>
