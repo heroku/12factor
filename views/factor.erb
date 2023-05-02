@@ -5,9 +5,12 @@
 
 <% if @frontmatter['title'] %>
   <div class="citation ba pa3 b--silver">
-    <p>Cite this page:<p>
+    <strong>Cite this page (APA):</strong>
     <p>
-      <code>Heroku. (n.d.). <em><%= "#{@frontmatter['title']}"%></em>. The Twelve-Factor App</em>. Retrieved <%= Time.now.strftime('%B %d, %Y') %>, from https://12factor.net/<%= @factor %></code>
+      In-line: <code>(Heroku, 2023)</code>
+    </p>
+    <p>
+      Full-text: <code>Heroku. (2023). <em><%= "#{@frontmatter['title']}"%></em>. The Twelve-Factor App</em>. Retrieved <%= Time.now.strftime('%B %d, %Y') %>, from https://12factor.net/<%= @factor %></code>
     </p>
     
   </div>
