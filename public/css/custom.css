@@ -51,6 +51,14 @@ h1, h2 {
   margin-top: 0;
 }
 
+.content .citation {
+  display: none;
+}
+
+.content .citation-visible {
+  display: block !important;
+}
+
 .content .previous-next {
   text-align: center;
 }

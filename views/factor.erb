@@ -4,15 +4,63 @@
   <%= render_markdown(@factor) %>
 
 <% if @frontmatter['title'] %>
-  <div class="citation ba pa3 b--silver">
-    <strong>Cite this page (APA):</strong>
-    <p>
-      In-line: <code>(Heroku, 2023)</code>
-    </p>
-    <p>
-      Full-text: <code>Heroku. (2023). <em><%= "#{@frontmatter['title']}"%></em>. The Twelve-Factor App</em>. Retrieved <%= Time.now.strftime('%B %d, %Y') %>, from https://12factor.net/<%= @factor %></code>
-    </p>
-    
+  <div class="citation-block ba pa3 b--silver v-top">
+    <h4>Cite this page</h4>
+    <div class="hk-button-group">
+      <button type="button" class="citation-tab hk-button--primary" onclick="openCitation(event,'apa')">APA</button>
+      <button type="button" class="citation-tab hk-button--secondary" onclick="openCitation(event,'mla')">MLA</button>
+      <button type="button" class="citation-tab hk-button--secondary" onclick="openCitation(event,'chi')">Chicago</button>
+    </div>
+    <div class="citation citation-visible" id="apa">
+      <p class="mb0">
+        In-line
+      </p>
+      <p class="mt1">
+        <code>(Heroku, 2023)</code>
+      </p>
+      <p class="mb0">
+        Bibliography
+      </p>
+      <p class="mt1" style="text-indent: -2rem; padding-left: 2rem">
+        <code>Heroku. (2023). <em><%= "#{@frontmatter['title']}"%></em>. The Twelve-Factor App</em>. Retrieved <%= Time.now.strftime('%B %d, %Y') %>, from https://12factor.net/<%= @factor %></code>
+      </p>
+    </div>
+
+    <div class="citation" id="mla">
+      <p class="mb0">
+        In-line
+      </p>
+      <p class="mt1">
+        <code>("<%= "#{@frontmatter['title']}"%>")</code>
+      </p>
+      <p class="mb0">
+        Works Cited
+      </p>
+      <p class="mt1" style="text-indent: -2rem; padding-left: 2rem">
+      <code>"<%= "#{@frontmatter['title']}"%>." <em>The Twelve-Factor App</em>, Heroku, 2023, https://12factor.net/<%= @factor %>.</code>
+      </p>
+    </div>
+
+    <div class="citation" id="chi">
+      <p class="mb0">
+        Full Note
+      </p>
+      <p class="mt1" style="text-indent: 1rem">
+        <code>1. Heroku, "<%= "#{@frontmatter['title']}"%>," <%= Time.now.strftime('%B %d, %Y') %>, https://12factor.net/<%= @factor %>.</code>
+      </p>
+      <p class="mb0">
+        Concise Note
+      </p>
+      <p class="mt1" style="text-indent: 1rem">
+        <code>2. Heroku, "<%= "#{@frontmatter['title']}"%>."</code>
+      </p>
+      <p class="mb0">
+        Bibliography
+      </p>
+      <p class="mt1" style="text-indent: -2rem; padding-left: 2rem">
+        <code>Heroku. "<%= "#{@frontmatter['title']}"%>." Accessed <%= Time.now.strftime('%B %d, %Y') %>, https://12factor.net/<%= @factor %>.</code>
+      </p>
+    </div>
   </div>
 <% end %>
 </article>
