@@ -117,3 +117,17 @@ h1, h2 {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+
+table {
+  text-align: left;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 4px;
+}
+
+ul {
+  padding-left: 1em;
+  line-height: 1.5rem;
+}
