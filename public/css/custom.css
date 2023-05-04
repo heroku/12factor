@@ -25,7 +25,7 @@ h1, h2 {
   flex-direction: column;
 }
 
-.inset-safe-area {
+.safe-area-inset {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
