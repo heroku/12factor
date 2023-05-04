@@ -33,7 +33,7 @@
   <!-- End Google Tag Manager -->
   <% end %>
 
-  <header>
+  <header class="inset-safe-area">
     <nav class="db dt-l w-100 border-box pa3 ph5-l bg-purple">
       <h1 class="db dtc-l v-mid white link w-100 w-25-l tc ttu tl-l mb2 mb0-l f5" href="#" title="Home">
         <svg xmlns="http://www.w3.org/2000/svg" class="h3 v-mid mr1" viewBox="0 0 72 80">
@@ -50,10 +50,10 @@
       </div>
     </nav>
   </header>
-  <section class="content gradient-section gradient-section-bg-img pa3 lh-copy black-80">
+  <section class="inset-safe-area content gradient-section gradient-section-bg-img pa3 lh-copy black-80">
     <%= yield %>
   </section>
-  <footer class="pv4 ph3 ph5-m ph6-l dark-gray" style="background-color: #eef1f6">
+  <footer class="inset-safe-area pv4 ph3 ph5-m ph6-l dark-gray" style="background-color: #eef1f6">
     <small class="f6 db tc">© <%= Time.new.year %> Salesforce.com. Originally written by Adam Wiggins. Last updated 2023.</small>
     <div class="tc mt3">
       <a class="privacy-terms f6 dib ph2 link dark-gray" rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/?_gl=1*zh3ngv*_ga*MTQ5MzIzOTIwLjE2Nzk2OTA1NjY.*_ga_62RHPFWB9M*MTY4Mjk2OTM0Ni41MC4wLjE2ODI5NjkzNDYuMC4wLjA."><span aria-label="Privacy Icon" title="Privacy Icon"></span> Your Privacy Choices</a>
