@@ -11,5 +11,5 @@
 
 รูปแบบ process ดีมากเมือมากับ time to scale out [share-nothing, horizontally partitionable nature of twelve-factor app processes](./processes) หมายความว่าเพิ่ม concurrency ได้ง่ายและทำงานได้น่าเชื่อถือ อาเรย์ชนิดของ process และจำนวนของ process ของแต่ละชนิด รู้จักกันใน *process formation*
 
-Process ของ twelve-factor app [should never daemonize](http://dustin.github.com/2010/02/28/running-processes.html) หรือเขียนไฟล์ PID แต่จะขึ้นอยู่กับตัวจัดการ process ของระบบปฏิบัติการแทน (เช่น [systemd](https://www.freedesktop.org/wiki/Software/systemd/), ตัวจัดการ process กระจายบน cloud platform หรือเครื่องมือ อย่างเช่น [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) ใน development) เพื่อจัดการ [output streams](./logs) ตอบสนองต่อ process ที่ล้มเหลว และจัดการ user-initiated restarts และ shutdowns
+Process ของ twelve-factor app [should never daemonize](https://dustin.sallings.org/2010/02/28/running-processes.html) หรือเขียนไฟล์ PID แต่จะขึ้นอยู่กับตัวจัดการ process ของระบบปฏิบัติการแทน (เช่น [systemd](https://www.freedesktop.org/wiki/Software/systemd/), ตัวจัดการ process กระจายบน cloud platform หรือเครื่องมือ อย่างเช่น [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) ใน development) เพื่อจัดการ [output streams](./logs) ตอบสนองต่อ process ที่ล้มเหลว และจัดการ user-initiated restarts และ shutdowns
 
