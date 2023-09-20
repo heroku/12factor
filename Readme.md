@@ -1,7 +1,7 @@
 The Twelve-Factor App
 =====================
 
-Source for the content app running at: https://12factor.net/
+Source for the content app running at: http://12factor.net/
 
 Development
 -----------
