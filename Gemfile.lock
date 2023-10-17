@@ -13,7 +13,7 @@ GEM
     rack-protection (3.0.6)
       rack
     rack-ssl-enforcer (0.2.9)
-    rexml (3.2.5)
+    rexml (3.2.6)
     ruby2_keywords (0.0.5)
     sinatra (3.0.6)
       mustermann (~> 3.0)
