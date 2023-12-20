@@ -3,7 +3,7 @@
 
 Une [base de code](./codebase) est transformée en un déploiement (non-développement) à travers les étapes suivantes :
 
-* L'*étapes d'assemblage* (ou "build") est une transformation qui convertit un dépôt de code en un paquet autonome exécutable appelé l'assemblage (ou "build"). En utilisant une version du code référencée par un commit spécifié lors du processus de déploiement, l'étape d'assemblage va chercher toutes les [dépendances externes](./dependencies) et compile les fichiers binaires et les ressources.
+* L'*étape d'assemblage* (ou "build") est une transformation qui convertit un dépôt de code en un paquet autonome exécutable appelé l'assemblage (ou "build"). En utilisant une version du code référencée par un commit spécifié lors du processus de déploiement, l'étape d'assemblage va chercher toutes les [dépendances externes](./dependencies) et compile les fichiers binaires et les ressources.
 * L'*étape de publication * (ou "release") prend l'assemblage produit à l'étape précédente et le combine avec la [configuration](./config) de déploiement courante. La release résultante contient à la fois l'assemblage et la configuration, et elle est prête pour une exécution immédiate dans l'environnement d'exécution.
 * L'*étape d'exécution* (ou "runtime") fait fonctionner l'application dans l'environnement d'exécution, en lançant un ensemble de [processus](./processes) de l'application associée à la release considérée.
 

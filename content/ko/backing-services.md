@@ -1,7 +1,7 @@
 ## IV. 백엔드 서비스
 ### 백엔드 서비스를 연결된 리소스로 취급
 
-*백엔드 서비스*는 애플리케이션 정상 동작 중 네트워크를 통해 이용하는 모든 서비스입니다. 예를 들어, 데이터 저장소(예: [MySQL](http://dev.mysql.com/), [CouchDB](http://couchdb.apache.org/)), 메시지 큐잉 시스템(예: [RabbitMQ](http://www.rabbitmq.com/), [Beanstalkd](http://kr.github.com/beanstalkd/)), 메일을 보내기 위한 SMTP 서비스 (예: [Postfix](http://www.postfix.org/)), 캐시 시스템(예: [Memcached](http://memcached.org/)) 등이 있습니다.
+*백엔드 서비스*는 애플리케이션 정상 동작 중 네트워크를 통해 이용하는 모든 서비스입니다. 예를 들어, 데이터 저장소(예: [MySQL](http://dev.mysql.com/), [CouchDB](http://couchdb.apache.org/)), 메시지 큐잉 시스템(예: [RabbitMQ](http://www.rabbitmq.com/), [Beanstalkd](https://beanstalkd.github.io)), 메일을 보내기 위한 SMTP 서비스 (예: [Postfix](http://www.postfix.org/)), 캐시 시스템(예: [Memcached](http://memcached.org/)) 등이 있습니다.
 
 데이터베이스와 같은 백엔드 서비스들은 통상적으로 배포된 애플리케이션과 같은 시스템 관리자에 의해서 관리되고 있었습니다.  애플리케이션은 이런 로컬에서 관리하는 서비스 대신, 서드파티에 의해서 제공되고 관리되는 서비스를 이용할 수 있습니다. 예를 들어, SMTP 서비스 (예: [Postmark](http://postmarkapp.com/)), 지표 수집 서비스 (예: [New Relic](http://newrelic.com/), [Loggly](http://www.loggly.com/)), 스토리지 서비스 (예: [Amazon S3](http://aws.amazon.com/s3/)), API로 접근 가능한 소비자 서비스 (예: [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), [Last.fm](http://www.last.fm/api))등이 있습니다.
 

@@ -1,7 +1,7 @@
 ## IV. Backing Service
 ### Tratta i backing service come "risorse"
 
-Un "backing service" è un qualsiasi servizio che l'applicazione consuma attraverso la rete durante la sua esecuzione. Alcuni esempi includono i database (come [MySQL](http://dev.mysql.com/) o [CouchDB](http://couchdb.apache.org/)), servizi di messaging/code (come [RabbitMQ](http://www.rabbitmq.com/) oppure [Beanstalkd](http://kr.github.com/beanstalkd/)), servizi SMTP per la posta (come [Postfix](http://www.postfix.org/)) e sistemi di cache (come [Memcached](http://memcached.org/)).
+Un "backing service" è un qualsiasi servizio che l'applicazione consuma attraverso la rete durante la sua esecuzione. Alcuni esempi includono i database (come [MySQL](http://dev.mysql.com/) o [CouchDB](http://couchdb.apache.org/)), servizi di messaging/code (come [RabbitMQ](http://www.rabbitmq.com/) oppure [Beanstalkd](https://beanstalkd.github.io)), servizi SMTP per la posta (come [Postfix](http://www.postfix.org/)) e sistemi di cache (come [Memcached](http://memcached.org/)).
 
 Un backing service (prendiamo ad esempio un database) è tradizionalmente gestito dallo stesso amministratore di sistema, al deployment dell'applicazione. In aggiunta a questi servizi gestiti in locale potrebbero esserne presenti altri, forniti da terze parti. Parliamo di servizi SMTP (come [Postmark](http://postmarkapp.com/)), servizi di raccolta metriche (come [New Relic](http://newrelic.com/) o [Loggly](http://www.loggly.com/)), servizi per asset (come [Amazon S3](http://aws.amazon.com/s3/)), e anche servizi accessibili via API (come [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), o [Last.fm](http://www.last.fm/api)).
 

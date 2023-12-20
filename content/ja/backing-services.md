@@ -1,7 +1,7 @@
 ## IV. バックエンドサービス
 ### バックエンドサービスをアタッチされたリソースとして扱う
 
-*バックエンドサービス* はアプリケーションが通常の動作の中でネットワーク越しに利用するすべてのサービスを言う。例としては、データストア（例：[MySQL](http://dev.mysql.com/) や [CouchDB](http://couchdb.apache.org/)）、メッセージキューイングシステム（例：[RabbitMQ](http://www.rabbitmq.com/) や [Beanstalkd](http://kr.github.com/beanstalkd/)）、電子メールを送信するためのSMTPサービス（例：[Postfix](http://www.postfix.org/)）、キャッシュシステム（例：[Memcached](http://memcached.org/)）などがある。
+*バックエンドサービス* はアプリケーションが通常の動作の中でネットワーク越しに利用するすべてのサービスを言う。例としては、データストア（例：[MySQL](http://dev.mysql.com/) や [CouchDB](http://couchdb.apache.org/)）、メッセージキューイングシステム（例：[RabbitMQ](http://www.rabbitmq.com/) や [Beanstalkd](https://beanstalkd.github.io)）、電子メールを送信するためのSMTPサービス（例：[Postfix](http://www.postfix.org/)）、キャッシュシステム（例：[Memcached](http://memcached.org/)）などがある。
 
 従来、データストアなどのバックエンドサービスは、デプロイされたアプリケーションと同じシステム管理者によって管理されていた。このようなローカルで管理されるサービスに加えて、サードパーティによって提供、管理されるサービスを利用することもある。例としては、SMTP サービス（例：[Postmark](http://postmarkapp.com/)）、メトリクス収集システム（例：[New Relic](http://newrelic.com/) や [Loggly](http://www.loggly.com/)）、ストレージサービス（例：[Amazon S3](http://aws.amazon.com/s3/)）、APIアクセス可能な消費者向けサービス（例：[Twitter](http://dev.twitter.com/)や[Google Maps](https://developers.google.com/maps/)、[Last.fm](http://www.last.fm/api)）などがある。
 

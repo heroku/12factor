@@ -11,4 +11,4 @@
 
 HTTP 并不是唯一一个可以由端口绑定提供的服务。其实几乎所有服务器软件都可以通过进程绑定端口来等待请求。例如，使用 [XMPP](http://xmpp.org/) 的 [ejabberd](http://www.ejabberd.im/)  ， 以及使用 [Redis 协议](http://redis.io/topics/protocol) 的 [Redis](http://redis.io/) 。
 
-还要指出的是，端口绑定这种方式也意味着一个应用可以成为另外一个应用的 [后端服务](/backing-services) ，调用方将服务方提供的相应 URL 当作资源存入 [配置](/config) 以备将来调用。
+还要指出的是，端口绑定这种方式也意味着一个应用可以成为另外一个应用的 [后端服务](./backing-services) ，调用方将服务方提供的相应 URL 当作资源存入 [配置](./config) 以备将来调用。

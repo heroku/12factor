@@ -4,4 +4,4 @@ pl:
 
   # A text to make known that the article is a translation not an original.
   # Empty for English, original.
-  translation: "To jest tłumaczenie."
+  translation: "- edycja polska"

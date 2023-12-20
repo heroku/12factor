@@ -1,7 +1,7 @@
 ## IV. Сторонні служби
 ### Вважайте сторонні служби (backing services) підключеними ресурсами
 
-*Стороння служба* — це будь-яка служба, яка доступна застосунку по мережі і необхідна для його нормальної роботи: бази даних (наприклад, [MySQL](http://dev.mysql.com/) або [CouchDB](http://couchdb.apache.org/)), системи черг повідомлень (наприклад, [RabbitMQ](http://www.rabbitmq.com/) або [Beanstalkd](http://kr.github.com/beanstalkd/)), служби SMTP для вихідної пошти (наприклад, [Postfix](http://www.postfix.org/)), системи кешування (наприклад, [Memcached](http://memcached.org/)) тощо.
+*Стороння служба* — це будь-яка служба, яка доступна застосунку по мережі і необхідна для його нормальної роботи: бази даних (наприклад, [MySQL](http://dev.mysql.com/) або [CouchDB](http://couchdb.apache.org/)), системи черг повідомлень (наприклад, [RabbitMQ](http://www.rabbitmq.com/) або [Beanstalkd](https://beanstalkd.github.io)), служби SMTP для вихідної пошти (наприклад, [Postfix](http://www.postfix.org/)), системи кешування (наприклад, [Memcached](http://memcached.org/)) тощо.
 
 Допоміжні служби, такі як бази даних, традиційно управляються тими ж системними адміністраторами, які розгортають застосунок. Окрім локальних служб, застосунок може також використовувати служби, що надаються і керуються третіми сторонами: SMTP-сервіси (наприклад, [Postmark](http://postmarkapp.com/)), сервіси збору метрик (наприклад, [New Relic](http://newrelic.com/) або [Loggly](http://www.loggly.com/)), сховища бінарних даних (наприклад, [Amazon S3](http://aws.amazon.com/s3/)), а також різні сервіси, що надають доступ через API (наприклад, [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), або [Last.fm](http://www.last.fm/api)).
 

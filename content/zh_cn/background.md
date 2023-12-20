@@ -1,7 +1,7 @@
 背景
 ==========
 
-本文的贡献者者参与过数以百计的应用程序的开发和部署，并通过 [Heroku](http://www.heroku.com/) 平台间接见证了数十万应用程序的开发，运作以及扩展的过程。
+本文的贡献者参与过数以百计的应用程序的开发和部署，并通过 [Heroku](http://www.heroku.com/) 平台间接见证了数十万应用程序的开发，运作以及扩展的过程。
 
 本文综合了我们关于 SaaS 应用几乎所有的经验和智慧，是开发此类应用的理想实践标准，并特别关注于应用程序如何保持良性成长，开发者之间如何进行有效的代码协作，以及如何 [避免软件污染](http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/) 。
 

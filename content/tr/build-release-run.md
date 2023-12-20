@@ -1,18 +1,18 @@
-## V. Derleme, Sürüm, Çalıştırma
+## V. Derleme, yayınlama, çalıştırma
 ### Derleme ve çalıştırma aşamalarını tam olarak ayırma
 
-Bir [kod tabanı](./codebase) üç aşamada dağıtıma dönüşebilir:
+Bir [kod tabanı](./codebase) üç aşamada (geliştirme dağıtımı olmayan) dağıtıma dönüşür:
 
-* *Derleme aşaması* kod deposunun *derleme* olarak bilinen çalıştırılabilir pakette çeviren bir dönüşümdür.Dağıtım süreci tarafından belirlenen bir commit'deki kodun versiyonunu kullanırken, derleme aşaması sağlayıcı [bağımlılıkları](./dependencies)  getirir ve binary'leri derler.
-* *Sürüm aşaması*, derleme aşaması tarafından üretilmiş derlemeyi alır ve dağıtımı şu anki [yapılandırmasıyla](./config) birleştirir. Son durumda oluşan *sürüm* derleme ve yapılandırmanın ikisinide içerir ve çalışma ortamındaki doğrudan çalıştırma için hazırdır.
-* *Çalıştırma evresi* (aynı zamanda "runtime" olarak bilinir) seçili sürümün karşılığındaki uygulamanın [süreçlerini](./processes) bazı setlerini başlatarak, çalıştırma ortamındaki uygulamayı çalıştırır.
+* *Derleme aşaması* kod deposunun *derleme* olarak bilinen çalıştırılabilir bir pakete çevrilmesidir. Dağıtım evresi tarafından seçilen commit'teki kod kullanılır. Sistem, üçüncü parti [bağımlılıkları](./dependencies) toparlar ve çalıştırılabilirleri ve statik dosyaları derler.
+* *Yayınlama aşaması*, derleme aşaması tarafından üretilmiş derlemeyi alır ve dağıtımı güncel [yapılandırmasıyla](./config) birleştirir. Son durumda oluşan *yayın* derleme ve yapılandırmanın ikisini de içerir ve çalışma ortamında çalıştırmak için hazırdır.
+* *Çalıştırma evresi* (aynı zamanda "runtime" olarak bilinir) seçili yayının karşılığındaki [süreçleri](./processes) başlatarak, çalıştırma ortamındaki uygulamayı çalıştırır.
 
 ![Kod, sürüm oluşturmak için yapılandırmayla birleşmiş derlemeye dönüşür.](/images/release.png)
 
-**On iki faktör uygulamaları derleme,sürüm ve çalıştırma aşamaları arasında mutlak ayırmayı kullanır.** Örneğin, koddaki değişiklikleri derleme aşamasına geri döndürmenin bir yolu olmadığı için çalışma zamanında kodda değişiklik yapmak imkansızdır.
+**On iki faktör uygulamalarının derleme, yayınlama ve çalıştırma aşamaları tamamen birbirinden bağımsızdır.** Örneğin, koddaki değişiklikleri derleme aşamasına geri döndürmenin bir yolu olmadığı için çalışma zamanında kodda değişiklik yapmak imkansızdır.
 
-Dağıtım araçları genel olarak sürüm yönetim araçlarını önerir, en dikkat çekeni bir önceki sürüme geri dönme yeteneğidir. Örneğin, [Capistrano](https://github.com/capistrano/capistrano/wiki) dağıtım aracı sürümleri, şu anki sürümün şimdiki sürüm dizinine bir sembolik link olduğu, `releases` adlı alt dizinde depolar. `rollback` komutu, bir önceki sürüme hızlı geri dönüşü kolaylaştırır.
+Dağıtım araçları genelde yayın yönetim araçları da sunar. En dikkat çeken yetenekleri ise bir önceki yayına geri dönebilmeleridir. Örneğin, [Capistrano](https://github.com/capistrano/capistrano/wiki) farklı yayınları `releases` adındaki bir alt dizinde depolar. Çalışıyor olan yayın ise bu alt dizinlerden birine oluşturulmuş bir kısayol dosyasıdır. Capistrano'nun `rollback` komutu, kısayol dosyasının işaret ettiği dizini değiştirerek önceki bir yayına dönüş yapmayı kolaylaştırır.
 
-Her sürüm her zaman sürümlerin zaman damgası gibi (`2011-04-06-20:32:17` gibi) özel sürüm ID'sine veya artış numarasına (`v100` gibi) sahip olmalıdır. Sürümler yalnızca eklemeli bir defterdir ve bir kere oluşturulduğu zaman dönüştürülemez. Herhangi bir değişiklik yeni bir sürüm oluşturmalıdır.
+Her yayın zaman damgası gibi (`2011-04-06-20:32:17` gibi) özel bir ID'ye veya her yeni yayında artan bir numaraya (`v100` gibi) sahip olmalıdır. Yayınlar yalnızca eklemeli bir defterdir ve bir kere oluşturulduğu zaman değiştirilemez. Herhangi bir değişiklik yeni bir yayın oluşturmalıdır.
 
-Derlemeler, herhangi bir zamanda yeni kod dağıtıldığında uygulama geliştiricileri tarafından başlatılır. Çalışma zamanı yürütmesi, kontras tarafından, sunucu tekrar çalıştırılması veya çökmüş süreçlerin süreç yöneticisi tarafından tekrar başlatılması gibi durumlarda otomatik olarak olabilir. Bunun sonucunda, çalıştırma evresi, gecenin bir yarısında çalışan geliştiriciler yokken uygulamanın çalışmasını engelleyen problemler uygulamanın bozulmasına yol açabildiği için, olabildiği kadar az sayıda hareketli bölüm olarak tutulmalıdır. Derleme evresinde, hatalar  dağıtımı çalıştıran geliştiriciler için her zaman ön planda olduğu için daha fazla karış olabilir.
+Derlemeler, geliştiricilerin kod değişikliklerini kod depolarına yüklemesiyle başlatılır. Çalıştırma evresi ise, sunucuların yeniden başlatılması veya çökmüş süreçlerin tekrar ayağa kaldırılması gibi durumlarda otomatik olarak gerçekleştirilir. Bu yüzden çalıştırma evresi olabildiği kadar az sayıda hareketli parçaya sahip olmalıdır ki, gecenin bir yarısında, işinin başında olan hiçbir geliştirici yokken bozulmasın. Derleme evresi ise daha karmaşık olabilir, çünkü hatalar dağıtımı çalıştıran geliştiricilerin her zaman önündedir.

@@ -3,7 +3,7 @@
 
 L'application est exécutée dans l'environnement d'exécution comme un ou plusieurs *processus*.
 
-Dans la situation la plus simple, le code est un script indépendant, l'environnement d'exécution est l'ordinateur portable du développeur sur lequel est installé de quoi exécuter le langage, et le processus est lancé depuis la ligne de commande. (par exemple, `python mon_script.py`). De l'autre côté du spectre, un déploiement de production d'une application sophistiquée peut utiliser plusieurs [types de processus, instanciés dans 0 ou plus processus en fonctionnement](./concurrency).
+Dans la situation la plus simple, le code est un script indépendant, l'environnement d'exécution est l'ordinateur portable du développeur sur lequel est installé de quoi exécuter le langage, et le processus est lancé depuis la ligne de commande. (par exemple, `python mon_script.py`). De l'autre côté du spectre, un déploiement de production d'une application sophistiquée peut utiliser plusieurs [types de processus, instanciés dans zéro ou plus processus en fonctionnement](./concurrency).
 
 **Les processus 12 facteurs sont sans état et ne partagent [rien (en)](http://en.wikipedia.org/wiki/Shared_nothing_architecture).**  Toute donnée qui doit être persistée doit être stockée dans un [service externe](./backing-services) stateful, typiquement une base de données.
 

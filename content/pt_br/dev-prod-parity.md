@@ -67,7 +67,7 @@ Resumindo o acima em uma tabela:
   </tr>
 </table>
 
-Desenvolvedores as vezes vem uma grande vantagem em usar um serviço de apoio leve em seus ambientes, enquanto um serviço de apoio mais sério e robusto seria usado em produção. Por exemplo, usando SQLite localmente e PostgreSQL em produção; ou memória de processo local para caching em desenvolvimento e Memcached em produção.
+Desenvolvedores as vezes veem uma grande vantagem em usar um serviço de apoio leve em seus ambientes, enquanto um serviço de apoio mais sério e robusto seria usado em produção. Por exemplo, usando SQLite localmente e PostgreSQL em produção; ou memória de processo local para caching em desenvolvimento e Memcached em produção.
 
 **O desenvolvedor doze-fatores resiste a tentação de usar diferentes serviços de apoio entre desenvolvimento e produção**, mesmo quando adaptadores teoricamente abstraem as diferenças dos serviços de apoio. Diferenças entre serviços de apoio significam que pequenas incompatibilidades aparecerão, fazendo com que código que funcionava e passava em desenvolvimento ou homologação, falhe em produção. Tais tipos de erros criam fricção que desincentivam deploy contínuo. O custo dessa fricção e do subsequente decaimento de deploy contínuo é extremamente alto quando considerado que vai acumular no tempo de vida da aplicação.
 

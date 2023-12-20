@@ -1,7 +1,7 @@
 ﻿## IV. Unterstützende Dienste
 ### Unterstützende Dienste als angehängte Ressourcen behandeln
 
-Ein *unterstützender Dienst* ist jeder Dienst, den die App über das Netzwerk im Rahmen ihrer normalen Arbeit konsumiert. Beispiele sind Datenspeicher  (wie [MySQL](http://dev.mysql.com/) oder [CouchDB](http://couchdb.apache.org/)), Messaging/Queueing-Systeme (wie [RabbitMQ](http://www.rabbitmq.com/) oder [Beanstalkd](http://kr.github.com/beanstalkd/)), SMTP-Dienste für das Senden von Mail (wie [Postfix](http://www.postfix.org/)), und Cache-Systeme (wie [Memcached](http://memcached.org/)).
+Ein *unterstützender Dienst* ist jeder Dienst, den die App über das Netzwerk im Rahmen ihrer normalen Arbeit konsumiert. Beispiele sind Datenspeicher  (wie [MySQL](http://dev.mysql.com/) oder [CouchDB](http://couchdb.apache.org/)), Messaging/Queueing-Systeme (wie [RabbitMQ](http://www.rabbitmq.com/) oder [Beanstalkd](https://beanstalkd.github.io)), SMTP-Dienste für das Senden von Mail (wie [Postfix](http://www.postfix.org/)), und Cache-Systeme (wie [Memcached](http://memcached.org/)).
 
 Unterstützende Dienste wie Datenbanken werden traditionell von denselben Systemadministratoren verwaltet, die die App deployen. Außer diesen intern verwalteten Diensten können der App auch von Dritten verwaltete Dienste zur Verfügung stehen. Dazu gehören SMTP-Dienste (wie [Postmark](http://postmarkapp.com/)), Metrik-Sammler (wie [New Relic](http://newrelic.com/) oder [Loggly](http://www.loggly.com/)), Binary-Asset-Dienste (wie [Amazon S3](http://aws.amazon.com/s3/)), und auch über eine API zugängliche Dienste (wie [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), oder [Last.fm](http://www.last.fm/api)).
 

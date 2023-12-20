@@ -7,7 +7,7 @@ A *configuração* de uma aplicação é tudo o que é provável variar entre [d
 * Credenciais para serviços externos como Amazon S3 ou Twitter
 * Valores por deploy como o nome canônico do host para o deploy
 
-Aplicações as vezes armazenam as configurações no código como constantes. Isto é uma violação do doze-fatores, o que exige uma **estrita separação da configuração a partir do código**. Configuração varia substancialmente entre deploys, código não.
+Aplicações às vezes armazenam as configurações no código como constantes. Isto é uma violação da doze-fatores, a qual exige uma **estrita separação entre configuração e código**. Configuração varia substancialmente entre deploys, código não.
 
 A prova de fogo para saber se uma aplicação tem todas as configurações corretamente consignadas fora do código é saber se a base de código poderia ter seu código aberto ao público a qualquer momento, sem comprometer as credenciais.
 
@@ -17,6 +17,6 @@ Outra abordagem para configuração é o uso de arquivos de configuração que n
 
 **A aplicação doze-fatores armazena configuração em *variáveis de ambiente*** (muitas vezes abreviadas para *env vars* ou *env*). Env vars são fáceis de mudar entre deploys sem alterar qualquer código; ao contrário de arquivos de configuração, há pouca chance de serem colocados acidentalmente no repositório do código; e ao contrário dos arquivos de configuração personalizados, ou outros mecanismos de configuração como Propriedades do Sistema Java, eles são por padrão agnósticos a linguagem e ao SO.
 
-Outro aspecto do gerenciamento de configuração é o agrupamento. Às vezes, as aplicações incluem a configuração em grupos nomeados (muitas vezes chamados de ambientes) em homenagem a deploys específicos, tais como os ambientes `development`, `test`, e `production` em Rails. Este método não escala de forma limpa: quanto mais deploys da aplicação são criados, novos nomes de ambiente são necessários, tais como `staging` ou `qa`. A medida que o projeto cresce ainda mais, desenvolvedores podem adicionar seus próprios ambientes especiais como `joes-staging`, resultando em uma explosão combinatória de configurações que torna o gerenciamento de deploys da aplicação muito frágil.
+Outro aspecto do gerenciamento de configuração é o agrupamento. Às vezes, as aplicações incluem a configuração em grupos nomeados (muitas vezes chamados de ambientes) que remetem a deploys específicos, tais como os ambientes `development`, `test`, e `production` em Rails. Este método não escala de forma limpa: quanto mais deploys da aplicação são criados, novos nomes de ambiente são necessários, tais como `staging` ou `qa`. A medida que o projeto cresce ainda mais, desenvolvedores podem adicionar seus próprios ambientes especiais como `joes-staging`, resultando em uma explosão combinatória de configurações que torna o gerenciamento de deploys da aplicação muito frágil.
 
 Em uma aplicação doze-fatores, env vars são controles granulares, cada um totalmente ortogonal às outras env vars. Elas nunca são agrupadas como "environments", mas em vez disso são gerenciadas independentemente para cada deploy. Este é um modelo que escala sem problemas à medida que o app naturalmente se expande em muitos deploys durante seu ciclo de vida.

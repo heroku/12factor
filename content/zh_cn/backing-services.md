@@ -1,7 +1,7 @@
 ## IV. 后端服务
 ### 把后端服务(*backing services*)当作附加资源
 
-*后端服务*是指程序运行所需要的通过网络调用的各种服务，如数据库（[MySQL](http://dev.mysql.com/)，[CouchDB](http://couchdb.apache.org/)），消息/队列系统（[RabbitMQ](http://www.rabbitmq.com/)，[Beanstalkd](http://kr.github.com/beanstalkd/)），SMTP 邮件发送服务（[ Postfix](http://www.postfix.org/)），以及缓存系统（[Memcached](http://memcached.org/)）。
+*后端服务*是指程序运行所需要的通过网络调用的各种服务，如数据库（[MySQL](http://dev.mysql.com/)，[CouchDB](http://couchdb.apache.org/)），消息/队列系统（[RabbitMQ](http://www.rabbitmq.com/)，[Beanstalkd](https://beanstalkd.github.io)），SMTP 邮件发送服务（[ Postfix](http://www.postfix.org/)），以及缓存系统（[Memcached](http://memcached.org/)）。
 
 类似数据库的后端服务，通常由部署应用程序的系统管理员一起管理。除了本地服务之外，应用程序有可能使用了第三方发布和管理的服务。示例包括 SMTP（例如 [Postmark](http://postmarkapp.com/)），数据收集服务（例如 [New Relic](http://newrelic.com/) 或 [Loggly](http://www.loggly.com/)），数据存储服务（如 [Amazon S3](http://http://aws.amazon.com/s3/)），以及使用 API 访问的服务（例如 [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), [Last.fm](http://www.last.fm/api)）。
 
