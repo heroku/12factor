@@ -13,8 +13,8 @@ The Twelve Factors
 ## [IV. Háttérszolgáltatások](./backing-services)
 ### Kezeljük a háttérszolgáltatásokat csatolt erőforrásokként
 
-## [V. Előállítás, telepítés, üzemeltetés](./build-release-run)
-### Egyértelműen válasszuk külön a forráskód futtathatóvá alakítását (BUILD), telepítését (RELEASE) és telepített alkalmazásunk üzemeltetését (RUN)
+## [V. Előállítás, közreadás, futtatás](./build-release-run)
+### Szigorúan válasszuk szét az alkalmazás forráskódból történő előállítását (BUILD), a közreadását (RELEASE) és a telepített alkalmazásunk futtatását (RUN)
 
 ## [VI. Folyamatok](./processes)
 ### Az alkalmazást egy vagy több állapot nélküli folyamatként futtassuk
