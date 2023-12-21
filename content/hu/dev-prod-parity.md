@@ -1,5 +1,5 @@
-## X. Fejlesztés/üzemeltetés hasonlóság
-### A fejlesztés, a tesztelés és az üzemeltetés legyen annyira hasonló, amennyire ez egyáltalán lehetséges
+## X. Fejlesztés/üzemeltetés összehangolva
+### A fejlesztés, a tesztelés és az üzemeltetés annyira hasonlónak megtartva, amennyire ez egyáltalán lehetséges
 
 Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az alkalmazás helyi [üzembehelyezését (deployment)](./codebase) élőben módosítja) és az üzemeltetés (az alkalmazás végfelhasználók által elérhető, éppen futó üzembehelyezése (deployment)) között.  Ezek az eltérések és az ezekből adódó problémák három területen jelentkeznek:
 

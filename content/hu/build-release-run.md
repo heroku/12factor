@@ -1,5 +1,5 @@
 ## V. Előállítás, közreadás, futtatás
-### Szigorúan válasszuk szét az alkalmazás forráskódból történő előállítását (BUILD), a közreadását (RELEASE) és a telepített alkalmazásunk futtatását (RUN)
+### Előállítási ütem (BUILD) és a futtatási ütem (RUN) szigorúan elválasztva
 
 A [kódbázis](./codebase) három ütemben formálódik át egy (nem fejlesztői környezetben) üzembehelyezett (deploy) alkalmazássá:
 

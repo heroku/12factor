@@ -1,5 +1,5 @@
 ## II. Függőségek
-### A függőségeket egyértelműen határozzuk meg és különítsünk el
+### Függőségek egyértelműen meghatározva és elkülönítve
 
 A legtöbb programozási nyelvben rendelkezésre áll egy olyan csomagkezelési megoldás, ami támogatja könyvtármodulok becsomagolását és csomagban terjesztését, mint a [CPAN](http://www.cpan.org/) a Perl fejlesztőknek vagy a [Rubygems](http://rubygems.org/) a Ruby-hoz. A csomagkezelő megoldás egyrészt telepítheti a könyvtármodulokat rendszerszinten (ekkor minden telepített alkalmazás használhatja őket, ezt hívják "site package"-nek), másrészt telepítheti ezeket az alkalmazásunkat tartalmazó könyvtárra szűkítve a hatókört (ezt pedig "vendoring" vagy "bundling" néven ismerhetjük).
 

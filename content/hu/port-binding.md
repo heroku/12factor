@@ -1,5 +1,5 @@
 ## VII. Hálózati port hozzárendelés
-### Tegyük a szolgáltatásainkat port hozzárendeléssel elérhetővé
+### Szolgáltatásaok elérhetővé tétele port hozzárendeléssel
 
 A webalkalmazások néha [webkiszolgáló konténereken](https://hu.wikipedia.org/wiki/Servlet) belül futnak.  Például, a PHP alkalmazások modulként egy [Apache HTTPD](http://httpd.apache.org/) belsejében futnak vagy a Java alkalmazások futhatnak egy [Tomcat](http://tomcat.apache.org/) belsejében.
 

@@ -1,5 +1,5 @@
 ## XII. Adminisztratív folyamatok
-### Futtassuk az adminisztrációs és felügyeleti feladatokat egyszer futó folyamatokként
+### A fejlesztés, a tesztelés és az üzemeltetés annyira hasonlónak megtartva, amennyire ez egyáltalán lehetséges
 
 A [folyamatösszeállítás](./concurrency) a folyamatok együttese, amelyek az alkalmazás mindennapi üzleti tevékenységei használnak (például webes kérések kiszolgálára) az alkalmazás futása közben.  Ezen kívül a fejlesztők gyakran szeretnek végezni egyszeri adminisztratív vagy karbantartási feladatokat az alkalmazásban, például:
 

@@ -5,34 +5,34 @@ A Tizenkét Tényező
 ### Egy kódbázis verziókezelő alkalmazásban rögzítve, több üzembehelyezés (deployment)
 
 ## [II. Függőségek](./dependencies)
-### A függőségeket egyértelműen határozzuk meg és különítsünk el
+### Függőségek egyértelműen meghatározva és elkülönítve
 
 ## [III. Konfiguráció](./config)
-### A konfigurációs beállításokat tároljuk a környezetben
+### Konfigurációs beállítások a környezeti változókban tárolva 
 
 ## [IV. Háttérszolgáltatások](./backing-services)
-### Kezeljük a háttérszolgáltatásokat csatolt erőforrásokként
+### Háttérszolgáltatások használata erőforrásként
 
 ## [V. Előállítás, közreadás, futtatás](./build-release-run)
-### Szigorúan válasszuk szét az alkalmazás forráskódból történő előállítását (BUILD), a közreadását (RELEASE) és a telepített alkalmazásunk futtatását (RUN)
+### Előállítási ütem (BUILD) és a futtatási ütem (RUN) szigorúan elválasztva
 
 ## [VI. Folyamatok](./processes)
-### Futtassuk az alkalmazást egy vagy több állapot nélküli folyamatként
+### Alkalmazás egy vagy több állapotmentes folyamatként futtatva
 
 ## [VII. Hálózati port hozzárendelés](./port-binding)
-### Tegyük a szolgáltatásainkat port hozzárendeléssel elérhetővé
+### Szolgáltatásaok elérhetővé tétele port hozzárendeléssel
 
 ## [VIII. Párhuzamos folyamatok](./concurrency)
-### Szolgáltatásunkat a nagyobb terheléshez -az állapot nélküli- folyamat modellünknek köszönhetően méretezzük át
+### Méretezés a folyamatmodell segítségével
 
 ## [IX. Megszüntethetőség](./disposability)
 ### Az elérhető legnagyobb ellenálló képesség villámgyors indulással és kulturált leállással
 
-## [X. Fejlesztés/üzemeltetés hasonlóság](./dev-prod-parity)
-### A fejlesztés, a tesztelés és az üzemeltetés legyen annyira hasonló, amennyire ez egyáltalán lehetséges
+## [X. Fejlesztés/üzemeltetés összehangolva](./dev-prod-parity)
+### A fejlesztés, a tesztelés és az üzemeltetés annyira hasonlónak megtartva, amennyire ez egyáltalán lehetséges
 
 ## [XI. Naplók](./logs)
-### Kezeljük a naplókat események folyamatos sorozataként
+### Naplók kezelése események folyamatos sorozataként
 
 ## [XII. Adminisztratív folyamatok](./admin-processes)
-### Futtassuk az adminisztrációs és felügyeleti feladatokat egyszer futó folyamatokként
+### Adminisztrációs és felügyeleti feladatok futtatása egyszer futó folyamatokként

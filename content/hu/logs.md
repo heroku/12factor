@@ -1,5 +1,5 @@
 ## XI. Naplók
-### Kezeljük a naplókat események folyamatos sorozataként
+### Naplók kezelése események folyamatos sorozataként
 
 A *Naplók* a futó alkalmazás viselkedésébe nyújtanak betekintést. Szerver alapú környezetben általában egy állományba írják őket a merevlemezre ("naplóállomány"); de ez csak egy kimeneti formátum.
 

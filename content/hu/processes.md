@@ -1,5 +1,5 @@
 ## VI. Folyamatok
-### Futtassuk az alkalmazást egy vagy több állapot nélküli folyamatként
+### Alkalmazás egy vagy több állapotmentes folyamatként futtatva
 
 Az alkalmazás a futtatókörnyezetben egy vagy több *folyamatként* fut.
 

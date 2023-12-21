@@ -1,5 +1,5 @@
 ## III. Konfiguráció
-### A konfigurációs beállításokat tároljuk a környezetben
+### Konfigurációs beállítások a környezeti változókban tárolva 
 
 Az alkalmazás *konfigurációja* minden olyan dolog, ami valószínüleg változik az egyes [üzembehelyezések](./codebase) (deployment) között (tesztelési, üzemeltetési, fejlesztői környezetek, stb.). Ideértve:
 
