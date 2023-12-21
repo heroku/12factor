@@ -1,7 +1,7 @@
 ## XII. Adminisztratív folyamatok
 ### Futtassuk az adminisztrációs és felügyeleti feladatokat egyszer futó folyamatokként
 
-A [folyamatok képzése](./concurrency) a folyamatok együttese, amelyek az alkalmazás mindennapi üzleti tevékenységei használnak (például webes kérések kiszolgálára) az alkalmazás futása közben.  Ezen kívül a fejlesztők gyakran szeretnek végezni egyszeri adminisztratív vagy karbantartási feladatokat az alkalmazásban, például:
+A [folyamatösszeállítás](./concurrency) a folyamatok együttese, amelyek az alkalmazás mindennapi üzleti tevékenységei használnak (például webes kérések kiszolgálára) az alkalmazás futása közben.  Ezen kívül a fejlesztők gyakran szeretnek végezni egyszeri adminisztratív vagy karbantartási feladatokat az alkalmazásban, például:
 
 * Adatbázis migrációk végrehajtása (mint például `manage.py migrate` a Django-nál, `rake db:migrate` a Rails használatakor).
 * Konzol (vagy másnéven [REPL](http://en.wikipedia.org/wiki/Read-eval-print_loop) parancssor) használata tetszőleges kód futtatásához vagy az alkalmazás éles adatbázisán az adatmodell vizsgálatához.  A legtöbb nyelv biztosít REPL eszközt az értelmező alkalmazás parancssori paraméterek nélküli futtatásával (mint a `python` vagy `perl`) vagy egyes esetekben erre külön parancs van (az `irb` a Rubyhoz, vagy `rails console` a Rails-hez).
