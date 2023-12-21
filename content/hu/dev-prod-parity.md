@@ -1,17 +1,17 @@
-## X. Egyensúly a fejlesztés és az üzemeltetés között
-### A fejlesztési és az üzemeltetési folyamatok legyenek annyira hasonlóak amennyire csak ez lehetséges
+## X. Fejlesztés/üzemeltetés hasonlóság
+### A fejlesztés, a tesztelés és az üzemeltetés legyen annyira hasonló, amennyire ez egyáltalán lehetséges
 
-Történeti okokból jelentős különbségek vannak a fejlesztés (a fejlesztő az alkalmazás helyi [telepítését](./codebase) élőben módosítja) és az üzemeltetés (az alkalmazás végfelhasználók által elérhető, éppen futó telepítése) között.  Ezek a különbségek és az ezekből adódó problémák három területen jelentkeznek:
+Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az alkalmazás helyi [üzembehelyezését (deploy)](./codebase) élőben módosítja) és az üzemeltetés (az alkalmazás végfelhasználók által elérhető, éppen futó üzembehelyezése (deploy)) között.  Ezek az eltérések és az ezekből adódó problémák három területen jelentkeznek:
 
-* **Az idő különbség:** A fejlesztő a kódon napokig, hetekig vagy akár hónapokig dolgozhat, mire a munkája az üzemeltetett alkalmazásba kerülne.
-* **A személyi különbség**: A fejlesztő írja a kódot, az üzemeltető mérnök telepíti azt.
-* **Az eszköz különbség**:  a fejlesztő dolgozhat olyan csomaggal, amiben Nginx, SQLite és OS X van, az üzemeltetés viszont Apache, MySQL és Linux környezetre telepíti az alkalmazást.
+* **Az idő különbség:** A fejlesztő munkája a kódon az üzemeltetett alkalmazásba hetek vagy akár hónapok múlva kerül.
+* **A személyi különbség**: A kódot a fejlesztő írja, az üzembehelyezést (deploy) az üzemeltető mérnök végzi.
+* **Az eszköz különbség**:  a fejlesztő dolgozhat olyan csomaggal, amiben Nginx, SQLite és OS X van, az üzemeltetés viszont Apache, MySQL és Linux környezetet használ.
 
-**A tizenkét tényezős alkalmazást eleve [folyamatos telepítéshez](http://avc.com/2011/02/continuous-deployment/) tervezzük, hogy ez a különbség a fejlesztés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
+**A tizenkét tényezős alkalmazást a [szünetmentes üzembehelyezés](http://avc.com/2011/02/continuous-deployment/) miatt eleve úgy tervezzük, hogy ez a különbség a fejlesztés, a tesztelés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
 
-* Az időbeli különséget tegyük kicsivé: a fejlesztő megírhatja a kódot, és az órák de akár akár percek múlva is az üzemeltetésbe kerülhet.
-* A személyi különbséget tegyük kicsivé: a kódot író fejlesztőt szorosan bevonjuk a a telepítésbe így közelről figyeli az üzemeltetésben az alkalmazás viselkedését.
-* Az eszközökben megjelenő különbséget tegyük kicsivé: legyen a fejlesztési és az üzemeltetési környezet olyan hasonló, amennyire csak lehet.
+* Az időbeli különséget tegyük kicsivé: a fejlesztő írhat kódot, ami órák, de akár akár percek alatt üzembe van helyezve (deploy).
+* A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deploy), és közelről figyeli az üzembehelyezett (deploy)alkalmazás viselkedését.
+* Az eszközökben megjelenő különbséget tegyük kicsivé: megtartva a fejlesztési és az üzemeltetési környezetet olyan hasonlónak, amennyire csak lehet.
 
 Összegezve ebben a táblázatban:
 
@@ -29,7 +29,7 @@ Történeti okokból jelentős különbségek vannak a fejlesztés (a fejlesztő
   <tr>
     <th>Kódot létrehozó kontra telepítő</th>
     <td>Különböző emberek</td>
-    <td>Ugyanazon emberek</td>
+    <td>Ugyanazok az emberek</td>
   </tr>
   <tr>
     <th>Fejlesztői kontra üzemeltetési környezet</th>
@@ -38,7 +38,7 @@ Történeti okokból jelentős különbségek vannak a fejlesztés (a fejlesztő
   </tr>
 </table>
 
-A [háttérszolgáltatások](./backing-services), mint az alkalmazás adatbázisa, az üzenetsor vagy a gyorsítótár olyan terület, ahol a fejlesztés és az üzemeltetés egyensúlya fontos. Sok nyelv kínál könyvtárakat, amik egyszerűsítik a hozzáférést a háttérszolgáltatáshoz, ideértve adaptereket a különböző típusú szolgáltatásokhoz. Néhány példa táblázatban.
+A [háttérszolgáltatások](./backing-services), mint például az alkalmazás adatbázisa, az üzenetsor vagy a gyorsítótár olyan terület, ahol fontos a fejlesztés és az üzemeltetés hasonlósága. Sok nyelv kínál olyan könyvtárakat, amik leegyszerűsítik a háttérszolgáltatáshoz való hozzáférést, ideértve a különböző típusú szolgáltatásokhoz csatlakozó adaptereket. Néhány példa megtalálható az alábbi táblázatban.
 
 <table>
   <tr>
@@ -67,10 +67,10 @@ A [háttérszolgáltatások](./backing-services), mint az alkalmazás adatbázis
   </tr>
 </table>
 
-A fejlesztők néha nagyon vonzónak találják, ha fejlesztés közben pehelysúlyú háttérszolgáltatást használhatnak a saját fejlesztési környezetükben, míg erős háttérszolgáltatások kerülnek az üzemeltetési környezetbe. Például fejlesztéshez SQLite-ot üzemeltetéshez viszont PostgreSQL-t használni; vagy helyben a folyamat memóriáját, üzemeltetéskor pedig Memcached-et használni gyorsítótárazáshoz.
+A fejlesztők néha nagyon vonzónak találják, ha a saját fejlesztési környezetükben pehelysúlyú háttérszolgáltatást használhatnak, míg sokkal komolyabb és megbízhatóbb háttérszolgáltatások elérhetőek majd az üzembehelyezett (deploy) éles környezetben. Például fejlesztéshez SQLite-ot használni, üzemeltetéshez viszont PostgreSQL-t; vagy gyorsítótárazáshoz helyben a folyamat memóriáját, üzemeltetéskor pedig Memcached-et használni.
 
-**A tizenkét tényezős fejlesztő ellenál annak a kísértésnek, hogy más háttérszolgáltatást használjon a fejlesztési és az üzemeltetési környezetben**, még akkor is, ha az adapterek elméletileg bármilyen háttérszolgáltatások közötti különbséget eltüntetnek. A háttérszolgáltatások közötti különbségek azt jelenti, hogy apró inkompatibilitási problémák merülhetnek fel azt eredményezve, hogy a kód, ami működött és a teszteken megfelelően teljesített fejlesztési és tesztkörnyezetben, üzemeltetés közben hibára fut. A hibáknak ez a típusa súrlódást hoz létre ami a folyamatos telepítést akadályozza. Ennek a surlódásnak a negatív hatása a folyamatos telepítésre és az alkalmazás életciklusára összegzett kültsége rendkívül magas.
+**A tizenkét tényezős fejlesztő ellenáll annak a kísértésnek, hogy más háttérszolgáltatást használjon a fejlesztési és az üzemeltetési környezetben**, még akkor is, ha az adapterek elméletileg eltüntetnek bármilyen különbséget a háttérszolgáltatások között.  A háttérszolgáltatások közötti különbségek azt jelentik, hogy apró együttműködési problémák merülhetnek fel azt eredményezve, hogy a kód, ami működött és megfelelően teljesített a teszteken a fejlesztési és a tesztkörnyezetekben is, üzemeltetés közben hibára fut. A hibáknak ez a típusa súrlódást hoz létre ami kiszámíthatatlanná teszi a szünetmentes üzembehelyzés (continuous deployment) használatát. Ennek a súrlódásnak és a szünetmentes üzembehelyezés (continuous deployment) fékezésének a költsége az alkalmazás életciklusára összegezve rendkívül magas.
 
-A pehelysúlyú háttérszolgáltatások ma már kevésbé vonzóak, mint korábban voltak. A modern háttérszolgáltatásokat, mint a Memcached, a PostgreSQL és a RabbitMQ a modern csomagkezelési rendszereknek köszönhetően -mint a [Homebrew](http://mxcl.github.com/homebrew/) és az [apt-get](https://help.ubuntu.com/community/AptGet/Howto)- már egyáltalán nem körülményes telepíteni és futtatni. Alternatív megoldásként a deklaratív telepítő eszközök, mint a [Chef](http://www.opscode.com/chef/) és a [Puppet](http://docs.puppetlabs.com/) kombinálva a vékony virtuális rendszerekkel, mint a [Docker](https://www.docker.com/) és a [Vagrant](http://vagrantup.com/) lehetővé teszi a fejlesztők számára, hogy az üzemeltetési környezethez nagyon hasonló fejlesztési környezetben dolgozhassanak. Ezen rendszerek telepítésének és használatának a költsége alacsony - összehasonlítva a fejlesztési és üzemeltetési egyensúllyal valamint a folyamatos telepítés előnyeivel.
+A pehelysúlyú háttérszolgáltatások ma már nem olyan vonzóak, mint korábban voltak.  A modern háttérszolgáltatásokat, mint a Memcached, a PostgreSQL és a RabbitMQ a modern csomagkezelési rendszereknek köszönhetően -mint a [Homebrew](http://mxcl.github.com/homebrew/) és az [apt-get](https://help.ubuntu.com/community/AptGet/Howto)- már egyáltalán nem körülményes telepíteni és futtatni. Alternatív megoldásként a deklaratív telepítő eszközök, mint a [Chef](http://www.opscode.com/chef/) és a [Puppet](http://docs.puppetlabs.com/) kombinálva a vékony virtuális rendszerekkel, mint a [Docker](https://www.docker.com/) és a [Vagrant](http://vagrantup.com/) lehetővé teszik a fejlesztők számára, hogy olyan fejlesztési környezetben dolgozhassanak ami nagyon megközelíti az üzemeltetési környezetet. Ezen rendszerek telepítésének és használatának a költsége alacsony - összehasonlítva a fejlesztés/üzemeltetés egyensúly valamint a szünetmentes üzembehelyezés (continuous deployment) előnyeivel.
 
-A háttérszolgáltatások eléréséhez adaptereket használni továbbra is hasznos, mivel az újabb háttérszolgáltatásokra való áttérést relatív fájdalommentessé teszik. De az alkalmazás valamennyi telepítésének (fejlesztési környezet, tesztelés és üzemeltetés) azonos típusú és verziójú háttérszolgáltatásokat kell használnia.
+A különböző háttérszolgáltatások eléréséhez adaptereket használni továbbra is hasznos, mivel az újabb háttérszolgáltatásokra való áttérést relatív fájdalommentessé teszik. De az alkalmazás valamennyi telepítésének (fejlesztési környezet, tesztelés és üzemeltetés) azonos típusú és verziójú háttérszolgáltatásokat kellene használnia.
