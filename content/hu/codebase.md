@@ -1,17 +1,17 @@
 ## I. Kódbázis
-### Egy kódbázis kódtárban kezelve, több telepítés
+### Egy kódbázis verziókezelő alkalmazásban rögzítve, több üzembe helyezés
 
-A tizenkét tényezős alkalmazást minden esetben verziókövető rendszerrel kezelünk, mint a [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), vagy [Subversion](http://subversion.apache.org/). A verziókövető adatbázist és másolatát *kódtárnak* hívjuk.
+Egy tizenkét tényezős alkalmazást minden esetben verziókezelő rendszerben rögzítünk, mint a [Git](http://git-scm.com/), a [Mercurial](https://www.mercurial-scm.org/), vagy a [Subversion](http://subversion.apache.org/). A verziókezelő adatbázis másolatát *kódtárnak* hívjuk (code repository, code repo, repo).
 
-A *kódbázis* egy tetszőleges kódtár (központosított verziókövetési rendszernél, mint a Subversion), vagy bármilyen csoportja a kódtáraknak, amik a kezdő commit-et megosztják (decentralizált verziókövető rendszerek esetén, mint a Git)
+A *kódbázis* bármely egyetlen kódtár (repo) (központosított verziókövetési rendszernél, mint a Subversion), vagy bármely olyan csoportja a kódtáraknak (repo), amik a kezdő commit-ot megosztják (decentralizált verziókövető rendszerek esetén, mint a Git).
 
-![Egy kódbázis több telepítéshez tartozik](/images/codebase-deploys.png)
+![Egy kódbázishoz több üzembe helyezés tartozik](/images/codebase-deploys.png)
 
 Egy alkalmazáshoz mindig pontosan egy kódbázis tartozik:
 
 * Ha több kódbázis van, akkor az nem lehet egy alkalmazás. Ebben az esetben elosztott rendszerről beszélünk több összetevővel. Ilyenkor tekintsünk minden összetevőt egy-egy alkalmazásnak, és ezek az alkalmazások külön-külön már alkalmasak arra, hogy a 12 tényezős alkalmazásfejlesztés követelményeinek megfeleljenek.
-* Ha több alkalmazás ugyanazt a kódot megosztja (például ugyanazt a függvényt használják, ugyanazt a konstans/modell kódot tartalmazzák stb.), akkor ezek az alkalmazások megsértik a 12 tényezős alkalmazásfejlesztés előírásait. Ebben az esetben a megoldás az, hogy a megosztott kódot például egy könyvtárba ki kell szervezni, és az egyes alkalmazások közötti [függőségek feloldásának mechanizmusával](./dependencies) felhasználni ahol szükség van rá.
+* Ha több alkalmazás ugyanazt a kódot megosztja (például ugyanazt a függvényt használja), akkor ezek az alkalmazások megsértik a 12 tényezős alkalmazásfejlesztés előírásait. Ebben az esetben a megoldás az, hogy a megosztott kódot például egy könyvtárba ki kell szervezni, és az egyes alkalmazások közötti [függőségek feloldásának mechanizmusával](./dependencies) felhasználni ott, ahol szükség van rá.
 
-Minden kódbázishoz tehát pontosan egy alkalmazás tartozik, azonban ezt az alkalmazást több környezetben és változatban is lehet telepíteni. A *telepítés* az alkalmazásnak egy futó példánya. Ilyen például az éles üzemeltetési (produkciós) környezet, különböző tesztelési környezetek. Emellett minden fejlesztő gépére kerül egy-egy fejlesztői másolat is az alkalmazásból.
+Minden kódbázishoz tehát pontosan egy alkalmazás tartozik, azonban ezt az alkalmazást több környezetben és változatban is üzembe lehet helyezni (deploy). Az *üzembe helyezés (deploy)* az alkalmazásnak egy futó példánya. Ilyen például egy éles üzemeltetési (produktion) környezet, és egy vagy több különböző tesztelési környezet. Emellett minden fejlesztő gépére kerül egy-egy fejlesztői másolat is az alkalmazásból, amit a fejlesztő futtat, így ezek is üzembe helyezésnek (deploy) számítanak.
 
-A kódbázis azonos minden példánynál akkor is, ha nem minden telepítés azonos kód verzióból készült. A fejlesztőknél lehetnek olyan módosítások, amiket a tesztelési környezet(ek)re még nem telepítettünk, és a tesztkörnyezeteken is olyan változatot tesztelünk, aminek nem minden változása van az éles telepítésben. De minden telepítés ugyanazt a kódbázist (kódtárat) használja, innen ismerjük fel, hogy ezek ugyanannak az alkalmazásnak a különböző telepítései.
+A kódbázis azonos minden üzembe helyezésnél (deploy) akkor is, ha nem minden üzembe helyezés (deploy) azonos kód verzióból (commit) készült. A fejlesztőknél lehetnek olyan módosítások (commit), amiket a tesztelési környezet(ek)en még nem helyeztünk üzembe (deploy), és a tesztkörnyezeteken is olyan változatot helyezünk üzembe (deploy), aminek nem minden változása (commit) van az éles üzembe helyezésben (deploy). De minden üzembe helyezés (deploy) ugyanazt a kódbázist (kódtárat, repo) használja, innen ismerjük fel, hogy ezek ugyanannak az alkalmazásnak a különböző üzembe helyezett (deploy) változatai.
