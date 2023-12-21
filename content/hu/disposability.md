@@ -1,7 +1,7 @@
 ## IX. Megszüntethetőség
 ### Az elérhető legnagyobb ellenálló képesség villámgyors indulással és kulturált leállással
 
-**A tizenkét tényezős alkalmazás [folyamatai](./processes) *megszüntethetőek*, ami azt jelenti, hogy pillanatok alatt képesek elindulni vagy leállni.** Ez támogatja a gyors, rugalmas méretezést, a [kód](./codebase) vagy [konfiguráció](./config) változásának gyors üzembehelyezését (deploy), és az élés üzembehelyezések (production deploy) nagy ellenálló képességét.
+**A tizenkét tényezős alkalmazás [folyamatai](./processes) *megszüntethetőek*, ami azt jelenti, hogy pillanatok alatt képesek elindulni vagy leállni.** Ez támogatja a gyors, rugalmas méretezést, a [kód](./codebase) vagy [konfiguráció](./config) változásának gyors üzembehelyezését (deployment), és az éles üzembehelyezések (production deployment) nagy ellenálló képességét.
 
 A folyamatoknak törekedniük kell **az elindulásukhoz szükséges idő minimalizálására**. Ideális esetben egy folyamatnak néhány másodpercig tart az indulási parancstól eljutni egészen addig, hogy a folyamat dolgozik és kész a kérések vagy a feladatok fogadására. A rövid indulási idő nagyobb rugalmasságot biztosít a [közzétételi folyamathoz](./build-release-run) és az átméretezéséhez (scaling up); segíti az ellenálló képességet, ugyanis ha szükséges, a folyamatkezelő könnyebben át tudja mozgatni a folyamatot egy új fizikai eszközre.
 

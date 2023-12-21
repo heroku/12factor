@@ -1,16 +1,16 @@
 ## X. Fejlesztés/üzemeltetés hasonlóság
 ### A fejlesztés, a tesztelés és az üzemeltetés legyen annyira hasonló, amennyire ez egyáltalán lehetséges
 
-Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az alkalmazás helyi [üzembehelyezését (deploy)](./codebase) élőben módosítja) és az üzemeltetés (az alkalmazás végfelhasználók által elérhető, éppen futó üzembehelyezése (deploy)) között.  Ezek az eltérések és az ezekből adódó problémák három területen jelentkeznek:
+Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az alkalmazás helyi [üzembehelyezését (deployment)](./codebase) élőben módosítja) és az üzemeltetés (az alkalmazás végfelhasználók által elérhető, éppen futó üzembehelyezése (deployment)) között.  Ezek az eltérések és az ezekből adódó problémák három területen jelentkeznek:
 
 * **Az idő különbség:** A fejlesztő munkája a kódon az üzemeltetett alkalmazásba hetek vagy akár hónapok múlva kerül.
-* **A személyi különbség**: A kódot a fejlesztő írja, az üzembehelyezést (deploy) az üzemeltető mérnök végzi.
+* **A személyi különbség**: A kódot a fejlesztő írja, az üzembehelyezést (deployment) az üzemeltető mérnök végzi.
 * **Az eszköz különbség**:  a fejlesztő dolgozhat olyan csomaggal, amiben Nginx, SQLite és OS X van, az üzemeltetés viszont Apache, MySQL és Linux környezetet használ.
 
-**A tizenkét tényezős alkalmazást a [szünetmentes üzembehelyezés](http://avc.com/2011/02/continuous-deployment/) miatt eleve úgy tervezzük, hogy ez a különbség a fejlesztés, a tesztelés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
+**A tizenkét tényezős alkalmazást a [szünetmentes üzembehelyezés (continuous deployment)](http://avc.com/2011/02/continuous-deployment/) miatt eleve úgy tervezzük, hogy ez a különbség a fejlesztés, a tesztelés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
 
 * Az időbeli különséget tegyük kicsivé: a fejlesztő írhat kódot, ami órák, de akár akár percek alatt üzembe van helyezve (deploy).
-* A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deploy), és közelről figyeli az üzembehelyezett (deploy)alkalmazás viselkedését.
+* A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deployment), és közelről figyeli az üzembehelyezett (deploy)alkalmazás viselkedését.
 * Az eszközökben megjelenő különbséget tegyük kicsivé: megtartva a fejlesztési és az üzemeltetési környezetet olyan hasonlónak, amennyire csak lehet.
 
 Összegezve ebben a táblázatban:

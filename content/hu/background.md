@@ -1,7 +1,7 @@
 Háttér
 ======
 
-Mi, ezen dokumentum készítői, közvetlenül több száz alkalmazás fejlesztésében és üzembehelyezésében (deploy) vettünk részt, közvetett módon, munkánk során a <a href="http://www.heroku.com/" target="_blank">Heroku</a> platformon keresztül pedig százezernyi alkalmazás fejlesztését, üzemeltetését és skálázódását figyeltük meg.
+Mi, ezen dokumentum készítői, közvetlenül több száz alkalmazás fejlesztésében és üzembehelyezésében (deployment) vettünk részt, közvetett módon, munkánk során a <a href="http://www.heroku.com/" target="_blank">Heroku</a> platformon keresztül pedig százezernyi alkalmazás fejlesztését, üzemeltetését és skálázódását figyeltük meg.
 
 Ez a dokumentum összefoglalja minden tapasztalatunkat és megfigyelésünket számos, széles körben elterjedt szoftver-mint-szolgáltatás (SaaS) alkalmazás kapcsán. Az alkalmazásfejlesztés ideális gyakorlatainak három irányból történő vizsgálatával jött létre, különös figyelmet fordítva egyrészt az alkalmazásnak az idő múlásával bekövetkező természetes növekedésére és szerves fejlődésére, másrészt az alkalmazás kódbázisán dolgozó fejlesztők együttműködésének a dinamikájára, harmadrészt a <a href="http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/" target="_blank">szoftveravulás</a> költségének elkerülésére.
 
