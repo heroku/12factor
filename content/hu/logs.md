@@ -9,7 +9,7 @@ A naplók az összegyűjtött és idő szerint rendezett [események folyamatos 
 
 A tesztelési vagy az üzemeltetési telepítéseknél minden folyamat adatsorát (stream) a futtatókörnyezet rögzíti, összevonva az alkalmazás összes többi adatsorával (stream), egy vagy több végső célállomás felé irányítva a megtekintéshez és a hosszú távú archiváláshoz. Ezek az archívumok nem láthatók és konfigurálhatók az alkalmazás által, helyette teljes egészében a futtatókörnyezet kezeli őket. Ehhez nyílt forráskódú naplóforgalom írányító eszközök állnak rendelkezésre (mint a [Logplex](https://github.com/heroku/logplex) és a [Fluentd](https://github.com/fluent/fluentd)).
 
-Az alkalmazás eseményeinek adatsorát (stream) irányíthatjuk állományba, vagy valós időben figyelhetjük terminálablakban. A legfontosabb, hogy az adatsort (stream) elküldhetjük egy naplóindexelő és elemző rendszerbe, mint a [Splunk](http://www.splunk.com/), vagy egy általános célú adattárház eszközbe, mint a[Hadoop/Hive](http://hive.apache.org/). Ezek a rendszerek nagy erőt és rugalmasságot biztosítanak egy alkalmazás időbeli viselkedésének vizsgálatához, ideértve:
+Az alkalmazás eseményeinek adatsorát (stream) irányíthatjuk állományba, vagy valós időben figyelhetjük terminálablakban. A legfontosabb, hogy az adatsort (stream) elküldhetjük egy naplóindexelő és elemző rendszerbe, mint a [Splunk](http://www.splunk.com/), vagy egy általános célú adattárház eszközbe, mint a [Hadoop/Hive](http://hive.apache.org/). Ezek a rendszerek nagy erőt és rugalmasságot biztosítanak egy alkalmazás időbeli viselkedésének vizsgálatához, ideértve:
 
 * Meghatározott múltbeli események keresése.
 * A trendek tágabb nézőpontból történő ábrázolása (mint például a percenkénti kérések száma).

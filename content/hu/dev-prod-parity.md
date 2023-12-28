@@ -9,7 +9,7 @@ Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az
 
 **A tizenkét tényezős alkalmazást a [szünetmentes üzembehelyezés (continuous deployment)](http://avc.com/2011/02/continuous-deployment/) miatt eleve úgy tervezzük, hogy ez a különbség a fejlesztés, a tesztelés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
 
-* Az időbeli különséget tegyük kicsivé: a fejlesztő írhat kódot, ami órák, de akár akár percek alatt üzembe van helyezve (deploy).
+* Az időbeli különbséget tegyük kicsivé: a fejlesztő írhat kódot, ami órák, de akár akár percek alatt üzembe van helyezve (deploy).
 * A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deployment), és közelről figyeli az üzembehelyezett (deploy) alkalmazás viselkedését.
 * Az eszközökben megjelenő különbséget tegyük kicsivé: megtartva a fejlesztési és az üzemeltetési környezetet olyan hasonlónak, amennyire csak lehet.
 
@@ -63,7 +63,7 @@ A [háttérszolgáltatások](./backing-services), mint például az alkalmazás 
     <td>Gyorsítótár</td>
     <td>Ruby/Rails</td>
     <td>ActiveSupport::Cache</td>
-    <td>Memory, filesystem, Memcached</td>
+    <td>Memória, állományrendszer, Memcached</td>
   </tr>
 </table>
 
@@ -71,6 +71,6 @@ A fejlesztők néha nagyon vonzónak találják, ha a saját fejlesztési körny
 
 **A tizenkét tényezős fejlesztő ellenáll annak a kísértésnek, hogy más háttérszolgáltatást használjon a fejlesztési és az üzemeltetési környezetben**, még akkor is, ha az adapterek elméletileg eltüntetnek bármilyen különbséget a háttérszolgáltatások között.  A háttérszolgáltatások közötti különbségek azt jelentik, hogy apró együttműködési problémák merülhetnek fel azt eredményezve, hogy a kód, ami működött és megfelelően teljesített a teszteken a fejlesztési és a tesztkörnyezetekben is, üzemeltetés közben hibára fut. A hibáknak ez a típusa súrlódást hoz létre ami kiszámíthatatlanná teszi a szünetmentes üzembehelyzés (continuous deployment) használatát. Ennek a súrlódásnak és a szünetmentes üzembehelyezés (continuous deployment) fékezésének a költsége az alkalmazás életciklusára összegezve rendkívül magas.
 
-A pehelysúlyú háttérszolgáltatások ma már nem olyan vonzóak, mint korábban voltak.  A modern háttérszolgáltatásokat, mint a Memcached, a PostgreSQL és a RabbitMQ a modern csomagkezelési rendszereknek köszönhetően -mint a [Homebrew](http://mxcl.github.com/homebrew/) és az [apt-get](https://help.ubuntu.com/community/AptGet/Howto)- már egyáltalán nem körülményes telepíteni és futtatni. Alternatív megoldásként a deklaratív telepítő eszközök, mint a [Chef](http://www.opscode.com/chef/) és a [Puppet](http://docs.puppetlabs.com/) kombinálva a vékony virtuális rendszerekkel, mint a [Docker](https://www.docker.com/) és a [Vagrant](http://vagrantup.com/) lehetővé teszik a fejlesztők számára, hogy olyan fejlesztési környezetben dolgozhassanak ami nagyon megközelíti az üzemeltetési környezetet. Ezen rendszerek telepítésének és használatának a költsége alacsony - összehasonlítva a fejlesztés/üzemeltetés egyensúly valamint a szünetmentes üzembehelyezés (continuous deployment) előnyeivel.
+A pehelysúlyú háttérszolgáltatások ma már nem olyan vonzóak, mint korábban voltak.  A modern háttérszolgáltatásokat, mint a Memcached, a PostgreSQL és a RabbitMQ a modern csomagkezelési rendszereknek köszönhetően -mint a [Homebrew](http://mxcl.github.com/homebrew/) és az [apt-get](https://help.ubuntu.com/community/AptGet/Howto)- már egyáltalán nem körülményes telepíteni és futtatni. Alternatív megoldásként a deklaratív telepítő eszközök, mint a [Chef](http://www.opscode.com/chef/) és a [Puppet](http://docs.puppetlabs.com/) kombinálva a vékony virtuális rendszerekkel, mint a [Docker](https://www.docker.com/) és a [Vagrant](http://vagrantup.com/), lehetővé teszik a fejlesztők számára, hogy olyan fejlesztési környezetben dolgozhassanak ami nagyon megközelíti az üzemeltetési környezetet. Ezen rendszerek telepítésének és használatának a költsége alacsony - összehasonlítva a fejlesztés/üzemeltetés egyensúly valamint a szünetmentes üzembehelyezés (continuous deployment) előnyeivel.
 
 A különböző háttérszolgáltatások eléréséhez adaptereket használni továbbra is hasznos, mivel az újabb háttérszolgáltatásokra való áttérést relatív fájdalommentessé teszik. De az alkalmazás valamennyi telepítésének (fejlesztési környezet, tesztelés és üzemeltetés) azonos típusú és verziójú háttérszolgáltatásokat kellene használnia.
