@@ -4,7 +4,7 @@
 A [kódbázis](./codebase) három ütemben formálódik át egy (nem fejlesztői környezetben) üzembehelyezett (deploy) alkalmazássá:
 
 * Az *előállítási ütem (build stage)* az a transzformáció, amikor a forráskód kódtára (repository) átalakul futtatható alkalmazássá (build), ezt a lépést *előállítás (build)*-nak hívjuk. Ez megfogja a forráskódnak azt a változatát (commit), amit az üzembehelyezési folyamat (deployment process) kijelölt, hozzáveszi a [függőségeket](./dependencies) majd előállítja a szükséges bináris állományokat és erőforrásokat, így elkészítve futtatható alkalmazást (build).
-* A *közreadási ütem (build stage)* átveszi az előállítási ütemben (build stage) előállított futtatható alkalmazást (build), és párosítja az aktuális telepítési [konfigurációval](./config). Az eredményül kapott *közreadási változat* (release) tartalmazza a futtatható állományokat plusz a megfelelő konfigurációt, és alkalmas arra, hogy a futtatókörnyezetben azonnal beüzemeljük és használjuk.
+* A *közreadási ütem (release stage)* átveszi az előállítási ütemben (build stage) előállított futtatható alkalmazást (build), és párosítja az aktuális telepítési [konfigurációval](./config). Az eredményül kapott *közreadási változat* (release) tartalmazza a futtatható állományokat plusz a megfelelő konfigurációt, és alkalmas arra, hogy a futtatókörnyezetben azonnal beüzemeljük és használjuk.
 * Az *futtatási ütem (run stage)* (nevezzük "runtime"-nak is) a közreadási változatot (release) felhasználva futtatja az alkalmazást a végrehajtási környezetben, elindítva a megfelelő [folyamatait](./processes).
 
 ![A kódból futtatható alkalmazás (build) lesz, amit a konfigurációval kombinálunk a közreadási változat (release) létrehozásához.](/images/release.png)

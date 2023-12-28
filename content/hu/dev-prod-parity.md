@@ -10,7 +10,7 @@ Történeti okokból jelentős eltérések vannak a fejlesztés (a fejlesztő az
 **A tizenkét tényezős alkalmazást a [szünetmentes üzembehelyezés (continuous deployment)](http://avc.com/2011/02/continuous-deployment/) miatt eleve úgy tervezzük, hogy ez a különbség a fejlesztés, a tesztelés és az üzemeltetés között kicsi legyen.** Nézzük a három különbséget egyenként:
 
 * Az időbeli különséget tegyük kicsivé: a fejlesztő írhat kódot, ami órák, de akár akár percek alatt üzembe van helyezve (deploy).
-* A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deployment), és közelről figyeli az üzembehelyezett (deploy)alkalmazás viselkedését.
+* A személyi különbséget tegyük kicsivé: a kódot megíró fejlesztő szorosan be van vonva az üzembehelyezésbe (deployment), és közelről figyeli az üzembehelyezett (deploy) alkalmazás viselkedését.
 * Az eszközökben megjelenő különbséget tegyük kicsivé: megtartva a fejlesztési és az üzemeltetési környezetet olyan hasonlónak, amennyire csak lehet.
 
 Összegezve ebben a táblázatban:

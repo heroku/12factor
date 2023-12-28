@@ -3,9 +3,9 @@
 
 Az alkalmazás *konfigurációja* minden olyan dolog, ami valószínüleg változik az egyes [üzembehelyezések](./codebase) (deployment) között (tesztelési, üzemeltetési, fejlesztői környezetek, stb.). Ideértve:
 
-* Erőforráskezelők az adatbázishoz, a Memcached-hez és a további [háttérszolgáltatások](./backing-services) eléréséséhez
+* Erőforráskezelők az adatbázis, a Memcached és a további [háttérszolgáltatások](./backing-services) eléréséséhez
 * Hozzáférési és hitelesítő adatok olyan külső szolgáltatásokhoz mint az Amazon S3 vagy a Twitter
-* Olyan, üzembehelyezésenként (deployment) különböző értékek, mint az adott környezetben az egyedi név (canonical hostname)
+* Olyan, üzembehelyezésenként (deployment) különböző értékek, mint az adott környezetben az egyedi kiszolgálónév (canonical hostname)
 
 Az alkalmazások néha konstansként tartalmaznak beállítási információkat a forráskódban. Ez megsérti a 12 tényezős alkalmazásfejlesztési alapelveket, aminek teljesítéséhez **szigorúan szét kell választani a konfigurációs értékeket a forráskódtól**.  A konfiguráció üzembehelyezésenként (deployment) jelentősen különbözik, a forráskód nem.
 

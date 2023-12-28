@@ -20,7 +20,7 @@ A Tizenkét Tényező
 ### Alkalmazás egy vagy több állapotmentes folyamatként futtatva
 
 ## [VII. Hálózati port hozzárendelés](./port-binding)
-### Szolgáltatásaok elérhetővé tétele port hozzárendeléssel
+### Szolgáltatások elérhetővé tétele port hozzárendeléssel
 
 ## [VIII. Párhuzamos folyamatok](./concurrency)
 ### Méretezés a folyamatmodell segítségével
