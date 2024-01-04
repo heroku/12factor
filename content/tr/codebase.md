@@ -1,18 +1,17 @@
 ## I. Kod Tabanı
-### Bir çok dağıtım kod tabanı gözden geçirme kontrolünde izlenmeli
+### Sürüm kontrol sistemi üzerinde tek bir kod tabanı, birden fazla dağıtım
 
-On iki faktör bir uygulama her zaman [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/) veya [Subversion](http://subversion.apache.org/) gibi bir sürüm takip sistemiyle izlenir. VEritabanının gözden geçirme sisteminin bir kopyası *kod deposu* olarak bilinir. *kod repo* ya da sadece *repo* olarak kısaltılır.
+On iki faktör bir uygulama her zaman [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/) veya [Subversion](http://subversion.apache.org/) gibi bir sürüm kontrol sistemiyle izlenir. Bu sürüm kontrol sistemindeki dosya veritabanına kod deposu (İng. code repository) veya kısaca depo (İng. repo) denir.
 
-Bir *kod tabanı* herhangi tek bir depo(Subversion gibi merkezi gözden geçirme kontrol sistemi) ya da kök işleyicini paylaşan bir takım repodur(Git gibi merkezi olmayan gözden geçirme kontrol sistemi).
+Bir *kod tabanı*, tek bir depo (Subversion gibi merkezi sürüm kontrol sistemi) ya da kök *commit* paylaşan birden fazla depodan (Git gibi merkezi olmayan sürüm kontrol sistemi) oluşur.
 
 ![Bir kod tabanı bir çok dağıtımla eşlenir](/images/codebase-deploys.png)
 
-Kod tabanı ve uygulama arasında bire-bir ilişki her zaman vardır:
+Kod tabanı ve uygulama arasında her zaman birebir ilişki vardır:
 
 * Eğer birden fazla kod tabanı varsa bu bir uygulama değil, dağıtık sistemdir. Dağıtık sistemdeki her bileşen bir uygulamadır ve her biri on iki faktörle bireysel olarak uyumlu olmalıdır.
 * Aynı kodu paylaşan birden fazla uygulama, on iki faktörü ihlal eder. Burada çözüm, paylaşılan kodun [bağımlılık yöneticisi](./dependencies) aracılığıyla dahil edilebilecek kütüphanelere dönüştürülmesidir.
 
+Uygulamanın sadece bir kod tabanı vardır fakat birden fazla dağıtımı olacaktır. Bir *dağıtım*, uygulamanın çalışan bir örneğidir. Bu dağıtımlar genelde bir canlı yayın (İng. production) ve bir veya birkaç test ortamıdır. Ayrıca her geliştiricinin kendi yerel geliştirme ortamında çalışan bir kopyası vardır ve bunların her biri aynı zamanda dağıtım olarak nitelendirilirler.
 
-Uygulamanın sadece bir kod tabanı vardır fakat birden fazla dağıtımı olacaktır. Bir *dağıtım*, uygulamanın çalışan bir örneğidir. Ayrıca her geliştiricinin kendi yerel geliştirme ortamında çalışan bir kopyası vardır ve bunların her biri aynı zamanda dağıtım olarak nitelendirilirler.
-
-Sürümler her bir dağıtımda etkin olabilir fakat kod temeli tüm dağıtımlarda aynıdır. Örneğin, geliştiricilerin henüz uygulamaya eklenmemiş commitleri olabilir. Bu nedenle hepsi ayrı dağıtım olarak tanımlanır ama kod tabanı aynıdır.
+Dağıtımlarda anlık olarak farklı sürümler etkin olabilir fakat kod tabanı tüm dağıtımlarda aynıdır. Örneğin, bir geliştirici henüz commit'lemediği değişiklikleri çalıştırıyor olabilir, veya test ortamında henüz canlı yayına dağıtılmamış bir sürüm çalışıyor olabilir. Bu nedenle hepsi ayrı dağıtım olarak tanımlanır ama kod tabanı aynıdır.
