@@ -1,24 +1,20 @@
-The Twelve-Factor App
-=====================
+# The Twelve-Factor App
 
 Source for the content app running at: https://12factor.net/
 
-Development
------------
+## Development
 
-    bundle install
-    heroku local:start
-    open http://localhost:5000
+```sh
+bundle install
+heroku local:start
+open http://localhost:5000
+```
 
-Production deploy
------------------
+## Deployment
 
-    heroku create
-    git push heroku master
-    heroku open
+Changes should take place through Pull Requests. Deployment of changes is automatic when merged into `main`.
 
-Meta
-----
+## Meta
 
 Created by Adam Wiggins
 
