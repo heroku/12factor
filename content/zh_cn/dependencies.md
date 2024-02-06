@@ -1,7 +1,7 @@
 ## II. 依赖
 ### 显式声明依赖关系（ *dependency* ）
 
-大多数编程语言都会提供一个打包系统，用来为各个类库提供打包服务，就像 Perl 的 [CPAN](http://www.cpan.org/) 或是 Ruby 的 [Rubygems](http://rubygems.org/) 。通过打包系统安装的类库可以是系统级的（称之为 "site packages"），或仅供某个应用程序使用，部署在相应的目录中（称之为 "vendoring" 或 "bunding"）。
+大多数编程语言都会提供一个打包系统，用来为各个类库提供打包服务，就像 Perl 的 [CPAN](http://www.cpan.org/) 或是 Ruby 的 [Rubygems](http://rubygems.org/) 。通过打包系统安装的类库可以是系统级的（称之为 "site packages"），或仅供某个应用程序使用，部署在相应的目录中（称之为 "vendoring" 或 "bundling"）。
 
 **12-Factor规则下的应用程序不会隐式依赖系统级的类库。** 它一定通过 *依赖清单* ，确切地声明所有依赖项。此外，在运行过程中通过 *依赖隔离* 工具来确保程序不会调用系统中存在但清单中未声明的依赖项。这一做法会统一应用到生产和开发环境。
 
