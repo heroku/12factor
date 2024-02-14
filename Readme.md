@@ -4,13 +4,16 @@ Source for the content app running at: https://12factor.net/
 
 ## Development
 
+### Prerequisites
+
+You will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/), [heroku](https://devcenter.heroku.com/articles/heroku-cli?utm_source=redirect&utm_campaign=cli)
+
+### Run
 ```sh
 bundle install
-heroku local:start
+heroku local:start &
 open http://localhost:5000
 ```
-
-## Deployment
 
 Changes should take place through Pull Requests. Deployment of changes is automatic when merged into `main`.
 
