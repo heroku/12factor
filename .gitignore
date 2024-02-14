@@ -3,3 +3,4 @@
 .tool-versions
 .DS_Store
 .idea
+Gemfile.lock
