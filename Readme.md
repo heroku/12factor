@@ -15,6 +15,8 @@ heroku local:start &
 open http://localhost:5000
 ```
 
+## Deployment
+
 Changes should take place through Pull Requests. Deployment of changes is automatic when merged into `main`.
 
 ## Meta
