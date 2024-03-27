@@ -1,0 +1,14 @@
+## IV. Backing-diensten
+### Behandel backing services als bijgevoegde bronnen
+
+Een *backing service* is een service die de app via het netwerk gebruikt als onderdeel van zijn normale werking. Voorbeelden zijn datastores (zoals [MySQL](http://dev.mysql.com/) of [CouchDB](http://couchdb.apache.org/)), messaging/queueing systemen (zoals [RabbitMQ](http://www.rabbitmq.com/) of [Beanstalkd](https://beanstalkd.github.io)), SMTP diensten voor uitgaande email (zoals [Postfix](http://www.postfix.org/)), en caching systemen (zoals [Memcached](http://memcached.org/)).
+
+Backing services zoals de database worden traditioneel beheerd door dezelfde systeembeheerders die de runtime van de app implementeren. Naast deze lokaal beheerde diensten, kan de app ook diensten hebben die door derden worden geleverd en beheerd. Voorbeelden zijn SMTP-diensten (zoals [Postmark](http://postmarkapp.com/)), metriek-verzamelende diensten (zoals [New Relic](http://newrelic.com/) of [Loggly](http://www.loggly.com/)), binaire asset-diensten (zoals [Amazon S3](http://aws.amazon.com/s3/)), en zelfs API-toegankelijke consumentendiensten (zoals [Twitter](http://dev.twitter.com/), [Google Maps](https://developers.google.com/maps/), of [Last.fm](http://www.last.fm/api)).
+
+**De code voor een 12-factor app maakt geen onderscheid tussen lokale diensten en diensten van derden.** Voor de app zijn beide verbonden resources, toegankelijk via een URL of andere locator/credentials opgeslagen in de [config](./config). Een [deploy](./codebase) van de 12-factoren app zou in staat moeten zijn om een lokale MySQL database te verwisselen met een die wordt beheerd door een derde partij (zoals [Amazon RDS](http://aws.amazon.com/rds/)) zonder enige wijzigingen aan de code van de app. Op dezelfde manier zou een lokale SMTP-server kunnen worden vervangen door een SMTP-service van een derde partij (zoals Postmark) zonder codewijzigingen. In beide gevallen hoeft alleen de resource handle in de config veranderd te worden.
+
+Elke afzonderlijke backing service is een *resource*. Bijvoorbeeld, een MySQL database is een bron; twee MySQL databases (gebruikt voor sharding op de applicatielaag) kwalificeren als twee verschillende bronnen. De 12-factor app behandelt deze databases als *attached resources*, wat aangeeft dat ze losgekoppeld zijn aan de deploy waaraan ze gekoppeld zijn.
+
+<img src="/images/attached-resources.png" class="full" alt="A production deploy attached to four backing services." />
+
+Resources kunnen naar believen aan deploys worden toegevoegd of ervan worden losgekoppeld. Bijvoorbeeld, als de database van de app zich niet goed werkt vanwege een hardwareprobleem, kan de app-beheerder een nieuwe databaseserver opstarten die is hersteld vanaf een recente back-up. De huidige productiedatabase kan worden losgekoppeld en de nieuwe database aangekoppeld -- allemaal zonder enige codewijziging.
