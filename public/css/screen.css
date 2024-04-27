@@ -168,3 +168,9 @@ article img.full {
   float: none;
   margin-left: 0;
 }
+
+.cpra a img {
+  height: 17px;
+  margin-bottom: -2px !important;
+  margin-right: 5px;
+}

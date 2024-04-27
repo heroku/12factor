@@ -9,6 +9,6 @@
 
 内存区域或磁盘空间可以作为进程在做某种事务型操作时的缓存，例如下载一个很大的文件，对其操作并将结果写入数据库的过程。12-Factor应用根本不用考虑这些缓存的内容是不是可以保留给之后的请求来使用，这是因为应用启动了多种类型的进程，将来的请求多半会由其他进程来服务。即使在只有一个进程的情形下，先前保存的数据（内存或文件系统中）也会因为重启（如代码部署、配置更改、或运行环境将进程调度至另一个物理区域执行）而丢失。
 
-源文件打包工具（[Jammit](http://documentcloud.github.com/jammit/), [django-compressor](http://django-compressor.readthedocs.org/)） 使用文件系统来缓存编译过的源文件。12-Factor 应用更倾向于在 [构建步骤](./build-release-run) 做此动作——正如 [Rails资源管道](http://guides.rubyonrails.org/asset_pipeline.html) ，而不是在运行阶段。
+源文件打包工具（[Jammit](http://documentcloud.github.io/jammit/), [django-compressor](http://django-compressor.readthedocs.org/)） 使用文件系统来缓存编译过的源文件。12-Factor 应用更倾向于在 [构建步骤](./build-release-run) 做此动作——正如 [Rails资源管道](http://guides.rubyonrails.org/asset_pipeline.html) ，而不是在运行阶段。
 
 一些互联网系统依赖于 “[粘性 session ](http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence)”， 这是指将用户 session 中的数据缓存至某进程的内存中，并将同一用户的后续请求路由到同一个进程。粘性 session 是 12-Factor 极力反对的。Session 中的数据应该保存在诸如 [Memcached](http://memcached.org/) 或 [Redis](http://redis.io/) 这样的带有过期时间的缓存中。

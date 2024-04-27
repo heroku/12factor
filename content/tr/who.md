@@ -1,4 +1,4 @@
 Bu belgeyi kim okumalı?
 =======================
 
-Herhangi bir çalışan uygulama geliştirenler. Bu tür uygulamaları dağıtan ve yöneten Ops mühendisleri.
+Servis yazılımı geliştiren tüm geliştiriciler. Bu tür uygulamaları yayınlayan ve yöneten operasyon mühendisleri.

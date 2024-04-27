@@ -11,4 +11,4 @@ Kwestię obsługi takich zapytań można rozwiązać dodając bibliotekę webser
 
 HTTP nie jest jedyną usługą, którą możną eksportować przez przydzielenie portu. Niemal każdy rodzaj oprogramowania serwerowego może być uruchomiony przez przydzielenie portu na którym jest uruchomiony proces i oczekiwać na przychodzące zapytania. Do przykładów należą [ejabberd](http://www.ejabberd.im/) (komunikujący się przez [XMPP](http://xmpp.org/)), oraz [Redis](http://redis.io/) (komunikujący się przez [Redis protocol](http://redis.io/topics/protocol)).
 
-Warto również zauważyć, że przez przydzielnie portu aplikacja może pełnić funkcję [usługi wspierającej](./backing-services) dla innej aplikacji przez udostępnienie swojego adresu URL jako adres zasobu w [konfiguracji](./config) tejże aplikacji.
+Warto również zauważyć, że przez przydzielenie portu aplikacja może pełnić funkcję [usługi wspierającej](./backing-services) dla innej aplikacji przez udostępnienie swojego adresu URL jako adres zasobu w [konfiguracji](./config) tejże aplikacji.
