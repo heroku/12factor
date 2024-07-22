@@ -5,7 +5,7 @@ GEM
     concurrent-ruby (1.2.2)
     daemons (1.4.1)
     eventmachine (1.2.7)
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     maruku (0.7.3)
     mustermann (3.0.0)
