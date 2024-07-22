@@ -1,24 +1,25 @@
-The Twelve-Factor App
-=====================
+# The Twelve-Factor App
 
 Source for the content app running at: https://12factor.net/
 
-Development
------------
+## Development
 
-    bundle install
-    heroku local:start
-    open http://localhost:5000
+### Prerequisites
 
-Production deploy
------------------
+You will need [Ruby](https://www.ruby-lang.org/en/documentation/installation/), [heroku](https://devcenter.heroku.com/articles/heroku-cli?utm_source=redirect&utm_campaign=cli)
 
-    heroku create
-    git push heroku master
-    heroku open
+### Run
+```sh
+bundle install
+heroku local:start &
+open http://localhost:5000
+```
 
-Meta
-----
+## Deployment
+
+Changes should take place through Pull Requests. Deployment of changes is automatic when merged into `main`.
+
+## Meta
 
 Created by Adam Wiggins
 
