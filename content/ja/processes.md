@@ -9,6 +9,6 @@
 
 プロセスのメモリ空間やファイルシステムは、短い単一のトランザクション内でのキャッシュとして利用してもよい。例えば、大きなファイルをダウンロードし、そのファイルを処理し、結果をデータベースに格納するという一連の処理において、ファイルシステムをキャッシュとして利用できる。Twelve-Factor Appは、メモリやディスクにキャッシュされたものが将来のリクエストやジョブにおいて利用できることを決して仮定しない -- それぞれのプロセスタイプのプロセスが多く実行されている場合、将来のリクエストやジョブが別のプロセスで処理される可能性が高い。1つのプロセスしか実行されていない場合であっても、プロセスが再起動すると、すべての局所的な状態（メモリやファイルシステムなど）が消えてしまうことがある。プロセスの再起動の要因としては、コードのデプロイ、設定の変更、プロセスを別の物理位置に再配置する実行環境などがある。
 
-アセットパッケージャー（例：[Jammit](http://documentcloud.github.com/jammit/) や [django-compressor](http://django-compressor.readthedocs.org/)）は、コンパイルされたアセットをキャッシュするためにファイルシステムを利用する。Twelve-Factor Appは、このコンパイル処理を実行時に行うよりも、[Rails asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html)のように[ビルドステージ](./build-release-run)で行うほうが、望ましいと考えている。
+アセットパッケージャー（例：[Jammit](http://documentcloud.github.io/jammit/) や [django-compressor](http://django-compressor.readthedocs.org/)）は、コンパイルされたアセットをキャッシュするためにファイルシステムを利用する。Twelve-Factor Appは、このコンパイル処理を実行時に行うよりも、[Rails asset pipeline](http://guides.rubyonrails.org/asset_pipeline.html)のように[ビルドステージ](./build-release-run)で行うほうが、望ましいと考えている。
 
 Webシステムの中には、[“スティッキーセッション”](http://en.wikipedia.org/wiki/Load_balancing_%28computing%29#Persistence)に頼るものがある -- これはユーザーのセッションデータをアプリケーションプロセスのメモリにキャッシュし、同じ訪問者からの将来のリクエストが同じプロセスに送られることを期待するものである。スティッキーセッションはTwelve-Factorに違反しており、決して使ったり頼ったりしてはならない。セッション状態のデータは、有効期限を持つデータストア（例：[Memcached](http://memcached.org/) や [Redis](http://redis.io/)）に格納すべきである。
