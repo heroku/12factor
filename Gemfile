@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '3.3.0'
+ruby File.read('.ruby-version').strip
 
 gem 'sinatra'
 gem 'thin'
