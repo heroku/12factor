@@ -2,6 +2,7 @@ require 'sinatra'
 require 'maruku'
 require 'i18n'
 require 'rack/ssl-enforcer'
+require 'rtl'
 
 configure do
   use Rack::SslEnforcer if ENV['FORCE_SSL']
@@ -64,6 +65,16 @@ helpers do
         "<a href=\"#{path_prefix}/#{factor}\">#{I18n.t(:language, :locale => locale)}</a>"
       end
     }.join(" | ")
+  end
+
+  def render_direction
+    locale = I18n.locale
+    unless locale.to_s.empty?
+      if Rtl.rtl? locale
+        return 'rtl'
+      end
+      'ltr'
+    end
   end
 end
 
