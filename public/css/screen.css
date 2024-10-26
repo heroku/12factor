@@ -174,3 +174,11 @@ article img.full {
   margin-bottom: -2px !important;
   margin-right: 5px;
 }
+
+article.rtl {
+  direction: rtl;
+}
+
+article.ltr {
+  direction: ltr;
+}

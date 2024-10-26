@@ -17,6 +17,7 @@ GEM
     rack-ssl-enforcer (0.2.9)
     rexml (3.3.2)
       strscan
+    rtl (0.6.0)
     ruby2_keywords (0.0.5)
     sinatra (3.2.0)
       mustermann (~> 3.0)
@@ -38,6 +39,7 @@ DEPENDENCIES
   maruku
   rack-ssl-enforcer
   rexml
+  rtl
   sinatra
   thin
 
