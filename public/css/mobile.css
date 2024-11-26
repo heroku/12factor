@@ -35,7 +35,7 @@
     max-width: none;
   }
 
-  article h1, article h2, article h3, article p, article table {
+  article h1, article h2, article h3, article h6,  article p, article table {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -84,7 +84,7 @@
     max-width: 480px;
   }
 
-  article h1, article h2, article h3, article p, article table {
+  article h1, article h2, article h3, article h6, article p, article table {
     padding-left: 15px;
     padding-right: 15px;
     text-align: left;
@@ -117,5 +117,37 @@
   footer {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .header-container {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .title-wrapper {
+    flex: 1;
+    text-align: center;
+  }
+
+  .header-container h1 {
+    font-size: 18px; /* Slightly smaller font for small screens */
+  }
+
+  .top-nav {
+    position: static;
+    margin-left: auto;
+    display: flex;
+    margin-top: 1em;
+    justify-content: center;
+  }
+  
+  .top-nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .top-nav li {
+    margin-left: 0.5rem; /* Reduce spacing for small screens */
+    margin-right: 0.5rem; /* Reduce spacing for small screens */
   }
 }
