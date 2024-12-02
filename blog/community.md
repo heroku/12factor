@@ -25,3 +25,11 @@ Thank you for your interest in the twelve-factor manifesto. Here are some sugges
      first issue](https://github.com/twelve-factor/twelve-factor/issues?q=is%3Aissue+is%3Aopen+label%3Agood+first+issue)
      for beginners, or explore areas where you feel you can provide value.
     - More details can be found in [The Contributing document](https://github.com/twelve-factor/twelve-factor/blob/main/CONTRIBUTING.md).
+
+## Meetings
+
+The maintainers group meets weekly in our [discord](https://discord.gg/9HFMDMt95z) at 8:00 AM PST.
+
+Invite links:
+[(gcal)](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Twelve-Factor+Maintainers+Meeting&dates=20241205T160000Z/20241205T170000Z&details=Weekly+meeting+to+discuss+updates+and+maintenance+for+the+Twelve-Factor+manifesto.&location=https%3A%2F%2Fdiscord.com%2Fchannels%2F1296917489615110174%2F1296917489615110178&recur=RRULE:FREQ=WEEKLY)
+[(ics)](/maintainers.ics)

@@ -1,3 +1,14 @@
+## [December Monthly Updates](/blog/december-monthly-updates)
+###### 3 Dec, 2024
+### [Vish Abrams](https://github.com/vishvananda)
+![Vish Abrams](/images/bios/vish.jpg) Welcome to our first monthly update\!
+We're excited to share our progress and what's coming next.
+
+#### What We've Been Working On
+
+In addition to some minor formatting fixes, our initial focus has been on
+getting organized for larger updates. Here are the key activities: **[read on...](/blog/december-monthly-updates)**
+
 ## [Twelve-Factor App Methodology is now Open Source](/blog/open-source-announcement)
 ###### 12 Nov, 2024
 ### [Yehuda Katz](https://github.com/wycats)
