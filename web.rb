@@ -150,12 +150,14 @@ helpers do
 
   def default_url
     uri = URI(request.url)
+    uri.query = nil
     uri.path = request.path_info
     uri.to_s
   end
 
   def locale_url(locale)
     uri = URI(request.url)
+    uri.query = nil
     uri.path = "/#{locale}#{request.path_info}"
     uri.to_s
   end
