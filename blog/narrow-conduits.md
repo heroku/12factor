@@ -1,7 +1,7 @@
 # Narrow Conduits and the Application-Platform Interface
 ###### 12 Nov, 2024
 ### [Vish Abrams](https://github.com/vishvananda)
-![Vish Abrams](/images/bios/vish.jpg) Welcome to the twelve-factor maintainters blog. As stated in [our announcemnt](/blog/open-source-announcement), some of our posts will analyze the manifesto more generically. This is the first post in that vein,  where we dive into the interface between the application and the platform.
+![Vish Abrams](/images/bios/vish.jpg) Welcome to the twelve-factor maintainters blog. As stated in [our announcement](/blog/open-source-announcement), some of our posts will analyze the manifesto more generically. This is the first post in that vein,  where we dive into the interface between the application and the platform.
 
 It is well understood that defining a clear contract between parts of a system allows one to shed cognitive load on either side of the contract. This has been called the "narrow-waist" principle which has some unfortunate connotations, so we'll refer to it as the "narrow-conduit" principle. This principle is especially valuable when the humans on either side of the conduit have dramatically different concerns.
 
