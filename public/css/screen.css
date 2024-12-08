@@ -175,6 +175,14 @@ article img.full {
   margin-right: 5px;
 }
 
+article.rtl {
+  direction: rtl;
+}
+
+article.ltr {
+  direction: ltr;
+}
+
 .header-container {
   position: relative;
   justify-content: space-between;
