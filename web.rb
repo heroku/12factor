@@ -70,7 +70,7 @@ TOC = %w(codebase dependencies config backing-services build-release-run process
 
 
 
-POSTS = %w(open-source-announcement narrow-conduits)
+POSTS = %w(open-source-announcement narrow-conduits december-monthly-updates)
 get '/blog/:post' do |post|
   halt 404 unless POSTS.include?(post)
   @post = post
@@ -151,12 +151,14 @@ helpers do
 
   def default_url
     uri = URI(request.url)
+    uri.query = nil
     uri.path = request.path_info
     uri.to_s
   end
 
   def locale_url(locale)
     uri = URI(request.url)
+    uri.query = nil
     uri.path = "/#{locale}#{request.path_info}"
     uri.to_s
   end
