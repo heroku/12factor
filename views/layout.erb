@@ -8,7 +8,9 @@
   <meta name="author" content="Adam Wiggins">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="canonical" href="<%= request.url %>">
+  <%= alternate_links %>
+  <link rel="shortcut icon" href="/images/favicon.ico">
 
   <link rel="stylesheet" href="/css/screen.css" media="screen">
   <link rel="stylesheet" href="/css/mobile.css" media="screen">
@@ -30,7 +32,35 @@
   <% end %>
 
   <header>
-    <h1><a href="./" title="The Twelve-Factor App">The Twelve-Factor App</a></h1>
+  <div class="header-container">
+  <% if request.path_info.start_with?('/blog') %>
+    <div class="title-wrapper">
+        <h1><a href="/blog" title="The Twelve-Factor Blog">The Twelve-Factor Blog</a></h1>
+    </div>
+    <div class="top-nav">
+      <ul>
+        <li><a href="/">App</a></li>
+        <li><a href="/community">Community</a></li>
+        <li><a href="https://github.com/twelve-factor/twelve-factor" class="github-button">
+          <img src="/images/github-mark.svg" alt="GitHub logo" class="github-logo">GitHub
+        </a></li>
+      </ul>
+    </div>
+  <% else %>
+    <div class="title-wrapper">
+        <h1><a href="/" title="The Twelve-Factor App">The Twelve-Factor App</a></h1>
+    </div>
+    <div class="top-nav">
+      <ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/community">Community</a></li>
+        <li><a href="https://github.com/twelve-factor/twelve-factor" class="github-button">
+          <img src="/images/github-mark.svg" alt="GitHub logo" class="github-logo">GitHub
+        </a></li>
+      </ul>
+    </div>
+  <% end %>
+  </div>
   </header>
 
   <%= yield %>
@@ -43,6 +73,7 @@
   <div><a href="/12factor.epub">Download ePub Book</a></div>
   <div><a href="https://www.heroku.com/policy/privacy">Privacy Policy</a></div>
   <div class="cpra"><a rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/"><img src="/images/privacy.png" aria-label="Privacy Icon" title="Privacy Icon">Your Privacy Choices</a></div>
+  <div><a class="optanon-toggle-display" rel="nofollow" href="#">Cookie Preferences</a></div>
 </footer>
 </body>
 </html>

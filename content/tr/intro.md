@@ -1,11 +1,12 @@
 Giriş
 ==========
 
-Modern çağda yazılımlar yaygın olarak servis olarak sunulur;*web uygulamaları* ya da *yazılım hizmetleri*. On iki faktörlü uygulama, aşağıdaki gibi bir yazılım hizmeti oluşturmak için bir yöntemdir:
+Modern çağda yazılımlar çoğunlukla "web uygulaması" ya da "yazılım hizmeti" olarak isimlendirilen servisler olarak sunulurlar. *On iki faktörlü uygulama*, servis olarak çalışan yazılımlar (İng. *software as a service* veya *SaaS*) geliştirmek için bir yöntembilimdir. Bu yöntembilimin kuralları ve faydaları şunlardır:
 
-* Projeye katılan yeni geliştiriciler için zaman ve maliyeti en aza indirmek için ayar otomasyonu için **bildirim** biçimleri kullanılır;
-* Çalışma ortamları arasında maksimum taşınabilirlik sunan temel işletim sistemi ile **şifresiz sözleşmesi** vardır
+* Projenin kurulum otomasyonu için **açıklayıcı** (İng. declarative) biçimler kullanır. Bu şekilde, projeye yeni katılan geliştiricilerin geliştirmeye başlama zamanını ve maliyetinı en aza indirir;
+* Üzerinde çalıştığı işletim sistemi ile arasında **basit bir bağlılık** vardır. Bu, tüm çalıştırma ortamlarına (Docker gibi *container* sistemleri ve sıradan işletim sistemlerine) **maksimum uyumluluk** sağlar;
 * Sunucu ve sistem yönetimine olan ihtiyacı ortadan kaldıran modern **bulut platformlarına kurulum** için uygundur;
-* İşlem, mimari veya geliştirme uygulamalarında önemli değişiklikler olmaksızın **ölçek büyültülebilir**.
+* Geliştirme ve canlı yayın ortamları arasında **farklılıklaşmayı minimize ederek**, maksimum çeviklik ile **sürekli dağıtımı**n önünü açar;
+* Kullanılan araçlarda, mimaride veya geliştirme pratiklerinde önemli değişikliklere gerek duymadan **ölçeklenebilir**.
 
-On iki faktör uygulaması herhangi bir programlama dili ile yazılmış uygulamalara uygulanabilir ve destek servislerinin herhangi bir kombinasyonu kullanılabilir (Veritabanı, kuyruk, önbellek vb.).
+On iki faktör uygulaması herhangi bir programlama dili ile yazılmış ve yardımcı (veritabanları, kuyruk işleyiciler, önbellek, vb. gibi) servislerin herhangi bir kombinasyonuna sahip tüm uygulamalara uygulanabilir.
