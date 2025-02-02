@@ -7,7 +7,7 @@ Históricamente, han existido dos tipos de entorno muy diferenciados: desarrollo
 * **Diferencias de personal**: Los desarrolladores escriben el código y los ingenieros de operaciones lo despliegan.
 * **Diferencias de herramientas**: Los desarrolladores pueden usar una pila como Nginx, SQLite y OS X, mientras que en producción se usa Apache, MySQL y Linux.
 
-** Las aplicaciones "twelve-factor" están diseñadas para hacer [despliegues continuos](http://avc.com/2011/02/continuous-deployment/) que reducen las diferencias entre los entornos de desarrollo y producción.** Teniendo en cuenta las tres diferencias descritas anteriormente:
+**Las aplicaciones "twelve-factor" están diseñadas para hacer [despliegues continuos](http://avc.com/2011/02/continuous-deployment/) que reducen las diferencias entre los entornos de desarrollo y producción.** Teniendo en cuenta las tres diferencias descritas anteriormente:
 
 * Reducir las diferencias de tiempo: Un desarrollador puede escribir código y tenerlo desplegado en tan solo unas horas, o incluso, minutos más tarde.
 * Reducir las diferencias de personal: Los desarrolladores que escriben el código están muy involucrados en el despliegue y observan su comportamiento en producción.
