@@ -6,22 +6,6 @@
 ## Evan Anderson
 ### Stacklok (independent)
 ![Evan Anderson](/images/bios/evan.jpg) Evan worked for about 15 years in Google's cloud, with about 10 years in the public cloud.  During that time, he was a founding member of the Google Compute Engine team, then worked on App Engine (control plane API), Cloud Functions, and Knative/Cloud Run. In 2019, he moved to VMware, where he spent 4 years on VMware Tandy, VMware’s cloud-native developer platform.   He’s also the author of "Designing Serverless Applications with Knative", and has held many leadership roles in Knative over the years.
-## Gail Frederick 
-### Heroku/Salesforce
-![Gail Frederick](/images/bios/gail.jpg) As Heroku CTO, Gail is a Salesforce leader known for her technical excellence and drive to deliver. She stewards the opinionated magic that is Heroku’s developer platform. Prior to Heroku, Gail led engineering for Salesforce DX. Her values are integrity, impact, and joy.
-Previously, VP Engineering at eBay, where she was the 2019 winner of the John Donahoe Award, eBay’s highest leadership award, for building a new $3B annual GMB business by reinventing eBay’s developer ecosystem.
-Member of 2024 Curve Power List of 50 LGBTQ+ women and non-binary leaders. Formerly, executive advisory board member of Lesbians Who Tech, Business Governing Board member of OpenAPI Initiative at the Linux Foundation, and represented eBay at the founding of the Facebook-led Libra Initiative. 
-Gail holds 9 software patents.
-## Steren Giannini
-### Google Cloud
-![Steren Giannini](/images/bios/steren.jpg) Steren is an engineer turned product manager. He is leading product management for Google Cloud's serverless portfolio (Cloud Run, Cloud Run functions, App Engine). He is a founding member of Cloud Run.
-
-[https://twitter.com/steren](https://twitter.com/steren)
-
-[https://www.linkedin.com/in/steren](https://www.linkedin.com/in/steren)
-
-[https://steren.fr](https://steren.fr)
-
 ## Brian Hammons
 ### AWS
 ![Brian Hammons](/images/bios/brian.jpg) Brian Hammons, a Principal Solutions Architect at AWS, is an original member of the launch team for Amazon EKS. He has held crucial roles in growing the service from its inception including co-founding projects such as eksworkshop.com, Data on EKS (DoEKS), and CNOE.  Brian leads Application Modernization and Developer Productivity practice areas for AWS Strategic Industries as well as the Open Source Technical Field Community (TFC) of AWS Worldwide Specialists (WWSO).
@@ -49,3 +33,22 @@ He was the co-author of the [Extensible Web Manifesto](https://extensiblewebmani
 ## Brett Weaver
 ### Intuit
 ![Brett Weaver](/images/bios/brett.jpg) Brett Weaver is a Distinguished Engineer at Intuit.  He has spent the last twenty two odd years at Intuit in various software development and systems engineer roles.  He has been focused on building distributed, scalable architectures for Intuit’s flagship products including Quickbooks and TurboTax.  Most recently, Brett has been leading architecture for Intuit’s internal services platform.
+
+# Emeritus
+
+## Gail Frederick 
+### Heroku/Salesforce
+![Gail Frederick](/images/bios/gail.jpg) As Heroku CTO, Gail is a Salesforce leader known for her technical excellence and drive to deliver. She stewards the opinionated magic that is Heroku’s developer platform. Prior to Heroku, Gail led engineering for Salesforce DX. Her values are integrity, impact, and joy.
+Previously, VP Engineering at eBay, where she was the 2019 winner of the John Donahoe Award, eBay’s highest leadership award, for building a new $3B annual GMB business by reinventing eBay’s developer ecosystem.
+Member of 2024 Curve Power List of 50 LGBTQ+ women and non-binary leaders. Formerly, executive advisory board member of Lesbians Who Tech, Business Governing Board member of OpenAPI Initiative at the Linux Foundation, and represented eBay at the founding of the Facebook-led Libra Initiative. 
+Gail holds 9 software patents.
+## Steren Giannini
+### Google Cloud
+![Steren Giannini](/images/bios/steren.jpg) Steren is an engineer turned product manager. He is leading product management for Google Cloud's serverless portfolio (Cloud Run, Cloud Run functions, App Engine). He is a founding member of Cloud Run.
+
+[https://twitter.com/steren](https://twitter.com/steren)
+
+[https://www.linkedin.com/in/steren](https://www.linkedin.com/in/steren)
+
+[https://steren.fr](https://steren.fr)
+

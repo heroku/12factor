@@ -28,8 +28,8 @@ Thank you for your interest in the twelve-factor manifesto. Here are some sugges
 
 ## Meetings
 
-The maintainers group meets weekly in our [discord](https://discord.gg/9HFMDMt95z) at 8:00 AM PST.
+The maintainers group meets weekly in our [discord](https://discord.gg/9HFMDMt95z) at 8:30 AM PST.
 
 Invite links:
-[(gcal)](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Twelve-Factor+Maintainers+Meeting&dates=20241205T160000Z/20241205T170000Z&details=Weekly+meeting+to+discuss+updates+and+maintenance+for+the+Twelve-Factor+manifesto.&location=https%3A%2F%2Fdiscord.com%2Fchannels%2F1296917489615110174%2F1296917489615110178&recur=RRULE:FREQ=WEEKLY)
+[(gcal)](https://calendar.google.com/calendar/render?action=TEMPLATE&text=Twelve-Factor+Maintainers+Meeting&dates=20241205T163000Z/20241205T170000Z&details=Weekly+meeting+to+discuss+updates+and+maintenance+for+the+Twelve-Factor+manifesto.&location=https%3A%2F%2Fdiscord.com%2Fchannels%2F1296917489615110174%2F1296917489615110178&recur=RRULE:FREQ=WEEKLY)
 [(ics)](/maintainers.ics)
