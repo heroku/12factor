@@ -70,7 +70,7 @@ TOC = %w(codebase dependencies config backing-services build-release-run process
 
 
 
-POSTS = %w(open-source-announcement narrow-conduits december-monthly-updates)
+POSTS = %w(open-source-announcement narrow-conduits december-monthly-updates evolving-twelve-factor)
 get '/blog/:post' do |post|
   halt 404 unless POSTS.include?(post)
   @post = post
