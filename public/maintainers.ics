@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Twelve-Factor Maintainers//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:Twelve-Factor-Maintainers-Meeting
+SUMMARY:Twelve-Factor Maintainers Meeting
+DTSTART:20241205T163000Z
+DTEND:20241205T170000Z
+DESCRIPTION:Weekly meeting to discuss updates and maintenance for the Twelve-Factor manifesto.
+LOCATION:https://discord.com/channels/1296917489615110174/1296917489615110178
+RRULE:FREQ=WEEKLY
+END:VEVENT
+END:VCALENDAR

@@ -174,3 +174,106 @@ article img.full {
   margin-bottom: -2px !important;
   margin-right: 5px;
 }
+
+.header-container {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.title-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.header-container h1 {
+  margin: 0;
+}
+
+.top-nav {
+  position: absolute;
+  right: 2rem; /* Position the navigation links on the right side */
+  top: 25%;
+  transform: translateY(-25%); /* Vertically center-align the links */
+  z-index: 2;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li {
+  margin-left: 1rem;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.github-button {
+  margin-top: -4px;
+  margin-left: -4px;
+  display: flex;
+  align-items: center;
+  background-color: #0366d6; /* GitHub blue color */
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+a.github-button:hover {
+  background-color: #024ea2; /* Darker blue on hover */
+  text-decoration: none;
+}
+
+.github-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.blog img {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+.blog h6 {
+  color: darkgray;
+  font-size: 0.9em;          /* Make it slightly smaller than default heading sizes */
+  font-weight: normal;       /* Make it less bold to differentiate from main headings */
+  margin-top: 0;             /* Remove extra margin at the top */
+  margin-bottom: 5px;        /* Minimal spacing below the date */
+}
+
+.maintainers img {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 0px;
+}
+
+.maintainers h2 {
+  clear: both;
+}

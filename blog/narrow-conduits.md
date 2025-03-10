@@ -1,0 +1,22 @@
+# Narrow Conduits and the Application-Platform Interface
+###### 12 Nov, 2024
+### [Vish Abrams](https://github.com/vishvananda)
+![Vish Abrams](/images/bios/vish.jpg) Welcome to the twelve-factor maintainters blog. As stated in [our announcement](/blog/open-source-announcement), some of our posts will analyze the manifesto more generically. This is the first post in that vein,  where we dive into the interface between the application and the platform.
+
+It is well understood that defining a clear contract between parts of a system allows one to shed cognitive load on either side of the contract. This has been called the "narrow-waist" principle which has some unfortunate connotations, so we'll refer to it as the "narrow-conduit" principle. This principle is especially valuable when the humans on either side of the conduit have dramatically different concerns.
+
+One way to think about twelve-factor as a whole is a narrow conduit between the application developer and the platform developer. The Manifesto provides other conduits as well, but this is a good place to start the discussion. Historically, for application developers this interface was source code, and the source code was ultimately handed off to an operations team. As software evolved through the era of DevOps, the hand-off morphed from code into a container image, with the development team generally taking on the container building duties.
+
+As systems have become more distributed, the deployment and management of multiple containers have become the developers’ concern, with many companies focusing operations teams on building and maintaining a platform and development teams operating the systems themselves.
+
+This has led to application developers writing code for container orchestration systems directly, often relying on templating systems like helm or infrastructure as code systems like terraform to do the heavy lifting. The challenge with this approach is that the world of the application developer is no longer simple. Development, build, and deployment concerns are all mixed together. We no longer have a narrow conduit.
+
+In an ideal world an application developer would only need to worry about their source code and the platform would take care of everything else. Reducing the conduit aperture back to this level is challenging because it means eliminating features. It is necessary to ask: what functionality can we sacrifice on the altar of simplicity.
+
+Ultimately, what we are looking for is a perfect balance: enough functionality to solve real problems, but not so much that we fall into the sea of complexity. The de-facto interface that has evolved between an application developer and the platform, the container orchestration system, is actually the wrong interface. It works, but it does not provide the cleanest and most valuable contract between the two worlds. Application developers should optimally stay focused on their application code. They need clear interfaces to be able to refer to connected systems from within the code. The container is a useful artifact for deployment consistency, but its existence is an implementation detail of the platform.
+
+Instead, the contract needs to focus on how platform information makes its way into application code. For example: how does the application code know where it is reachable on the internet? How does it securely connect with other systems? It is the role of the platform to provide a mechanism for configuration information. Conversely, it is the role of the application to be built in a way that it can be deployed anywhere and scaled automatically so the platform can do its job.
+
+One of the primary purposes of the twelve-factor update is to refresh this contract between the application and the platform in a way that makes both application developers and platform developers lives easier. Without this agreement, applications become special snowflakes that are both unmaintainable and un-operatable.
+
+One of the most challenging aspects of this change is managing expectations for engineers that feel like they are losing something. Having access to a full orchestration system allows application developers to build anything, and shrinking the interface means reducing their power. The payoff is worth the loss: less application complexity and simplified operations. The cat is running wild, but we all benefit if we can find a way to coax it back into the bag.  
