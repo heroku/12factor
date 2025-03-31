@@ -11,7 +11,7 @@
 ### Lưu trữ cấu hình trong môi trường
 
 ## [IV. Dịch vụ hỗ trợ](./backing-services)
-### Dịch vụ hỗ trợ như là tài nguyên bổ xung
+### Dịch vụ hỗ trợ như là tài nguyên bổ sung
 
 ## [V. Xây dựng, phát hành, vận hành](./build-release-run)
 ### Tách biệt hoàn toàn giữa bước xây dựng và vận hành
