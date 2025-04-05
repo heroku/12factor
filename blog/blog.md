@@ -1,5 +1,15 @@
+## [Why Intuit is Thrilled About the Evolution of the Twelve-Factor Model](/blog/intuit-thrilled)
+###### 03 Apr, 2025
+### Brett Weaver
+![Brett Weaver](/images/bios/brett.jpg) At Intuit, we've long embraced the
+twelve-factor app principles as a guiding framework for modern software
+development. As a company building cutting-edge development tools and runtime
+platforms for our internal engineers, these principles have been instrumental
+in unifying service developers, platform engineers, and SREs under a shared
+philosophy. **[read on...](/blog/intuit-thrilled)**
+
 ## [Evolving Twelve-Factor: Applications to Modern Cloud-Native Platforms](/blog/evolving-twelve-factor)
-###### 10 Feb, 2024
+###### 10 Feb, 2025
 ### [Brian Hammons](https://github.com/bhammons)
 ![Brian Hammons](/images/bios/brian.jpg) The recent [**open sourcing of the Twelve-Factor App Methodology**](https://blog.heroku.com/heroku-open-sources-twelve-factor-app-definition) comes at a transformative moment for cloud-native platforms. As organizations increasingly rely on cloud-native technologies to power mission-critical workloads, the principles behind Twelve-Factor offer timeless foundations that remain relevant for modern platform builders. **[read on...](/blog/evolving-twelve-factor)**
 
