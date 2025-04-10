@@ -1,5 +1,213 @@
-<section class="abstract" id="post">
-  <article class="blog">
-    <%= render_post('blog') %>
-  </article>
-</section>
+
+<!-- Content -->
+<main id="content">
+
+  <!-- Hero block -->
+  <section class="pageblock js-pageblock pageblock--hero">
+    <div class="pageblock__inner">
+      <div class="container-fluid">
+        <div class="l-hero__row row align-items-center justify-content-center">
+          <div class="l-hero__col--left col-12 full-width">
+            <div class="hero__content">
+              <h1>Blog</h1>
+              <p class="intro-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Blog Posts Block (Post feed) -->
+  <section class="pageblock pageblock--post-feed bg-color-white">
+    <div class="pageblock__inner">
+      <div class="container-fluid">
+        <div class="row align-items-start justify-content-center">
+          <div class="l-posts__column col--full-width featured-posts col-12">
+            <div class="featured-posts__row row">
+              <div class="featured-posts__inner col-12">
+                <h2 class="featured-posts__block-title text-center"><span>Featured Posts</span></h2>
+                <div class="l-posts__row row">
+
+                  <% TwelveFactor::BLOG.featured.each do |post| %>
+                  <a href="<%= post.url %>" class="post-teaser post type-post post-blog featured-post col-12 col-xl-4">
+                    <div class="post-teaser__inner">
+                      <% if post.image_path %>
+                      <div class="post-teaser__image">
+                        <img width="600" height="400" src="<%= post.image_path %>" />
+                      </div>
+                      <% end %>
+                      <div class="post-teaser__content">
+                        <div class="post-teaser__meta">
+                          <div class="post-meta__item post-meta__item--author-img"><img src="<%= post.author.image_path %>" alt="<%= post.author.name %>"></div>
+                          <div class="post-meta__item post-meta__item--author-name"><%= post.author.name %></div>
+                          <div class="post-meta__item post-meta__item--separator">•</div>
+                          <div class="post-meta__item post-meta__item--date"><%= post.front_matter['date'].strftime('%d %b, %Y') %></div>
+                        </div>
+                        <h3 class="post-teaser__title"><%= post.front_matter['title'] %></h3>
+                        <%# <div class="post-teaser__categories"><span>Codebase</span><span>Dependencies</span><span>Disposability</span></div> %>
+                      </div>
+                    </div>
+                  </a>
+                  <% end %>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog landing -->
+  <section class="pageblock pageblock--post-landing blog">
+    <div class="pageblock__inner">
+
+      <div class="blog-landing-filters">
+        <%# <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="blog-landing-filters__top">
+                <p class="blog-landing-filters__header">Filter Results</p>
+              </div>
+              <div class="blog-landing-filters__bottom blog-landing-filters__facets">
+
+                <div class="facetwp-facet facet-first facetwp-facet-tags facetwp-type__dropdown facetwp-type-dropdown" data-name="tags" data-type="dropdown">
+                  <label for="tags" class="facetwp-facet__label sr-only" data-for="tags">
+                    <span class="sr-only">Tag</span>
+                  </label>
+                  <select id="tags" class="facetwp-dropdown facetwp-facet__dropdown" aria-label="Filter by Tag">
+                    <option value="">— Select Tag —</option>
+                    <option value="option_1">Alpha</option>
+                    <option value="option_2">Beta</option>
+                    <option value="option_3">Gamma</option>
+                  </select>
+                </div>
+
+                <div class="facetwp-facet  facetwp-facet-author facetwp-type__dropdown facetwp-type-dropdown" data-name="author" data-type="dropdown">
+                  <label for="author" class="facetwp-facet__label sr-only" data-for="author">
+                    <span class="sr-only">Author</span>
+                  </label>
+                  <select id="author" class="facetwp-dropdown facetwp-facet__dropdown" aria-label="Filter by Author">
+                    <option value="">— Select Author —</option>
+                    <option value="option_1">Aaron Aardvark</option>
+                    <option value="option_2">Betty Binturong</option>
+                    <option value="option_3">Gemmy Giraffe</option>
+                  </select>
+                </div>
+
+                <div class="facetwp-facet facetwp-facet-blog_search facetwp-type__search facetwp-type-search" data-name="blog_search" data-type="search">
+                  <label for="blog_search" class="facetwp-facet__label sr-only" data-for="blog_search">
+                    <span class="sr-only">Blog Search</span>
+                  </label>
+                  <input type="text" id="blog_search" class="facetwp-search facetwp-facet__search" value="" placeholder="Search" autocomplete="off" aria-label="Blog Search">
+                  <!-- <i class="facetwp-icon facetwp-facet__search-icon"></i> -->
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <button class="facet__search-submit facet-last btn-primary" aria-label="Search Submit">Submit</span></button>
+
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="blog-landing-results-meta">
+                  <div class="blog-landing-results-meta__count">Showing <strong>12</strong> of <strong>36</strong> Results</div>
+                  <div class="blog-landing-results-meta__clear"><a href="#" role="button">Reset Filters <i class="fa-solid fa-circle-xmark"></i></a></div>
+              </div>
+            </div>
+          </div> %>
+            <div class="container-fluid">
+
+          <% TwelveFactor::BLOG.all.each do |post| %>
+          <div class="row">
+            <!-- results here -->
+            <div class="blog-landing-results col-12">
+              <div class="l-posts__row row">
+
+                <a href="<%= post.url %>" class="post-teaser post type-post post-blog col-12 col-xl-4">
+                  <div class="post-teaser__inner">
+                    <% if post.image_path %>
+                    <div class="post-teaser__image">
+                      <img width="600" height="400" src="<%= post.image_path %>" />
+                    </div>
+                    <% end %>
+                    <div class="post-teaser__content">
+                      <div class="post-teaser__meta">
+                        <% if post.author.image_path %>
+                          <div class="post-meta__item post-meta__item--author-img"><img src="<%= post.author.image_path %>"></div>
+                        <% end %>
+                        <div class="post-meta__item post-meta__item--author-name"><%= post.author.name %></div>
+                        <div class="post-meta__item post-meta__item--separator">•</div>
+                        <div class="post-meta__item post-meta__item--date"><%= post.date %></div>
+                      </div>
+                      <h3 class="post-teaser__title"><%= post.title %></h3>
+                      <% if post.categories? %> 
+                      <div class="post-teaser__categories">
+                        <% post.categories.each do |category| %>
+                          <span><%= category %></span>
+                        <% end %>
+                      </div>
+                      <% end %>
+                    </div>
+                  </div>
+                </a>
+              </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# <div class="row">
+    <div class="blog-pager pagination col-12" data-name="pagination" data-type="pager">
+      <div class="pager" role="navigation">
+        <a class="page prev inactive" data-page="1" role="link" aria-label="Go to previous page" tabindex="0"><i class="fa-solid fa-caret-left"></i> Previous</a>
+        <a class="page first active" data-page="1" role="link" aria-label="Go to page 1" aria-current="true">1</a>
+        <a class="page last" data-page="2" role="link" aria-label="Go to page 2">2</a>
+                <a class="page next active" data-page="2" role="link" aria-label="Go to next page" tabindex="0">Next <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section> %>
+
+  <!-- Interstitial CTA -->
+  <section class="pageblock js-pageblock pageblock--oms-cta pageblock--oms-cta-global pageblock--interstitial pageblock--interstitial-top-bg-white pageblock--interstitial-bottom-bg-black ">
+    <div class="pageblock__inner">
+      <div class="container-fluid">
+        <div class="l-cta__row row">
+
+          <div class="l-cta__col l-cta__col--content col-12">
+            <div class="cta">
+              <div class="cta__content">
+                <h2>H2 – Conversion Focused Header Text for Bottom of Page</h2>
+                <p class="intro-text">Friendly text further encouraging the user to choose to take action. Donec mollis hendrerit risus.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="l-cta__col l-cta__col--content col-12 ">
+            <div class="cta">
+              <div class="cta__actions d-flex flex-row justify-content-center">
+                <a href="#" class="btn-secondary"><i class="fa-brands fa-github"></i> Twelve-Factor on GitHub</a>
+                <a href="#" class="btn-primary">Explore Community</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

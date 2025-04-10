@@ -1,0 +1,44 @@
+ /**
+ * Image/text page block
+ */
+.pageblock--oms-image-text {
+
+    // Image / Text
+    .image-text {
+
+        &__image-wrap {
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: auto;
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+        &__content {
+
+            @include media-breakpoint-up(lg) {
+                padding: 0 oms-px-to-rem(25px) 0 0;
+            }
+        }
+    }
+
+    // Text / Image
+    &.layout-text-image {
+
+        .image-text {
+
+            &__image-wrap {
+    
+                &:after {
+                    left: auto;
+                    right: 0;
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+}

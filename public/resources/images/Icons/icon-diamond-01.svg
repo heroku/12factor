@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-diamond-01</title>
+    <defs>
+        <path d="M49.5,36.399 L58,50 L49.5,63.174 L41,50 L49.5,36.399 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="19" height="28.775">
+            <rect x="40" y="35.399" width="19" height="28.775" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="icon-diamond-01" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-11">
+            <rect id="Icon" x="0" y="0" width="100" height="100"></rect>
+            <path d="M38,18.9433981 L57.407717,49.9957453 L38,80.0777067 L18.592283,49.9957453 L38,18.9433981 Z" id="Rectangle" stroke="#79589F" fill-opacity="0.2" fill="#430098"></path>
+            <path d="M61,18.9433981 L80.407717,49.9957453 L61,80.0777067 L41.592283,49.9957453 L61,18.9433981 Z" id="Rectangle-Copy" stroke="#79589F" fill-opacity="0.2" fill="#430098"></path>
+            <use id="Combined-Shape" stroke="#79589F" mask="url(#mask-2)" stroke-width="2" fill-opacity="0.2" fill="#430098" stroke-dasharray="1" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

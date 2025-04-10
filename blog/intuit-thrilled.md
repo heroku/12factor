@@ -1,15 +1,17 @@
-# Why Intuit is Thrilled About the Evolution of the Twelve-Factor Model
+---
+title: Why Intuit is Thrilled About the Evolution of the Twelve-Factor Model
+date: 2025-04-03
+author: brett
+featured: true
+---
 
-###### 03 Apr, 2025
+At Intuit, we've long embraced the twelve-factor app principles as a guiding
+framework for modern software development. As a company building cutting-edge
+development tools and runtime platforms for our internal engineers, these
+principles have been instrumental in unifying service developers, platform
+engineers, and SREs under a shared philosophy.
 
-### Brett Weaver
-
-![Brett Weaver](/images/bios/brett.jpg) At Intuit, we've long embraced the
-twelve-factor app principles as a guiding framework for modern software
-development. As a company building cutting-edge development tools and runtime
-platforms for our internal engineers, these principles have been instrumental
-in unifying service developers, platform engineers, and SREs under a shared
-philosophy.
+<!-- END_EXCERPT -->
 
 By fostering a universal understanding across teams, we've eliminated friction
 between services, platforms, and dependencies. Concepts like running

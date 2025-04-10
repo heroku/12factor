@@ -1,0 +1,74 @@
+// Social Media Share
+.share {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: oms-px-to-rem(55px);
+    padding-bottom: oms-px-to-rem(35px);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: oms-px-to-rem(75px);
+    }
+
+    &__title {
+        @include webfont();
+        font-size: oms-px-to-rem(13px);
+        color: $text-body-color;
+        letter-spacing: oms-px-to-rem(0.5px);
+        line-height: 1;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 oms-px-to-rem(10px);
+
+            &:before {
+                display: none;
+            }
+
+            a {
+                background-image: none !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: oms-px-to-rem(20px);
+                height: oms-px-to-rem(20px);
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+                &:after {
+                    display: none;
+                }
+
+                .icon-color {
+                    transition: all .3s ease-out;
+                }
+
+                .new-window-icon {
+                    display: none;
+                }
+
+                &:hover,
+                &:active {
+                    transition: all .3s ease-out;
+
+                    .icon-color {
+                        fill: $color-purple;
+                        transition: all .3s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}

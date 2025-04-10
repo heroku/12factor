@@ -1,0 +1,73 @@
+// Table styles for tables without a class (e.g. table elements in WYSIWYG content)
+table:not([class]) {
+    border: none;
+    border-collapse: collapse;
+    caption-side: top;
+    width: 100%;
+
+    thead {
+        background-color: $color-purple;
+
+        th {
+
+            /*&:first-of-type {
+                width: 25%;
+
+                @include media-breakpoint-up(xl) {
+                    width: 50%;
+                }
+            }*/
+        }
+    }
+
+    th {
+
+        @include webfont-medium();
+        color: $text-light-color;
+        font-size: oms-px-to-rem(18);
+        line-height: oms-px-to-rem(30);
+
+
+        //vertical-align: top;
+        padding: oms-px-to-rem(10px) oms-px-to-rem(15px);
+
+        @include media-breakpoint-down(xl) {
+            display: block;
+        }
+    }
+
+    tbody {
+
+        tr {
+            background-color: transparent;
+            border-bottom: solid 1px $color-dark-purple;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            td {
+                @include webfont();
+                color: $text-body-color;
+                font-size: oms-px-to-rem(18);
+
+                line-height: oms-px-to-rem(30px);
+
+                //vertical-align: top;
+                padding: oms-px-to-rem(10px) oms-px-to-rem(15px);
+
+                @include media-breakpoint-down(xl) {
+                    display: block;
+                }
+
+                &:first-of-type {
+                    @include webfont-medium();
+                }
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+/**
+ * Form Styles
+ */
+.form {
+    background-color: white;
+    border-radius: oms-px-to-rem(5px);
+    padding: oms-px-to-rem(50px);
+
+    .form-fields {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: oms-px-to-rem(25px);
+    }
+
+    .input-container {
+        width: 100%;
+    }
+
+    .field {
+        position: relative;
+        margin: 0 oms-px-to-rem(5px) oms-px-to-rem(25px);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .field--width-half {
+        width: 100%;
+
+        @include media-breakpoint-up(xl) {
+            width: calc(50% - oms-px-to-rem(10px));
+        }
+    }
+
+    .field--width-full {
+        width: 100%;
+    }
+
+    // Label
+    .form-field-label {
+        position: absolute;
+        left: oms-px-to-rem(20px);
+        top: oms-px-to-rem(23px);
+        z-index: 1;
+        @include webfont();
+        font-size: oms-px-to-rem(15px);
+        color: $text-body-color;
+        letter-spacing: oms-px-to-rem(0.25px);
+        line-height: 1;
+        transition: all .3s ease-out;
+        padding: 0;
+
+        &.focused {
+            left: oms-px-to-rem(20px);
+            top: oms-px-to-rem(10px);
+            font-size: oms-px-to-rem(9px) !important;
+            transition: all .3s ease-out;
+        }
+    }
+
+    // Field
+    .floating-label label,
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    select,
+    textarea {
+        background-color: $color-light-gray;
+        border: #000;
+        border-radius: oms-px-to-rem(5px);
+        width: 100%;
+        @include webfont();
+        font-size: oms-px-to-rem(15px);
+        color: #000;
+        letter-spacing: oms-px-to-rem(0.25px);
+        line-height: oms-px-to-rem(26px);
+        transition: all 0.3s ease-out;
+        padding: oms-px-to-rem(18px) oms-px-to-rem(20px) oms-px-to-rem(14px) !important;
+
+        &::placeholder {
+            color: #000;
+        }
+
+        &:focus {
+            border-color: #000 !important;
+            outline: none;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    textarea {
+        height: oms-px-to-rem(200px);
+    }
+
+    .button {
+        margin: 0;
+
+        &:focus-visible {
+            border: solid oms-px-to-rem(2px) white !important;
+            outline: solid oms-px-to-rem(2px) black !important;
+            outline-offset: oms-px-to-rem(2px) !important;
+        }
+    }
+}

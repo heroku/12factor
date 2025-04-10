@@ -1,0 +1,152 @@
+/**
+ * OMS Columns Section
+ */
+
+.pageblock--oms-columns {
+
+    // Layout
+    .l-columns {
+
+        &__row {
+            margin-top: oms-px-to-rem(-50px);
+        }
+
+        &__col {
+            margin-top: oms-px-to-rem(50px);
+        }
+    }
+
+    // Column component
+    .column {
+        display: block;
+        height: 100%;
+
+        // Is Linked?
+        &.is-linked {
+            position: relative;
+            top: 0;
+            //text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &:active {
+
+                h3 {
+                    color: $text-body-color !important;
+                    text-decoration-color: $text-body-color !important;
+                    transition: all 0.3s ease-out;
+                }
+            }
+
+
+            &:not(.is-linked) {
+
+                .column__image-wrap {
+                    //border-color: transparent;
+                }
+            }
+
+            // Hide new window link icon
+            &[target="_blank"] {
+                position: relative;
+
+                .fa-external-link-alt {
+                    display: none;
+                }
+            }
+
+            .column__content {
+
+                h3 {
+
+                    @include webfont-medium;
+                    color: $color-purple;
+                    padding-bottom: oms-px-to-rem(3px);
+                    text-decoration: $color-purple underline dashed;
+                    text-underline-offset: oms-px-to-rem(4px);
+                    transition: all 0.3s ease-out;
+
+                    &:hover,
+                    &:active {
+                        color: $text-body-color;
+                        text-decoration-color: $text-body-color;
+                        transition: all 0.3s ease-out;
+                    }
+
+                    &:after {
+                        background-size: oms-px-to-rem(9px) oms-px-to-rem(13px);
+                        width: oms-px-to-rem(9px);
+                        height: oms-px-to-rem(13px);
+                        transition: all 0.3s ease-out;
+                    }
+                }
+
+                p,
+                span {
+                    text-decoration: none !important;
+                }
+            }
+
+            &:hover,
+            &:active {
+                top: oms-px-to-rem(-5px);
+                transition: all 0.3s ease-out;
+
+                &:before {
+                    height: oms-px-to-rem(10px);
+                    bottom: oms-px-to-rem(-10px);
+                    transition: all 0.3s ease-out;
+                }
+            }
+
+            // Add new window link icon to h3
+            &[target="_blank"] {
+                position: relative;
+
+                .column__title {
+                    position: relative;
+                }
+            }
+        }
+
+
+        //
+        // Elements
+        //
+
+        // column__image-wrap element
+        &__image-wrap {
+            //text-align: center;
+
+            margin-bottom: oms-px-to-rem(20px);
+
+            &--icon .column__image {
+                border: 1px solid $color-yellow;
+                height: oms-px-to-rem(100px);
+                width: auto;
+            }
+        }
+
+        &-text__link {
+            //text-align: center;
+        }
+
+        // column__content element
+        &__content {
+            color: $body-color;
+            text-decoration: none;
+
+            h3 {
+                font-size: oms-px-to-rem(26px) !important;
+                line-height: oms-px-to-rem(32px) !important;
+                margin: 0 0 oms-px-to-rem(10px);
+
+
+
+            }
+        }
+    }
+
+
+
+}

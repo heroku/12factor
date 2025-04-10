@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Pseudo Element</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pseudo-Element" transform="translate(5, 6) rotate(270) translate(-5, -6)translate(-0.625, 1)">
+            <rect id="Rectangle" x="5.68434189e-13" y="0" width="11.25" height="8.75"></rect>
+            <polygon id="Fill-1-Copy-15" fill="#430098" transform="translate(5.625, 5.625) rotate(90) translate(-5.625, -5.625)" points="1.25 4.54792454e-13 1.25 11.25 10 5.625"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,506 @@
+.primary-nav {
+
+    .primary-nav-row {
+        width: 100%;
+        margin: 0;
+
+        @include media-breakpoint-down(xxl) {
+            flex-wrap: nowrap;
+        }
+    }
+
+    /* General Menu Styles */
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Mobile Menu Toggle */
+    @include media-breakpoint-down(xl) {
+        width: 100%;
+        padding: 0;
+
+        .dropdown-menu {
+            background: none;
+            border-radius: 0;
+        }
+
+        .menu-item.dropdown {
+            position: relative;
+
+            > [data-toggle="dropdown"] {
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: oms-px-to-rem(44px);
+                height: oms-px-to-rem(44px);
+                position: absolute;
+                right: oms-px-to-rem(15px);
+                top: oms-px-to-rem(-2px);
+                text-align: center;
+                margin: oms-px-to-rem(12px) 0;
+                padding: 0;
+
+                .icon {
+                    // background-color: $color-dk-blue;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: oms-px-to-rem(24px);
+                    height: oms-px-to-rem(24px);
+                    text-align: center;
+
+                    &:before {
+                        border-left: oms-px-to-rem(5px) solid transparent;
+                        border-right: oms-px-to-rem(5px) solid transparent;
+                        border-top: oms-px-to-rem(7px) solid $color-yellow;
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        transform-origin: center;
+                    }
+                }
+
+                &.open {
+
+                    .icon {
+
+                        &:before {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#primary-nav {
+
+    /* Mobile Menu Styles */
+    #mobile-top-nav {
+        //background-color: $color-lt-gray;
+        margin: 0;
+        padding: oms-px-to-rem(30px) oms-px-to-rem(10px);
+    }
+
+    @include media-breakpoint-down(xl) {
+        background-color: #000;
+        border: none;
+        box-shadow: none;
+
+        .open > .dropdown-menu {
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        // Primary Menu Styles
+        .mobile-menu,
+        .top-right-menu {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0 0 0 oms-px-to-rem(10px);
+
+            // First Level
+            li {
+                border: none;
+                display: block;
+                list-style: none;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+                &:last-of-type {
+                    border: none;
+                }
+
+                &.open {
+                    background-color: transparent;
+                    //border-bottom: solid oms-px-to-rem(1px) rgba($color-dk-blue, 0.15);
+
+                    > a {
+                        @include webfont-medium();
+                    }
+                }
+
+                > a {
+                    background-color: transparent;
+                    border: none;
+                    display: inline-block;
+                    position: relative;
+                    @include webfont();
+                    font-size: oms-px-to-rem(20px);
+                    font-style: normal;
+                    color: $text-light-color;
+                    letter-spacing: oms-px-to-rem(0);
+                    line-height: oms-px-to-rem(36px);
+                    text-decoration: none;
+                    text-transform: none;
+                    margin: 0;
+                    padding: oms-px-to-rem(10px) 0;
+
+                    /*&:after {
+                        background-image: url("../images/glyph-caret-right-light-blue.svg");
+                        background-size: oms-px-to-rem(9px) oms-px-to-rem(9px);
+                        display: inline-block;
+                        content: "";
+                        width: oms-px-to-rem(9px);
+                        height: oms-px-to-rem(9px);
+                        margin-left: oms-px-to-rem(8px);
+                    }*/
+                }
+
+
+
+                &.current-menu-item > a,
+                &.current-menu-ancestor > a,
+                &.current-menu-parent > a {
+                    // text-decoration: underline oms-px-to-rem(1px) $color-md-blue !important;
+                    // text-underline-offset: oms-px-to-rem(5px);
+                }
+
+                &.nav-button {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    &.dropdown > [data-toggle=dropdown] {
+                        display: none !important;
+                    }
+
+                    a {
+                        background-color: $color-dark-purple;
+                        border: solid oms-px-to-rem(2px) transparent;
+                        border-radius: oms-px-to-rem(22px);
+                        box-shadow: none;
+                        cursor: pointer;
+                        display: block;
+                        position: relative;
+                        @include webfont-medium();
+                        font-size: oms-px-to-rem(18px);
+                        font-style: normal;
+                        color: $text-light-color;
+                        letter-spacing: oms-px-to-rem(0.25px);
+                        line-height: 1;
+                        text-align: center;
+                        text-decoration: none;
+                        z-index: 1;
+                        transition: all 0.3s ease-out;
+                        margin: 0;
+                        padding: oms-px-to-rem(15px) oms-px-to-rem(20px) oms-px-to-rem(14px);
+
+                        /*&:after {
+                            background: url("../images/glyph-caret-right-light-blue.svg") 0 0 no-repeat;
+                            background-size: 0.4375rem 0.5625rem;
+                            content: "";
+                            display: inline-block;
+                            width: 0.4375rem;
+                            height: 0.5625rem;
+                            color: $color-md-blue;
+                            transition: all .3s ease-out;
+                            margin-left: 0.5rem;
+                        }*/
+                    }
+
+                    &.current-menu-item > a,
+                    &.current-menu-ancestor > a,
+                    &.current-menu-parent > a {
+                        // text-decoration: underline oms-px-to-rem(1px) $color-md-blue !important;
+                        // text-underline-offset: oms-px-to-rem(5px);
+                    }
+                }
+
+                &.nav-button-light {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    &.dropdown > [data-toggle=dropdown] {
+                        display: none !important;
+                    }
+
+                    a {
+                        background-color: #fff;
+                        border: solid oms-px-to-rem(2px) transparent;
+                        border-radius: oms-px-to-rem(22px);
+                        box-shadow: none;
+                        cursor: pointer;
+                        display: block;
+                        position: relative;
+                        @include webfont-medium();
+                        font-size: oms-px-to-rem(18px);
+                        font-style: normal;
+                        color: $text-body-color;
+                        letter-spacing: oms-px-to-rem(0.25px);
+                        line-height: 1;
+                        text-align: center;
+                        text-decoration: none;
+                        z-index: 1;
+                        transition: all 0.3s ease-out;
+                        margin: 0;
+                        padding: oms-px-to-rem(15px) oms-px-to-rem(20px) oms-px-to-rem(14px);
+
+                        /*&:after {
+                            background: url("../images/glyph-caret-right-light-blue.svg") 0 0 no-repeat;
+                            background-size: 0.4375rem 0.5625rem;
+                            content: "";
+                            display: inline-block;
+                            width: 0.4375rem;
+                            height: 0.5625rem;
+                            color: $color-md-blue;
+                            transition: all .3s ease-out;
+                            margin-left: 0.5rem;
+                        }*/
+                    }
+                }
+
+                // Second Level
+                &.open > .dropdown-menu {
+                    //background: $color-lt-gray;
+                    border: none;
+                    display: block;
+                    position: static !important;
+                    padding-top: 0;
+                    padding-bottom: oms-px-to-rem(15px);
+
+                    &:before {
+                        display: none;
+                    }
+
+                    > li {
+                        background-color: transparent;
+                        border: none;
+                        display: list-item;
+                        list-style-type: none !important;
+                        width: 100%;
+                        max-width: none;
+                        height: auto;
+                        position: relative;
+                        font-size: oms-px-to-rem(16px);
+                        color: $text-light-color;
+                        line-height: 1;
+                        //white-space: wrap;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+
+                        &::marker {
+                            display: none !important;
+                        }
+
+                        &.open {
+                            border-bottom: none;
+                        }
+
+                        /*> [data-toggle="dropdown"] {
+                            right: oms-px-to-rem(34px);
+                            margin-top: oms-px-to-rem(4px);
+
+                            .icon {
+                                background-color: transparent;
+
+                                &:before {
+                                    border-left: oms-px-to-rem(7px) solid transparent;
+                                    border-right: oms-px-to-rem(7px) solid transparent;
+                                    border-top: oms-px-to-rem(9px) solid $color-dk-blue;
+                                }
+                            }
+                        }*/
+
+                        a {
+                            background-color: transparent;
+                            display: inline-block;
+                            position: relative;
+                            @include webfont();
+                            font-size: oms-px-to-rem(16px);
+                            font-style: normal;
+                            color: $text-light-color;
+                            letter-spacing: oms-px-to-rem(0);
+                            line-height: oms-px-to-rem(28px);
+                            text-decoration: none;
+                            text-transform: none;
+                            padding: oms-px-to-rem(5px) 0;
+                        }
+
+                        &.current-menu-item > a,
+                        &.current-menu-ancestor > a,
+                        &.current-menu-parent > a {
+                            // text-decoration: underline oms-px-to-rem(1px) $color-md-blue !important;
+                            // text-underline-offset: oms-px-to-rem(5px);
+                        }
+
+                        // Third Level
+                        /*&.open > .dropdown-menu {
+                            background: transparent;
+                            border: none;
+                            display: block;
+                            width: 100%;
+                            position: static !important;
+                            margin-left: 0;
+                            margin-right: 0;
+                            padding: 0;
+
+                            &:before {
+                                display: none;
+                            }
+
+                            > li {
+                                background-color: transparent;
+                                border: none;
+                                display: list-item;
+                                list-style: disc outside;
+                                position: relative;
+                                margin: 0 oms-px-to-rem(15px);
+                                padding: 0;
+
+                                > [data-toggle="dropdown"] {
+                                    display: none;
+                                }
+
+                                a {
+                                    background-color: transparent;
+                                    display: inline-block;
+                                    position: relative;
+                                    @include webfont();
+                                    font-size: oms-px-to-rem(17px);
+                                    font-style: normal;
+                                    color: $color-dk-blue;
+                                    letter-spacing: 0;
+                                    line-height: 1;
+                                    text-decoration: none;
+                                    text-transform: none;
+                                    padding: oms-px-to-rem(15px) 0;
+                                }
+
+                                &.current-menu-item > a,
+                                &.current-menu-ancestor > a,
+                                &.current-menu-parent > a {
+                                    text-decoration: underline oms-px-to-rem(1px) $color-md-blue !important;
+                                    text-underline-offset: oms-px-to-rem(5px);
+                                }
+
+                                // Hide fourth level
+                                ul {
+                                    display: none;
+                                }
+                            }
+                        } */
+                    }
+                }
+            }
+        }
+
+        .top-right-menu {
+            background-color: white;
+            width: calc(100% + oms-px-to-rem(20px));
+            margin: 0 oms-px-to-rem(-10px) oms-px-to-rem(10px);
+            padding: oms-px-to-rem(20px) oms-px-to-rem(20px) 0;
+        }
+    }
+
+    /* Tablet Specific Menu Styles */
+    @include media-breakpoint-only(md) {
+        max-width: calc(100% + oms-px-to-rem(150px));
+        margin-left: oms-px-to-rem(-75px);
+        margin-right: oms-px-to-rem(-75px);
+
+        .menu-item.dropdown {
+            position: relative;
+
+            > [data-toggle="dropdown"] {
+                right: 0;
+            }
+
+            // Second Level
+            &.open {
+
+                li > [data-toggle="dropdown"] {
+                    right: oms-px-to-rem(15px) !important;
+                }
+            }
+        }
+
+        .mobile-menu,
+        .top-right-menu {
+            padding-left: oms-px-to-rem(75px);
+            padding-right: oms-px-to-rem(75px);
+        }
+
+        .top-right-menu {
+            background-color: white;
+            margin: 0 oms-px-to-rem(-10px) oms-px-to-rem(10px);
+            padding: oms-px-to-rem(20px) oms-px-to-rem(75px) 0;
+
+            // First Level
+            li {
+                margin: 0 oms-px-to-rem(10px);
+
+                &.nav-button {
+                    margin: 0 oms-px-to-rem(10px);
+                }
+            }
+        }
+    }
+
+    /* Desktop Specific Menu Styles */
+    @include media-breakpoint-only(lg) {
+        max-width: calc(100% + oms-px-to-rem(200px));
+        margin-left: oms-px-to-rem(-100px);
+        margin-right: oms-px-to-rem(-100px);
+
+        .menu-item.dropdown {
+            position: relative;
+
+            > [data-toggle="dropdown"] {
+                right: 0;
+            }
+
+            // Second Level
+            &.open {
+
+                li > [data-toggle="dropdown"] {
+                    right: oms-px-to-rem(15px) !important;
+                }
+            }
+        }
+
+        .mobile-menu,
+        .top-right-menu {
+            padding-left: oms-px-to-rem(100px);
+            padding-right: oms-px-to-rem(100px);
+        }
+
+        .top-right-menu {
+            background-color: white;
+            margin: 0 oms-px-to-rem(-10px) oms-px-to-rem(10px);
+            padding: oms-px-to-rem(20px) oms-px-to-rem(100px) 0;
+
+            // First Level
+            li {
+                margin: 0 oms-px-to-rem(10px);
+
+                &.nav-button {
+                    margin: 0 oms-px-to-rem(10px);
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-left: oms-px-to-rem(30px);
+        padding-right: 0;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-left: oms-px-to-rem(50px);
+    }
+}
