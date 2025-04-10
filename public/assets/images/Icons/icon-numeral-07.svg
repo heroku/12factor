@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-numeral-07</title>
+    <g id="icon-numeral-07" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-22">
+            <rect id="Icon" x="0" y="0" width="100" height="100"></rect>
+            <rect id="Rectangle-Copy-8" stroke="#79589F" x="56.5" y="30.5" width="9" height="39"></rect>
+            <rect id="Rectangle-Copy-15" stroke="#79589F" fill-opacity="0.2" fill="#430098" x="68.5" y="30.5" width="9" height="39"></rect>
+            <path d="M53.3439383,30.5 L42.6189383,69.5 L33.6560617,69.5 L44.3810617,30.5 L53.3439383,30.5 Z" id="Rectangle-Copy-12" stroke="#79589F"></path>
+            <path d="M42.3439383,30.5 L31.6189383,69.5 L22.6560617,69.5 L33.3810617,30.5 L42.3439383,30.5 Z" id="Rectangle-Copy-13" stroke="#79589F" fill-opacity="0.2" fill="#430098" transform="translate(32.5, 50) scale(-1, 1) translate(-32.5, -50)"></path>
+        </g>
+    </g>
+</svg>

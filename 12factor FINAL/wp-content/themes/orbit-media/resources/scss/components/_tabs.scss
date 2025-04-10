@@ -1,0 +1,55 @@
+.tabs-wrapper {
+    margin-top: oms-px-to-rem(50);
+
+    ul,
+    li {
+        list-style-type: none !important;
+    }
+
+    li {
+        margin-bottom: 0;
+
+
+        &:before {
+            display: none !important;
+        }
+
+        button,
+        button.active {
+            @include webfont-medium();
+            color: #000;
+            font-size: oms-px-to-rem(18);
+            line-height: oms-px-to-rem(30);
+        }
+
+        button {
+            // Position rel and z-index applied to allow border overlap with content below, but ensure this bottom border appears
+            position: relative;
+            z-index: 3;
+            padding: oms-px-to-rem(10) !important;
+
+            &.active {
+                border-bottom: 2px solid $color-purple !important;
+            }
+        }
+
+        &:hover {
+            button {
+                @include webfont-medium();
+                color: #000;
+                font-size: oms-px-to-rem(18);
+                line-height: oms-px-to-rem(30);
+                border-bottom: 2px solid $color-purple !important;
+            }
+        }
+    }
+}
+
+.tab-content {
+    background: #f2f2f2;
+    border-top: 2px solid rgba(102, 102, 102, 0.2);
+    margin-bottom: oms-px-to-rem(30);
+    padding: oms-px-to-rem(30);
+
+    transform: translateY(-2px);
+}

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2",
+    "gulp-exit": "0.0.2",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-if": "^3",
+    "gulp-notify": "^4",
+    "gulp-sass": "^5",
+    "gulp-sourcemaps": "^3",
+    "gulp-strip-css-comments": "^2",
+    "gulp-uglify-es": "^3",
+    "gulp-util": "^3",
+    "sass": "^1"
+  }
+}

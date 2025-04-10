@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-diamond-02</title>
+    <g id="icon-diamond-02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12">
+            <rect id="Icon" x="0" y="0" width="100" height="100"></rect>
+            <path d="M50,29.9433981 L69.407717,60.9957453 L50,91.0777067 L30.592283,60.9957453 L50,29.9433981 Z" id="Rectangle" stroke="#79589F" fill-opacity="0.2" fill="#430098" transform="translate(50, 60.5) rotate(90) translate(-50, -60.5)"></path>
+            <path d="M50,9.94339811 L69.407717,40.9957453 L50,71.0777067 L30.592283,40.9957453 L50,9.94339811 Z" id="Rectangle-Copy" stroke="#79589F" fill-opacity="0.2" fill="#430098" transform="translate(50, 40.5) rotate(90) translate(-50, -40.5)"></path>
+        </g>
+    </g>
+</svg>

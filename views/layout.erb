@@ -12,8 +12,13 @@
   <%= alternate_links %>
   <link rel="shortcut icon" href="/images/favicon.ico">
 
-  <link rel="stylesheet" href="/css/screen.css" media="screen">
-  <link rel="stylesheet" href="/css/mobile.css" media="screen">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/assets/css/bootstrap-icons.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="/assets/css/layout.min.css" type="text/css" media="all" />
+
 
   <script type="text/javascript" src="//use.typekit.com/rsq7tro.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -31,49 +36,173 @@
   <!-- End Google Tag Manager -->
   <% end %>
 
-  <header>
-  <div class="header-container">
-  <% if request.path_info.start_with?('/blog') %>
-    <div class="title-wrapper">
-        <h1><a href="/blog" title="The Twelve-Factor Blog">The Twelve-Factor Blog</a></h1>
-    </div>
-    <div class="top-nav">
-      <ul>
-        <li><a href="/">App</a></li>
-        <li><a href="/community">Community</a></li>
-        <li><a href="https://github.com/twelve-factor/twelve-factor" class="github-button">
-          <img src="/images/github-mark.svg" alt="GitHub logo" class="github-logo">GitHub
-        </a></li>
-      </ul>
-    </div>
-  <% else %>
-    <div class="title-wrapper">
-        <h1><a href="/" title="The Twelve-Factor App">The Twelve-Factor App</a></h1>
-    </div>
-    <div class="top-nav">
-      <ul>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/community">Community</a></li>
-        <li><a href="https://github.com/twelve-factor/twelve-factor" class="github-button">
-          <img src="/images/github-mark.svg" alt="GitHub logo" class="github-logo">GitHub
-        </a></li>
-      </ul>
-    </div>
-  <% end %>
-  </div>
-  </header>
+  <header class="site-header" role="banner">
+    <div class="site-header-bottom">
+      <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-xl" aria-label="Primary">
+          <div class="row navbar-row align-items-center">
+            <a href="#" class="navbar-brand col-8 col-md-5 col-xl-auto" rel="home">
+              <img src="/assets/images/Logos/twelve-factor-logo.svg" alt="Twelve Factor" width="162" height="76" class="logo logo--black-text" role="img" />
+              <img src="/assets/images/Logos/twelve-factor-logo-white.svg" alt="Twelve Factor" width="162" height="76" class="logo logo--white-text" role="img" />
+            </a>
+            <div class="navbar-toggle-container col-4 col-md-7 d-xl-none">
+              <button class="navbar-toggler d-inline-block d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="menu-text d-none d-md-block d-xl-none">Menu</span>
+                <span class="menu-icon">
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                              </span>
+              </button> <!-- /.navbar-toggler -->
+            </div>
+
+            <div id="primary-nav" class="primary-nav collapse navbar-collapse col-6 col-xl-10">
+              <div class="row primary-nav-row align-items-center">
+                <div class="mega-menu-wrap mega-menu-wrap-left col-xl-12">
+                  <ul class="mega-menu">
+
+                    <li class="menu-item menu-item-has-children dropdown">
+                      <a href="#" class="dropdown-toggle" data-bs-hover="dropdown" data-bs-auto-close="outside" aria-expanded="false">App Methodology<span class="mega-indicator"></span></a>
+                      <ul class="mega-menu-container dropdown-menu">
+                        <li class="mega-menu-wrapper container-fluid">
+                          <ul class="row mega-sub-menu">
+
+                            <li class="menu-column menu-columns-3-of-12 mega-menu-column col-md-3 first">
+                              <ul class="mega-sub-menu">
+                                <li class="menu-item menu-item-type-widget widget_text">
+                                  <div class="textwidget">
+                                    <div class="mega-block-title">Twelve-Factor App Methodology</div>
+                                    <p>Paragraph text on the web is used to present the main body of content within a website, providing detailed information that is easy to read and understand.</p>
+
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+
+                            <li class="menu-column menu-columns-3-of-12 mega-menu-column col-md-3">
+                              <ul class="row mega-sub-menu">
+                                <li class="menu-column menu-columns-12-of-12 mega-menu-column col-md-12">
+                                  <ul class="row mega-sub-menu">
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Codebase</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Dependencies</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Config</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Backing Services</a>
+                                    </li>
+                                  </ul>
+                                </li>
+
+                              </ul>
+                            </li>
+
+                            <li class="menu-column menu-columns-3-of-12 mega-menu-column col-md-3">
+                              <ul class="row mega-sub-menu">
+                                <li class="menu-column menu-columns-12-of-12 mega-menu-column col-md-12">
+                                  <ul class="row mega-sub-menu">
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Build, Release, Run</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Processes</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Port Binding</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Concurrency</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+
+                            <li class="menu-column menu-columns-3-of-12 mega-menu-column col-md-3 last">
+                              <ul class="mega-sub-menu">
+                                <li class="menu-column menu-columns-12-of-12 mega-menu-column col-md-12">
+                                  <ul class="row mega-sub-menu">
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Disposability</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Dev/Prod Parity</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Logs</a>
+                                    </li>
+                                    <li class="menu-item">
+                                      <a class="mega-menu-link" href="#">Admin Processes</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+
+                    <li class="menu-item"><a href="#">Community</a></li>
+                    <li class="menu-item"><a href="#">Blog</a></li>
+                    <li class="menu-item"><a href="#">About</a></li>
+                    <li class="menu-item nav-button"><a href="#"><i class="fa-brands fa-github"></i> Github</a></li>
+                    <li class="menu-item nav-button-light"><a href="#">EN</a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Mobile Menu -->
+              <div id="mobile-top-nav" class="d-block d-xl-none menu-main-nav-container">
+                <ul id="menu-main-nav" class="menu navbar-nav primary-nav mobile-menu">
+                  <li class="menu-item menu-item-has-children dropdown current-menu-item"><a href="#" class="nav-link">App Methodology</a><button type="button" data-toggle="dropdown" aria-expanded="false" class="expand-collapse-section"><i class="icon" aria-hidden="true"></i><span class="text visually-hidden">Expand Sub Links</span></button>
+                    <ul class="dropdown-menu">
+                      <li class="menu-item"><a href="#" class="nav-link">Codebase</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Dependencies</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Config</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Backing Services</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Build. Release. Run</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Processes</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Port Binding</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Concurrency</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Disposability</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Dev/Prod Parity</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Logs</a></li>
+                      <li class="menu-item"><a href="#" class="nav-link">Admin Processes</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a href="#" class="nav-link">Community</a></li>
+                  <li class="menu-item"><a href="#" class="nav-link">Blog</a></li>
+                  <li class="menu-item"><a href="#" class="nav-link">About</a></li>
+                  <li class="menu-item nav-button"><a href="#" class="nav-link"><i class="fa-brands fa-github"></i> Github</a></li>
+                  <li class="menu-item nav-button-light"><a href="#" class="nav-link">Language: English</a></li>
+                </ul>
+                <!--<ul id="menu-secondary-nav-mobile" class="menu top-right-menu">
+                  <li class="menu-item nav-button"><a href="#" class="nav-link">Register</a></li>
+                  <li class="menu-item"><a href="#" class="nav-link">Find My Rep</a></li>
+                </ul> -->
+              </div>
+            </div> <!-- /.collapse navbar-collapse -->
+          </div> <!-- /.row -->
+        </nav> <!-- /.navbar -->
+
+      </div> <!-- /.container-fluid -->
+    </div> <!-- /.site-header-bottom -->
+
+  </header> <!-- /.site-header -->
+
 
   <%= yield %>
 
-  <footer>
-  <div id="locales"><%= render_locales(@factor) %></div>
-  <div>Written by Adam Wiggins</div>
-  <div>Last updated 2017</div>
-  <div><a href="https://github.com/heroku/12factor">Sourcecode</a></div>
-  <div><a href="/12factor.epub">Download ePub Book</a></div>
-  <div><a href="https://www.heroku.com/policy/privacy">Privacy Policy</a></div>
-  <div class="cpra"><a rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/"><img src="/images/privacy.png" aria-label="Privacy Icon" title="Privacy Icon">Your Privacy Choices</a></div>
-  <div><a class="optanon-toggle-display" rel="nofollow" href="#">Cookie Preferences</a></div>
-</footer>
+  <%= partial 'footer' %>
+
+
 </body>
 </html>

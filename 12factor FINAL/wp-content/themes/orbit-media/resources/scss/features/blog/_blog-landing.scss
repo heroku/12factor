@@ -1,0 +1,169 @@
+.blog-landing-filters {
+    background: $color-light-gray;
+
+    padding-top: oms-px-to-rem(30);
+    padding-bottom: oms-px-to-rem(30);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: oms-px-to-rem(50);
+        padding-bottom: oms-px-to-rem(50);
+    }
+
+    &__header {
+        @include webfont-medium();
+        color: $color-dark-purple;
+        font-size: oms-px-to-rem(18);
+        letter-spacing: 0;
+        line-height: oms-px-to-rem(28);
+        text-transform: uppercase;
+
+        margin-bottom: oms-px-to-rem(6);
+    }
+
+    &__top {
+        padding-bottom: oms-px-to-rem(6);
+    }
+
+    &__facets {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .facetwp-facet {
+            width: 100%;
+
+
+            @include media-breakpoint-up(lg) {
+                width: 30%;
+                padding-left: oms-px-to-rem(15);
+                padding-right: oms-px-to-rem(15);
+            }
+
+            &.facet-first {
+                @include media-breakpoint-up(lg) {
+                    padding-left: 0;
+                }
+            }
+
+            &.facet-last {
+                @include media-breakpoint-up(lg) {
+                    padding-left: oms-px-to-rem(5);
+                    padding-right: 0;
+                }
+            }
+
+            select,
+            input[type="text"] {
+                width: 100%;
+            }
+
+            select {
+                position: relative;
+                -webkit-appearance: none;
+                border: 1px #d8d8d8 solid;
+                padding: oms-px-to-rem(14) oms-px-to-rem(20);
+
+                color: $text-body-color;
+                font-size: oms-px-to-rem(18);
+                letter-spacing: 0;
+                line-height: oms-px-to-rem(32);
+
+            }
+
+            &.facetwp-type__search {
+                position: relative;
+
+                .fa-magnifying-glass {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 30px;
+                    color: $color-dark-purple;
+                }
+            }
+            .facetwp-facet__search {
+                position: relative;
+
+                -webkit-appearance: none;
+                border: 1px #d8d8d8 solid;
+                padding: oms-px-to-rem(14) oms-px-to-rem(20);
+
+                color: $text-body-color;
+                font-size: oms-px-to-rem(18);
+                letter-spacing: 0;
+                line-height: oms-px-to-rem(32);
+
+                /*&::before {
+                    content: "\f002";
+                    color: $color_purple;
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    position: absolute;
+                    font-style: normal;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                }*/
+            }
+
+
+
+        }
+
+        .facet__search-submit {
+            @include media-breakpoint-up(lg) {
+                width: 10%;
+            }
+        }
+
+        .facetwp-type__dropdown {
+            position: relative;
+
+            &:before {
+                //content: "";
+                content: "\f0d7";
+                color: $color_dark_purple;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                position: absolute;
+                font-style: normal;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.blog-landing-results-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    padding-top: oms-px-to-rem(50);
+    padding-bottom: oms-px-to-rem(50);
+
+    &__count {
+
+    }
+    &__clear {
+        a {
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+
+        .fa-circle-xmark {
+            color: $color-dark-purple !important;
+        }
+
+    }
+}
+
+.blog-landing-results {
+
+    .post-teaser__inner {
+        background: $color-light-gray;
+    }
+}

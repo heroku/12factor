@@ -1,0 +1,46 @@
+.breadcrumbs {
+    display: block;
+    margin-bottom: oms-px-to-rem(10px);
+
+    span {
+        display: inline-block;
+        @include webfont-medium();
+        color: $color-purple;
+        font-size: oms-px-to-rem(18);
+        letter-spacing: 0;
+        text-align: left;
+        line-height: oms-px-to-rem(28);
+        text-decoration: none !important;
+        text-transform: uppercase;
+
+        a {
+            @include webfont-medium();
+            color: $color-purple;
+            font-size: oms-px-to-rem(18);
+            letter-spacing: 0;
+            text-align: left;
+            line-height: oms-px-to-rem(28);
+            text-decoration: none !important;
+            text-transform: uppercase;
+
+            &:hover,
+            &:active {
+                color: #000;
+            }
+        }
+
+        span.breadcrumbs__separator {
+            @include webfont-medium();
+            color: $color-purple;
+            font-size: oms-px-to-rem(18);
+            letter-spacing: 0;
+            text-align: left;
+            line-height: oms-px-to-rem(28);
+        }
+
+        // Hide the current page
+        &.breadcrumb_last {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.pageblock--oms-blurbs {
+
+    .l-blurb {
+
+        &__row {
+            margin-top: oms-px-to-rem(-50px);
+        }
+
+        &__col {
+            @include make-row();
+            margin-top: oms-px-to-rem(50px);
+
+            .blurb {
+                @include make-col-ready();
+            }
+
+            &.intro_copy {
+                margin-bottom: oms-px-to-rem(50);
+
+                .blurb-intro {
+                    text-align: center;
+
+                   /* @include media-breakpoint-up(lg) {
+                        height: auto !important;
+                        position: sticky;
+                        top: 15vh;
+                    }*/
+                }
+            }
+        }
+    }
+
+    &.num-columns-2 {
+        .blurb {
+            max-width: 100%;
+
+            @include media-breakpoint-up(xl) {
+                max-width: 50%;
+            }
+        }
+    }
+
+    &.num-columns-3 {
+        .blurb {
+            max-width: 100%;
+
+            @include media-breakpoint-up(xl) {
+                max-width: 33%;
+            }
+        }
+    }
+}

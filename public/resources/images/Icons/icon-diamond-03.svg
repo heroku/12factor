@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-diamond-03</title>
+    <defs>
+        <polygon id="path-1" points="61 19 81 51 61 82 41 51"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="63" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="icon-diamond-03" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-13">
+            <rect id="Icon" x="0" y="0" width="100" height="100"></rect>
+            <line x1="61" y1="19.49995" x2="37" y2="19.49995" id="Rectangle-Copy-6" stroke="#979797" opacity="0.4" stroke-dasharray="1" transform="translate(49, 19.5) scale(1, -1) translate(-49, -19.5)"></line>
+            <line x1="60.9" y1="81.49995" x2="38" y2="81.49995" id="Rectangle-Copy-7" stroke="#430098" fill-opacity="0.2" fill="#430098" opacity="0.4" stroke-dasharray="1" transform="translate(49.45, 81.5) scale(1, -1) translate(-49.45, -81.5)"></line>
+            <path d="M38,19.9433981 L57.407717,50.9957453 L38,81.0777067 L18.592283,50.9957453 L38,19.9433981 Z" id="Rectangle" stroke="#79589F" fill-opacity="0.2" fill="#430098"></path>
+            <use id="Rectangle-Copy" stroke="#79589F" mask="url(#mask-2)" stroke-width="2" fill-opacity="0.2" fill="#430098" stroke-dasharray="1" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,69 @@
+
+.pageblock {
+    background-color: $bg-color;
+    display: block;
+    position: relative;
+
+    &__inner {
+        // Global Block Padding
+        padding-top: oms-px-to-rem(50px);
+        padding-bottom: oms-px-to-rem(50px);
+
+        @include media-breakpoint-up(md) {
+            padding-top: oms-px-to-rem(75px);
+            padding-bottom: oms-px-to-rem(75px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 8vw;
+            padding-bottom: 8vw;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding-top: 10.5vw;
+            padding-bottom: 10.5vw;
+        }
+    }
+
+    // Background Colors
+    &.bg-color-white {
+        background-color: $bg-color;
+
+        + .bg-color-white:not(.transition_block):not(.pageblock--oms-cta):not(.pageblock--oms-testimonials) .pageblock__inner {
+            padding-top: 0;
+        }
+    }
+
+    &.bg-color-gray {
+        background-color: $bg-color-light-gray;
+
+        + .bg-color-gray:not(.transition_block):not(.pageblock--oms-cta):not(.pageblock--oms-testimonials) .pageblock__inner {
+            padding-top: 0;
+        }
+    }
+
+}
+
+// Global Header
+.pageblock-header {
+    margin-bottom: oms-px-to-rem(40px);
+
+    .l-pageblock-header__col {
+        max-width: oms-px-to-rem(1000px);
+    }
+}
+
+// Individual block styling
+@import "hero";
+@import "columns";
+@import "image-text";
+@import "cta";
+@import "blurbs";
+@import "content";
+@import "post-feed";
+
+// Animations
+@import "animations";
+
+// Page block Components
+@import "pageblock-components/blurb";

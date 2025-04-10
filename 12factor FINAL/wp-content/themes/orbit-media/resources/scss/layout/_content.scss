@@ -1,0 +1,89 @@
+main {
+    //padding-top: oms-px-to-rem(50);
+    padding-bottom: oms-px-to-rem(50);
+
+    @include media-breakpoint-up(lg) {
+        //padding-top: oms-px-to-rem(100);
+        padding-bottom: oms-px-to-rem(100);
+    }
+
+
+    &.has-no-hero {
+        padding-top: oms-px-to-rem(50);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: oms-px-to-rem(100);
+        }
+    }
+}
+
+.main-content-wrapper {
+    padding-top: oms-px-to-rem(50);
+    padding-bottom: oms-px-to-rem(50);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: oms-px-to-rem(100);
+        padding-bottom: oms-px-to-rem(100);
+    }
+}
+
+// Left sidebar nav
+.left-nav {
+    &__header {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__menu {
+        list-style-type: upper-roman;
+
+        li {
+            list-style-type: upper-roman;
+            margin-bottom: oms-px-to-rem(15) !important;
+
+            font-family: $font-body !important;
+            font-weight: 400 !important;
+            font-size: oms-px-to-rem(16px) !important;
+            color: $text-body-color !important;
+            letter-spacing: oms-px-to-rem(0);
+            line-height: oms-px-to-rem(28px) !important;
+            //margin: 0 0 oms-px-to-rem(20px);
+            text-decoration: none !important;
+
+            @include media-breakpoint-up(md) {
+                font-size: oms-px-to-rem(18px) !important;
+                line-height: oms-px-to-rem(32px) !important;
+            }
+
+            a {
+                display: inline-block;
+                font-family: $font-body !important;
+                font-weight: 400 !important;
+                font-size: oms-px-to-rem(16px) !important;
+                color: $text-body-color !important;
+                letter-spacing: oms-px-to-rem(0);
+                line-height: oms-px-to-rem(28px) !important;
+                //margin: 0 0 oms-px-to-rem(20px);
+                text-decoration: none !important;
+                width: 100%;
+
+                @include media-breakpoint-up(md) {
+                    font-size: oms-px-to-rem(18px) !important;
+                    line-height: oms-px-to-rem(32px) !important;
+                }
+            }
+
+            &:hover,
+            &:active {
+                //background-color: $color-light-gray;
+                color: $color-purple !important;
+                font-weight: 700 !important;
+
+                a {
+                    color: $color-purple !important;
+                    font-weight: 700 !important;
+                }
+            }
+        }
+    }
+}
