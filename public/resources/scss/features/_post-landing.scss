@@ -1,0 +1,122 @@
+// Posts Landing
+.pageblock--post-landing {
+    background-color: transparent;
+
+    .pageblock__inner {
+        padding: 0;
+    }
+
+    .container-fluid.featured {
+        position: relative;
+    }
+
+    .featured-posts {
+        position: static;
+        padding-top: oms-px-to-rem(25px);
+        padding-bottom: oms-px-to-rem(100px);
+
+        @include media-breakpoint-up(md) {
+            padding-top: 0;
+            padding-bottom: oms-px-to-rem(125px);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding-bottom: oms-px-to-rem(150px);
+        }
+
+        &__bg {
+            background-color: $color-light-gray;
+            border-radius: 0;
+            width: 100%;
+            height: calc(100% - oms-px-to-rem(50px));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 5;
+            padding-bottom: oms-px-to-rem(50px);
+
+            @include media-breakpoint-up(md) {
+                top: oms-px-to-rem(-50px);
+                padding-bottom: oms-px-to-rem(55px);
+            }
+
+            @include media-breakpoint-up(lg) {
+                border-radius: oms-px-to-rem(5px);
+                width: calc(100% - oms-px-to-rem(100px));
+                left: oms-px-to-rem(50px);
+                right: oms-px-to-rem(50px);
+            }
+        }
+
+        &__row {
+            position: relative;
+            z-index: 6;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            @include webfont();
+            font-size: oms-px-to-rem(15px);
+            color: $text-body-color;
+            letter-spacing: oms-px-to-rem(0.25px);
+            line-height: 1;
+            padding: oms-px-to-rem(25px) 0 0 !important;
+
+            &:before {
+                //background-color: rgba($color-dk-blue, 0.15);
+                content: "";
+                width: 100%;
+                height: oms-px-to-rem(1px);
+                position: absolute;
+            }
+
+            span {
+                background-color: $color-light-gray;
+                display: flex;
+                width: auto;
+                position: relative;
+                padding-right: oms-px-to-rem(10px);
+            }
+        }
+
+        &__inner {
+
+            .post-teaser {
+
+
+                @include media-breakpoint-up(xl) {
+                    margin-bottom: 0;
+                }
+
+                &__meta {
+                    margin-bottom: oms-px-to-rem(22px);
+                }
+
+                &__title {
+                    font-size: oms-px-to-rem(22px);
+
+                    @include media-breakpoint-up(md) {
+                        font-size: oms-px-to-rem(24px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Standard Posts
+    .posts-container {
+        margin-left: oms-px-to-rem(-10px);
+        margin-right: oms-px-to-rem(-10px);
+
+        .post-teaser {
+            margin-bottom: oms-px-to-rem(25px);
+            padding-left: oms-px-to-rem(10px);
+            padding-right: oms-px-to-rem(10px);
+        }
+    }
+}

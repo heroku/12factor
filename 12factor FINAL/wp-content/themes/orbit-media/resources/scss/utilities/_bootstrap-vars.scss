@@ -1,0 +1,46 @@
+$spacer_desktop_smaller: 5vw;
+$spacer_desktop: 8vw;
+
+/**
+ * Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap
+ * grid system.
+ * @see https://getbootstrap.com/docs/5.0/layout/gutters/
+ */
+$grid-gutter-width: 3.125rem; // default at 50
+$gutters: (
+    0: 0,
+    1: $spacer * 0.625, // 10
+    2: $spacer,
+    3: $spacer * 1.875, // 30
+    4: $spacer * 2.5, // 40
+    5: $spacer * 3.125, // 50
+    6: $spacer * 4.688, // 75
+    7: $spacer * 6.25, // 100
+    9: $spacer_desktop_smaller, // ~100
+    10: $spacer_desktop // ~150
+);
+
+/**
+ * Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport
+ * sizes in Bootstrap.
+ * @see https://getbootstrap.com/docs/5.0/layout/breakpoints/
+ */
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px,
+    xxl: 1570px,
+    //xxxl: 2000px,
+);
+
+// Custom aspect ratios
+// Usage classnames: ratio ratio-4x3
+// @see https://getbootstrap.com/docs/5.0/helpers/ratio/
+$aspect-ratios: (
+    "1x1": 100%, // Square
+    "7x5": calc(5 / 7 * 100%),
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+);

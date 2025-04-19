@@ -1,0 +1,238 @@
+/**
+ * CTA page block
+ */
+
+.pageblock--oms-cta {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &.pageblock--oms-cta-global {
+        // We need a negative bottom margin equal to the padding on the <main> page element in order to go flush against the footer
+        margin-bottom: calc( oms-px-to-rem(50) * -1);
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: calc( oms-px-to-rem(100) * -1);
+        }
+    }
+
+    &.pageblock--interstitial {
+        .pageblock__inner {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &.pageblock--interstitial-top-bg-white {
+        &:before {
+            background-color: #fff;
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+    &.pageblock--interstitial-top-bg-gray {
+        &:before {
+            background-color: $color-light-gray;
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+    &.pageblock--interstitial-top-bg-black {
+        &:before {
+            background-color: #000;
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+
+    &.pageblock--interstitial-bottom-bg-white {
+        &:after {
+            background-color: #fff;
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+    &.pageblock--interstitial-bottom-bg-gray {
+        &:after {
+            background-color: $color-light-gray;
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+    &.pageblock--interstitial-bottom-bg-black {
+        &:after {
+            background-color: #000;
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 1;
+        }
+    }
+
+    .pageblock__inner {
+
+        .container-fluid {
+            //max-width: calc(100% - 16.6666%);
+            margin: 0 auto;
+        }
+    }
+
+    .l-cta {
+
+        &__row {
+            position: relative;
+            background: url("../images/cta-background.png") repeat;
+
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            z-index: 2;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                padding-top: 200px;
+                padding-bottom: 200px;
+            }
+        }
+
+        &__col {
+
+            padding-left: oms-px-to-rem(50);
+            padding-right: oms-px-to-rem(50);
+
+            & + .l-cta__col {
+                margin-top: 30px;
+            }
+/*
+            &--image {
+                display: flex;
+                padding-left: 0;
+                padding-right: 0;
+
+                .cta__image {
+                    width: 100%;
+                    z-index: 2;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+*/
+            &--content {
+                position: relative;
+                text-align: center;
+                z-index: 2;
+                //padding: oms-px-to-rem(50px) 10%;
+
+                @include media-breakpoint-up(lg) {
+                    //padding: 8vw;
+                }
+
+                .cta {
+                    position: relative;
+                    left: 0;
+                    top: 50%;
+                    z-index: 2;
+                    transform: translateY(-50%);
+
+                    .cta__content {
+                        h2,
+                        h3,
+                        h4,
+                        h5,
+                        h6,
+                        p,
+                        span {
+                            color: #fff !important;
+                        }
+
+
+                    }
+
+                    .cta__actions {
+                        a {
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+
+                    // Form for newletter sign up
+                    // Note: will probably be replaced by webform or 3rd party component - styles can be replicated if so.
+                    .cta__inner-form-wrapper {
+                        background: #fff;
+                        border-radius: oms-px-to-rem(29);
+                        padding: oms-px-to-rem(4) oms-px-to-rem(15);
+
+                        .cta__email-field {
+                            -webkit-appearance: none;
+                            border: none;
+                            height: 50px;
+
+                            // Font styles
+                            @include webfont();
+                            font-size: oms-px-to-rem(18);
+                            line-height: oms-px-to-rem(18);
+
+                            &::placeholder {
+                                color: #666666;
+                            }
+                        }
+
+                        button {
+                            -webkit-appearance: none;
+                            height: 50px;
+                            background: $color-yellow;
+                            border: none;
+                            border-radius: oms-px-to-rem(25);
+                            padding: oms-px-to-rem(16) oms-px-to-rem(20) oms-px-to-rem(14);
+                            // bump over a bit
+                            transform: translateX(11px);
+
+                            // Font styles
+                            @include webfont-medium();
+                            font-size: oms-px-to-rem(18);
+                            line-height: oms-px-to-rem(20);
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,254 @@
+/*=================================================================================
+    Common Button Styling
+    - Primary Button
+    - Secondary Button
+    - CTA Link
+===============================================================================*/
+
+/* Common Base Styles for ALL Button types */
+.btn {
+    // @extend %appendSingleArrow;
+    // background-color: $color-dk-blue;
+    border: solid oms-px-to-rem(2px) transparent;
+    border-radius: oms-px-to-rem(30px);
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+    @include webfont-medium();
+    font-size: oms-px-to-rem(16px);
+    font-style: normal;
+    color: $text-light-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(24px);
+    text-decoration: none;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    //margin: oms-px-to-rem(20px) oms-px-to-rem(10px) oms-px-to-rem(10px) 0;
+    margin: 0;
+    padding: oms-px-to-rem(14px) oms-px-to-rem(20px) oms-px-to-rem(12px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(20px);
+        line-height: oms-px-to-rem(26px);
+        padding: oms-px-to-rem(16px) oms-px-to-rem(20px) oms-px-to-rem(14px);
+
+    }
+
+
+    &:after {
+        //color: $color-md-blue;
+    }
+
+    &:hover,
+    &:active {
+        //background-color: $color-dk-blue;
+        border-color: transparent;
+        cursor: pointer;
+        //color: $text-light;
+        text-decoration: none;
+        transition: all .3s ease-out;
+        //padding: oms-px-to-rem(14px) oms-px-to-rem(16px) oms-px-to-rem(12px);
+
+        &:after {
+            margin-left: oms-px-to-rem(16px);
+            transition: all .3s ease-out;
+        }
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: solid oms-px-to-rem(2px) white !important;
+        outline: solid oms-px-to-rem(2px) black !important;
+        outline-offset: oms-px-to-rem(2px) !important;
+    }
+
+    &[target="_blank"] {
+
+        &:after {
+            display: none !important;
+        }
+
+        .new-window-icon {
+            position: relative;
+            transition: all .3s ease-out;
+        }
+
+        &:hover,
+        &:active {
+
+            .new-window-icon {
+                transition: all .3s ease-out;
+                margin-left: oms-px-to-rem(8px);
+            }
+        }
+    }
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-action {
+    @extend .btn;
+}
+
+.btn-primary {
+    background-color: $color-dark-purple;
+    border-color: $color-dark-purple;
+    color: $text-light-color;
+
+    &:hover,
+    &:active {
+        background-color: #000;
+        border-color: #000;
+        cursor: pointer;
+        color: $text-light-color;
+        text-decoration: none;
+        transition: all .3s ease-out;
+    }
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: $color-dark-purple;
+    color: $color-dark-purple;
+
+    &:hover,
+    &:active {
+        background-color: #000;
+        border-color: #000;
+        cursor: pointer;
+        color: $text-light-color;
+        text-decoration: none;
+        transition: all .3s ease-out;
+    }
+}
+
+.cta-link {
+    @extend %appendSingleArrow;
+    //@include link_underline($color-md-blue, $color-dk-blue, true);
+    background-color: transparent;
+    position: relative;
+    @include webfont-medium();
+    //font-size: oms-px-to-rem(14px);
+    font-style: normal;
+    color: $color-purple;
+    letter-spacing: oms-px-to-rem(0);
+    //line-height: 1;
+   //text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-out;
+    padding-bottom: oms-px-to-rem(4px);
+    text-decoration: $color-purple underline dashed;
+    text-underline-offset: oms-px-to-rem(4px);
+
+    &:after {
+        //color: $color-md-blue;
+        transition: all 0.3s ease-out;
+    }
+
+    &[target="_blank"] {
+
+        &:after {
+            display: none !important;
+        }
+
+        .new-window-icon {
+            position: relative;
+            transition: all .3s ease-out;
+        }
+
+        &:hover,
+        &:active {
+
+            .new-window-icon {
+                transition: all .3s ease-out;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &:hover,
+    &:active {
+        color: #000;
+        transition: all 0.3s ease-out;
+        text-decoration: #000 underline dotted;
+
+        &:after {
+            background: url("../images/Icons/glyph-caret-right-black.svg") 0 0 no-repeat;
+            background-size: 0.4375rem 0.5625rem;
+        }
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: solid oms-px-to-rem(2px) white;
+        outline: solid oms-px-to-rem(2px) black;
+        outline-offset: oms-px-to-rem(2px);
+    }
+}
+
+// Overrides for darker backgrounds, to provide greater contrast
+.u-purple-bg,
+.u-dark-purple-bg,
+.cta__actions {
+    .btn-primary {
+        background-color: #000;
+        border-color: #000;
+        color: $text-light-color;
+
+        &:hover,
+        &:active {
+            background-color: #fff;
+            border-color: #fff;
+            color: #000;
+        }
+    }
+    .btn-secondary {
+        background-color: $color-yellow;
+        border-color: $color-yellow;
+        color: #000;
+
+        &:hover,
+        &:active {
+            background-color: #000;
+            border-color: #000;
+            color: $text-light-color;
+        }
+    }
+}
+
+// Some pageblocks have buttons with arrows
+.pageblock--oms-cta{
+    .btn-primary {
+        @extend %appendSingleArrow;
+        &:after {
+            background: url("../images/Icons/glyph-caret-right-white.svg") 0 0 no-repeat;
+            background-size: 0.4375rem 0.5625rem;
+        }
+
+        &:hover,
+        &:active {
+            &:after {
+                background: url("../images/Icons/glyph-caret-right-black.svg") 0 0 no-repeat;
+                background-size: 0.4375rem 0.5625rem;
+            }
+        }
+    }
+}
+.pageblock--oms-image-text {
+    .btn-primary {
+        @extend %appendSingleArrow;
+        &:after {
+            background: url("../images/Icons/glyph-caret-right-white.svg") 0 0 no-repeat;
+            background-size: 0.4375rem 0.5625rem;
+        }
+
+        /*&:hover,
+        &:active {
+            &:after {
+                background: url("../images/Icons/glyph-caret-right-black.svg") 0 0 no-repeat;
+                background-size: 0.4375rem 0.5625rem;
+            }
+        }*/
+    }
+}

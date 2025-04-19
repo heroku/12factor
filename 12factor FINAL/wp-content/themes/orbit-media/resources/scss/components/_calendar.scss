@@ -1,0 +1,164 @@
+#full-calendar {
+    margin-top: oms-px-to-rem(30);
+    margin-bottom: oms-px-to-rem(30);
+
+    @include media-breakpoint-up(lg) {
+        margin-top: oms-px-to-rem(50);
+        margin-bottom: oms-px-to-rem(50);
+    }
+
+    // Header Toolbar
+    .fc-header-toolbar {
+
+        .fc-toolbar-title {
+            @include webfont-medium();
+            font-size: oms-px-to-rem(26);
+            line-height: oms-px-to-rem(32);
+        }
+
+        .fc-toolbar-chunk {
+            display: inline-flex;
+        }
+
+        // Override .btn styles
+        .btn {
+            @include webfont-medium();
+            border: none !important;
+            border-radius: 0 !important;
+
+            background-color: #f2f2f2 !important;
+            color: $text-body-color !important;
+            font-size: oms-px-to-rem(18) !important;
+            line-height: 1 !important;
+
+            padding: oms-px-to-rem(12) oms-px-to-rem(14) oms-px-to-rem(9) !important;
+        }
+        .btn.active,
+        .btn.fc-today-button:not([disabled]) {
+            background-color: $color-dark-purple !important;
+            color: $text-light-color !important;
+        }
+        ////border-radius: 3px 0px 0px 3px !important;
+        .btn.fc-dayGridWeek-button {
+            border-radius: 3px 0px 0px 3px !important;
+        }
+        .btn.fc-dayGridMonth-button {
+            border-radius: 0px 3px 3px 0px !important;
+        }
+        .btn.fc-prev-button {
+            border-radius: 3px 0px 0px 3px !important;
+        }
+        .btn.fc-next-button {
+            border-radius: 0px 3px 3px 0px !important;
+        }
+    }
+
+    // The calendar display
+    .fc-daygrid {
+
+        // Is outer table
+        .fc-scrollgrid {
+            border: none;
+
+            // remove extra padding between days of week and calendar days
+            > tbody {
+                transform: translateY(-20px);
+            }
+        }
+
+        // Remove unwanted border
+        .fc-scrollgrid-section {
+            > th,
+            > td {
+                border: none;
+            }
+        }
+
+
+        // Wraps days of week (is the inner <table> element for the days of week)
+        .fc-col-header {
+            border-collapse: separate;
+            border-spacing: oms-px-to-rem(30) oms-px-to-rem(20);
+            border-style: none;
+        }
+            // Days of week
+        .fc-col-header-cell {
+            background-color: $color-light-gray;
+            border: none;
+
+            @include media-breakpoint-up(lg) {
+                padding: oms-px-to-rem(20) oms-px-to-rem(45);
+            }
+
+            // Text within
+            a {
+                @include webfont-medium();
+                color: $text-body-color;
+                font-size: oms-px-to-rem(18);
+                line-height: oms-px-to-rem(30);
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 0;
+            }
+        }
+
+        // The calendar dates
+        .fc-daygrid-body { // wraps the table
+            // The table
+            .fc-scrollgrid-sync-table {
+                border-collapse: separate;
+                border-spacing: oms-px-to-rem(30) oms-px-to-rem(20);
+                border-style: none;
+            }
+
+            // Each day
+            .fc-day {
+                border-collapse: collapse;
+                padding: oms-px-to-rem(4) oms-px-to-rem(10);
+
+                &.fc-day-disabled {
+                    background: $color-light-gray;
+                    border: none;
+                }
+
+                // Day number
+                .fc-daygrid-day-number {
+                    @include webfont-medium();
+                    color: $text-body-color;
+                    font-size: oms-px-to-rem(18);
+                    line-height: oms-px-to-rem(30);
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 0;
+                }
+
+                // Event text
+                .fc-event {
+
+                    @include webfont-medium();
+                    color: $text-body-color;
+                    font-size: oms-px-to-rem(14);
+                    line-height: 1;
+                    text-align: center;
+                    text-decoration: none;
+
+                    padding: 0;
+
+                    .fc-daygrid-event-dot {
+                        border-color: $color-purple;
+                    }
+
+                    .fc-event-title {
+                        text-wrap: wrap;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+}

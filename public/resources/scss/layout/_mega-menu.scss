@@ -1,0 +1,899 @@
+/**
+ * Mega Menu
+ */
+
+body {
+    position: relative;
+
+    &:before {
+        background-color: #000;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        visibility: hidden;
+        transition: all 0.1s ease-out;
+    }
+
+    &.mega-menu-open {
+
+        &:before {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.1s ease-out;
+        }
+    }
+}
+
+.mega-menu-wrap {
+    display: none;
+    position: relative;
+
+    @include media-breakpoint-up(xl) {
+        background: transparent;
+        display: block;
+        position: static;
+        margin-top: 0;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    // Mega Menu - Grid
+    ul {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: static;
+        margin: 0;
+
+        // Top Level
+        > li.menu-item {
+            background: transparent;
+            border: none;
+            position: static;
+            margin: 0 0 0 oms-px-to-rem(20px);
+            padding: 0;
+
+            @include media-breakpoint-up(xxl) {
+                margin: 0 0 0 oms-px-to-rem(30px);
+            }
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+
+            > a {
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                display: flex !important;
+                align-items: center;
+                width: auto;
+                height: 100%;
+                position: relative;
+                z-index: 100;
+                @include webfont-medium();
+                font-size: oms-px-to-rem(16px);
+                color: $text-body-color;
+                letter-spacing: oms-px-to-rem(0.25px);
+                line-height: oms-px-to-rem(18px);
+                text-decoration: none;
+                text-transform: none;
+                transition: all 0.3s ease-out;
+                white-space: normal;
+                word-break: break-word;
+                margin: 0;
+                padding: oms-px-to-rem(15px) 0;
+
+                @include media-breakpoint-up(lg) {
+                    //padding: oms-px-to-rem(48px) 0;
+                    padding: oms-px-to-rem(6) 0;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    //font-size: oms-px-to-rem(18px);
+                }
+
+                // Change color when mega menu is open
+                body.mega-menu-open & {
+                    color: $text-light-color;
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $color-yellow !important;
+                    text-decoration: none;
+                    transition: all .3s ease-out;
+
+
+                }
+
+                &:focus-visible {
+                    outline: solid oms-px-to-rem(2px) black;
+                    outline-offset: oms-px-to-rem(2px);
+                }
+            }
+
+            &.current-menu-item,
+            &.current-menu-ancestor,
+            &.current-menu-parent {
+
+                > a {
+                    background-color: transparent !important;
+                    //color: $color-dk-blue;
+                    text-decoration: none;
+                    transition: all .3s ease-out;
+
+                    &:focus-visible {
+                        outline: solid oms-px-to-rem(2px) black;
+                        outline-offset: oms-px-to-rem(2px);
+                    }
+                }
+            }
+
+            // Buttons
+            &.nav-button {
+
+                a {
+                    @extend .btn;
+                    background-color: $color-dark-purple;
+                    border-color: $color-dark-purple;
+                    color: $text-light-color;
+
+                    margin: 0;
+                    padding: oms-px-to-rem(10px) oms-px-to-rem(20px) oms-px-to-rem(9px) !important;
+
+                    &:hover,
+                    &:active {
+                        background-color: #000;
+                        border-color: #000;
+                        cursor: pointer;
+                        color: $text-light-color;
+                        text-decoration: none;
+                        transition: all .3s ease-out;
+                    }
+
+                    &:focus-visible {
+                        outline: solid oms-px-to-rem(2px) black;
+                        outline-offset: oms-px-to-rem(2px);
+                    }
+                }
+
+                &.current-menu-item,
+                &.current-menu-ancestor,
+                &.current-menu-parent {
+                    background-color: transparent;
+                    border-color: transparent;
+                    cursor: pointer;
+                    //color: green;
+                    text-decoration: none;
+                    transition: all .3s ease-out;
+                    padding: oms-px-to-rem(14px) oms-px-to-rem(16px) oms-px-to-rem(12px);
+
+                    &:after {
+                        margin-left: oms-px-to-rem(16px);
+                        transition: all .3s ease-out;
+                    }
+                }
+            }
+
+            &.nav-button-light {
+                @include webfont();
+                font-size: oms-px-to-rem(16);
+                line-height: oms-px-to-rem(16);
+
+                //border: 1px solid rgba(67, 0, 152, 1);
+                border: solid oms-px-to-rem(2) $color-dark-purple;
+                border-radius: 50%;
+                opacity: 1;
+                background-color: #fff;
+
+                a {
+                    @include webfont();
+                    font-size: oms-px-to-rem(16);
+                    line-height: oms-px-to-rem(16);
+                    padding: oms-px-to-rem(13px) oms-px-to-rem(9px) oms-px-to-rem(12px) oms-px-to-rem(10px);
+
+                    // Change color when mega menu is open
+                    body.mega-menu-open & {
+                        color: $text-body-color;
+                    }
+                }
+            }
+
+            &:not(.menu-item-has-children):not(.nav-button):not(.nav-button-light) {
+
+
+                > a {
+
+                    &:after {
+                        background-color: $color-yellow;
+                        border: none;
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: oms-px-to-rem(7px);
+                        position: absolute;
+                        left: auto;
+                        right: auto;
+                        bottom: oms-px-to-rem(-7px);
+                        text-align: left;
+                        transition: width 0.3s ease-out;
+                        margin: 0;
+                    }
+
+                    &:hover,
+                    &:active {
+
+                        &:after {
+                            width: 100%;
+                            transition: width 0.3s ease-out;
+                        }
+                    }
+                }
+
+                &.current-menu-item,
+                &.current-menu-ancestor,
+                &.current-menu-parent {
+
+                    > a {
+
+                        //color: $color-purple;
+                        color: $color-yellow;
+
+                        &:after {
+                            //background-color: $color-purple;
+                            background-color: $color-yellow;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.menu-item-has-children {
+
+                > a {
+                    text-decoration: none;
+
+                    &:after {
+                        background: url(../images/Icons/glyph-caret-down-purple.svg) 0 0 no-repeat;
+                        border: none;
+                        content: "";
+                        display: block;
+                        width: oms-px-to-rem(9px);
+                        height: oms-px-to-rem(8px);
+                        //transform: rotate(-90deg);
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        //right: auto;
+                        bottom: oms-px-to-rem(-7px);
+                        transition: all 0.3s ease-out;
+                        margin-left: 0 !important;
+                    }
+
+                    &:hover,
+                    &:active {
+                        &:after {
+                            background: url(../images/Icons/glyph-caret-down-yellow.svg) 0 0 no-repeat;
+                        }
+                    }
+
+                    /*.mega-indicator {
+                        background-color: $color-md-blue;
+                        border: none;
+                        display: block;
+                        width: 0;
+                        height: oms-px-to-rem(4px);
+                        position: absolute;
+                        left: auto;
+                        right: auto;
+                        bottom: oms-px-to-rem(-3px);
+                        text-align: left;
+                        transition: width 0.3s ease-out;
+                        margin: 0;
+                    }*/
+
+                    &[aria-expanded="true"] {
+
+                        &:after {
+                            //transform: rotate(0);
+                        }
+
+                        /*.mega-indicator {
+                            width: 100%;
+                            transition: width 0.3s ease-out;
+                        }*/
+                    }
+                }
+
+                &.current-menu-item,
+                &.current-menu-ancestor,
+                &.current-menu-parent {
+
+                    .mega-indicator {
+                        //width: 100%;
+                    }
+                }
+            }
+
+            // This is the container of the dropdown mega menu
+            > ul.mega-menu-container {
+                //background-color: $color-lt-gray;
+                border: none;
+                border-radius: 0;
+                box-shadow: 0 oms-px-to-rem(30px) oms-px-to-rem(40px) 0 rgba(black, 0.15);
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                height: 0;
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                right: auto;
+                top: 100%;
+                z-index: 999;
+                transform: translateY(oms-px-to-rem(-2px));
+                visibility: hidden;
+                padding: 0;
+                transition: all 0.4s ease-out;
+
+                &.show {
+                    background-color: #000;
+                    height: auto;
+                    opacity: 1;
+                    transform: translateY(0);
+                    visibility: visible;
+                    transition: all 0.4s ease-out;
+                }
+
+                .mega-indicator {
+                    display: none;
+                }
+
+                li.mega-menu-wrapper {  // This is the container-fluid
+                    margin: 0 auto;
+
+                    > ul.mega-sub-menu {  // This is the row
+                        background: none;
+                        box-shadow: none;
+                        display: flex;
+                        align-items: unset;
+                        width: auto;
+                        max-width: 100%;
+                        height: 100%;
+                        position: static;
+                        transform: translateY(0);
+                        z-index: unset;
+                        margin: 0 !important;
+                        padding: 0 !important;
+
+                        ul.mega-sub-menu {
+                            display: flex;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            width: 100%;
+                            height: auto;
+                            margin: 0;
+                        }
+
+                        li.menu-column { // This is the column
+                            border: none;
+                            display: flex;
+                            align-items: flex-start;
+                            float: none;
+                            margin: 0;
+                            padding: oms-px-to-rem(25px) oms-px-to-rem(50px) oms-px-to-rem(50px) 0 !important;
+
+                            &:first-of-type {
+                                border: none;
+                            }
+
+                            &:last-child {
+                                padding-right: 0 !important;
+                            }
+
+
+
+                            // Title of the columns
+                            .mega-block-title {
+                                @include webfont-medium();
+                                font-size: oms-px-to-rem(26px);
+                                color: $text-light-color;
+                                letter-spacing: oms-px-to-rem(0);
+                                line-height: oms-px-to-rem(36);
+                                margin: 0 0 oms-px-to-rem(20px);
+
+                                @include media-breakpoint-up(md) {
+                                    font-size: oms-px-to-rem(30px);
+                                    line-height: oms-px-to-rem(42px);
+                                }
+
+                                @include media-breakpoint-up(xl) {
+                                    font-size: oms-px-to-rem(32px);
+                                    line-height: oms-px-to-rem(44px);
+                                }
+
+                                @include media-breakpoint-up(xxl) {
+                                    font-size: oms-px-to-rem(36px);
+                                    line-height: oms-px-to-rem(48px);
+                                }
+
+                                padding: 0;
+                            }
+
+                            // Text widget
+                            li.widget_text {
+                                background-color: transparent;
+                                border-radius: 0;
+                                box-shadow: none;
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                margin: 0;
+                                padding: 0;
+
+                                p {
+                                    color: $text-light-color;
+                                    /*@include webfont();
+                                    font-size: oms-px-to-rem(13px);
+                                    color: $text-light-color;
+                                    letter-spacing: oms-px-to-rem(0.25px);
+                                    line-height: oms-px-to-rem(20px);
+                                    text-transform: none;
+                                    margin: 0 0 oms-px-to-rem(10px);
+
+                                    &:last-of-type {
+                                        margin-bottom: 0;
+                                    }*/
+                                }
+
+                                ul,
+                                ol {
+                                    display: block;
+
+                                    li {
+                                        display: list-item;
+                                        list-style: disc outside;
+                                        font-size: oms-px-to-rem(15px);
+                                        color: $text-light-color;
+                                        line-height: 1.4;
+                                        white-space: wrap;
+                                        margin: 0 0 oms-px-to-rem(15px) !important;
+
+                                        a {
+                                            //@include link_underline($color-md-blue, $color-dk-blue, true);
+                                            /*background-size: 200% oms-px-to-rem(1px);
+                                            display: inline !important;
+                                            width: auto;
+                                            @include webfont();
+                                            font-size: oms-px-to-rem(15px);
+                                            color: $color-dk-gray;
+                                            letter-spacing: oms-px-to-rem(0.25px);
+                                            line-height: 1;
+                                            padding-bottom: oms-px-to-rem(2px);*/
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Image Widget
+                            li.widget_media_image {
+                                max-width: none;
+                                text-align: right;
+                                margin: 0;
+                                padding: 0;
+
+                                img {
+                                    border-radius: oms-px-to-rem(3px);
+                                    width: 100%;
+                                }
+                            }
+
+                            // These are the children of the column
+                            // Without description
+                            li.menu-item:not(.widget_text) {
+                                display: block;
+                                list-style: none;
+                                width: 100%;
+                                max-width: none;
+                                height: auto;
+                                white-space: nowrap;
+                                margin: 0 0 oms-px-to-rem(30px);
+                                padding: 0;
+
+                                &:last-child {
+                                    margin-bottom: 0 !important;
+                                }
+
+                                .mega-menu-link {
+                                    @extend %appendSingleArrow;
+                                    background-color: transparent;
+                                    border: none;
+                                    display: block !important;
+                                    width: auto;
+                                    height: auto;
+                                    position: relative;
+                                    z-index: 100; // The mm container is 99
+                                    @include webfont-medium();
+                                    font-size: oms-px-to-rem(18px);
+                                    color: $text-light-color;
+                                    letter-spacing: oms-px-to-rem(0);
+                                    line-height: oms-px-to-rem(30);
+                                    text-decoration: none;
+                                    text-transform: none;
+                                    transition: all 0.3s ease-out;
+                                    vertical-align: middle;
+                                    white-space: normal;
+                                    margin: 0 oms-px-to-rem(-26px) 0 0;
+                                    padding: 0;
+
+                                    &:after {
+                                        position: static;
+                                        color: $color-purple;
+                                        transition: all 0.3s ease-out;
+                                        padding-right: oms-px-to-rem(26px);
+                                    }
+
+                                    .mega-indicator {
+                                        display: none;
+                                    }
+
+                                    &:hover,
+                                    &:active {
+                                        &:after {
+                                            background: url(../images/Icons/glyph-caret-right-yellow.svg) 0 0 no-repeat;
+                                            background-size: 0.4375rem 0.5625rem;
+                                        }
+                                    }
+                                }
+
+                                a.mega-menu-link {
+
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
+                                        color: $color-yellow;
+                                        text-decoration: none;
+                                        transition: all .3s ease-out;
+
+                                        &:after {
+                                            margin-left: oms-px-to-rem(10px);
+                                            transition: all .3s ease-out;
+                                        }
+                                    }
+
+                                    &:focus-visible {
+                                        outline: solid oms-px-to-rem(2px) black;
+                                        outline-offset: oms-px-to-rem(2px);
+                                    }
+                                }
+
+                                &.current-menu-item,
+                                &.current-menu-ancestor,
+                                &.current-menu-parent {
+
+                                    > a {
+                                        color: $text-light-color;
+                                        text-decoration: none;
+                                        transition: all .3s ease-out;
+
+                                        &:after {
+                                            margin-left: oms-px-to-rem(10px);
+                                            transition: all .3s ease-out;
+                                        }
+                                    }
+                                }
+
+                                // With Description
+                                /*&.has-description {
+
+                                    .mega-menu-link {
+                                        background-image: none;
+                                        display: flex;
+
+                                        &:after {
+                                            display: none;
+                                        }
+
+                                        .mega-description-group {
+
+                                            .mega-menu-title {
+                                                background-color: transparent;
+                                                display: block;
+                                                @include webfont-medium();
+                                                font-size: oms-px-to-rem(18px);
+                                                color: $text-light-color;
+                                                letter-spacing: oms-px-to-rem(0.25px);
+                                                line-height: 1;
+                                                transition: all 0.3s ease-out;
+                                            }
+
+                                            .mega-menu-description {
+                                                display: block;
+                                                @include webfont();
+                                                font-size: oms-px-to-rem(13px);
+                                                font-style: normal;
+                                                font-weight: $regular;
+                                                color: $text-light-color;
+                                                letter-spacing: oms-px-to-rem(0.25px);
+                                                line-height: 1;
+                                                margin-top: oms-px-to-rem(10px);
+                                            }
+                                        }
+
+                                        &.locked {
+
+                                            .locked-title {
+                                                position: relative;
+                                                color: violet;
+
+                                                &:before {
+                                                    background: url(../images/glyph-lock-navy.svg) 0 0 no-repeat;
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: oms-px-to-rem(15px);
+                                                    height: oms-px-to-rem(15px);
+                                                    opacity: 0.5;
+                                                    position: relative;
+                                                    left: 0;
+                                                    top: 0;
+                                                    margin-right: oms-px-to-rem(8px);
+                                                }
+                                            }
+
+                                            .locked-text {
+                                                color: violet;
+                                            }
+                                        }
+                                    }
+
+                                    a.mega-menu-link {
+
+                                        .mega-description-group {
+
+                                            .mega-menu-title {
+                                                @extend %appendSingleArrow;
+                                                margin-right: oms-px-to-rem(-26px);
+
+                                                &:after {
+                                                    position: static;
+                                                    font-size: oms-px-to-rem(16px);
+                                                    color: $color-md-blue;
+                                                    transition: all 0.3s ease-out;
+                                                    padding-right: oms-px-to-rem(26px);
+                                                }
+                                            }
+                                        }
+
+                                        &:hover,
+                                        &:focus,
+                                        &:active {
+
+                                            .mega-description-group {
+
+                                                .mega-menu-title {
+                                                    color: $color-md-blue;
+                                                    transition: all .3s ease-out;
+
+                                                    &:after {
+                                                        margin-left: oms-px-to-rem(10px);
+                                                        transition: all .3s ease-out;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }*/
+
+                                /*&.has-description.current-menu-item,
+                                &.has-description.current-menu-ancestor,
+                                &.has-description.current-menu-parent {
+
+                                    > a.mega-menu-link {
+
+                                        &:after {
+                                            display: none;
+                                            transition: all 0.3s ease-out;
+                                        }
+
+                                        .mega-description-group {
+
+                                            .mega-menu-title {
+                                                color: $color-md-blue;
+
+                                                &:after {
+                                                    margin-left: oms-px-to-rem(10px);
+                                                    transition: all .3s ease-out;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }*/
+
+                            /*    // Second level deep
+                                ul.mega-sub-menu {
+                                    margin-top: oms-px-to-rem(15px) !important;
+
+                                    li.menu-item {
+                                        display: list-item;
+                                        list-style: disc outside;
+                                        font-size: oms-px-to-rem(15px);
+                                        color: $color-md-blue;
+                                        line-height: 1;
+                                        white-space: wrap;
+                                        margin: 0 0 oms-px-to-rem(15px) oms-px-to-rem(15px) !important;
+
+                                        a.mega-menu-link {
+                                            display: inline !important;
+                                            @include webfont();
+                                            font-size: oms-px-to-rem(15px);
+                                            color: $color-dk-gray;
+                                            letter-spacing: oms-px-to-rem(0.25px);
+                                            line-height: 1.4;
+                                            padding-right: oms-px-to-rem(26px);
+
+                                            &:after {
+                                                background-image: url("../images/glyph-chevron-right-light-blue.svg");
+                                                background-size: oms-px-to-rem(9px) oms-px-to-rem(9px);
+                                                width: oms-px-to-rem(9px);
+                                                height: oms-px-to-rem(9px);
+                                                position: static;
+                                                margin-right: oms-px-to-rem(-26px);
+                                            }
+
+                                            .mega-indicator {
+                                                display: none;
+                                            }
+
+                                            &:hover,
+                                            &:focus,
+                                            &:active {
+                                                color: $color-md-blue;
+                                                text-decoration: none;
+                                                transition: all .3s ease-out;
+
+                                                &:after {
+                                                    margin-left: oms-px-to-rem(10px);
+                                                    transition: all .3s ease-out;
+                                                }
+                                            }
+
+                                            &:focus-visible {
+                                                outline: solid oms-px-to-rem(2px) black;
+                                                outline-offset: oms-px-to-rem(2px);
+                                            }
+                                        }
+
+                                        &.current-menu-item,
+                                        &.current-menu-ancestor,
+                                        &.current-menu-parent {
+
+                                            > .mega-menu-link {
+                                                color: $color-md-blue;
+                                                text-decoration: none;
+                                                transition: all .3s ease-out;
+
+                                                &:after {
+                                                    margin-left: oms-px-to-rem(10px);
+                                                    transition: all .3s ease-out;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    // Third level deep inside the mega menu
+                                    ul.mega-sub-menu {
+                                        display: none;
+                                    }
+                                }
+                              */
+                            }
+
+                            &.first {
+                                position: relative;
+                                padding: oms-px-to-rem(50px) oms-px-to-rem(50px) 0 0 !important;
+
+                                /*&:after {
+                                    background-color: rgba($color-dk-blue, 0.15);
+                                    content: "";
+                                    width: oms-px-to-rem(1px);
+                                    height: calc(100% - oms-px-to-rem(100px));
+                                    position: absolute;
+                                    right: oms-px-to-rem(50px);
+                                    top: oms-px-to-rem(50px);
+                                }*/
+
+                                // Title of the columns
+                                .mega-block-title {
+                                    //font-size: oms-px-to-rem(24px);
+                                    //line-height: oms-px-to-rem(30px);
+                                }
+
+                                // Text widget
+                                li.widget_text {
+
+                                    p {
+                                        //font-size: oms-px-to-rem(17px);
+                                        //line-height: oms-px-to-rem(30px);
+                                    }
+                                }
+                            }
+
+                            &.last {
+                                //background-color: #EFF3F8;
+                                //padding: oms-px-to-rem(50px) oms-px-to-rem(50px) 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+} // Entire mega wrapper
+
+
+// Logged In
+body.logged-in {
+
+    .primary-nav:not(.navbar-collapse) {
+        width: 16.66666667%;
+        margin: 0 0 0 auto;
+    }
+
+    .navbar-toggle-container {
+        margin: 0 0 0 auto;
+    }
+
+    .mega-menu-wrap {
+        display: block;
+        position: static;
+
+        .mega-menu {
+            position: static;
+
+            .location ul.mega-sub-menu {
+
+                @include media-breakpoint-down(sm) {
+                    width: 100% !important;
+                    max-width: calc(100% - oms-px-to-rem(50px)) !important;
+                    left: oms-px-to-rem(25px) !important;
+                    right: oms-px-to-rem(25px) !important;
+                    transform: translateX(0) !important;
+                }
+            }
+
+
+        }
+    }
+
+    /*.header-top-nav .nav-button > a {
+
+        @include media-breakpoint-down(xl) {
+            font-size: oms-px-to-rem(14px) !important;
+        }
+    }*/
+
+    li:not(.mega-menu-flyout) > ul.mega-menu-container > .container-fluid,
+    #mobile-top-nav {
+        border-top: solid oms-px-to-rem(1px) rgba(#000, 0.15) !important;
+    }
+}

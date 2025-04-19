@@ -1,0 +1,61 @@
+body {
+    background-color: #3c3252;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-shadow: 0 0 1px white;
+}
+
+hr {
+    width: 30%;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+}
+
+.gif {
+    height: 400px;
+    width: 500px;
+}
+
+details {
+    cursor: pointer;
+}
+
+p {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+code {
+    padding: 5px;
+    background-color: gray;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.contents {
+    margin-top: 69px;
+}
+
+.usage {
+    margin-top: 69px;
+    display: inline-block;
+    text-align: left;    
+}

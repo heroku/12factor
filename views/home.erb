@@ -1,9 +1,12 @@
 <section class="abstract">
-  <article><%= render_markdown('intro') %></article>
-  <article><%= render_markdown('background') %></article>
-  <article><%= render_markdown('who') %></article>
+  <article><%= @home.intro.render %></article>
+  <article><%= @home.background.render %></article>
+  <article><%= @home.who.render %></article>
 </section>
 
 <section class="concrete">
-  <article><%= render_markdown('toc') %></article>
+
+  <article>
+    <%= @home.toc.render %>
+  </article>
 </section>

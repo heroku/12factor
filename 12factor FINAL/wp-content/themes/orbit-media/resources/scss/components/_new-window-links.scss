@@ -1,0 +1,9 @@
+// Warning for links that open in a new window
+a[target="_blank"] {
+    position: relative;
+    
+    .new-window-icon {
+        vertical-align: middle;
+        padding-left: oms-px-to-rem(5px);
+    }
+}

@@ -1,0 +1,20 @@
+// Posts Detail
+.pageblock--post-detail {
+    background-color: transparent;
+
+    .pageblock__inner {
+        padding: oms-px-to-rem(35px) 0 0;
+    }
+
+    .l-posts {
+
+        &__column {
+
+            @include media-breakpoint-up(lg) {
+                max-width: calc(oms-px-to-rem(1000px) + 12vw);
+            }
+
+
+        }
+    }
+}

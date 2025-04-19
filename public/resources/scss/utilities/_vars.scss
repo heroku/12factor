@@ -1,0 +1,55 @@
+// Site Color Values
+$color-purple: #79589F;
+$color-dark-purple: #430098;
+$color-yellow: #FDC500;
+$color-light-gray: #F8F8F8;
+
+
+// Background Colors
+$bg-color: white;
+$bg-color-light-gray: $color-light-gray;
+
+
+// Text Colors
+$text-body-color: #000;
+$text-heading-color: #000;
+$text-light-color: #fff;
+
+// Fonts
+@font-face {
+    font-family: 'BentonSans-Regular';
+    src: url('../../resources/fonts/BentonSans-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+@font-face {
+    font-family: 'BentonSans-Medium';
+    src: url('../../resources/fonts/BentonSans-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+$font-body: 'BentonSans-Regular', sans-serif;
+$font-heading: 'BentonSans-Medium', sans-serif;
+
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Set the root font size
+$root-font-size: 16px;
+
+@mixin webfont() {
+    font-family: $font-body;
+    font-weight: $regular;
+}
+
+@mixin webfont-medium() {
+    font-family: $font-heading;
+    font-weight: $medium;
+}
+

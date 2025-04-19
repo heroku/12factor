@@ -1,7 +1,12 @@
-# Evolving Twelve-Factor: Applications to Modern Cloud-Native Platforms
-###### 10 Feb, 2025
-### [Brian Hammons](https://github.com/bhammons)
-![Brian Hammons](/images/bios/brian.jpg) The recent [**open sourcing of the Twelve-Factor App Methodology**](https://blog.heroku.com/heroku-open-sources-twelve-factor-app-definition) comes at a transformative moment for cloud-native platforms. As organizations increasingly rely on cloud-native technologies to power mission-critical workloads, the principles behind Twelve-Factor offer timeless foundations that remain relevant for modern platform builders.
+---
+title: "Evolving Twelve-Factor: Applications to Modern Cloud-Native Platforms"
+date: 2025-02-10
+author: brian
+---
+
+The recent [**open sourcing of the Twelve-Factor App Methodology**](https://blog.heroku.com/heroku-open-sources-twelve-factor-app-definition) comes at a transformative moment for cloud-native platforms. As organizations increasingly rely on cloud-native technologies to power mission-critical workloads, the principles behind Twelve-Factor offer timeless foundations that remain relevant for modern platform builders.
+
+<!-- END_EXCERPT -->
 
 As Gail Frederick, CTO at Heroku, noted in a recent [interview with The New Stack](https://thenewstack.io/heroku-moved-twelve-factor-apps-to-open-source-whats-next/), “the principles were primarily created to help developers develop their applications locally and package it portably across cloud providers, then have it be able to run resiliently and have it be a delightful experience to build that." This vision of developer empowerment coupled with operational excellence remains as relevant today as when Twelve-Factor was first introduced.
 

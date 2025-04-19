@@ -1,0 +1,42 @@
+{
+    "server": {
+        "host": "127.0.0.1:1337",
+        "tls": {
+            "host": "127.0.0.1:443",
+            "enable": false,
+            "key": "key.pem",
+            "cert": "cert.pem"
+        }
+    },
+    "routes": {
+        "/": "public/index.html",
+        "/usage": "public/usage.hbs"
+    },
+    "static": {
+        "directory": ".",
+        "served_from": ".",
+        "error_pages": {
+            "404": "public/404.html"
+        }
+    },
+    "template": {
+        "partials": {
+            "header": "public/header.hbs"
+        },
+        "variables": {
+            "app_name": "Binserve"
+        }
+    },
+    "config": {
+        "enable_hot_reload": true,
+        "fast_mem_cache": true,
+        "enable_cache_control": true,
+        "enable_directory_listing": true,
+        "minify_html": false,
+        "follow_symlinks": false,
+        "enable_logging": false
+    },
+    "insert_headers": {
+        "x-greetings": "hellooo!"
+    }
+}

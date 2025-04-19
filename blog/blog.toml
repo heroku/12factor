@@ -1,0 +1,53 @@
+# Blog posts data for 12factor
+# Format: Array of tables for each blog post
+
+[[posts]]
+title = "Why Intuit is Thrilled About the Evolution of the Twelve-Factor Model"
+slug = "intuit-thrilled"
+date = "2025-04-03"
+author_name = "Brett Weaver"
+author_github = ""
+author_image = "/images/bios/brett.jpg"
+excerpt = "At Intuit, we've long embraced the twelve-factor app principles as a guiding framework for modern software development. As a company building cutting-edge development tools and runtime platforms for our internal engineers, these principles have been instrumental in unifying service developers, platform engineers, and SREs under a shared philosophy."
+full_link = "/blog/intuit-thrilled"
+
+
+[[posts]]
+title = "Evolving Twelve-Factor: Applications to Modern Cloud-Native Platforms"
+slug = "evolving-twelve-factor"
+date = "2025-02-10"
+author_name = "Brian Hammons"
+author_github = "https://github.com/bhammons"
+author_image = "/images/bios/brian.jpg"
+excerpt = "The recent open sourcing of the Twelve-Factor App Methodology comes at a transformative moment for cloud-native platforms. As organizations increasingly rely on cloud-native technologies to power mission-critical workloads, the principles behind Twelve-Factor offer timeless foundations that remain relevant for modern platform builders."
+full_link = "/blog/evolving-twelve-factor"
+
+[[posts]]
+title = "December Monthly Updates"
+slug = "december-monthly-updates"
+date = "2024-12-03"
+author_name = "Vish Abrams"
+author_github = "https://github.com/vishvananda"
+author_image = "/images/bios/vish.jpg"
+excerpt = "Welcome to our first monthly update! We're excited to share our progress and what's coming next. In addition to some minor formatting fixes, our initial focus has been on getting organized for larger updates. Here are the key activities:"
+full_link = "/blog/december-monthly-updates"
+
+[[posts]]
+title = "Twelve-Factor App Methodology is now Open Source"
+slug = "open-source-announcement"
+date = "2024-11-12"
+author_name = "Yehuda Katz"
+author_github = "https://github.com/wycats"
+author_image = "/images/bios/yehuda.jpg"
+excerpt = "Join us in modernizing the twelve-factor app manifesto together. As a community of app, framework and platform developers, we're working together to refresh this foundational document for the modern era. While it's not software we're working on, we'll use familiar processes like pull requests, issues, and reviews to collaborate together in the twelve-factor project repo."
+full_link = "/blog/open-source-announcement"
+
+[[posts]]
+title = "Narrow Conduits and the Application-Platform Interface"
+slug = "narrow-conduits"
+date = "2024-11-12"
+author_name = "Vish Abrams"
+author_github = "https://github.com/vishvananda"
+author_image = "/images/bios/vish.jpg"
+excerpt = "Welcome to the twelve-factor maintainters blog. As stated in our announcement, some of our posts will analyze the manifesto more generically. This is the first post in that vein, where we dive into the interface between the application and the platform. It is well understood that defining a clear contract between parts of a system allows one to shed cognitive load on either side of the contract. This has been called the \"narrow-waist\" principle which has some unfortunate connotations, so we'll refer to it as the \"narrow-conduit\" principle. This principle is especially valuable when the humans on either side of the conduit have dramatically different concerns."
+full_link = "/blog/narrow-conduits"
