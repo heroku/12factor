@@ -2,9 +2,6 @@ require 'sinatra'
 require 'maruku'
 require 'i18n'
 require 'rack/ssl-enforcer'
-require 'toml-rb'
-require 'redcarpet'
-require 'front_matter_parser'
 require 'sinatra/partial'
 require_relative './lib/twelve_factor'
 
@@ -66,6 +63,7 @@ class App < Sinatra::Base
   end
   
   get '/' do
+    @home = TwelveFactor::FACTORS.current
     erb :home
   end
   
@@ -142,7 +140,16 @@ class App < Sinatra::Base
     erb :factor
 
   end
+
   helpers do
+    def h(text)
+      Rack::Utils.escape_html(text)
+    end
+    
+    def hattr(text)
+      Rack::Utils.escape_path(text)
+    end
+
     def alternate_links
       links = [
         "<link rel=\"alternate\" hreflang=\"x-default\" href=\"#{default_url}\">"

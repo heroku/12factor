@@ -1,3 +1,4 @@
 {
-  "markdown.validate.enabled": true
+  "markdown.validate.enabled": true,
+  "solargraph.commandPath": "./bin/solargraph"
 }
