@@ -1,0 +1,154 @@
+// Pagination
+.pagination {
+    margin-top: oms-px-to-rem(0);
+    margin-bottom: oms-px-to-rem(50);
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: oms-px-to-rem(100);
+    }
+
+    .pager {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        //padding: oms-px-to-rem(35px) 0 0;
+    }
+
+    .dots {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: oms-px-to-rem(40px);
+        min-height: oms-px-to-rem(40px);
+        @include webfont-medium();
+        font-size: oms-px-to-rem(16px);
+        color: $color-dark-purple;
+        letter-spacing: 0;
+        line-height: oms-px-to-rem(27px);
+        text-align: center;
+        text-decoration: none;
+        margin: 0 oms-px-to-rem(5px) oms-px-to-rem(5px);
+        padding: 0;
+    }
+
+    .page {
+        @extend .btn;
+
+        cursor: pointer;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        min-width: oms-px-to-rem(60px);
+        min-height: oms-px-to-rem(60px);
+
+        text-align: center;
+        text-decoration: none;
+        margin: 0 oms-px-to-rem(5px) oms-px-to-rem(5px);
+
+        //padding: 0 !important;
+
+        background-color: #dfdfdf !important;
+        border-color: #dfdfdf !important;
+        color: #000 !important;
+
+        &:hover:not(.inactive),
+        &:active:not(.inactive) {
+            background-color: $color-dark-purple !important;
+            border-color: $color-dark-purple !important;
+            color: $text-light-color !important;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all .3s ease-out;
+        }
+
+        &.active {
+            background-color: $color-dark-purple !important;
+            border-color: $color-dark-purple !important;
+            color: $text-light-color !important;
+        }
+
+        &.inactive {
+            color: #7c7c7c !important;
+        }
+
+        &:focus,
+        &:active {
+            outline: solid oms-px-to-rem(2px) black;
+        }
+
+        &:not(.prev):not(.next) {
+            border-radius: 50% !important;
+        }
+
+        // Previous and Next buttons
+        &.prev,
+        &.next {
+            @extend .btn;
+
+            cursor: pointer;
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            min-width: oms-px-to-rem(60px);
+            min-height: oms-px-to-rem(60px);
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+
+            margin: 0 oms-px-to-rem(5px) oms-px-to-rem(5px);
+
+            /*span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }*/
+
+            background-color: #dfdfdf !important;
+            border-color: #dfdfdf !important;
+            color: #000 !important;
+
+            &:hover:not(.inactive),
+            &:active:not(.inactive) {
+                background-color: $color-dark-purple !important;
+                border-color: $color-dark-purple !important;
+                color: $text-light-color !important;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all .3s ease-out;
+            }
+
+            &.active {
+                background-color: $color-dark-purple !important;
+                border-color: $color-dark-purple !important;
+                color: $text-light-color !important;
+            }
+
+            &.inactive {
+                color: #7c7c7c !important;
+            }
+
+            &:focus,
+            &:active {
+                outline: solid oms-px-to-rem(2px) black;
+            }
+        }
+
+        &.prev {
+            .fa-solid {
+                padding-right: oms-px-to-rem(5);
+            }
+        }
+
+        &.next {
+            .fa-solid {
+                padding-left: oms-px-to-rem(5);
+            }
+        }
+    }
+}

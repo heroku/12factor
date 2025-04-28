@@ -1,0 +1,69 @@
+// Has js
+.has_js {
+
+    .pageblock {
+
+        &__inner {
+            transition: all .5s ease;
+            opacity: 0;
+            transform: translateY(oms-px-to-rem(100px));
+         }
+ 
+         &.active {
+ 
+             .pageblock__inner {
+                 opacity: 1;
+                 transform: translateY(0);
+             }
+         }
+
+        // Columns
+        .column {
+            transform: translateY(oms-px-to-rem(50px));
+            opacity: 0;
+            transition: all .3s ease;
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+    * {
+        animation: none;
+        opacity: 1;
+        scroll-behavior: auto;
+        transition: none;
+    }
+
+    .pageblock {
+
+        .pageblock__inner {
+            transform: translateY(0) !important;
+            opacity: 1 !important;
+        }
+
+        &.active {
+
+            .pageblock__inner {
+                transform: translateY(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        // Columns
+        .column {
+            transform: translateY(0);
+            opacity: 1;
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,8 +1,12 @@
-# December Monthly Updates
-###### 3 Dec, 2024
-### [Vish Abrams](https://github.com/vishvananda)
-![Vish Abrams](/images/bios/vish.jpg) Welcome to our first monthly update\!
-We're excited to share our progress and what's coming next.
+---
+title: December Monthly Updates
+date: 2024-12-03
+author: vish
+---
+
+Welcome to our first monthly update! We're excited to share our progress and what's coming next.
+
+<!-- END_EXCERPT -->
 
 ## What We've Been Working On
 

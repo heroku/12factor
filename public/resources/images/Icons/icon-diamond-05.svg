@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-diamond-05</title>
+    <g id="icon-diamond-05" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15">
+            <rect id="Icon" x="0" y="0" width="100" height="100"></rect>
+            <path d="M38.3333333,29.9433981 L51.0743837,50.3290786 L38.3333333,70.0777067 L25.592283,50.3290786 L38.3333333,29.9433981 Z" id="Rectangle" stroke="#79589F" fill-opacity="0.2" fill="#430098"></path>
+            <line x1="62.2" y1="18.5" x2="38.5" y2="29.5" id="Rectangle-Copy" stroke="#430098" fill-opacity="0.2" fill="#430098" opacity="0.4" stroke-dasharray="1"></line>
+            <line x1="62.2" y1="70.5" x2="38.5" y2="80.5" id="Rectangle-Copy-6" stroke="#430098" fill-opacity="0.2" fill="#430098" opacity="0.4" stroke-dasharray="1" transform="translate(50.35, 75.5) scale(1, -1) translate(-50.35, -75.5)"></line>
+            <path d="M62,18.9433981 L81.407717,49.9957453 L62,80.0777067 L42.592283,49.9957453 L62,18.9433981 Z" id="Rectangle-Copy-5" stroke="#79589F" fill-opacity="0.2" fill="#430098"></path>
+        </g>
+    </g>
+</svg>

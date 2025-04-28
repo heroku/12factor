@@ -1,0 +1,31 @@
+[brett]
+maintainer = true
+name = "Brett Weaver"
+description = """
+Brett Weaver is a Distinguished Engineer at Intuit. He has spent the last 
+twenty-two odd years at Intuit in various software development and systems
+engineer roles.  He has been focused on building distributed, scalable
+architectures for Intuit's flagship products including Quickbooks and TurboTax.
+Most recently, Brett has been leading architecture for Intuit's internal services
+platform.
+"""
+
+[yehuda]
+maintainer = true
+name = "Yehuda Katz"
+github = "wycats"
+description = """
+Yehuda is a True Believer in the power of the open web, especially when the web evolves as a collaboration between browser vendors, framework authors and application developers.
+
+He is one of the creators of [Ember.js](http://www.emberjs.com/?ref=yehudakatz.com), and a retired member of the [Rust](http://www.rust-lang.org/?ref=yehudakatz.com), the Ruby on Rails and jQuery Core Teams. He is an occasional member of ECMAScript's TC39 standards committee, and a former member of the W3C's TAG ([Technical Architecture Group](http://www.w3.org/2001/tag/?ref=yehudakatz.com)).
+
+He was the co-author of the [Extensible Web Manifesto](https://extensiblewebmanifesto.org/?ref=yehudakatz.com), of which he is still very proud.
+"""
+
+[brian]
+name = "Brian Hammons"
+github = "bhammons"
+
+[vish]
+name = "Vish Abrams"
+github = "vishvananda"

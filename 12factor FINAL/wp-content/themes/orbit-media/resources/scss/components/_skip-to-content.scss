@@ -1,0 +1,10 @@
+// Skip to main content anchor link
+.skip-to-content {
+    background-color: white;
+    border: solid oms-px-to-rem(3px) black;
+    display: inline-block;
+    font-size: oms-px-to-rem(18px);
+    font-weight: bold;
+    color: black !important;
+    padding: oms-px-to-rem(15px);
+}

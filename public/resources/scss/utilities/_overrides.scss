@@ -1,0 +1,91 @@
+// Gutter edge vars
+$gutter_xs: 1.5625rem; // XS 25px
+$gutter_sm: 3.125rem; // SM 50px
+$gutter_md: 4.6875rem; // MD 75px
+$gutter_lg: $spacer_desktop; // LG 8vw
+$gutter_xl: $spacer_desktop; // XL 8vw
+$gutter_xxl: $spacer_desktop; // XXL+ 8vw @see _bootstrap_vars.scss
+
+// Max container width
+$max-container-width: 143.75rem;
+
+// Override max-width and gutters
+.container-fluid {
+    max-width: $max-container-width;
+    padding-left: $gutter_xs;
+    padding-right: $gutter_xs;
+
+    @include media-breakpoint-up(sm) {
+        padding-left: $gutter_sm;
+        padding-right: $gutter_sm;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-left: $gutter_md;
+        padding-right: $gutter_md;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-left: $gutter_lg;
+        padding-right: $gutter_lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-left: $gutter_xl;
+        padding-right: $gutter_xl;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-left: $gutter_xxl;
+        padding-right: $gutter_xxl;
+    }
+}
+
+// For cols that are not part of Bootstrap
+$custom_cols: (
+    5th: calc(100% / 5),
+    7th: calc(100% / 7),
+    8th: calc(100% / 8),
+);
+
+@each $name, $width in $custom_cols {
+    .col-xs-#{$name} {
+        flex: 0 0 auto;
+        width: $width;
+    }
+    .col-sm-#{$name} {
+        @include media-breakpoint-up(sm) {
+            width: $width;
+        }
+    }
+    .col-md-#{$name} {
+        @include media-breakpoint-up(md) {
+            width: $width;
+        }
+    }
+    .col-lg-#{$name} {
+        @include media-breakpoint-up(lg) {
+            width: $width;
+        }
+    }
+    .col-xl-#{$name} {
+        @include media-breakpoint-up(xl) {
+            width: $width;
+        }
+    }
+    .col-xxl-#{$name} {
+        @include media-breakpoint-up(xxl) {
+            width: $width;
+        }
+    }
+}
+
+// For all ratios, make the image cover the area so it doesn't stretch
+.ratio {
+    display: block;
+
+    > img {
+        object-fit: cover;
+        height: 100% !important;
+    }
+}

@@ -1,0 +1,137 @@
+/* ======================================== */
+/* Mixins
+/* ======================================== */
+@use "sass:math";
+
+/**
+ * Removes first elements top padding
+ * and last elements bottom padding.
+ */
+@mixin first_last_elements() {
+    > *:first-child:not([class^="btn-"]) {
+        margin-top: 0 !important;;
+        padding-top: 0 !important;
+
+        > a[class^="btn-"] {
+            margin-top: 0;
+        }
+    }
+
+    > *:last-child:not([class^="btn-"]) {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+
+        > a[class^="btn-"] {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/**
+ * Element underline that has option to slide into another color on hover.
+ * Good too if you needed to make a thicker underline under an element.
+ * @param $color Color of the underline
+ * @param $hoverColor Color of the underline on hover
+ * @param $animate Bool Should the hover color slide in on hover?
+ */
+ @mixin link_underline($color, $hoverColor, $animate: false) {
+    position: relative;
+    background-image: linear-gradient(to right, $hoverColor, $hoverColor 50%, $color 50%);
+    background-position: 100% 100%;
+    background-size: 200% 0.125rem;
+    background-repeat: no-repeat;
+
+    // if you want the border to animate on hover
+    @if $animate {
+        transition: background-size 0.3s ease-out, background-position 0.3s ease-out,
+        color 0.3s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+        background-position: 0 100%;
+    }
+}
+
+%appendSingleArrow {
+
+    &:after {
+        background: url("../images/Icons/glyph-caret-right-purple.svg") 0 0 no-repeat;
+        background-size: 0.4375rem 0.5625rem;
+        content: "";
+        display: inline-block;
+        width: 0.4375rem;
+        height: 0.5625rem;
+        transition: all .3s ease-out;
+        margin-left: 0.5rem;
+    }
+}
+
+/* ======================================== */
+/* Mixins
+/* ======================================== */
+
+@mixin all_text_color($color) {
+    h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p,
+    span,
+    li,
+    li:before {
+        color: $color;
+    }
+
+    .pre-title {
+
+        &:after {
+            //color: $color-lt-blue;
+        }
+    }
+
+    a:not(.btn-primary):not(.btn-secondary):not(.cta-link):not(.navbar-brand):not(.column--style-card):not(.blurb) {
+        color: $color-purple;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #000;
+            text-decoration-color: #000;
+        }
+    }
+}
+
+/**
+ * Strips the specified value of its unit.
+ *
+ * @see https://css-tricks.com/snippets/sass/strip-unit-function/
+ *
+ * @author Orbit Media <wordpress@orbitmedia.com>
+ */
+@function oms-strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return math.div( $number, ( $number * 0 + 1));
+    }
+    @return $number;
+}
+
+/**
+ * Converts the specified pixel value to its rem value based on the
+ * specified view.
+ *
+ * @param $input The original pixel value.
+ *
+ * @author Orbit Media <wordpress@orbitmedia.com>
+ */
+@function oms-px-to-rem($input) {
+    $rem: oms-strip-unit(math.div($input, $root-font-size));
+    @return #{$rem}rem;
+}

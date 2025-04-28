@@ -1,0 +1,460 @@
+/*=================================================================================
+    Common Typography Styling
+    - H1 - H6
+    - Links
+    - Global Elements
+===============================================================================*/
+
+// Bootstrap.
+@import "vars";
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: $root-font-size;
+}
+
+body {
+    background-color: $bg-color;
+    @include webfont();
+    font-size: oms-px-to-rem(18px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(28);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(18px);
+        line-height: oms-px-to-rem(32);
+    }
+/*
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(17px);
+    }*/
+}
+
+
+// Global
+
+// Skip to content
+.skip-to-content {
+    background-color: $bg-color;
+    border: solid oms-px-to-rem(3px) black;
+    display: inline-block;
+    font-size: oms-px-to-rem(18px);
+    font-weight: bold;
+    color: black !important;
+    padding: oms-px-to-rem(15px);
+
+    &:focus-visible {
+        border: solid oms-px-to-rem(2px) white;
+        outline: solid oms-px-to-rem(2px) black;
+        outline-offset: oms-px-to-rem(2px);
+    }
+}
+
+h1 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(32px);
+    color: $text-heading-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(40);
+    margin: 0 0 oms-px-to-rem(20px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(36px);
+        line-height: oms-px-to-rem(48px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: oms-px-to-rem(45px);
+        line-height: oms-px-to-rem(54px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(54px);
+        line-height: oms-px-to-rem(60px);
+    }
+}
+/*
+body.home {
+
+    h1 {
+
+        @include media-breakpoint-up(xxl) {
+            font-size: oms-px-to-rem(75px);
+        }
+    }
+}
+*/
+h2,
+.h2 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(26px);
+    color: $text-heading-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(36);
+    margin: 0 0 oms-px-to-rem(20px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(30px);
+        line-height: oms-px-to-rem(42px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: oms-px-to-rem(32px);
+        line-height: oms-px-to-rem(44px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(36px);
+        line-height: oms-px-to-rem(48px);
+    }
+}
+
+h3,
+.h3 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(22px);
+    color: $text-heading-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(32px);
+    margin: 0 0 oms-px-to-rem(10px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(24px);
+        line-height: oms-px-to-rem(36px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(26px);
+        line-height: oms-px-to-rem(40px);
+    }
+}
+
+h4,
+.h4 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(18px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(28px);
+    margin: 0 0 oms-px-to-rem(10px);
+    text-transform: lowercase;
+
+    /*@include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(19px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(21px);
+    }*/
+}
+
+
+h5,
+.h5 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(20px);
+    color: $text-heading-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(28px);
+    margin: 0 0 oms-px-to-rem(10px);
+
+    /*@include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(16px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(17px);
+    }*/
+}
+
+h6,
+.h6 {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(20px);
+    color: $text-heading-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(32px);
+    margin: 0 0 oms-px-to-rem(10px);
+
+    /*@include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(16px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(17px);
+    }*/
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+        transition: all 0.3s ease-out;
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: solid oms-px-to-rem(2px) white !important;
+        outline: solid oms-px-to-rem(2px) black !important;
+        outline-offset: oms-px-to-rem(2px) !important;
+    }
+
+    img {
+        border: none;
+    }
+
+}
+
+main {
+
+    a:not(.btn-primary):not(.btn-secondary):not(.cta-link):not(.navbar-brand):not(.column.is-linked):not(.linked-blurb):not(.post-teaser):not(.page) {
+        //@include link_underline($color-md-blue, $color-dk-blue, true);
+        @include webfont-medium;
+        color: $color-purple;
+        padding-bottom: oms-px-to-rem(3px);
+        text-decoration: $color-purple underline dashed;
+        text-underline-offset: oms-px-to-rem(4px);
+        transition: all 0.3s ease-out;
+
+        &:hover,
+        &:active {
+            color: $text-body-color;
+            text-decoration-color: $text-body-color;
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+hr {
+    background-color: $color-purple;
+    border: none;
+    height: oms-px-to-rem(4px);
+    opacity: 1;
+    margin: oms-px-to-rem(50px) 0;
+    padding: 0;
+}
+
+p {
+    @include webfont();
+    font-size: oms-px-to-rem(16px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(28px);
+    margin: 0 0 oms-px-to-rem(20px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(18px);
+        line-height: oms-px-to-rem(32px);
+    }
+
+   /* @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(17px);
+    }*/
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.small-text {
+        font-size: oms-px-to-rem(14px) !important;
+    }
+}
+
+strong {
+    @include webfont-medium();
+}
+
+blockquote {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.02);
+    //background-color: $color-lt-gray;
+    border: none;
+    border-left: solid oms-px-to-rem(4px) $color-purple;
+    border-radius: 0;
+    position: relative;
+    margin: oms-px-to-rem(100px) auto;
+    padding: oms-px-to-rem(50px);
+
+    @include media-breakpoint-up(lg) {
+        //padding: oms-px-to-rem(100px);
+    }
+
+    p {
+        @include webfont();
+        font-size: oms-px-to-rem(16px);
+        font-style: normal;
+        color: $text-body-color;
+        letter-spacing: oms-px-to-rem(0.25px);
+        line-height: oms-px-to-rem(28px);
+        margin: 0 0 oms-px-to-rem(20px);
+
+        @include media-breakpoint-up(md) {
+            font-size: oms-px-to-rem(22px);
+            line-height: oms-px-to-rem(34px);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            font-size: oms-px-to-rem(24px);
+            line-height: oms-px-to-rem(36px);
+        }
+    }
+}
+
+main ul,
+main ol {
+    list-style-position: outside;
+    margin: 0 0 oms-px-to-rem(20px);
+    padding: 0 0 0 oms-px-to-rem(20px);
+
+    li {
+        @include webfont();
+        font-size: oms-px-to-rem(16px);
+        color: $text-body-color;
+        letter-spacing: oms-px-to-rem(0);
+        line-height: oms-px-to-rem(28px);
+        margin: 0 0 oms-px-to-rem(20px);
+        padding: 0;
+
+        /*@include media-breakpoint-up(lg) {
+            font-size: oms-px-to-rem(17px);
+        }*/
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    ul,
+    ol {
+        margin-top: oms-px-to-rem(20px);
+        margin-bottom: oms-px-to-rem(20px);
+    }
+}
+
+main ol {
+    list-style-type: decimal;
+}
+
+main ul {
+    list-style-type: none;
+
+    li {
+        position: relative;
+
+        &:before {
+            background-color: $color-dark-purple;
+            border-radius: 100%;
+            content: "";
+            width: oms-px-to-rem(5px);
+            height: oms-px-to-rem(5px);
+            position: absolute;
+            top: oms-px-to-rem(12px);
+            left: oms-px-to-rem(-20px);
+        }
+
+        /*ul li:before,
+        ol li:before {
+            background-color: $color-lt-blue;
+        }*/
+    }
+}
+
+.highlight {
+    //color: $color-md-blue !important;
+}
+
+.caption {
+    @include webfont-medium();
+    font-size: oms-px-to-rem(14px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(-0.25px);
+    line-height: oms-px-to-rem(22px);
+}
+
+
+// Intro Text
+.intro-text {
+    display: block;
+    @include webfont();
+    font-size: oms-px-to-rem(18px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(30px);
+    margin: 0 0 oms-px-to-rem(10px);
+
+    @include media-breakpoint-up(md) {
+        font-size: oms-px-to-rem(20px);
+        line-height: oms-px-to-rem(32px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: oms-px-to-rem(22px);
+        line-height: oms-px-to-rem(34px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(24px);
+        line-height: oms-px-to-rem(36px);
+    }
+}
+
+// Pre-Title
+// this is what is in the designs, so going with this. Styleguide says otherwise though...
+.pre-title {
+    position: relative;
+    color: #000;
+    @include webfont();
+    font-size: oms-px-to-rem(14);
+    letter-spacing: oms-px-to-rem(4);
+    line-height: oms-px-to-rem(28px);
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 0 oms-px-to-rem(10px);
+}
+
+// This is what was in the styleguide, but the designs say otherwise...
+/*.pre-title {
+    display: block;
+    position: relative;
+    @include webfont-medium();
+    font-size: oms-px-to-rem(18px);
+    color: $text-body-color;
+    letter-spacing: oms-px-to-rem(0);
+    line-height: oms-px-to-rem(28px);
+    text-transform: uppercase;
+    margin: 0 0 oms-px-to-rem(10px);
+
+
+    @include media-breakpoint-up(xxl) {
+        font-size: oms-px-to-rem(14px);
+    }
+
+}*/
+
+// Utility classes
+.u-purple-bg {
+    background: $color-purple;
+}
+.u-dark-purple-bg {
+    background: $color-dark-purple;
+}
+.u-yellow-bg {
+    background: $color-yellow;
+}
+.u-black-bg {
+    background: #000;
+}

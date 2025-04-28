@@ -1,7 +1,12 @@
-# Twelve-Factor App Methodology is now Open Source
-###### 12 Nov, 2024
-### [Yehuda Katz](https://github.com/wycats)
-![Yehuda Katz](/images/bios/yehuda.jpg) **Join us in modernizing the twelve-factor app manifesto together.** As a community of app, framework and platform developers, we’re working together to refresh this foundational document for the modern era. While it’s not software we’re working on, we’ll use familiar processes like pull requests, issues, and reviews to collaborate together in the [twelve-factor project repo](https://github.com/twelve-factor/twelve-factor).
+---
+title: Twelve-Factor App Methodology is now Open Source
+date: 2024-11-12
+author: yehuda
+---
+
+**Join us in modernizing the twelve-factor app manifesto together.** As a community of app, framework and platform developers, we’re working together to refresh this foundational document for the modern era. While it’s not software we’re working on, we’ll use familiar processes like pull requests, issues, and reviews to collaborate together in the [twelve-factor project repo](https://github.com/twelve-factor/twelve-factor).
+
+<!-- END_EXCERPT -->
 
 This initiative builds on a strong foundation laid by Heroku when they originally created "The Twelve-Factor App" all the way back in 2011, a time when container-based deployment was still just emerging. Back then, developers could get apps running on their local machines, but common development mistakes often made it challenging to deploy those apps to production.
 

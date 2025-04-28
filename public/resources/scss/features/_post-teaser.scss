@@ -1,0 +1,199 @@
+// Post Teaser
+.post-teaser {
+    background-image: none !important;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    transition: all 0.3s ease !important;
+    margin-bottom: oms-px-to-rem(50px);
+    padding-bottom: 0 !important;
+
+
+
+    &__inner {
+        //@include all_text_color(white);
+        //border-radius: oms-px-to-rem(5px);
+        display: flex;
+        flex-wrap: wrap;
+        min-height: oms-px-to-rem(212px);
+        position: relative;
+        //padding: oms-px-to-rem(35px) oms-px-to-rem(35px) oms-px-to-rem(50px);
+        border-bottom: oms-px-to-rem(6) $color-yellow solid;
+        padding: 0;
+
+        @include media-breakpoint-up(lg) {
+            min-height: oms-px-to-rem(500px);
+        }
+
+        p,
+        div,
+        span {
+            color: $text-body-color;
+            text-decoration: none;
+        }
+
+
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        // height: 100%;
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        // z-index: 1;
+
+        img {
+            //border-radius: oms-px-to-rem(5px);
+            width: 100%;
+            height: auto;
+            // height: 100%;
+            // position: absolute;
+            // left: 0;
+            // top: 0;
+        }
+    }
+
+    &__content {
+        //height: 100%;
+        position: relative;
+        z-index: 3;
+
+        padding: oms-px-to-rem(30);
+    }
+
+    /*&__thumbnail {
+        border-radius: oms-px-to-rem(5px) oms-px-to-rem(5px) 0 0;
+        width: calc(100% + oms-px-to-rem(70px));
+        overflow: hidden;
+        z-index: 2;
+        margin: oms-px-to-rem(-35px) oms-px-to-rem(-35px) oms-px-to-rem(50px);
+
+        img {
+            border-radius: oms-px-to-rem(5px) oms-px-to-rem(5px) 0 0;
+            position: relative;
+            transform: scale(1);
+            transition: all 0.3s ease-out;
+        }
+    }*/
+
+    &__meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include webfont();
+        font-size: oms-px-to-rem(14px);
+        letter-spacing: oms-px-to-rem(0);
+        line-height: oms-px-to-rem(14px);
+        margin-bottom: oms-px-to-rem(10px);
+
+
+    }
+
+    .post-meta__item {
+        &--author-img {
+            width: oms-px-to-rem(30);
+            height: oms-px-to-rem(30);
+            border-radius: 50%;
+
+            margin-right: oms-px-to-rem(8);
+
+            img {
+                width: oms-px-to-rem(30);
+                height: oms-px-to-rem(30);
+            }
+        }
+
+        &--separator {
+            margin: 0 oms-px-to-rem(6);
+        }
+    }
+
+    &__title {
+        @include webfont-medium;
+        color: $color-purple;
+        padding-bottom: oms-px-to-rem(3px);
+        text-decoration: $color-purple underline dashed;
+        text-underline-offset: oms-px-to-rem(4px);
+        transition: all 0.3s ease-out;
+
+        font-size: oms-px-to-rem(22px);
+        line-height: oms-px-to-rem(32);
+        margin-bottom: oms-px-to-rem(30);
+
+        @include media-breakpoint-up(lg) {
+            font-size: oms-px-to-rem(26px);
+            line-height: oms-px-to-rem(36px);
+            margin-bottom: oms-px-to-rem(50);
+        }
+
+
+    }
+
+    &__categories {
+
+        display: block;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+
+        @include webfont();
+        font-size: oms-px-to-rem(14px);
+        color: white;
+        letter-spacing: oms-px-to-rem(0);
+        line-height: 1;
+        margin-top: auto;
+        margin-bottom: 0;
+        //padding-top: oms-px-to-rem(9px);
+
+        > span {
+            display: inline-block;
+            background-color: #e9e9e9;
+            margin-right: oms-px-to-rem(4);
+            padding: oms-px-to-rem(6) oms-px-to-rem(4) oms-px-to-rem(4);
+        }
+    }
+
+
+
+
+
+
+
+
+
+}
+
+// Hover and active states
+a.post-teaser:hover,
+a.post-teaser:active {
+    top: oms-px-to-rem(-5px);
+    transition: all 0.3s ease-out;
+
+
+    .post-teaser__title {
+        color: $text-body-color !important;
+    }
+
+    .post-teaser__inner {
+        border-bottom-color: $color-purple;
+
+        /*&:after {
+            height: oms-px-to-rem(10px);
+            bottom: oms-px-to-rem(-10px);
+            transition: all 0.3s ease-out;
+        }*/
+    }
+
+    /*.post-teaser__thumbnail {
+
+        img {
+            transform: scale(1.05);
+            transition: all 0.3s ease-out;
+        }
+    }*/
+
+
+}
