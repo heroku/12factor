@@ -159,6 +159,10 @@ footer a {
   color: #999;
 }
 
+footer p.legal a {
+  padding-right: 7px;
+}
+
 article img {
   float: right;
   margin-left: 32pt;
@@ -171,7 +175,7 @@ article img.full {
 
 .cpra a img {
   height: 17px;
-  margin-bottom: -2px !important;
+  margin-bottom: -5px !important;
   margin-right: 5px;
 }
 
