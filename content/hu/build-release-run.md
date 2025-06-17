@@ -1,0 +1,18 @@
+## V. Előállítás, közreadás, futtatás
+### Előállítási ütem (BUILD) és a futtatási ütem (RUN) szigorúan elválasztva
+
+A [kódbázis](./codebase) három ütemben formálódik át egy (nem fejlesztői környezetben) üzembehelyezett (deploy) alkalmazássá:
+
+* Az *előállítási ütem (build stage)* az a transzformáció, amikor a forráskód kódtára (repository) átalakul futtatható alkalmazássá (build), ezt a lépést *előállítás (build)*-nak hívjuk. Ez megfogja a forráskódnak azt a változatát (commit), amit az üzembehelyezési folyamat (deployment process) kijelölt, hozzáveszi a [függőségeket](./dependencies) majd előállítja a szükséges bináris állományokat és erőforrásokat, így elkészítve futtatható alkalmazást (build).
+* A *közreadási ütem (release stage)* átveszi az előállítási ütemben (build stage) előállított futtatható alkalmazást (build), és párosítja az aktuális telepítési [konfigurációval](./config). Az eredményül kapott *közreadási változat* (release) tartalmazza a futtatható állományokat plusz a megfelelő konfigurációt, és alkalmas arra, hogy a futtatókörnyezetben azonnal beüzemeljük és használjuk.
+* Az *futtatási ütem (run stage)* (nevezzük "runtime"-nak is) a közreadási változatot (release) felhasználva futtatja az alkalmazást a végrehajtási környezetben, elindítva a megfelelő [folyamatait](./processes).
+
+![A kódból futtatható alkalmazás (build) lesz, amit a konfigurációval kombinálunk a közreadási változat (release) létrehozásához.](/images/release.png)
+
+**A 12 tényezős alkalmazásfejlesztés élesen elkülöníti tehát az előállítási, a közreadási és a futtatási ütemeket.** Például kizárja, hogy valaki az üzemeltetett futó alkalmazás kódján változtasson, mivel nincs mód ezeket a változtatásokat az előállítási ütembe (build stage) eljuttatni.
+
+Általában az üzembehelyezési eszközök (deployment tool) kínálnak közreadási változatokat kezelő eszközöket (release management tool) is, de minimum lehetőséget adnak arra, hogy visszaálljunk egy korábban üzemeltetett közreadási változatra (previous release). Például a [Capistrano](https://github.com/capistrano/capistrano/wiki) a közreadási változatokat a `releases` nevű mappában tárolja, ahol az éppen aktuális változat (current release) nem más, mint egy szimbolikus hivatkozás (symlink) a megfelelő könyvtárra. A `rollback` parancs így egyszerűen vissza tud állni az előző közreadási változatra (previous release).
+
+Minden közreadási változatnak (release) egyedi azonosítóval (ID) kell rendelkeznie, mint például a készítésének időpontja (vagyis `2011-04-06-20:32:17`) vagy egy folyamatosan növekvő szám (mint a `v100`). A kiadási változatok összesége tulajdonképpen egy kizárólag bővülő, csak hozzáadást engedélyező főkönyv. A közreadási változatok (release) létrejöttük után már nem változhatnak. Bármilyen változáshoz új közreadási ütemet (release stage) kell végrehajtani.
+
+Az előállítási ütemet (build stage) az alkalmazás fejlesztői kezdeményezik, amikor új kódot (commit) tárolnak be (push) a kódtárba (repository). A futtatási ütem (run stage) pont fordítva, automatikusan bármikor megtörténhet, ha egy szerver újraindul vagy egy összeomlott folyamatot a folyamatkezelő újraindított. Ezért aztán a futtatási ütemnek (run stage) olyan kevés mozgó elemből kell állnia, amennyire csak lehetséges, mivel olyan probléma, ami az alkalmazás indulását megakadályozza megtörténhet az éjszaka közepén is, amikor nincs kéznél egy fejlesztő sem. Az előállítási ütem (build stage) már lehet sokkal összetettebb, mivel a hibák hangsúlyos módon mindig az üzembehelyezést (deployment) vezető fejlesztő szeme előtt vannak.
