@@ -1,0 +1,8 @@
+Achtergrond
+==========
+
+De medewerkers aan dit document zijn direct betrokken geweest bij de ontwikkeling en implementatie van honderden apps, en zijn indirect getuige geweest van de ontwikkeling, werking en schaling van honderdduizenden apps via ons werk op het <a href="http://www.heroku.com/" target="_blank">Heroku</a> platform
+
+Dit document verzamelt al onze ervaringen en observaties over een grote verscheidenheid van software-as-a-service apps in het wild. Het is een verzameling van ideale praktijken voor app-ontwikkeling, met bijzondere aandacht voor de dynamiek van de organische groei van een app in de tijd, de dynamiek van de samenwerking tussen ontwikkelaars die werken aan de codebase van de app, en <a href="http://blog.heroku.com/archives/2011/6/28/the_new_heroku_4_erosion_resistance_explicit_contracts/" target="_blank">het vermijden van de kosten van software-erosie</a>.
+
+Onze motivatie is om het bewustzijn te vergroten van een aantal systematische problemen die we hebben gezien in de moderne applicatie-ontwikkeling, om een gedeelde woordenschat te bieden voor het bespreken van deze problemen, en om een set van brede conceptuele oplossingen aan te bieden voor die problemen met bijbehorende terminologie. De indeling is geïnspireerd op Martin Fowler's boeken *<a href="https://books.google.com/books/about/Patterns_of_enterprise_application_archi.html?id=FyWZt5DdvFkC" target="_blank">Patterns of Enterprise Application Architecture</a>* en *<a href="https://books.google.com/books/about/Refactoring.html?id=1MsETFPD3I0C" target="_blank">Refactoring</a>*.

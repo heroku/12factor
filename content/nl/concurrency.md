@@ -1,0 +1,14 @@
+## VIII. Concurrentie
+### Schaalvergroting via het procesmodel
+
+Elk computerprogramma, eenmaal uitgevoerd, wordt vertegenwoordigd door een of meer processen. Web apps hebben een verscheidenheid aan procesuitvoeringsvormen aangenomen. PHP-processen bijvoorbeeld draaien als kindprocessen van Apache, die op verzoek worden opgestart naar gelang de hoeveelheid verzoeken. Java processen hebben de tegenovergestelde aanpak, waarbij de JVM één groot uberproces levert dat een groot blok systeembronnen (CPU en geheugen) reserveert bij het opstarten, met concurrency die intern beheerd wordt via threads. In beide gevallen is (zijn) het (de) lopende proces(sen) slechts minimaal zichtbaar voor de ontwikkelaars van de app.
+
+![Schaal wordt uitgedrukt als lopende processen, workload diversiteit wordt uitgedrukt als procestypes.](/images/process-types.png)
+
+**In de 12-factor app zijn processen een eerste klas burger.** Processen in de 12-factor app zijn sterk afgeleid van [het unix procesmodel voor het draaien van service daemons](https://adam.herokuapp.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/). Met behulp van dit model kan de ontwikkelaar zijn app ontwerpen om verschillende werkbelastingen aan te kunnen door elk type werk toe te wijzen aan een *procestype*. HTTP-verzoeken kunnen bijvoorbeeld worden afgehandeld door een webproces, en langlopende achtergrondtaken door een werkproces.
+
+Dit sluit niet uit dat individuele processen hun eigen interne multiplexing afhandelen, via threads in de runtime VM, of het async/evented model dat te vinden is in tools als [EventMachine](https://github.com/eventmachine/eventmachine), [Twisted](http://twistedmatrix.com/trac/), of [Node.js](http://nodejs.org/). Maar een individuele VM kan maar zo groot worden (verticale schaal), dus de applicatie moet ook in staat zijn om meerdere processen te overspannen die draaien op meerdere fysieke machines.
+
+Het procesmodel blinkt pas echt uit wanneer het tijd is om uit te schalen. De [niets delende, horizontaal partitioneerbare aard van 12-factor app processen] (./processes) betekent dat het toevoegen van meer concurrency een eenvoudige en betrouwbare operatie is. De reeks van procestypes en het aantal processen van elk type staat bekend als de *procesformatie*.
+
+12-factor app processen [moeten nooit daemoniseren](http://dustin.github.com/2010/02/28/running-processes.html) of PID-bestanden schrijven. Vertrouw in plaats daarvan op de procesmanager van het besturingssysteem (zoals [systemd](https://www.freedesktop.org/wiki/Software/systemd/), een gedistribueerde procesmanager op een cloud-platform, of een tool zoals [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) in ontwikkeling) om [uitvoerstromen](./logs) te beheren, te reageren op gecrashte processen, en door de gebruiker geïnitieerde herstarts en shutdowns af te handelen.
