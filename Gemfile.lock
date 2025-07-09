@@ -16,7 +16,7 @@ GEM
       base64 (>= 0.1.0)
       rack (~> 2.2, >= 2.2.4)
     rack-ssl-enforcer (0.2.9)
-    rexml (3.3.2)
+    rexml (3.3.6)
       strscan
     rtl (0.6.0)
     ruby2_keywords (0.0.5)
