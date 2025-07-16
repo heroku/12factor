@@ -12,6 +12,9 @@ GEM
     maruku (0.7.3)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.7.4)
+    puma (6.6.0)
+      nio4r (~> 2.0)
     rack (3.1.16)
     rack-protection (4.1.1)
       base64 (>= 0.1.0)
@@ -21,6 +24,8 @@ GEM
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-ssl-enforcer (0.2.9)
+    rackup (2.2.1)
+      rack (>= 3)
     rexml (3.4.1)
     rtl (0.6.0)
     ruby2_keywords (0.0.5)
@@ -45,7 +50,9 @@ DEPENDENCIES
   builder
   i18n
   maruku
+  puma (~> 6.6)
   rack-ssl-enforcer
+  rackup (~> 2.2)
   rexml
   rtl
   sinatra (~> 4.1.0)
