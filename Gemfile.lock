@@ -1,34 +1,42 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    base64 (0.2.0)
+    base64 (0.3.0)
     builder (3.3.0)
     concurrent-ruby (1.2.2)
     daemons (1.4.1)
     eventmachine (1.2.7)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    logger (1.7.0)
     maruku (0.7.3)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
-    rack (2.2.8.1)
-    rack-protection (3.2.0)
+    rack (3.1.16)
+    rack-protection (4.1.1)
       base64 (>= 0.1.0)
-      rack (~> 2.2, >= 2.2.4)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rack-session (2.1.1)
+      base64 (>= 0.1.0)
+      rack (>= 3.0.0)
     rack-ssl-enforcer (0.2.9)
     rexml (3.4.1)
     rtl (0.6.0)
     ruby2_keywords (0.0.5)
-    sinatra (3.2.0)
+    sinatra (4.1.1)
+      logger (>= 1.6.0)
       mustermann (~> 3.0)
-      rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.2.0)
+      rack (>= 3.0.0, < 4)
+      rack-protection (= 4.1.1)
+      rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    thin (1.8.2)
+    thin (2.0.1)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
-      rack (>= 1, < 3)
-    tilt (2.4.0)
+      logger
+      rack (>= 1, < 4)
+    tilt (2.6.1)
 
 PLATFORMS
   ruby
@@ -40,7 +48,7 @@ DEPENDENCIES
   rack-ssl-enforcer
   rexml
   rtl
-  sinatra
+  sinatra (~> 4.1.0)
   thin
 
 RUBY VERSION
