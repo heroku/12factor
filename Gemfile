@@ -12,3 +12,8 @@ gem 'rack-ssl-enforcer'
 gem "rackup", "~> 2.2"
 gem 'rexml'
 gem 'rtl'
+
+group :test do
+  gem 'rspec', '~> 3.13'
+  gem 'rack-test', '~> 2.1'
+end
