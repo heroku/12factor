@@ -26,7 +26,7 @@ GEM
     rack-ssl-enforcer (0.2.9)
     rackup (2.2.1)
       rack (>= 3)
-    rexml (3.4.1)
+    rexml (3.4.4)
     rtl (0.6.0)
     ruby2_keywords (0.0.5)
     sinatra (4.1.1)
