@@ -11,4 +11,4 @@
 
 このプロセスモデルが真価を発揮するのは、スケールアウトが必要になったときである。[シェアードナッシングで水平分割可能なTwelve-Factor Appプロセスの性質](./processes)は、並行性を高める操作が単純かつ確実なものであることを意味する。プロセスタイプとそれぞれのタイプのプロセス数の配列は、 *プロセスフォーメーション* と言われる。
 
-Twelve-Factor Appのプロセスは[決してデーモン化するべきではないし](http://dustin.github.com/2010/02/28/running-processes.html)、PIDファイルを書き出すべきではない。その代わりに、OSのプロセスマネージャー（例：[systemd](https://www.freedesktop.org/wiki/Software/systemd/)、クラウドプラットフォームの分散プロセスマネージャー、あるいは開発環境における[Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)のようなツール）を頼ることで、[出力ストリーム](./logs)を管理し、プロセスのクラッシュに対応し、ユーザーによる再起動やシャットダウンを処理すべきである。
+Twelve-Factor Appのプロセスは[決してデーモン化するべきではないし](http://dustin.sallings.org/2010/02/28/running-processes.html)、PIDファイルを書き出すべきではない。その代わりに、OSのプロセスマネージャー（例：[systemd](https://www.freedesktop.org/wiki/Software/systemd/)、クラウドプラットフォームの分散プロセスマネージャー、あるいは開発環境における[Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html)のようなツール）を頼ることで、[出力ストリーム](./logs)を管理し、プロセスのクラッシュに対応し、ユーザーによる再起動やシャットダウンを処理すべきである。
