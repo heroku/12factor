@@ -1,0 +1,14 @@
+## VIII. Konkurentnost
+### Skalirajte prema van putem modela procesa
+
+Svaki računalni program, jednom pokrenut, predstavljan je od strane jednog ili više procesa. Web aplikacije su imale različite oblike izvršenja procesa. Na primjer, PHP procesi se pokreću kao podređeni procesi Apachea, pokrenuti na zahtjev prema potrebi volumena zahtjeva. Java procesi imaju suprotan pristup, s JVM-om koji pruža jedan masivni uberproces koji rezervira veliki blok sustavskih resursa (CPU i memorija) pri pokretanju, s konkurentnošću kojom se interno upravlja putem niti. U oba slučaja, pokrenuti proces(i) samo su minimalno vidljivi razvijateljima aplikacije.
+
+![Skala se izražava kao broj pokrenutih procesa, raznolikost radnog opterećenja se izražava kao vrste procesa.](/images/process-types.png)
+
+**U dvanaestofaktorskoj aplikaciji procesi su "građani prve klase".** Procesi u dvanaestofaktorskoj aplikaciji uzimaju snažne znakove iz [Unixovog modela procesa za pokretanje uslužnih daemona](https://adam.herokuapp.com/past/2011/5/9/applying_the_unix_process_model_to_web_apps/). Koristeći ovaj model, razvijatelj može projektirati svoju aplikaciju za rukovanje različitim radnim opterećenjima dodjeljivanjem svake vrste posla *vrsti procesa*. Na primjer, HTTP zahtjevima može rukovati web proces, a dugotrajnim pozadinskim zadacima upravlja proces radnika.
+
+To ne isključuje pojedinačne procese iz rukovanja vlastitim internim multipleksiranjem, putem niti unutar VM-a u vremenu izvođenja, ili asinkronog/događajnog modela koji se nalazi u alatima kao što su [EventMachine](https://github.com/eventmachine/eventmachine), [Twisted](https://twistedmatrix.com/trac/) ili [Node.js](https://nodejs.org/). No, pojedinačni VM može narasti samo tako velik (u uspravnoj skali), tako da aplikacija također mora moći obuhvatiti više procesa koji se pokreću na više fizičkih strojeva.
+
+Procesni model uistinu zablista kada dođe vrijeme za skaliranje prema van. [Ne-dijeli-ništa, horizontalno particiona priroda procesa dvanaestofaktorske aplikacije](./processes) znači da je dodavanje više konkurentnosti jednostavna i pouzdana operacija. Niz tipova procesa i broj procesa svake vrste poznat je kao *formacija procesa*.
+
+Procesi dvanaestofaktorske aplikacije [nikada se ne bi trebali daemonizirati](https://dustin.sallings.org/2010/02/28/running-processes.html) ili pisati PID datoteke. Umjesto toga, oslanjaju se na upravitelja procesa operacijskog sustava (kao što je [systemd](https://www.freedesktop.org/wiki/Software/systemd/), upravitelj distribuiranih procesa na platformi u oblaku ili alat kao što je [Foreman](http://blog.daviddollar.org/2011/05/06/introducing-foreman.html) u razvoju) za upravljanje [izlaznim tokovima](./logs), odgovaranje na srušene procese i rukovanje ponovnim pokretanjima koja je započeo korisnik i isključivanjem.
