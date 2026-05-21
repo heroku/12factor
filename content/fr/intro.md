@@ -1,7 +1,7 @@
 Introduction
 ============
 
-À l'époque actuelle, les logiciels sont régulièrement délivrés en tant que services : on les appelle des *applications web* (web apps), ou *logiciels en tant que service* (*software-as-a-service*). L'application 12 facteurs est une méthodologie pour concevoir des logiciels en tant que service qui :
+De nos jours, les logiciels sont régulièrement délivrés en tant que services : on les appelle des *applications web* (web apps), ou *logiciels en tant que service* (*software-as-a-service*). L'application 12 facteurs est une méthodologie pour concevoir des logiciels en tant que service qui :
 
 * Utilisent des formats **déclaratifs** pour mettre en oeuvre l'automatisation, pour minimiser le temps et les coûts pour que de nouveaux développeurs rejoignent le projet;
 * Ont un **contrat propre** avec le système d'exploitation sous-jacent, offrant une **portabilité maximum** entre les environnements d'exécution;
