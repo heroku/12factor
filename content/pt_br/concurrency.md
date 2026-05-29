@@ -1,7 +1,7 @@
 ## VIII. Concorrência
 ### Escale através do processo modelo
 
-Qualquer programa de computador, uma vez executado, está representado por um ou mais processos. Aplicações web têm tomado uma variedade de formas de processo de execução. Por exemplo, processos PHP rodam como processos filhos do Apache, iniciados sob demanda conforme necessário por volume de requisições. Processos Java tomam o caminho inverso, com a JVM proporcionando um processo uber maciço que reserva um grande bloco de recursos do sistema (CPU e memória) na inicialização, com concorrência gerenciada internamente via threads. Em ambos os casos, o(s) processo(os) em execução são apenas minimamente visível para os desenvolvedores da aplicação.
+Qualquer programa de computador, uma vez executado, está representado por um ou mais processos. Aplicações web têm tomado uma variedade de formas de processo de execução. Por exemplo, processos PHP rodam como processos filhos do Apache, iniciados sob demanda conforme necessário por volume de requisições. Processos Java tomam o caminho inverso, com a JVM proporcionando um superprocesso maciço que reserva um grande bloco de recursos do sistema (CPU e memória) na inicialização, com concorrência gerenciada internamente via threads. Em ambos os casos, o(s) processo(os) em execução são apenas minimamente visível para os desenvolvedores da aplicação.
 
 ![Escala é expressado como processos em execução, a diversidade da carga de trabalho é expressada como tipos de processo.](/images/process-types.png)
 
