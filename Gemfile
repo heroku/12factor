@@ -7,7 +7,7 @@ gem 'builder'
 gem 'thin'
 gem 'maruku'
 gem 'i18n'
-gem "puma", "~> 6.6"
+gem "puma", "~> 8.0"
 gem 'rack-ssl-enforcer'
 gem "rackup", "~> 2.2"
 gem 'rexml'
