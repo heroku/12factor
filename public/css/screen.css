@@ -181,10 +181,12 @@ article img.full {
 
 article.rtl {
   direction: rtl;
+  text-align: right;
 }
 
 article.ltr {
   direction: ltr;
+  text-align: left;
 }
 
 .header-container {

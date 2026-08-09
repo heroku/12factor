@@ -43,7 +43,6 @@
   article ul, article ol {
     padding-left: 35px;
     padding-right: 10px;
-    text-align: left;
   }
   
   article table {
@@ -87,13 +86,11 @@
   article h1, article h2, article h3, article h6, article p, article table {
     padding-left: 15px;
     padding-right: 15px;
-    text-align: left;
   }
   
   article ul, article ol {
     padding-left: 35px;
     padding-right: 10px;
-    text-align: left;
   }
   
   article table {
