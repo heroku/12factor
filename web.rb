@@ -2,6 +2,7 @@ require 'sinatra'
 require 'maruku'
 require 'i18n'
 require 'rack/ssl-enforcer'
+require 'rtl'
 
 configure do
   use Rack::SslEnforcer if ENV['FORCE_SSL']
@@ -69,7 +70,7 @@ TOC = %w(codebase dependencies config backing-services build-release-run process
 
 
 
-POSTS = %w(open-source-announcement narrow-conduits december-monthly-updates)
+POSTS = %w(open-source-announcement narrow-conduits december-monthly-updates evolving-twelve-factor intuit-thrilled)
 get '/blog/:post' do |post|
   halt 404 unless POSTS.include?(post)
   @post = post
@@ -197,6 +198,16 @@ helpers do
         "<a href=\"#{path_prefix}/#{factor}\">#{I18n.t(:language, :locale => locale)}</a>"
       end
     }.join(" | ")
+  end
+
+  def render_direction
+    locale = I18n.locale
+    unless locale.to_s.empty?
+      if Rtl.rtl? locale
+        return 'rtl'
+      end
+      'ltr'
+    end
   end
 end
 

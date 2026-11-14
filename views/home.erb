@@ -1,9 +1,9 @@
 <section class="abstract">
-  <article><%= render_markdown('intro') %></article>
-  <article><%= render_markdown('background') %></article>
-  <article><%= render_markdown('who') %></article>
+  <article class="<%= render_direction %>"><%= render_markdown('intro') %></article>
+  <article class="<%= render_direction %>"><%= render_markdown('background') %></article>
+  <article class="<%= render_direction %>"><%= render_markdown('who') %></article>
 </section>
 
 <section class="concrete">
-  <article><%= render_markdown('toc') %></article>
+  <article class="<%= render_direction %>">  <%= render_markdown('toc') %></article>
 </section>

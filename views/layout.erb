@@ -66,14 +66,10 @@
   <%= yield %>
 
   <footer>
-  <div id="locales"><%= render_locales(@factor) %></div>
-  <div>Written by Adam Wiggins</div>
-  <div>Last updated 2017</div>
-  <div><a href="https://github.com/heroku/12factor">Sourcecode</a></div>
-  <div><a href="/12factor.epub">Download ePub Book</a></div>
-  <div><a href="https://www.heroku.com/policy/privacy">Privacy Policy</a></div>
-  <div class="cpra"><a rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/"><img src="/images/privacy.png" aria-label="Privacy Icon" title="Privacy Icon">Your Privacy Choices</a></div>
-  <div><a class="optanon-toggle-display" rel="nofollow" href="#">Cookie Preferences</a></div>
-</footer>
+    <p id="locales"><%= render_locales(@factor) %></p>
+    <p>Written by Adam Wiggins • Last updated 2017 • <a href="https://github.com/heroku/12factor">Sourcecode</a> • <a href="/12factor.epub">Download ePub Book</a></p>
+    <p>© Copyright <%= Time.now.year %> Salesforce, Inc. All rights reserved. Various trademarks held by their respective owners. Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105, United States</p>
+    <p class="legal"><a href="https://www.salesforce.com/company/legal/">Legal</a> <a href="https://www.salesforce.com/company/legal/sfdc-website-terms-of-service/">Terms of Service</a> <a href="https://www.salesforce.com/company/privacy/">Privacy Information</a> <a href="https://www.salesforce.com/company/disclosure/">Responsible Disclosure</a> <a href="https://trust.salesforce.com/en/">Trust</a> <a href="https://www.salesforce.com/form/contact/contactme/?d=70130000000EeYa">Contact</a> <span class="cpra"><a rel="nofollow" href="https://www.salesforce.com/form/other/privacy-request/"><img src="/images/privacy.png" aria-label="Privacy Icon" title="Privacy Icon">Your Privacy Choices</a></span> <a class="optanon-toggle-display" rel="nofollow" href="#">Cookie Preferences</a></p>
+  </footer>
 </body>
 </html>
